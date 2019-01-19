@@ -11,6 +11,7 @@ class ReviewsSpider(scrapy.Spider):
     current_review_coordinates = ""
     urls = [
         '/Attraction_Review-g644300-d7289577-Reviews-Tourist_Information_Centre_Kranj_House-Kranj_Upper_Carniola_Region.html',
+
     ]
 
     def start_requests(self):
