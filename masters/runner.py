@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 from scrapy import cmdline
 
-cmdline.execute("scrapy crawl reviews".split())
+cmdline.execute("scrapy crawl data_reviews".split())

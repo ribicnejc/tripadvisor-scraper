@@ -5,7 +5,7 @@ from masters.spiders_sel import reviews_sel
 
 
 class ReviewsSpider(scrapy.Spider):
-    name = "reviews"
+    name = "data_reviews"
     root_url = 'https://www.tripadvisor.com'
     current_review_coordinates = ""
     urls = [
@@ -30,7 +30,7 @@ class ReviewsSpider(scrapy.Spider):
             print(self.current_review_coordinates)
 
         page = response.url.split("/")[-2]
-        filename = 'reviews-%s.html' % page
+        filename = 'data_reviews/reviews-%s.html' % page
         with open(filename, 'wb') as f:
             f.write(response.body)
         self.log('Saved file %s' % filename)
