@@ -10,12 +10,11 @@ class ReviewsSpider(scrapy.Spider):
     current_review_coordinates = ""
     urls = [
         '/Attraction_Review-g644300-d7289577-Reviews-Tourist_Information_Centre_Kranj_House-Kranj_Upper_Carniola_Region.html',
-        # '/Attraction_Review-g644300-d7289577-Reviews-Tourist_Information_Centre_Kranj_House-Kranj_Upper_Carniola_Region.html',
     ]
 
     def start_requests(self):
         for url in self.urls:
-            self.current_review_coordinates = reviews_sel.get_url(url)
+            self.current_review_coordinates = reviews_sel.get_url(self.root_url + url)
             yield scrapy.Request(url=(self.root_url + url), callback=self.parse)
 
     def parse(self, response):
