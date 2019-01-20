@@ -20,8 +20,11 @@ class ReviewsSpider(scrapy.Spider):
             yield scrapy.Request(url=(self.root_url + url), callback=self.parse)
 
     def parse(self, response):
-        next_review_page_url = unicode_utils.unicode_to_string(
-            response.css('div.ui_pagination a.next::attr(href)').extract_first())
+        next_href = response.css('div.ui_pagination a.next::attr(href)').extract_first()
+        if next_href is not None:
+            next_review_page_url = unicode_utils.unicode_to_string(next_href)
+        else:
+            next_review_page_url = ""
         review_location_name = unicode_utils.unicode_to_string(
             response.css('div h1.ui_header::text').extract_first())
         review_location_tags = unicode_utils.unicode_list_to_string(
@@ -30,7 +33,7 @@ class ReviewsSpider(scrapy.Spider):
         review_location_description_tags = unicode_utils.unicode_list_to_string(
             response.css('div.headerInfoWrapper div.detail a::text').extract())
         review_current_page = unicode_utils.unicode_to_string(
-            response.css('div.pageNumbers a::attr(data-page-number)').extract_first())
+            response.css('div.pageNumbers a.current::attr(data-page-number)').extract_first())
         location_lat, location_lng = coordinate_utils.parse_google_maps_link(self.current_review_coordinates)
         place_rate = unicode_utils.unicode_to_string(response.css('span.overallRating::text').extract_first())
 
@@ -63,3 +66,5 @@ class ReviewsSpider(scrapy.Spider):
             for review in reviews:
                 f.write(review.get_csv_line())
         self.log('Saved file %s' % filename)
+        if next_review_page_url is not "":
+            yield scrapy.Request(url=(self.root_url + next_review_page_url), callback=self.parse)
