@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-def get_url(url):
+def get_coordinates(url):
     driver = webdriver.Chrome()
     driver.get(url)
     driver.implicitly_wait(5)
