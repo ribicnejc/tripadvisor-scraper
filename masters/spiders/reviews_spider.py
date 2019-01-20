@@ -11,13 +11,22 @@ class ReviewsSpider(scrapy.Spider):
     current_review_coordinates = ""
     urls = [
         '/Attraction_Review-g644300-d7289577-Reviews-Tourist_Information_Centre_Kranj_House-Kranj_Upper_Carniola_Region.html',
-
     ]
+
+    def request(self, url, callback):
+        request_with_cookies = scrapy.Request(
+            url=(self.root_url + url),
+            callback=callback)
+        request_with_cookies.cookies['TALanguage'] = 'ALL'
+        request_with_cookies.headers[
+            'User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/71.0.3578.89 Mobile/15E148 Safari/605.1'
+
+        return request_with_cookies
 
     def start_requests(self):
         for url in self.urls:
             self.current_review_coordinates = reviews_sel.get_coordinates(self.root_url + url)
-            yield scrapy.Request(url=(self.root_url + url), callback=self.parse)
+            yield self.request(url, self.parse)
 
     def parse(self, response):
         next_href = response.css('div.ui_pagination a.next::attr(href)').extract_first()
@@ -34,6 +43,10 @@ class ReviewsSpider(scrapy.Spider):
             response.css('div.headerInfoWrapper div.detail a::text').extract())
         review_current_page = unicode_utils.unicode_to_string(
             response.css('div.pageNumbers a.current::attr(data-page-number)').extract_first())
+
+        review_last_page = unicode_utils.unicode_to_string(
+            response.css('div.pageNumbers a.last::attr(data-page-number)').extract_first())
+
         location_lat, location_lng = coordinate_utils.parse_google_maps_link(self.current_review_coordinates)
         place_rate = unicode_utils.unicode_to_string(response.css('span.overallRating::text').extract_first())
 
@@ -67,4 +80,4 @@ class ReviewsSpider(scrapy.Spider):
                 f.write(review.get_csv_line())
         self.log('Saved file %s' % filename)
         if next_review_page_url is not "":
-            yield scrapy.Request(url=(self.root_url + next_review_page_url), callback=self.parse)
+            yield self.request(next_review_page_url, self.parse)
