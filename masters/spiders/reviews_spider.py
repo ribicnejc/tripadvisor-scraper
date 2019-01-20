@@ -6,7 +6,7 @@ from masters.utils import unicode_utils, coordinate_utils
 
 
 class ReviewsSpider(scrapy.Spider):
-    name = "data_reviews"
+    name = "reviews"
     root_url = 'https://www.tripadvisor.com'
     current_review_coordinates = ""
     urls = [
@@ -73,7 +73,7 @@ class ReviewsSpider(scrapy.Spider):
                                  username)
             reviews.append(review_data)
 
-        filename = 'data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
+        filename = 'data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
         with open(filename, 'wb') as f:
             f.write(Review.get_csv_header())
             for review in reviews:
