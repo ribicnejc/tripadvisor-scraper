@@ -1,4 +1,4 @@
-# To myself notes
+# Overall
 
 ## Prerequisites 
     go to root folder -> /masters
@@ -25,6 +25,8 @@
     - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - sudo dpkg -i google-chrome-stable_current_amd64.deb
     
-## Opened issues
+## Closed issues
     driver cannot open display!!!
     reason -> ssh with windows running probably
+Fix was in selenium. We created selenium scraper that way, that chrome browser is
+never visually shown. `--headless` mode!
