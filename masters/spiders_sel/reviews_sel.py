@@ -9,8 +9,6 @@ from masters.data_structures.Review import Review
 class SeleniumReviewSpider(object):
     def __init__(self, url):
         chrome_options = Options()
-        # TODO set this parameter as when production
-
         if settings.HEADLESS_MODE:
             chrome_options.add_argument("--headless")
         service_args = ['--verbose']
@@ -81,7 +79,17 @@ class SeleniumReviewSpider(object):
                                  review_rate,
                                  username)
             reviews.append(review_data)
-            # TODO write to file
+            self.save_to_file(reviews, review_location_name ,review_current_page)
+
+    @staticmethod
+    def save_to_file(reviews, location_name, current_page):
+        filename = 'data/data_reviews/reviews-%s-%s.csv' % (location_name, current_page)
+        with open(filename, 'wb') as f:
+            f.write(Review.get_csv_header())
+            for review in reviews:
+                f.write(review.get_csv_line())
+        print('Saved file %s' % filename)
+        # self.log('Saved file %s' % filename)
 
 
 # todo iterate over reviews and parse them as with scrapy parser
