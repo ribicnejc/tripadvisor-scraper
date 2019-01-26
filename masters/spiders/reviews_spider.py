@@ -1,5 +1,7 @@
 import scrapy
 
+from scrapy_splash import SplashRequest
+
 from masters.data_structures.Review import Review
 from masters.spiders_sel import reviews_sel
 from masters.utils import unicode_utils, coordinate_utils
@@ -18,14 +20,26 @@ class ReviewsSpider(scrapy.Spider):
             url=(self.root_url + url),
             callback=callback)
         request_with_cookies.cookies['TALanguage'] = 'ALL'
+        request_with_cookies.cookies['TAReturnTo'] = '%1%%2FAttraction_Review%3FreqNum%3D1%26isLastPoll%3Dfalse%26filterLang%3DALL%26filterSegment%3D%26changeSet%3DREVIEW_LIST%26g%3D644300%26q%3D%26t%3D%26puid%3DXExNFQokH20AAYnnbnQAAACo%26preferFriendReviews%3DFALSE%26trating%3D%26d%3D7289577%26filterSeasons%3D%26waitTime%3D19%26paramSeqId%3D10'
         request_with_cookies.headers[
             'User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/71.0.3578.89 Mobile/15E148 Safari/605.1'
 
         return request_with_cookies
 
+    def splash_request(self, url, callback):
+        # splash
+        return SplashRequest(self.root_url+url, callback, args={
+            # optional; parameters passed to Splash HTTP API
+            'wait': 10,
+            # 'url' is prefilled from request url
+            # 'http_method' is set to 'POST' for POST requests
+            # 'body' is set to request body for POST requests
+        },)
+
     def start_requests(self):
         for url in self.urls:
             self.current_review_coordinates = reviews_sel.get_coordinates(self.root_url + url)
+            # yield self.splash_request(url, self.parse)
             yield self.request(url, self.parse)
 
     def parse(self, response):
