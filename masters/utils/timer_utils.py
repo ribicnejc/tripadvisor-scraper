@@ -19,4 +19,4 @@ class Timer(object):
         self.print_time()
 
     def print_time(self):
-        print("Time of execution: ", self.stop_execution - self.start_execution)
+        return "Time of execution: %s" % (self.stop_execution - self.start_execution)
