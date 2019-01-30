@@ -46,7 +46,7 @@ class SeleniumReviewSpider(object):
             service_args=service_args)
         # driver.add_cookie({'name': 'TALanguage', 'value': 'ALL'})
         driver.get(url)
-        driver.implicitly_wait(10)
+        driver.implicitly_wait(2)
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 5)
 
@@ -56,13 +56,11 @@ class SeleniumReviewSpider(object):
         all_languages = self.driver.find_element_by_xpath('//div[@data-value="ALL"]')
         all_languages.click()
         time.sleep(1)
-        # self.driver.find_element_by_css_selector('div.choices div.ui_radio label.label').click()
-        self.driver.implicitly_wait(5)
+        self.driver.implicitly_wait(2)
 
     @stale_decorator
     def is_all_languages_selected(self):
         all_languages = self.driver.find_element_by_xpath('//input[@id="filters_detail_language_filterLang_ALL"]')
-        # all_languages = self.driver.find_element_by_xpath('//div[@data-value="ALL"]')
         return all_languages.is_selected()
 
     @stale_decorator
@@ -92,12 +90,12 @@ class SeleniumReviewSpider(object):
             self.driver.find_element_by_css_selector('div.ui_pagination a.next').click()
         except WebDriverException:
             Logger.log_it("There is no more pages!")
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(2)
 
     @stale_decorator
     def scrap_page(self):
-        self.driver.implicitly_wait(10)
-        time.sleep(3)
+        self.driver.implicitly_wait(2)
+        time.sleep(1)
         review_location_name = self.driver.find_element_by_css_selector('div h1.ui_header').text
         review_location_description_tags = self.driver.find_element_by_css_selector(
             'div.headerInfoWrapper div.detail a').text
