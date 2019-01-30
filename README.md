@@ -30,3 +30,13 @@
     reason -> ssh with windows running probably
 Fix was in selenium. We created selenium scraper that way, that chrome browser is
 never visually shown. `--headless` mode!
+
+
+# Dockerise deployment
+## Steps
+    pip install scrapy-splash
+
+    docker pull scrapinghub/splash
+    
+    docker run -p 8050:8050 scrapinghub/splash
+    
