@@ -13,6 +13,8 @@ from masters.utils import unicode_utils, coordinate_utils
 from masters.data_structures.Review import Review
 
 
+# TODO change root of project because on server masters is not found!!! root must be master
+
 def stale_decorator(f):
     def wrapper(*args, **kwargs):
         counter = 10
@@ -31,6 +33,7 @@ def stale_decorator(f):
     return wrapper
 
 
+# TODO spider is to complex. use firefox instead, and change logic.
 class SeleniumReviewSpider(object):
     def __init__(self, url):
         Logger.log_it("##########################################")
@@ -40,6 +43,7 @@ class SeleniumReviewSpider(object):
         if settings.HEADLESS_MODE:
             chrome_options.add_argument("--headless")
         service_args = ['--verbose']
+
         # driver = webdriver.PhantomJS(service_args=['--load-images=no'])
         driver = webdriver.Chrome(
             chrome_options=chrome_options,
@@ -126,15 +130,18 @@ class SeleniumReviewSpider(object):
             reviews.append(review_data)
         self.save_to_file(reviews, review_location_name, review_current_page, review_last_page)
 
+    # TODO try refreshing page when clicking next for 2-2 isse
+    def refresh_page(self):
+        Logger.log_it("Refreshing")
+        self.driver.refresh()
+
     def stop_spider(self):
         Logger.log_it("-------------------------------------------")
         self.driver.close()
         self.timer.stop_timer()
         Logger.log_it(self.timer.print_time())
 
-
-
-#je all ... potem je eng... klikne in se uganse!!!
+    # je all ... potem je eng... klikne in se uganse!!!
 
     @staticmethod
     def save_to_file(reviews, location_name, current_page, last_page):
