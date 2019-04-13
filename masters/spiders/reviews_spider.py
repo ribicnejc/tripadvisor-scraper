@@ -87,7 +87,7 @@ class ReviewsSpider(scrapy.Spider):
                                  username)
             reviews.append(review_data)
 
-        filename = 'data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
+        filename = 'scraped_data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
         with open(filename, 'wb') as f:
             f.write(Review.get_csv_header())
             for review in reviews:

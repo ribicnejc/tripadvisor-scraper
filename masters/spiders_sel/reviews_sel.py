@@ -2,9 +2,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import WebDriverException, StaleElementReferenceException
 from masters import settings
 from masters.utils.logger_utils import Logger
@@ -29,7 +27,6 @@ def stale_decorator(f):
                 Logger.log_it("Web driver exception... retrying")
                 counter -= 1
         return None
-
     return wrapper
 
 
@@ -39,12 +36,16 @@ class SeleniumReviewSpider(object):
         Logger.log_it("##########################################")
         self.timer = Timer()
         self.timer.start_timer()
-        chrome_options = Options()
+        gecko_options = Options()
         if settings.HEADLESS_MODE:
-            chrome_options.add_argument("--headless")
+            gecko_options.add_argument("--headless")
         service_args = ['--verbose']
 
+        profile
+
+
         # driver = webdriver.PhantomJS(service_args=['--load-images=no'])
+        driver = webdriver.Firefox(firefox_profile=profile, options=gecko_options, capabilities=capabilities)
         driver = webdriver.Chrome(
             chrome_options=chrome_options,
             service_args=service_args)

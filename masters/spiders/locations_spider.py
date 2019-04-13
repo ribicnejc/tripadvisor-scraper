@@ -44,7 +44,7 @@ class LocationsSpider(scrapy.Spider):
             location_data = Location(location_name, location_url)
             locations.append(location_data)
 
-        filename = 'data/data_locations/locations-%s-%s.csv' % (location_group_name, location_current_page)
+        filename = 'scraped_data/data_locations/locations-%s-%s.csv' % (location_group_name, location_current_page)
         with open(filename, 'wb') as f:
             for location in locations:
                 f.write(location.get_csv_line())
