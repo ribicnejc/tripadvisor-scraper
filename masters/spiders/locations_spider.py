@@ -1,6 +1,7 @@
 import scrapy
 
-from masters.data_structures.Location import Location
+from scrapy import signals
+from masters.data_structures.Attraction import Attraction
 from masters.utils import unicode_utils
 
 
@@ -9,7 +10,7 @@ class LocationsSpider(scrapy.Spider):
     root_url = 'https://www.tripadvisor.com'
     current_review_coordinates = ""
     urls = [
-        '/Attractions-g644300-Activities-Kranj_Upper_Carniola_Region.html#FILTERED_LIST',
+        '/Attractions-g274862-Activities-Slovenia.html',
     ]
 
     def request(self, url, callback):
@@ -20,34 +21,33 @@ class LocationsSpider(scrapy.Spider):
         return request_with_cookies
 
     def start_requests(self):
-        for url in self.urls:
-            yield self.request(url, self.parse)
+        while self.urls.__len__() > 0:
+            url = self.urls.pop()
+            yield self.request(url, self.parse_first)
 
-    def parse(self, response):
-        next_href = response.css('div.pagination a.next::attr(href)').extract_first()
-        if next_href is not None:
-            next_review_page_url = unicode_utils.unicode_to_string(next_href)
-        else:
-            next_review_page_url = ""
-        location_group_name = unicode_utils.unicode_to_string(
-            response.css('div.ui_container h1::text').extract_first()).replace("\n", "")
-        location_current_page = unicode_utils.unicode_to_string(
-            response.css('div.pageNumbers span.current::text').extract_first())
+    def parse_first(self, response):
+        attractions = response.css('div.ap_filter_wrap div.navigation_list')[-1].css(
+            'div.ap_navigator a.taLnk::attr(href)')
 
-        locations = []
-        for location in response.css('div.attraction_clarity_cell'):
-            location_url = unicode_utils.unicode_to_string(
-                location.css('div.listing_title a::attr(href)').extract_first())
-            location_name = unicode_utils.unicode_to_string(
-                location.css('div.listing_title a::text').extract_first())
+        attractions_obj = []
+        for attraction in attractions[:-1]:
+            attraction_name = attraction.root.split('-')[-1].replace(".html", "")
+            attraction_obj = Attraction(attraction_name, attraction.root)
+            attractions_obj.append(attraction_obj)
 
-            location_data = Location(location_name, location_url)
-            locations.append(location_data)
+        more_attractions = attractions[-1].root
 
-        filename = 'scraped_data/data_locations/locations-%s-%s.csv' % (location_group_name, location_current_page)
-        with open(filename, 'wb') as f:
-            for location in locations:
-                f.write(location.get_csv_line())
+        location_group_name = response.url.replace(".html", "").split("-Activities-")[1]
+        filename = 'scraped_data/data_attractions/attractions-%s-%s.csv' % (location_group_name, 1)
+        with open(filename, 'w') as f:
+            for attraction in attractions_obj:
+                f.write(attraction.get_csv_line())
         self.log('Saved file %s' % filename)
-        if next_review_page_url is not "":
-            yield self.request(next_review_page_url, self.parse)
+
+        yield self.request(more_attractions, self.parse_pagination)
+
+    def parse_pagination(self, response):
+        attractions = response.css('div.navigation_list div.ap_navigator')
+
+        page_num = 2 #todo get page num
+
