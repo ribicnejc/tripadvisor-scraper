@@ -47,7 +47,24 @@ class LocationsSpider(scrapy.Spider):
         yield self.request(more_attractions, self.parse_pagination)
 
     def parse_pagination(self, response):
-        attractions = response.css('div.navigation_list div.ap_navigator')
+        attractions = response.css('ul.geoList li a::attr(href)')
+        page_num = unicode_utils.unicode_to_string(
+            response.css('div.pgLinks span.pageDisplay::text').extract_first())
+        next_page = response.css('div.pgLinks a.sprite-pageNext::attr(href)').extract_first()
+        if next_page:
+            next_page = unicode_utils.unicode_to_string(next_page)
 
-        page_num = 2 #todo get page num
+        attractions_obj = []
+        for attraction in attractions:
+            attraction_name = attraction.root.split('-')[-1].replace(".html", "")
+            attraction_obj = Attraction(attraction_name, attraction.root)
+            attractions_obj.append(attraction_obj)
 
+        location_group_name = response.url.replace(".html", "").split("-Activities-")[1]
+        filename = 'scraped_data/data_attractions/attractions-%s-%s.csv' % (location_group_name, page_num)
+        with open(filename, 'w') as f:
+            for attraction in attractions_obj:
+                f.write(attraction.get_csv_line())
+        self.log('Saved file %s' % filename)
+        yield self.request(next_page, self.parse_pagination)
+        # todo last page not working...
