@@ -2,9 +2,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import WebDriverException, StaleElementReferenceException
 from masters import settings
 from masters.utils.logger_utils import Logger
@@ -12,6 +10,8 @@ from masters.utils.timer_utils import Timer
 from masters.utils import unicode_utils, coordinate_utils
 from masters.data_structures.Review import Review
 
+
+# TODO change root of project because on server masters is not found!!! root must be master
 
 def stale_decorator(f):
     def wrapper(*args, **kwargs):
@@ -27,20 +27,25 @@ def stale_decorator(f):
                 Logger.log_it("Web driver exception... retrying")
                 counter -= 1
         return None
-
     return wrapper
 
 
+# TODO spider is to complex. use firefox instead, and change logic.
 class SeleniumReviewSpider(object):
     def __init__(self, url):
         Logger.log_it("##########################################")
         self.timer = Timer()
         self.timer.start_timer()
-        chrome_options = Options()
+        gecko_options = Options()
         if settings.HEADLESS_MODE:
-            chrome_options.add_argument("--headless")
+            gecko_options.add_argument("--headless")
         service_args = ['--verbose']
+
+        profile
+
+
         # driver = webdriver.PhantomJS(service_args=['--load-images=no'])
+        driver = webdriver.Firefox(firefox_profile=profile, options=gecko_options, capabilities=capabilities)
         driver = webdriver.Chrome(
             chrome_options=chrome_options,
             service_args=service_args)
@@ -126,15 +131,18 @@ class SeleniumReviewSpider(object):
             reviews.append(review_data)
         self.save_to_file(reviews, review_location_name, review_current_page, review_last_page)
 
+    # TODO try refreshing page when clicking next for 2-2 isse
+    def refresh_page(self):
+        Logger.log_it("Refreshing")
+        self.driver.refresh()
+
     def stop_spider(self):
         Logger.log_it("-------------------------------------------")
         self.driver.close()
         self.timer.stop_timer()
         Logger.log_it(self.timer.print_time())
 
-
-
-#je all ... potem je eng... klikne in se uganse!!!
+    # je all ... potem je eng... klikne in se uganse!!!
 
     @staticmethod
     def save_to_file(reviews, location_name, current_page, last_page):

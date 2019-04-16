@@ -2,3 +2,4 @@ selenium
 chromedriver
 Scrapy
 scrapy-splash
+pypiwin32
