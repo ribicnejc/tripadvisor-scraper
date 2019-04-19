@@ -2,6 +2,7 @@ import scrapy
 
 from masters.data_structures.Attraction import Attraction
 from masters.utils import unicode_utils
+from time import sleep
 
 
 class LocationsSpider(scrapy.Spider):
@@ -43,6 +44,7 @@ class LocationsSpider(scrapy.Spider):
 
         """Scrap local attractions"""
         for attraction in attractions_obj:
+            sleep(1)
             yield self.request(attraction.attraction_url, self.parse_local_attraction)
 
         """Scrap next global attraction as pagination"""
