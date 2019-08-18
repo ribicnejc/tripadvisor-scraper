@@ -2,6 +2,8 @@ import unicodedata
 
 
 def byte_to_string(b_string):
+    if isinstance(b_string, str):
+        return b_string
     return b_string.decode('utf-8')
 
 

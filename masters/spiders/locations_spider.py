@@ -42,16 +42,18 @@ class LocationsSpider(scrapy.Spider):
             attraction_obj = Attraction(attraction_name, attraction.root)
             attractions_obj.append(attraction_obj)
 
-        """Scrap local attractions"""
+        """Scrap region attractions"""
         for attraction in attractions_obj:
             sleep(1)
+            print("Attraction: ", attraction.attraction_url)
             yield self.request(attraction.attraction_url, self.parse_local_attraction)
 
-        """Scrap next global attraction as pagination"""
-        yield self.request(more_attractions, self.parse_global_attraction)
+        """Scrap next page of regions"""
+        if more_attractions:
+            yield self.request(unicode_utils.byte_to_string(more_attractions), self.parse_global_attraction)
 
     def parse_local_attraction(self, response):
-        attraction_list = response.css('.attractions-attraction-overview-main-TopPOIs__name--GndbY').css('::attr(href)')
+        attraction_list = response.css('.attractions-attraction-overview-pois-PoiInfo__name--SJ0a4').css('::attr(href)')
         if len(attraction_list) == 0:
             attraction_list = response.css('div.tracking_attraction_title a::attr(href)')
 
