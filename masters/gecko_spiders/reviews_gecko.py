@@ -34,7 +34,8 @@ class GeckoReviewSpider(object):
         self.timer = Timer()
         self.timer.start_timer()
 
-        self.driver = gecko_utils.get_gecko_driver()
+        # self.driver = gecko_utils.get_gecko_driver()
+        self.driver = webdriver.Firefox()
 
         # driver.add_cookie({'name': 'TALanguage', 'value': 'ALL'})
         self.driver.get(url)
@@ -132,7 +133,7 @@ class GeckoReviewSpider(object):
 
     @staticmethod
     def save_to_file(reviews, location_name, current_page, last_page):
-        filename = 'data/data_reviews/selenium_reviews-%s-%s-%s.csv' % (location_name, current_page, last_page)
+        filename = 'scraped_data/data_reviews/selenium_reviews-%s-%s-%s.csv' % (location_name, current_page, last_page)
         with open(filename, 'w') as f:
             f.write(Review.get_csv_header())
             for review in reviews:

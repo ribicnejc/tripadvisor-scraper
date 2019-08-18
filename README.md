@@ -17,14 +17,23 @@ fetched from previous *location crawler*
     scrapy crawl reviews
     
         
+### 3. Start review crawler (all languages)
+This crawler works with headless browser called gecko.
+
+    python gecko_runner.py        
+        
 # Deployment (steps)
 ## 1. Project
     pip install -r requirements.txt
-## 2. Driver
+## 2.1. Driver (chrome)
     - LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
     - wget http://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
     - unzip chromedriver_linux64.zip && sudo ln -s $PWD/chromedriver /usr/local/bin/chromedriver
-    
+## 2.2. Driver(firefox)
+    - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+    - tar -xvzf geckodriver-v0.24.0-linux64.tar.gz
+    - chmod +x geckodriver
+    - sudo ln -s $PWD/geckodriver /usr/local/bin/geckodriver
 ## 3. Run Scraper    
     python runner.py
     
