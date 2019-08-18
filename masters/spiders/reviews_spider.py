@@ -3,7 +3,7 @@ import scrapy
 from scrapy_splash import SplashRequest
 
 from masters.data_structures.Review import Review
-from masters.spiders_sel import reviews_sel
+from masters.gecko_spiders import reviews_gecko
 from masters.utils import unicode_utils, coordinate_utils
 
 
@@ -38,7 +38,7 @@ class ReviewsSpider(scrapy.Spider):
 
     def start_requests(self):
         for url in self.urls:
-            self.current_review_coordinates = reviews_sel.get_coordinates(self.root_url + url)
+            self.current_review_coordinates = reviews_gecko.get_coordinates(self.root_url + url)
             # yield self.splash_request(url, self.parse)
             yield self.request(url, self.parse)
 

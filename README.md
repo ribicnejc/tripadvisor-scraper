@@ -6,10 +6,17 @@
 ## List spiders
     scrapy list
     
-## Start spider
+## Start scraper
+### 1. Start attraction crawler
+    scrapy crawl locations
+
+### 2. Start review crawler
+This crawler will fetch reviews from attraction which were 
+fetched from previous *location crawler*
+ 
     scrapy crawl reviews
     
-    
+        
 # Deployment (steps)
 ## 1. Project
     pip install -r requirements.txt

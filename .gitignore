@@ -1,6 +1,5 @@
 workspace.xml
 .idea/
-*.csv
 *.pyc
 venv/
 *.log

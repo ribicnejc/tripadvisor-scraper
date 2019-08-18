@@ -1,8 +1,16 @@
 import unicodedata
 
 
+def byte_to_string(b_string):
+    if isinstance(b_string, str):
+        return b_string
+    return b_string.decode('utf-8')
+
+
 def unicode_to_string(value):
-    return unicodedata.normalize('NFKD', value).encode('utf8', 'ignore')
+    if value is not None:
+        return unicodedata.normalize('NFKD', value).encode('utf8', 'ignore')
+    return None
 
 
 def unicode_list_to_string(list):

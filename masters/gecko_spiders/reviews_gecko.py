@@ -2,16 +2,13 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import WebDriverException, StaleElementReferenceException
 from masters import settings
 from masters.utils.logger_utils import Logger
 from masters.utils.timer_utils import Timer
-from masters.utils import unicode_utils, coordinate_utils
+from masters.utils import unicode_utils, coordinate_utils, gecko_utils
 from masters.data_structures.Review import Review
 
-
-# TODO change root of project because on server masters is not found!!! root must be master
 
 def stale_decorator(f):
     def wrapper(*args, **kwargs):
@@ -27,33 +24,22 @@ def stale_decorator(f):
                 Logger.log_it("Web driver exception... retrying")
                 counter -= 1
         return None
+
     return wrapper
 
 
-# TODO spider is to complex. use firefox instead, and change logic.
-class SeleniumReviewSpider(object):
+class GeckoReviewSpider(object):
     def __init__(self, url):
         Logger.log_it("##########################################")
         self.timer = Timer()
         self.timer.start_timer()
-        gecko_options = Options()
-        if settings.HEADLESS_MODE:
-            gecko_options.add_argument("--headless")
-        service_args = ['--verbose']
 
-        profile
+        self.driver = gecko_utils.get_gecko_driver()
 
-
-        # driver = webdriver.PhantomJS(service_args=['--load-images=no'])
-        driver = webdriver.Firefox(firefox_profile=profile, options=gecko_options, capabilities=capabilities)
-        driver = webdriver.Chrome(
-            chrome_options=chrome_options,
-            service_args=service_args)
         # driver.add_cookie({'name': 'TALanguage', 'value': 'ALL'})
-        driver.get(url)
-        driver.implicitly_wait(2)
-        self.driver = driver
-        self.wait = WebDriverWait(self.driver, 5)
+        self.driver.get(url)
+        self.driver.implicitly_wait(2)
+        # self.wait = WebDriverWait(self.driver, 5)
 
     @stale_decorator
     def select_all_languages(self):
