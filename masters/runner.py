@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 import os
+import sys
+
+sys.path.append("..")
 
 from scrapy import cmdline
 from os import listdir
 from masters.utils.logger_utils import Logger
 from masters.utils.file_utils import location_scraped
+
+print("Scraper started...")
 
 # cmdline.execute("scrapy crawl locations".split())
 root = "scraped_data/data_attractions/"
