@@ -45,4 +45,6 @@ def unicode_rating_to_string(rating):
 
 
 def unicode_user_uid_to_string(uid):
-    return unicode_to_string(uid).split("-")[0].split("_")[1]
+    if unicode_to_string(uid) is not None:
+        return unicode_to_string(uid).split("-")[0].split("_")[1]
+    return "tripadvisor-member"
