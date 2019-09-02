@@ -35,6 +35,8 @@ def unicode_date_to_string_number(date):
              "October": "10",
              "November": "11",
              "December": "12"}
+    if int(date[1]) < 10:
+        date[1] = "0" + date[1]
     return date[2] + dates[date[0]] + date[1]
 
 
