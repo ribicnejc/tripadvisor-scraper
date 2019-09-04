@@ -12,9 +12,11 @@ class ReviewsSpider(scrapy.Spider):
     root_url = 'https://www.tripadvisor.com'
     current_review_coordinates = ""
     urls = []
+    parent_url = ""
 
     def __init__(self, location='', **kwargs):
         print(location)
+        self.parent_url = location
         self.urls.append(location)
         super(ReviewsSpider, self).__init__(**kwargs)
 
@@ -83,11 +85,16 @@ class ReviewsSpider(scrapy.Spider):
                                  user_id,
                                  place_rate,
                                  review_rate,
-                                 username)
+                                 username,
+                                 self.parent_url)
             reviews.append(review_data)
 
+        if review_location_name is not None:
+            review_location_name = review_location_name.replace("/", "")
+        if review_current_page is not None:
+            review_current_page = review_current_page.replace("/", "")
         filename = 'scraped_data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
-        with open(filename, 'wb') as f:
+        with open(filename, 'w') as f:
             f.write(Review.get_csv_header())
             for review in reviews:
                 f.write(review.get_csv_line())

@@ -8,6 +8,8 @@ def byte_to_string(b_string):
 
 
 def unicode_to_string(value):
+    if isinstance(value, str):
+        return value
     if value is not None:
         return unicodedata.normalize('NFKD', value).encode('utf8', 'ignore')
     return None
