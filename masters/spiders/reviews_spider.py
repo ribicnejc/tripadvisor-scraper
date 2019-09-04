@@ -90,7 +90,7 @@ class ReviewsSpider(scrapy.Spider):
             reviews.append(review_data)
 
         if review_location_name is not None:
-            review_location_name = review_location_name.replace("/", "")
+            review_location_name = review_location_name.replace("/", "").replace(",", "")
         if review_current_page is not None:
             review_current_page = review_current_page.replace("/", "")
         filename = 'scraped_data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
