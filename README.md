@@ -7,6 +7,9 @@
     scrapy list
     
 ## Start scraper
+### 0. Start runner.py
+    python3.7 runner.py
+    
 ### 1. Start attraction crawler
     scrapy crawl locations
 
@@ -55,4 +58,28 @@ never visually shown. `--headless` mode!
     docker pull scrapinghub/splash
     
     docker run -p 8050:8050 scrapinghub/splash
+    
+# SSH Session scraping
+Use TMux
+
+Create new session
+
+    tmux new -s scrap-locations
+
+Start new process
+
+    scrapy crawl locations
+    
+Detach tmux process
+    
+    press: ctrl + b... then relase and press d after
+    
+List sessions
+
+    tmux list-sessions
+    
+Attach to previous session
+    
+    tmux attach -t scrap-locations
+        
     
