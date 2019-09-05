@@ -8,6 +8,8 @@ def byte_to_string(b_string):
 
 
 def unicode_to_string(value):
+    if isinstance(value, str):
+        return value
     if value is not None:
         return unicodedata.normalize('NFKD', value).encode('utf8', 'ignore')
     return None
@@ -35,6 +37,8 @@ def unicode_date_to_string_number(date):
              "October": "10",
              "November": "11",
              "December": "12"}
+    if int(date[1]) < 10:
+        date[1] = "0" + date[1]
     return date[2] + dates[date[0]] + date[1]
 
 
@@ -43,4 +47,6 @@ def unicode_rating_to_string(rating):
 
 
 def unicode_user_uid_to_string(uid):
-    return unicode_to_string(uid).split("-")[0].split("_")[1]
+    if unicode_to_string(uid) is not None:
+        return unicode_to_string(uid).split("-")[0].split("_")[1]
+    return "tripadvisor-member"

@@ -10,7 +10,7 @@ class LocationsSpider(scrapy.Spider):
     root_url = 'https://www.tripadvisor.com'
     current_review_coordinates = ""
     urls = [
-        '/Attractions-g274862-Activities-Slovenia.html',
+        '/Attractions-g274881-Activities-Hungary.html',
     ]
 
     def request(self, url, callback):

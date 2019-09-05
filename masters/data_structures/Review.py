@@ -8,7 +8,8 @@ class Review(object):
                  user_id,
                  place_rate,
                  review_rate,
-                 username):
+                 username,
+                 parent_url):
         self.review_rate = review_rate
         self.place_rate = place_rate
         self.user_id = user_id
@@ -19,9 +20,10 @@ class Review(object):
         self.location_tags = location_tags
         self.location_name = location_name
         self.username = username
+        self.parent_url = parent_url
 
     def get_csv_line(self):
-        return "{}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n".format(
+        return "{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n".format(
             self.location_name,
             self.location_tags,
             self.lat,
@@ -31,7 +33,8 @@ class Review(object):
             self.user_id,
             self.review_rate,
             self.place_rate,
-            self.username
+            self.username,
+            self.parent_url,
         )
 
     @staticmethod
@@ -45,4 +48,5 @@ class Review(object):
                "user_id," \
                "review_rate," \
                "place_rate," \
-               "username\n"
+               "username," \
+               "parent_url\n"

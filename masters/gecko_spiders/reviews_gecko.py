@@ -12,7 +12,7 @@ from masters.data_structures.Review import Review
 
 def stale_decorator(f):
     def wrapper(*args, **kwargs):
-        counter = 10
+        counter = 3
         while counter != 0:
             try:
                 result = f(*args, **kwargs)
@@ -34,7 +34,8 @@ class GeckoReviewSpider(object):
         self.timer = Timer()
         self.timer.start_timer()
 
-        self.driver = gecko_utils.get_gecko_driver()
+        # self.driver = gecko_utils.get_gecko_driver()
+        self.driver = webdriver.Firefox()
 
         # driver.add_cookie({'name': 'TALanguage', 'value': 'ALL'})
         self.driver.get(url)
@@ -90,15 +91,14 @@ class GeckoReviewSpider(object):
         review_location_name = self.driver.find_element_by_css_selector('div h1.ui_header').text
         review_location_description_tags = self.driver.find_element_by_css_selector(
             'div.headerInfoWrapper div.detail a').text
-        review_current_page = self.driver.find_element_by_css_selector('div.pageNumbers a.current').get_attribute(
-            'data-page-number')
+        review_current_page = self.driver.find_element_by_css_selector('div.pageNumbers span.pageNum').text
         review_last_page = self.driver.find_element_by_css_selector('div.pageNumbers a.last').get_attribute(
             'data-page-number')
         location_lat, location_lng = coordinate_utils.parse_google_maps_link_selenium(self.get_coordinates())
         place_rate = self.driver.find_element_by_css_selector('span.overallRating').text
 
         reviews = []
-        for review in self.driver.find_elements_by_css_selector("div.review-container"):
+        for review in self.driver.find_elements_by_css_selector("div.div.location-review-card-Card__ui_card--2Mri0"):
             review_id = review.get_attribute("data-reviewid")
             user_id = review.find_element_by_css_selector('div.member_info div.memberOverlayLink').get_attribute('id')
             review_date = review.find_element_by_css_selector('span.ratingDate').get_attribute('title')
@@ -132,7 +132,7 @@ class GeckoReviewSpider(object):
 
     @staticmethod
     def save_to_file(reviews, location_name, current_page, last_page):
-        filename = 'data/data_reviews/selenium_reviews-%s-%s-%s.csv' % (location_name, current_page, last_page)
+        filename = 'scraped_data/data_reviews/selenium_reviews-%s-%s-%s.csv' % (location_name, current_page, last_page)
         with open(filename, 'w') as f:
             f.write(Review.get_csv_header())
             for review in reviews:
