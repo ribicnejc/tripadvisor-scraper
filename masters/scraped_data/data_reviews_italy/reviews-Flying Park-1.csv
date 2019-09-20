@@ -1,0 +1,4 @@
+location_name, location_tags,lat,lng,review_id,review_date,user_id,review_rate,place_rate,username,parent_url
+Flying Park, Nature & Parks, #lat#, #lng#, 503205475, 20170718, F837BDE826DB4D0E4AA206B31A3E2629, 5.0, 4.5, Prause, /Attraction_Review-g1958066-d3266013-Reviews-Flying_Park-Male_Province_of_Trento_Trentino_Alto_Adige.html
+Flying Park, Nature & Parks, #lat#, #lng#, 291479975, 20150722, 97BCD81F387E8EE6D4C64BB6E355882F, 4.0, 4.5, brianraggett, /Attraction_Review-g1958066-d3266013-Reviews-Flying_Park-Male_Province_of_Trento_Trentino_Alto_Adige.html
+Flying Park, Nature & Parks, #lat#, #lng#, 218381133, 20140729, 722403F83332BBE5A849CFC46F879BCF, 5.0, 4.5, GuyTalmor, /Attraction_Review-g1958066-d3266013-Reviews-Flying_Park-Male_Province_of_Trento_Trentino_Alto_Adige.html
