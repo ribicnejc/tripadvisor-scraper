@@ -2,7 +2,7 @@ import os
 import re
 
 # <>:"/\|?*
-folder = "../scraped_data/data_reviews_hungary"
+folder = "../scraped_data/data_reviews_croatia"
 for file in os.listdir(folder):
     file_old = file
     if file.__contains__("<"):
