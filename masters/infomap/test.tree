@@ -1,8 +1,0 @@
-# '../PycharmProjects/tripadvisor-scraper/masters/infomap/test.net ../PycharmProjects/tripadvisor-scraper/masters/infomap/' -> 6 nodes partitioned in 0s from codelength 2.556656707 in one level to codelength 2.320730357 in 2 levels.
-# path flow name node:
-1:1 0.214286 "Node 1" 1
-1:2 0.142857 "Node 2" 2
-1:3 0.142857 "Node 3" 3
-2:1 0.214286 "Node 4" 4
-2:2 0.142857 "Node 5" 5
-2:3 0.142857 "Node 6" 6

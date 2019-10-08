@@ -20,7 +20,7 @@ def get_reviews_cursor():
     conn = create_connection('../database/data.db')
     cur = conn.cursor()
     cur.execute(
-        "select user_id, review_id, review_date, review_rate, place_rate, attraction_id, country_of_origin from reviews where country_of_origin = 'slovenia' order by user_id, review_id asc")
+        "select user_id, review_id, review_date, review_rate, place_rate, attraction_id, country_of_origin from reviews order by user_id, review_id asc")
     return cur.fetchall()
 
 
@@ -31,8 +31,8 @@ def get_attractions_cursor():
     return cur.fetchall()
 
 
-def save_pajek_format(vertices, edges):
-    filename = 'infomap_data/slovenia.net'
+def save_pajek_format(vertices, edges, name):
+    filename = 'infomap_data/' + name
     with open(filename, 'w+') as f:
         f.write("*Vertices " + str(vertices.__len__()) + "\n")
         for vertice in vertices.items():
@@ -56,7 +56,6 @@ def get_pajek_format():
     for attraction in get_attractions_cursor():
         attractions.__setitem__(attraction[0], i)
         i += 1
-
     edges = {}
     prev = None
     for review in get_reviews_cursor():
@@ -71,7 +70,7 @@ def get_pajek_format():
                 else:
                     edges.__setitem__(key, 1)
         prev = review
-    save_pajek_format(attractions, edges)
+    save_pajek_format(attractions, edges, 'sl-cr-hu-au-it.net')
 
 
 get_pajek_format()

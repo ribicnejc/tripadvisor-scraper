@@ -1,6 +1,6 @@
 import sqlite3
 import os
-
+import re
 
 def create_database():
     database = "../data.db"
@@ -122,6 +122,8 @@ def fill_reviews(folder, country):
                 counter += 1
                 line = line.replace("\n", "")
                 line_len = line.split(", ").__len__()
+                if "DD6949832F578136ADA626B6C98961A7" in line:
+                    debug = 1
                 if line_len < 5:
                     line = f.readline()
                     continue
@@ -144,6 +146,17 @@ def correct_data(conn, line):
     url = lst[-1]
     usr = lst[-2]
     pr = lst[-3]
+    if pr[0].isupper():
+        tmp = line.split(usr + ", ")
+        last_number = re.findall(r'\d+', tmp[0])[-1]
+        split_index = tmp[0].rfind(last_number) + 1
+        first_part = tmp[0][0:split_index]
+        usr = pr + "_" + usr
+        first_part += ", " + usr
+        second_part = tmp[1]
+        line = first_part + ", " +second_part
+        lst = line.split(", ")
+        pr = lst[-3]
     rr = lst[-4]
     uid = lst[-5]
     rd = lst[-6]
