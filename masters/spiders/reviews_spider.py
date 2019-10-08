@@ -93,6 +93,7 @@ class ReviewsSpider(scrapy.Spider):
             review_location_name = review_location_name.replace("/", "").replace(",", "")
         if review_current_page is not None:
             review_current_page = review_current_page.replace("/", "")
+        # todo remove commas!!! if next parser
         filename = 'scraped_data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
         with open(filename, 'w') as f:
             f.write(Review.get_csv_header())
