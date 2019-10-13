@@ -69,30 +69,43 @@ def get_attractions_cursor():
 
 
 def save_pajek_format(edges, name):
-    filename = 'infomap_data/' + name
+    filename = 'infomap_data/net_files/' + name
     vertices = {}
+    i = 1
     for edge in edges.items():
-        vertices[edge[1].review_from.attraction.attraction_url] = edge[1].review_from.attraction.number
-        vertices[edge[1].review_to.attraction.attraction_url] = edge[1].review_to.attraction.number
+        k1 = edge[1].review_from.attraction.attraction_url
+        k2 = edge[1].review_to.attraction.attraction_url
+        if k1 not in vertices:
+            vertices[k1] = i
+            i += 1
+        if k2 not in vertices:
+            vertices[k2] = i
+            i += 1
+
     with open(filename, 'w+') as f:
         f.write("*Vertices " + str(vertices.__len__()) + "\n")
         for vertice in vertices.items():
             f.write(str(vertice[1]) + " \"" + vertice[0].split("-Reviews-")[1] + "\" 1.0\n")
         f.write("*Edges " + str(edges.__len__()) + "\n")
         for edge in edges.items():
-            f.write(edge[0] + " " + str(edge[1].weight) + "\n")
+            tmp = edge[0].split(" ")
+            url_from = tmp[0]
+            url_to = tmp[1]
+            key = str(vertices[url_from]) + " " + str(vertices[url_to])
+            f.write(key + " " + str(edge[1].weight) + "\n")
 
 
 def get_key_from_locations(l1, l2):
     if l1.number < l2.number:
-        return str(l1.number) + " " + str(l2.number)
-    return str(l2.number) + " " + str(l1.number)
+        return str(l1.attraction_url) + " " + str(l2.attraction_url)
+    return str(l2.attraction_url) + " " + str(l1.attraction_url)
 
 
 def get_edges():
     edges = {}
     prev = None
-    for review in get_reviews():
+    reviews = get_reviews()
+    for review in reviews:
         if prev is None:
             prev = review
             continue
@@ -110,7 +123,7 @@ def get_edges():
 def filter_edges(edges):
     new_edges = {}
     for edge in edges.items():
-        if edge[1].weight > 20:
+        if edge[1].weight > 0:
             new_edges[edge[0]] = edge[1]
     return new_edges
 
@@ -123,7 +136,8 @@ def get_pajek_format():
     edges = filter_edges(edges)
     print("Edges filtered...")
 
-    save_pajek_format(edges, 'sl_w20.net')
+    save_pajek_format(edges, 'all_w0.net')
     print("Pajek saved...")
+
 
 get_pajek_format()
