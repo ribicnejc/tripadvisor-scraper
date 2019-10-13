@@ -146,17 +146,18 @@ def correct_data(conn, line):
     url = lst[-1]
     usr = lst[-2]
     pr = lst[-3]
-    if pr[0].isupper():
-        tmp = line.split(usr + ", ")
-        last_number = re.findall(r'\d+', tmp[0])[-1]
-        split_index = tmp[0].rfind(last_number) + 1
-        first_part = tmp[0][0:split_index]
-        usr = pr + "_" + usr
-        first_part += ", " + usr
-        second_part = tmp[1]
-        line = first_part + ", " +second_part
-        lst = line.split(", ")
-        pr = lst[-3]
+
+    tmp = line.split(usr + ", ")
+    last_number = re.findall(r'\d+', tmp[0])[-1]
+    split_index = tmp[0].rfind(last_number) + 1
+    first_part = tmp[0][0:split_index]
+    usr = pr + "_" + usr
+    first_part += ", " + usr
+    second_part = tmp[1]
+    line = first_part + ", " + second_part
+    lst = line.split(", ")
+    pr = lst[-3]
+
     rr = lst[-4]
     uid = lst[-5]
     rd = lst[-6]

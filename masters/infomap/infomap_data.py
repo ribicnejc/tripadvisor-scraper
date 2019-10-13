@@ -1,5 +1,9 @@
 import sqlite3
 
+from masters.data_structures.ReviewInfomap import ReviewInfomap
+from masters.data_structures.AttractionInfomap import AttractionInfomap
+from masters.data_structures.EdgeInfomap import EdgeInfomap
+
 
 def create_connection(db_file):
     """ create a database connection to the SQLite database
@@ -16,61 +20,110 @@ def create_connection(db_file):
     return conn
 
 
-def get_reviews_cursor():
+def get_review_by_location_name(conn, review_name):
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM reviews WHERE location_name = ?", (review_name,))
+    for row in cur.fetchall():
+        return row
+
+
+def get_reviews():
     conn = create_connection('../database/data.db')
     cur = conn.cursor()
     cur.execute(
-        "select user_id, review_id, review_date, review_rate, place_rate, attraction_id, country_of_origin from reviews order by user_id, review_id asc")
-    return cur.fetchall()
+        "select * from reviews order by user_id, review_id asc")
+    reviews = []
+    attractions = get_attractions_cursor()
+    for review in cur.fetchall():
+        url = review[11]
+        if 'html' not in url:
+            url = get_review_by_location_name(conn, review[1])[11]
+        review_data = ReviewInfomap(review[1],
+                                    review[2],
+                                    review[3],
+                                    review[4],
+                                    review[5],
+                                    review[6],
+                                    review[7],
+                                    review[8],
+                                    review[9],
+                                    review[10],
+                                    url,
+                                    review[12],
+                                    attractions[url])
+        reviews.append(review_data)
+    return reviews
 
 
 def get_attractions_cursor():
     conn = create_connection('../database/data.db')
     cur = conn.cursor()
     cur.execute("select * from attractions")
-    return cur.fetchall()
+    attractions = dict()
+    i = 1
+    for attraction in cur.fetchall():
+        attr = AttractionInfomap(attraction[0], attraction[0], i)
+        attractions[attr.attraction_url] = attr
+        i += 1
+    return attractions
 
 
-def save_pajek_format(vertices, edges, name):
+def save_pajek_format(edges, name):
     filename = 'infomap_data/' + name
+    vertices = {}
+    for edge in edges.items():
+        vertices[edge[1].review_from.attraction.attraction_url] = edge[1].review_from.attraction.number
+        vertices[edge[1].review_to.attraction.attraction_url] = edge[1].review_to.attraction.number
     with open(filename, 'w+') as f:
         f.write("*Vertices " + str(vertices.__len__()) + "\n")
         for vertice in vertices.items():
             f.write(str(vertice[1]) + " \"" + vertice[0].split("-Reviews-")[1] + "\" 1.0\n")
         f.write("*Edges " + str(edges.__len__()) + "\n")
         for edge in edges.items():
-            f.write(edge[0] + " " + str(edge[1]) + "\n")
+            f.write(edge[0] + " " + str(edge[1].weight) + "\n")
 
 
-def get_key_from_locations(l1, l2, locations):
-    k1 = locations[l1]
-    k2 = locations[l2]
-    if k1 < k2:
-        return str(k1) + " " + str(k2)
-    return str(k2) + " " + str(k1)
+def get_key_from_locations(l1, l2):
+    if l1.number < l2.number:
+        return str(l1.number) + " " + str(l2.number)
+    return str(l2.number) + " " + str(l1.number)
 
 
-def get_pajek_format():
-    attractions = {}
-    i = 1
-    for attraction in get_attractions_cursor():
-        attractions.__setitem__(attraction[0], i)
-        i += 1
+def get_edges():
     edges = {}
     prev = None
-    for review in get_reviews_cursor():
+    for review in get_reviews():
         if prev is None:
             prev = review
             continue
-        if review[0] == prev[0]:  # if is the same user
-            if int(review[2]) - int(prev[2]) < 30:  # if time between visit is less then 30
-                key = get_key_from_locations(review[5], prev[5], attractions)  # get key for edges
+        if review.user_id == prev.user_id:  # if is the same user
+            if review.review_date - prev.review_date < 30:  # if time between visit is less then 30
+                key = get_key_from_locations(review.attraction, prev.attraction)  # get key for edges
                 if edges.get(key):
-                    edges.__setitem__(key, edges.get(key) + 1)
+                    edges[key] = EdgeInfomap(edges[key].weight + 1, prev, review)
                 else:
-                    edges.__setitem__(key, 1)
+                    edges[key] = EdgeInfomap(1, prev, review)
         prev = review
-    save_pajek_format(attractions, edges, 'sl-cr-hu-au-it.net')
+    return edges
 
+
+def filter_edges(edges):
+    new_edges = {}
+    for edge in edges.items():
+        if edge[1].weight > 20:
+            new_edges[edge[0]] = edge[1]
+    return new_edges
+
+
+def get_pajek_format():
+    # get all edges top map {n - m: {from, to, weight}} position to position weight
+    edges = get_edges()
+    print("Edges grouped...")
+
+    edges = filter_edges(edges)
+    print("Edges filtered...")
+
+    save_pajek_format(edges, 'sl_w20.net')
+    print("Pajek saved...")
 
 get_pajek_format()
