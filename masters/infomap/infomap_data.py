@@ -73,19 +73,19 @@ def save_pajek_format(edges, name):
     vertices = {}
     i = 1
     for edge in edges.items():
-        k1 = edge[1].review_from.attraction.attraction_url
-        k2 = edge[1].review_to.attraction.attraction_url
-        if k1 not in vertices:
-            vertices[k1] = i
+        k1 = edge[1].review_from.attraction
+        k2 = edge[1].review_to.attraction
+        if k1.attraction_url not in vertices:
+            vertices[k1.attraction_url] = (i, k1)
             i += 1
-        if k2 not in vertices:
-            vertices[k2] = i
+        if k2.attraction_url not in vertices:
+            vertices[k2.attraction_url] = (i, k2)
             i += 1
 
     with open(filename, 'w+') as f:
         f.write("*Vertices " + str(vertices.__len__()) + "\n")
         for vertice in vertices.items():
-            f.write(str(vertice[1]) + " \"" + vertice[0].split("-Reviews-")[1] + "\" 1.0\n")
+            f.write(str(vertice[1][0]) + " \"" + vertice[0].split("-Reviews-")[1] + "\" 1.0\n")
         f.write("*Edges " + str(edges.__len__()) + "\n")
         for edge in edges.items():
             tmp = edge[0].split(" ")
@@ -96,9 +96,9 @@ def save_pajek_format(edges, name):
 
 
 def get_key_from_locations(l1, l2):
-    if l1.number < l2.number:
-        return str(l1.attraction_url) + " " + str(l2.attraction_url)
-    return str(l2.attraction_url) + " " + str(l1.attraction_url)
+    # if l1.number < l2.number:
+    return str(l1.attraction_url) + " " + str(l2.attraction_url)
+    # return str(l2.attraction_url) + " " + str(l1.attraction_url)
 
 
 def get_edges():
@@ -123,7 +123,7 @@ def get_edges():
 def filter_edges(edges):
     new_edges = {}
     for edge in edges.items():
-        if edge[1].weight > 0:
+        if edge[1].weight > 15:
             new_edges[edge[0]] = edge[1]
     return new_edges
 
@@ -136,7 +136,7 @@ def get_pajek_format():
     edges = filter_edges(edges)
     print("Edges filtered...")
 
-    save_pajek_format(edges, 'all_w0.net')
+    save_pajek_format(edges, 'all_w15_directed.net')
     print("Pajek saved...")
 
 
