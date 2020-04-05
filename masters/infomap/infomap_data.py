@@ -28,7 +28,7 @@ def get_review_by_location_name(conn, review_name):
 
 
 def get_reviews():
-    conn = create_connection('../database/data.db')
+    conn = create_connection('../database/data_bkp.db')
     cur = conn.cursor()
     cur.execute(
         "select * from reviews order by user_id, review_id asc")
@@ -56,7 +56,7 @@ def get_reviews():
 
 
 def get_attractions_cursor():
-    conn = create_connection('../database/data.db')
+    conn = create_connection('../database/data_bkp.db')
     cur = conn.cursor()
     cur.execute("select * from attractions")
     attractions = dict()
@@ -94,6 +94,7 @@ def save_pajek_format(edges, name):
             key = str(vertices[url_from]) + " " + str(vertices[url_to])
             f.write(key + " " + str(edge[1].weight) + "\n")
 
+# TODO add attraction weight
 
 def get_key_from_locations(l1, l2):
     # if l1.number < l2.number:
