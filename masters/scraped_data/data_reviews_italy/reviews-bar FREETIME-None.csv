@@ -1,0 +1,4 @@
+location_name, location_tags,lat,lng,review_id,review_date,user_id,review_rate,place_rate,username,parent_url
+bar FREETIME, Nightlife & Bars & Clubs, #lat#, #lng#, 625424932, 20181016, 56F462CA4688DDCE5F095BCD06B2A799, 5.0, 3.5, Huw W, /Attraction_Review-g616198-d5945072-Reviews-Bar_FREETIME-Roccatederighi_Province_of_Grosseto_Tuscany.html
+bar FREETIME, Nightlife & Bars & Clubs, #lat#, #lng#, 454785585, 20170125, 4B1622D7E6505016B04286D59E49C8B4, 3.0, 3.5, 715NatalieW, /Attraction_Review-g616198-d5945072-Reviews-Bar_FREETIME-Roccatederighi_Province_of_Grosseto_Tuscany.html
+bar FREETIME, Nightlife & Bars & Clubs, #lat#, #lng#, 284224921, 20150630, 60A530D6B899CAAD423E9EE0A4621A06, 3.0, 3.5, Estelariveros, /Attraction_Review-g616198-d5945072-Reviews-Bar_FREETIME-Roccatederighi_Province_of_Grosseto_Tuscany.html

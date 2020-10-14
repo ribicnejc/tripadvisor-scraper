@@ -1,0 +1,5232 @@
+# '../../PycharmProjects/tripadvisor-scraper/masters/infomap/infomap_data/sl_w20.net ../../PycharmProjects/tripadvisor-scraper/masters/infomap/ftree_files/ --ftree' -> 1229 nodes and 4347 links partitioned in 0s from codelength 7.611632069 in one level to codelength 4.371866397 in 5 levels.
+# path flow name node:
+1:1:1:1 0.0537208 "Colosseum-Rome_Lazio.html" 31
+1:1:1:2 0.0487782 "Trevi_Fountain-Rome_Lazio.html" 51
+1:1:1:3 0.0430348 "Pantheon-Rome_Lazio.html" 32
+1:1:1:4 0.0192393 "Piazza_Navona-Rome_Lazio.html" 61
+1:1:1:5 0.019214 "St_Peter_s_Basilica-Vatican_City_Lazio.html" 49
+1:1:1:6 0.0176173 "Vatican_Museums-Vatican_City_Lazio.html" 86
+1:1:1:7 0.0167642 "Roman_Forum-Rome_Lazio.html" 72
+1:1:1:8 0.0135764 "Spanish_Steps-Rome_Lazio.html" 42
+1:1:1:9 0.0129665 "Palatine_Hill-Rome_Lazio.html" 136
+1:1:1:10 0.0123978 "Sistine_Chapel-Vatican_City_Lazio.html" 112
+1:1:1:11 0.00693597 "Galleria_Borghese-Rome_Lazio.html" 52
+1:1:1:12 0.00573773 "Basilica_di_Santa_Maria_Maggiore-Rome_Lazio.html" 66
+1:1:1:13 0.00521578 "St_Peter_s_Square_Piazza_San_Pietro-Vatican_City_Lazio.html" 48
+1:1:1:14 0.00504928 "Museo_Nazionale_di_Castel_Sant_Angelo-Rome_Lazio.html" 45
+1:1:1:15 0.00483133 "Trastevere-Rome_Lazio.html" 65
+1:1:1:16 0.00403437 "Vatican_City-Vatican_City_Lazio.html" 47
+1:1:1:17 0.0038501 "Monumento_a_Vittorio_Emanuele_II-Rome_Lazio.html" 110
+1:1:1:18 0.00262286 "Arcibasilica_di_San_Giovanni_in_Laterano-Rome_Lazio.html" 273
+1:1:1:19 0.00246758 "Villa_Borghese-Rome_Lazio.html" 53
+1:1:1:20 0.00222812 "La_Pieta-Vatican_City_Lazio.html" 332
+1:1:1:21 0.00217667 "Fontana_dei_Quattro_Fiumi-Rome_Lazio.html" 60
+1:1:1:22 0.00189044 "Basilica_of_San_Clemente-Rome_Lazio.html" 189
+1:1:1:23 0.00183431 "San_Pietro_in_Vincoli-Rome_Lazio.html" 67
+1:1:1:24 0.0013423 "Santa_Maria_in_Trastevere-Rome_Lazio.html" 64
+1:1:1:25 0.0013292 "Chiesa_di_Sant_Ignazio_di_Loyola-Rome_Lazio.html" 63
+1:1:1:26 0.00106261 "Church_of_St_Louis_of_the_French-Rome_Lazio.html" 285
+1:1:1:27 0.000973749 "Piazza_del_Popolo-Rome_Lazio.html" 359
+1:1:1:28 0.000922302 "Cupola_di_San_Pietro-Vatican_City_Lazio.html" 195
+1:1:1:29 0.000877403 "Campo_de_Fiori-Rome_Lazio.html" 344
+1:1:1:30 0.000850277 "Stazione_Termini-Rome_Lazio.html" 536
+1:1:1:31 0.0008456 "Museum_and_Crypt_of_Capuchins-Rome_Lazio.html" 345
+1:1:1:32 0.000840923 "Piazza_di_Trevi-Rome_Lazio.html" 50
+1:1:1:33 0.000792282 "Piazza_Venezia-Rome_Lazio.html" 58
+1:1:1:34 0.000768897 "Abbazia_di_San_Paolo_Fuori_Le_Mura-Rome_Lazio.html" 382
+1:1:1:35 0.000703419 "Santa_Maria_della_Vittoria-Rome_Lazio.html" 144
+1:1:1:36 0.000660391 "Palazzo_Doria_Pamphilj-Rome_Lazio.html" 431
+1:1:1:37 0.000643554 "Musei_Capitolini-Rome_Lazio.html" 224
+1:1:1:38 0.000639812 "Santa_Maria_Sopra_Minerva-Rome_Lazio.html" 59
+1:1:1:39 0.000620169 "Le_Domus_Romane_di_Palazzo_Valentini-Rome_Lazio.html" 756
+1:1:1:40 0.000600525 "Basilica_di_Santa_Maria_degli_Angeli_e_dei_Martiri-Rome_Lazio.html" 69
+1:1:1:41 0.000600525 "Museo_Nazionale_Romano_Palazzo_Massimo_alle_Terme-Rome_Lazio.html" 223
+1:1:1:42 0.000598655 "Parco_Archeologico_di_Ostia_Antica-Ostia_Antica_Province_of_Rome_Lazio.html" 192
+1:1:1:43 0.000532241 "Circus_Maximus-Rome_Lazio.html" 241
+1:1:1:44 0.000418123 "Stanze_di_Raffaello-Vatican_City_Lazio.html" 203
+1:1:1:45 0.000320841 "Vatican_Gardens-Vatican_City_Lazio.html" 594
+1:1:1:46 0.000318035 "Sphere_within_a_Sphere-Vatican_City_Lazio.html" 568
+1:1:1:47 0.000315229 "Arco_di_Costantino-Rome_Lazio.html" 589
+1:1:1:48 0.000297456 "Basilica_Papale_San_Paolo_Fuori_le_Mura-Rome_Lazio.html" 587
+1:1:1:49 0.000292779 "Ponte_Sant_Angelo-Rome_Lazio.html" 46
+1:1:1:50 0.000275942 "Terme_di_Caracalla-Rome_Lazio.html" 111
+1:1:1:51 0.000255364 "Baldacchino_di_San_Pietro_di_Bernini-Vatican_City_Lazio.html" 621
+1:1:1:52 0.000248816 "Chiesa_del_Gesu-Rome_Lazio.html" 62
+1:1:1:53 0.000237591 "Bocca_della_Verita-Rome_Lazio.html" 830
+1:1:1:54 0.000231043 "Altare_Della_Patria-Rome_Lazio.html" 378
+1:1:1:55 0.000214206 "Piazza_di_Spagna-Rome_Lazio.html" 44
+1:1:1:56 0.000202981 "Centro_Storico-Rome_Lazio.html" 820
+1:1:1:57 0.000201111 "Vaticano_Egyptian_Obelisk-Vatican_City_Lazio.html" 620
+1:1:1:58 0.00019924 "Catacombe_di_San_Callisto-Rome_Lazio.html" 490
+1:1:1:59 0.00016463 "Vatican_Necropolis-Vatican_City_Lazio.html" 708
+1:1:1:60 0.000147793 "Leonardo_Express-Rome_Lazio.html" 96
+1:1:1:61 0.000138439 "Torre_Argentina_Cat_Sanctuary-Rome_Lazio.html" 40
+1:1:1:62 0.000125343 "Colonna_Traiana-Rome_Lazio.html" 970
+1:1:1:63 0.000120666 "Bioparco-Rome_Lazio.html" 193
+1:1:1:64 0.000116925 "Stadio_Olimpico-Rome_Lazio.html" 232
+1:1:1:65 0.000107571 "Chiesa_di_Santa_Maria_del_Popolo-Rome_Lazio.html" 360
+1:1:1:66 0.000106635 "Largo_di_Torre_Argentina-Rome_Lazio.html" 930
+1:1:1:67 9.1669e-05 "Basilica_di_Santa_Prassede-Rome_Lazio.html" 906
+1:1:1:68 8.88628e-05 "Colle_Aventino-Rome_Lazio.html" 1012
+1:1:1:69 7.48318e-05 "Via_del_Corso-Rome_Lazio.html" 618
+1:1:1:70 7.38964e-05 "Catacombe_San_Sebastiano-Rome_Lazio.html" 517
+1:1:1:71 7.38964e-05 "Complesso_del_Vittoriano-Rome_Lazio.html" 1090
+1:1:1:72 7.01548e-05 "Vatican_Grottoes-Vatican_City_Lazio.html" 194
+1:1:1:73 7.01548e-05 "Scala_Santa_and_Chapel_of_San_Lorenzo-Rome_Lazio.html" 767
+1:1:1:74 6.73486e-05 "Fontana_della_Barcaccia-Rome_Lazio.html" 1109
+1:1:1:75 5.05115e-05 "Museo_Leonardo_da_Vinci_Piazza_del_Popolo-Rome_Lazio.html" 435
+1:1:1:76 4.58345e-05 "Fontana_del_Tritone-Rome_Lazio.html" 634
+1:1:1:77 4.48991e-05 "National_Roman_Museum_The_Baths_of_Diocletian-Rome_Lazio.html" 1014
+1:1:1:78 3.92867e-05 "Chiesa_di_Sant_Agnese_in_Agone-Rome_Lazio.html" 1222
+1:1:1:79 3.64805e-05 "Piazza_della_Rotonda-Rome_Lazio.html" 41
+1:1:1:80 3.27389e-05 "Museo_del_Tesoro_della_Basilica_di_San_Pietro-Vatican_City_Lazio.html" 771
+1:1:1:81 2.99327e-05 "Domus_Aurea-Rome_Lazio.html" 1005
+1:1:1:82 2.80619e-05 "Castel_Romano_Designer_Outlet-Rome_Lazio.html" 958
+1:1:1:83 2.71265e-05 "Via_Condotti-Rome_Lazio.html" 1026
+1:1:1:84 2.24495e-05 "Trinita_dei_Monti-Rome_Lazio.html" 43
+1:1:1:85 2.15141e-05 "Catacombe_di_Santa_Domitilla-Rome_Lazio.html" 784
+1:1:1:86 2.15141e-05 "Keats_Shelley_House-Rome_Lazio.html" 831
+1:1:1:87 2.15141e-05 "Mercati_di_Traiano_Museo_dei_Fori_Imperiali-Rome_Lazio.html" 998
+1:1:1:88 2.15141e-05 "Piazza_del_Campidoglio-Rome_Lazio.html" 1065
+1:1:1:89 2.15141e-05 "Monte_Pincio-Rome_Lazio.html" 1126
+1:1:1:90 1.96434e-05 "Parco_Regionale_dell_Appia_Antica-Rome_Lazio.html" 893
+1:1:1:91 1.96434e-05 "Palazzo_Barberini-Rome_Lazio.html" 951
+1:1:1:92 1.96434e-05 "Museos_Vaticanos-Rome_Lazio.html" 1092
+1:1:1:93 1.96434e-05 "Colle_del_Gianicolo-Rome_Lazio.html" 1144
+1:1:1:94 1.96434e-05 "MAXXI_Museo_Nazionale_delle_Arti_del_XXI_Secolo-Rome_Lazio.html" 1215
+1:1:2:1 0.0165004 "Galleria_dell_Accademia-Florence_Tuscany.html" 6
+1:1:2:2 0.0140852 "Gallerie_Degli_Uffizi-Florence_Tuscany.html" 30
+1:1:2:3 0.0130002 "Duomo_Cattedrale_di_Santa_Maria_del_Fiore-Florence_Tuscany.html" 5
+1:1:2:4 0.0115147 "Piazzale_Michelangelo-Florence_Tuscany.html" 76
+1:1:2:5 0.00854579 "Piazza_del_Duomo-Florence_Tuscany.html" 84
+1:1:2:6 0.00831943 "Ponte_Vecchio-Florence_Tuscany.html" 85
+1:1:2:7 0.00631861 "Piazza_della_Signoria-Florence_Tuscany.html" 126
+1:1:2:8 0.00397544 "Basilica_di_Santa_Croce-Florence_Tuscany.html" 104
+1:1:2:9 0.00377246 "Mercato_Centrale-Florence_Tuscany.html" 77
+1:1:2:10 0.00343104 "Palazzo_Vecchio-Florence_Tuscany.html" 106
+1:1:2:11 0.00320187 "Campanile_di_Giotto-Florence_Tuscany.html" 105
+1:1:2:12 0.00231417 "Palazzo_Pitti-Florence_Tuscany.html" 414
+1:1:2:13 0.00167623 "Basilica_San_Miniato_al_Monte-Florence_Tuscany.html" 242
+1:1:2:14 0.00165004 "Cupola_del_Brunelleschi-Florence_Tuscany.html" 472
+1:1:2:15 0.00157334 "Battistero_di_San_Giovanni-Florence_Tuscany.html" 147
+1:1:2:16 0.00153873 "Museo_Nazionale_del_Bargello-Florence_Tuscany.html" 253
+1:1:2:17 0.00125717 "Museo_dell_Opera_del_Duomo-Florence_Tuscany.html" 200
+1:1:2:18 0.0012076 "Giardino_di_Boboli-Florence_Tuscany.html" 346
+1:1:2:19 0.00105326 "Church_of_Santa_Maria_Novella-Florence_Tuscany.html" 148
+1:1:2:20 0.000935398 "Museo_Galileo_Institute_and_Museum_of_the_History_of_Science-Florence_Tuscany.html" 89
+1:1:2:21 0.00067068 "Museo_di_San_Marco-Florence_Tuscany.html" 254
+1:1:2:22 0.00064636 "Loggia_dei_Lanzi-Florence_Tuscany.html" 201
+1:1:2:23 0.000585559 "Perseus_Statue-Florence_Tuscany.html" 262
+1:1:2:24 0.000551885 "Cappelle_Medicee-Florence_Tuscany.html" 255
+1:1:2:25 0.0005285 "Centro_Storico-Florence_Tuscany.html" 542
+1:1:2:26 0.000354516 "Museo_di_Palazzo_Vecchio-Florence_Tuscany.html" 202
+1:1:2:27 0.000301198 "Galleria_Palatina_in_Palazzo_Pitti-Florence_Tuscany.html" 498
+1:1:2:28 0.000183338 "Fountain_of_Neptune-Florence_Tuscany.html" 590
+1:1:2:29 0.000158082 "Giardino_Bardini-Florence_Tuscany.html" 614
+1:1:2:30 0.000130956 "Piazza_Santa_Croce-Florence_Tuscany.html" 1030
+1:1:2:31 9.07336e-05 "Basilica_di_San_Lorenzo-Florence_Tuscany.html" 916
+1:1:2:32 7.38964e-05 "Sinagoga_di_Firenze_e_Museo_ebraico-Florence_Tuscany.html" 910
+1:1:2:33 7.20256e-05 "Leonardo_da_Vinci_Museum-Florence_Tuscany.html" 915
+1:1:2:34 4.77053e-05 "Church_and_Museum_of_Orsanmichele-Florence_Tuscany.html" 966
+1:1:2:35 4.11575e-05 "Corridoio_Vasariano-Florence_Tuscany.html" 772
+1:1:2:36 3.92867e-05 "Piazza_di_Santa_Maria_Novella-Florence_Tuscany.html" 681
+1:1:2:37 3.18035e-05 "Museo_di_Palazzo_Davanzati-Florence_Tuscany.html" 1167
+1:1:2:38 2.89973e-05 "Accademia_di_Belle_Arti-Florence_Tuscany.html" 1020
+1:1:2:39 2.61911e-05 "Gucci_Garden-Florence_Tuscany.html" 1006
+1:1:2:40 2.33849e-05 "Palazzo_Medici_Riccardi-Florence_Tuscany.html" 1207
+1:1:2:41 2.24495e-05 "Museo_Leonardo_Da_Vinci-Florence_Tuscany.html" 953
+1:1:2:42 1.96434e-05 "Fontana_del_Porcellino-Florence_Tuscany.html" 788
+1:1:3:1 0.017867 "Piazza_San_Marco-Venice_Veneto.html" 18
+1:1:3:2 0.0166838 "Canal_Grande-Venice_Veneto.html" 8
+1:1:3:3 0.0147437 "Basilica_di_San_Marco-Venice_Veneto.html" 17
+1:1:3:4 0.0124483 "Doge_s_Palace-Venice_Veneto.html" 15
+1:1:3:5 0.0080042 "Ponte_di_Rialto-Venice_Veneto.html" 34
+1:1:3:6 0.00339643 "Campanile_di_San_Marco-Venice_Veneto.html" 73
+1:1:3:7 0.00325331 "Peggy_Guggenheim_Collection-Venice_Veneto.html" 74
+1:1:3:8 0.0029306 "Ponte_dei_Sospiri-Venice_Veneto.html" 35
+1:1:3:9 0.00167343 "Basilica_di_Santa_Maria_Gloriosa_dei_Frari-Venice_Veneto.html" 181
+1:1:3:10 0.00165285 "Cannaregio-Venice_Veneto.html" 227
+1:1:3:11 0.00150505 "San_Giorgio_Maggiore-Venice_Veneto.html" 199
+1:1:3:12 0.00100275 "Basilica_di_Santa_Maria_della_Salute-Venice_Veneto.html" 276
+1:1:3:13 0.000978426 "Scuola_Grande_di_San_Rocco-Venice_Veneto.html" 380
+1:1:3:14 0.000971878 "Teatro_La_Fenice-Venice_Veneto.html" 397
+1:1:3:15 0.000958783 "Dorsoduro-Venice_Veneto.html" 16
+1:1:3:16 0.000716515 "Ca_Rezzonico-Venice_Veneto.html" 387
+1:1:3:17 0.000593042 "Gallerie_dell_Accademia-Venice_Veneto.html" 137
+1:1:3:18 0.00054066 "Lido-Venice_Veneto.html" 205
+1:1:3:19 0.000535047 "Isola_di_Murano-Murano_Veneto.html" 277
+1:1:3:20 0.00053037 "Museo_Correr-Venice_Veneto.html" 215
+1:1:3:21 0.000500438 "Laguna_di_Venezia-Venice_Veneto.html" 409
+1:1:3:22 0.000433089 "Torcello_Island-Venice_Veneto.html" 361
+1:1:3:23 0.000428412 "Ponte_dell_Accademia-Venice_Veneto.html" 625
+1:1:3:24 0.000423735 "Torre_dell_Orologio-Venice_Veneto.html" 182
+1:1:3:25 0.000418123 "Centro_Storico_di_Venezia-Venice_Veneto.html" 530
+1:1:3:26 0.000356387 "Mercati_di_Rialto-Venice_Veneto.html" 7
+1:1:3:27 0.00032926 "Campo_del_Ghetto-Venice_Veneto.html" 573
+1:1:3:28 0.000323648 "Musica_A_Palazzo-Venice_Veneto.html" 429
+1:1:3:29 0.000229172 "Libreria_Acqua_alta-Venice_Veneto.html" 33
+1:1:3:30 0.000221689 "Scala_Contarini_del_Bovolo-Venice_Veneto.html" 296
+1:1:3:31 0.000201111 "Blue_Moon-Lido_di_Venezia_Veneto.html" 518
+1:1:3:32 0.000191757 "Alilaguna-Venice_Veneto.html" 777
+1:1:3:33 0.000139374 "Basilica_dei_Santi_Giovanni_e_Paolo_San_Zanipolo-Venice_Veneto.html" 773
+1:1:3:34 0.0001057 "Arsenale_di_Venezia-Venice_Veneto.html" 912
+1:1:3:35 9.07336e-05 "Santa_Maria_dei_Miracoli-Venice_Veneto.html" 579
+1:1:3:36 8.60566e-05 "La_Biennale_di_Venezia-Venice_Veneto.html" 666
+1:1:3:37 5.42531e-05 "T_Fondaco_Dei_Tedeschi-Venice_Veneto.html" 676
+1:1:3:38 4.39637e-05 "Natural_History_Museum-Venice_Veneto.html" 449
+1:1:3:39 4.02221e-05 "Naval_History_Museum-Venice_Veneto.html" 190
+1:1:3:40 4.02221e-05 "Giudecca-Venice_Veneto.html" 793
+1:1:3:41 3.92867e-05 "Campo_Santa_Margherita-Venice_Veneto.html" 593
+1:1:3:42 2.24495e-05 "Museo_Ebraico_di_Venezia-Venice_Veneto.html" 1226
+1:1:3:43 2.15141e-05 "Chiesa_di_San_Zaccaria-Venice_Veneto.html" 567
+1:1:3:44 2.05787e-05 "Basilica_di_Santa_Maria_Assunta_e_Chiesa_di_Santa_Fosca-Torcello_Veneto.html" 1042
+1:1:4:1 0.010237 "Duomo_di_Milano-Milan_Lombardy.html" 28
+1:1:4:2 0.00751218 "Galleria_Vittorio_Emanuele_II-Milan_Lombardy.html" 83
+1:1:4:3 0.00300637 "Castello_Sforzesco-Milan_Lombardy.html" 246
+1:1:4:4 0.0028988 "Il_Cenacolo-Milan_Lombardy.html" 29
+1:1:4:5 0.00202607 "Terrace_on_the_Duomo-Milan_Lombardy.html" 355
+1:1:4:6 0.00188763 "Teatro_Alla_Scala-Milan_Lombardy.html" 82
+1:1:4:7 0.0011337 "Santa_Maria_delle_Grazie-Milan_Lombardy.html" 229
+1:1:4:8 0.00104016 "I_Navigli-Milan_Lombardy.html" 236
+1:1:4:9 0.000893305 "Pinacoteca_di_Brera-Milan_Lombardy.html" 258
+1:1:4:10 0.000563109 "Chiesa_di_San_Maurizio_al_Monastero_Maggiore-Milan_Lombardy.html" 602
+1:1:4:11 0.000553755 "Monumental_Cemetery-Milan_Lombardy.html" 228
+1:1:4:12 0.000549078 "Stadio_Giuseppe_Meazza_San_Siro-Milan_Lombardy.html" 81
+1:1:4:13 0.00050605 "Basilica_di_Sant_Ambrogio-Milan_Lombardy.html" 492
+1:1:4:14 0.000432154 "Brera_District-Milan_Lombardy.html" 622
+1:1:4:15 0.000361999 "Parco_Sempione-Milan_Lombardy.html" 814
+1:1:4:16 0.000277813 "Milano_Centrale-Milan_Lombardy.html" 349
+1:1:4:17 0.000244139 "Pinacoteca_Ambrosiana-Milan_Lombardy.html" 516
+1:1:4:18 0.000173049 "Grande_Museo_del_Duomo_di_Milano-Milan_Lombardy.html" 840
+1:1:4:19 0.000162759 "Museo_Della_Scienza_E_Della_Tecnologia_Leonardo_da_Vinci-Milan_Lombardy.html" 486
+1:1:4:20 0.000155276 "Arco_della_Pace-Milan_Lombardy.html" 813
+1:1:4:21 0.000108506 "Gallerie_d_Italia-Milan_Lombardy.html" 569
+1:1:4:22 0.000102894 "Museo_Poldi_Pezzoli-Milan_Lombardy.html" 521
+1:1:4:23 9.91522e-05 "Chiesa_di_Santa_Maria_presso_San_Satiro-Milan_Lombardy.html" 1016
+1:1:4:24 8.04442e-05 "Leonardo3_Museum_The_World_of_Leonardo_da_Vinci-Milan_Lombardy.html" 721
+1:1:4:25 6.3607e-05 "Museo_del_Novecento-Milan_Lombardy.html" 575
+1:1:4:26 5.42531e-05 "Serravalle_Designer_Outlet-Serravalle_Scrivia_Province_of_Alessandria_Piedmont.html" 310
+1:1:4:27 3.18035e-05 "Via_Monte_Napoleone-Milan_Lombardy.html" 898
+1:1:4:28 2.89973e-05 "Villa_Necchi_Campiglio-Milan_Lombardy.html" 491
+1:1:4:29 2.52557e-05 "Chiesa_di_San_Bernardino_alle_Ossa-Milan_Lombardy.html" 825
+1:1:4:30 2.33849e-05 "Piazza_Gae_Aulenti-Milan_Lombardy.html" 1122
+1:1:4:31 2.24495e-05 "Museo_Teatrale_alla_Scala-Milan_Lombardy.html" 1118
+1:1:5:1 0.00640373 "Pompeii_Archaeological_Area-Pompeii_Province_of_Naples_Campania.html" 90
+1:1:5:2 0.00242362 "Parco_Acheologico_di_Ercolano-Ercolano_Province_of_Naples_Campania.html" 125
+1:1:5:3 0.00217106 "Vesuvius_National_Park-Ottaviano_Province_of_Naples_Campania.html" 124
+1:1:5:4 0.00201485 "Museo_Archeologico_Nazionale_di_Napoli-Naples_Province_of_Naples_Campania.html" 128
+1:1:5:5 0.00100368 "Museo_Cappella_Sansevero-Naples_Province_of_Naples_Campania.html" 127
+1:1:5:6 0.000421864 "Underground_Naples-Naples_Province_of_Naples_Campania.html" 639
+1:1:5:7 0.000390061 "Catacombe_di_San_Gennaro-Naples_Province_of_Naples_Campania.html" 183
+1:1:5:8 0.000334872 "Forum-Pompeii_Province_of_Naples_Campania.html" 244
+1:1:5:9 0.000331131 "Castel_dell_Ovo-Naples_Province_of_Naples_Campania.html" 724
+1:1:5:10 0.00028249 "Spaccanapoli-Naples_Province_of_Naples_Campania.html" 427
+1:1:5:11 0.00028249 "Teatro_di_San_Carlo-Naples_Province_of_Naples_Campania.html" 219
+1:1:5:12 0.000259105 "Teatro_Grande-Pompeii_Province_of_Naples_Campania.html" 245
+1:1:5:13 0.000250687 "Villa_dei_Misteri-Pompeii_Province_of_Naples_Campania.html" 243
+1:1:5:14 0.000212335 "Duomo_di_Napoli-Naples_Province_of_Naples_Campania.html" 428
+1:1:5:15 0.000194563 "Museo_e_Real_Bosco_di_Capodimonte-Naples_Province_of_Naples_Campania.html" 797
+1:1:5:16 0.000190821 "Gesu_Nuovo_Church-Naples_Province_of_Naples_Campania.html" 539
+1:1:5:17 0.00014218 "Castel_Sant_Elmo-Naples_Province_of_Naples_Campania.html" 678
+1:1:5:18 0.000122537 "Galleria_Borbonica-Naples_Province_of_Naples_Campania.html" 778
+1:1:5:19 0.000118796 "Complesso_Monumentale_di_Santa_Chiara-Naples_Province_of_Naples_Campania.html" 426
+1:1:5:20 0.000113183 "Via_San_Gregorio_Armeno-Naples_Province_of_Naples_Campania.html" 924
+1:1:5:21 0.000111312 "Castel_Nuovo_Maschio_Angioino-Naples_Province_of_Naples_Campania.html" 847
+1:1:5:22 0.000111312 "Stabian_Baths_Terme_Stabiane-Pompeii_Province_of_Naples_Campania.html" 845
+1:1:5:23 0.000104765 "Reggia_di_Caserta-Caserta_Province_of_Caserta_Campania.html" 502
+1:1:5:24 0.000103829 "Pontificio_Santuario_della_Beata_Maria_Vergine_del_Santo_Rosario_di_Pompei-Pompeii.html" 731
+1:1:5:25 9.44752e-05 "Terme_del_Foro-Pompeii_Province_of_Naples_Campania.html" 807
+1:1:5:26 7.67026e-05 "Scavi_di_Oplontis-Torre_Annunziata_Province_of_Naples_Campania.html" 1040
+1:1:5:27 7.10902e-05 "Cimitero_delle_Fontanelle-Naples_Province_of_Naples_Campania.html" 733
+1:1:5:28 6.64132e-05 "Museo_Archeologico_Virtuale_MAV-Ercolano_Province_of_Naples_Campania.html" 558
+1:1:5:29 6.54778e-05 "Oplonti_Villa_di_Poppea_Ruins-Torre_Annunziata_Province_of_Naples_Campania.html" 846
+1:1:5:30 5.51885e-05 "Piazza_del_Plebiscito-Naples_Province_of_Naples_Campania.html" 1104
+1:1:5:31 5.42531e-05 "Certosa_e_Museo_di_San_Martino_Napoli-Naples_Province_of_Naples_Campania.html" 866
+1:1:5:32 5.33177e-05 "Casa_del_Fauno-Pompeii_Province_of_Naples_Campania.html" 677
+1:1:5:33 4.95761e-05 "Via_Caracciolo_e_Lungomare_di_Napoli-Naples_Province_of_Naples_Campania.html" 1115
+1:1:5:34 4.77053e-05 "Catacombe_di_San_Gaudioso-Naples_Province_of_Naples_Campania.html" 1062
+1:1:5:35 4.39637e-05 "LAES_La_Napoli_Sotterranea-Naples_Province_of_Naples_Campania.html" 216
+1:1:5:36 3.18035e-05 "Toledo_Stazione_della_Metropolitana_dell_Arte-Naples_Province_of_Naples_Campania.html" 798
+1:1:5:37 2.71265e-05 "Casertavecchia-Caserta_Province_of_Caserta_Campania.html" 570
+1:1:5:38 2.71265e-05 "Bagni_della_Regina_Giovanna-Sorrento_Province_of_Naples_Campania.html" 1125
+1:1:5:39 2.43203e-05 "Pio_Monte_della_Misericordia-Naples_Province_of_Naples_Campania.html" 876
+1:1:5:40 2.33849e-05 "La_Neapolis_Sotterrata_Complesso_Monumentale_San_Lorenzo_Maggiore-Naples_Province.html" 1229
+1:1:5:41 1.96434e-05 "Casa_di_Nettuno_e_Anfitrite-Ercolano_Province_of_Naples_Campania.html" 770
+1:1:6:1 0.00276316 "Arena_di_Verona-Verona_Province_of_Verona_Veneto.html" 151
+1:1:6:2 0.0021879 "Casa_di_Giulietta-Verona_Province_of_Verona_Veneto.html" 396
+1:1:6:3 0.00169026 "Piazza_delle_Erbe-Verona_Province_of_Verona_Veneto.html" 93
+1:1:6:4 0.00137878 "Piazza_Bra-Verona_Province_of_Verona_Veneto.html" 92
+1:1:6:5 0.000863372 "Museo_di_Castelvecchio-Verona_Province_of_Verona_Veneto.html" 150
+1:1:6:6 0.00064636 "Basilica_di_San_Zeno_Maggiore-Verona_Province_of_Verona_Veneto.html" 149
+1:1:6:7 0.000640747 "Basilica_di_Santa_Anastasia-Verona_Province_of_Verona_Veneto.html" 230
+1:1:6:8 0.000637006 "Ponte_Scaligero_Ponte_di_Castelvecchio-Verona_Province_of_Verona_Veneto.html" 391
+1:1:6:9 0.000585559 "Torre_dei_Lamberti-Verona_Province_of_Verona_Veneto.html" 591
+1:1:6:10 0.000520081 "Ponte_Pietra-Verona_Province_of_Verona_Veneto.html" 259
+1:1:6:11 0.000440572 "Verona_s_Cathedral_Duomo-Verona_Province_of_Verona_Veneto.html" 260
+1:1:6:12 0.000256299 "Piazzale_Castel_San_Pietro-Verona_Province_of_Verona_Veneto.html" 336
+1:1:6:13 0.000213271 "Via_Mazzini-Verona_Province_of_Verona_Veneto.html" 261
+1:1:6:14 0.000174919 "Palazzo_Giardino_Giusti-Verona_Province_of_Verona_Veneto.html" 651
+1:1:6:15 0.000144987 "Teatro_Romano-Verona_Province_of_Verona_Veneto.html" 599
+1:1:6:16 5.14469e-05 "Chiesa_di_San_Fermo-Verona_Province_of_Verona_Veneto.html" 231
+1:1:6:17 4.95761e-05 "Verona_Porta_Nuova_Railway_Station-Verona_Province_of_Verona_Veneto.html" 889
+1:1:6:18 3.55451e-05 "Tomba_di_Giulietta-Verona_Province_of_Verona_Veneto.html" 963
+1:1:6:19 2.52557e-05 "Centro_Storico-Verona_Province_of_Verona_Veneto.html" 875
+1:1:6:20 2.33849e-05 "Arche_Scaligere-Verona_Province_of_Verona_Veneto.html" 722
+1:1:6:21 2.05787e-05 "Romeo_s_House_Casa_di_Romeo-Verona_Province_of_Verona_Veneto.html" 448
+1:1:6:22 1.96434e-05 "Porta_dei_Borsari-Verona_Province_of_Verona_Veneto.html" 1082
+1:1:7:1 0.00613527 "Leaning_Tower_of_Pisa-Pisa_Province_of_Pisa_Tuscany.html" 80
+1:1:7:2 0.00182215 "Duomo_di_Pisa-Pisa_Province_of_Pisa_Tuscany.html" 176
+1:1:7:3 0.00123472 "Piazza_dei_Miracoli-Pisa_Province_of_Pisa_Tuscany.html" 268
+1:1:7:4 0.00117205 "Battistero-Pisa_Province_of_Pisa_Tuscany.html" 175
+1:1:7:5 0.000413446 "Camposanto-Pisa_Province_of_Pisa_Tuscany.html" 711
+1:1:7:6 0.000276878 "Knights_Square-Pisa_Province_of_Pisa_Tuscany.html" 269
+1:1:7:7 0.000106635 "Chiesa_di_Santa_Maria_della_Spina-Pisa_Province_of_Pisa_Tuscany.html" 314
+1:1:7:8 3.83513e-05 "Murale_Tuttomondo_di_Keith_Haring-Pisa_Province_of_Pisa_Tuscany.html" 1050
+1:1:8:1 0.00263314 "Piazza_del_Campo-Siena_Tuscany.html" 306
+1:1:8:2 0.00254148 "Duomo_di_Siena-Siena_Tuscany.html" 141
+1:1:8:3 0.000491084 "Biblioteca_Piccolomini-Siena_Tuscany.html" 152
+1:1:8:4 0.000407833 "Torre_del_Mangia-Siena_Tuscany.html" 395
+1:1:8:5 0.000311487 "Centro_Storico_di_Siena-Siena_Tuscany.html" 417
+1:1:8:6 0.000221689 "Cripta_del_Duomo_di_Siena-Siena_Tuscany.html" 362
+1:1:8:7 0.000192692 "Battistero_di_San_Giovanni-Siena_Tuscany.html" 153
+1:1:8:8 0.000132826 "Museo_dell_Opera_Metropolitana-Siena_Tuscany.html" 826
+1:1:8:9 0.000125343 "Palazzo_Pubblico_and_Museo_Civico-Siena_Tuscany.html" 1110
+1:1:8:10 7.67026e-05 "Basilica_Cateriniana_Di_S_Domenico-Siena_Tuscany.html" 453
+1:1:8:11 5.33177e-05 "Facciatone-Siena_Tuscany.html" 1018
+1:1:8:12 4.20929e-05 "Complesso_Museale_Santa_Maria_della_Scala-Siena_Tuscany.html" 1192
+1:1:8:13 3.83513e-05 "Fonte_Gaia-Siena_Tuscany.html" 833
+1:1:8:14 2.24495e-05 "Casa_di_Santa_Caterina-Siena_Tuscany.html" 863
+1:1:9:1 0.00125998 "Piazza_Maggiore-Bologna_Province_of_Bologna_Emilia_Romagna.html" 108
+1:1:9:2 0.00106822 "Le_Due_Torri_Torre_degli_Asinell-Bologna_Province_of_Bologna_Emilia_Romagna.html" 122
+1:1:9:3 0.000710902 "Basilica_di_San_Petronio-Bologna_Province_of_Bologna_Emilia_Romagna.html" 311
+1:1:9:4 0.000578076 "Basilica_Santuario_di_Santo_Stefano-Bologna_Province_of_Bologna_Emilia_Romagna.html" 107
+1:1:9:5 0.00041064 "Santuario_di_Madonna_di_San_Luca-Bologna_Province_of_Bologna_Emilia_Romagna.html" 313
+1:1:9:6 0.000318035 "Fontana_del_Nettuno-Bologna_Province_of_Bologna_Emilia_Romagna.html" 774
+1:1:9:7 0.000307746 "Teatro_Anatomico-Bologna_Province_of_Bologna_Emilia_Romagna.html" 540
+1:1:9:8 0.000237591 "Archiginnasio_di_Bologna-Bologna_Province_of_Bologna_Emilia_Romagna.html" 312
+1:1:9:9 0.000121602 "Chiesa_di_Santa_Maria_della_Vita-Bologna_Province_of_Bologna_Emilia_Romagna.html" 327
+1:1:9:10 0.000120666 "Basilica_di_San_Domenico-Bologna_Province_of_Bologna_Emilia_Romagna.html" 817
+1:1:9:11 5.98655e-05 "Cattedrale_di_San_Pietro-Bologna_Province_of_Bologna_Emilia_Romagna.html" 1002
+1:1:9:12 2.33849e-05 "Via_dell_Indipendenza-Bologna_Province_of_Bologna_Emilia_Romagna.html" 495
+1:1:9:13 2.33849e-05 "Biblioteca_Salaborsa-Bologna_Province_of_Bologna_Emilia_Romagna.html" 1188
+1:1:9:14 1.96434e-05 "Quadrilatero-Bologna_Province_of_Bologna_Emilia_Romagna.html" 1206
+1:1:10:1 0.000892369 "Blue_Grotto-Anacapri_Island_of_Capri_Province_of_Naples_Campania.html" 177
+1:1:10:2 0.00076422 "Monte_Solaro-Anacapri_Island_of_Capri_Province_of_Naples_Campania.html" 320
+1:1:10:3 0.000613621 "Giardini_di_Augusto-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 700
+1:1:10:4 0.000567786 "I_Faraglioni-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 334
+1:1:10:5 0.000387255 "Villa_San_Michele-Anacapri_Island_of_Capri_Province_of_Naples_Campania.html" 178
+1:1:10:6 0.000206723 "Green_Grotta-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 923
+1:1:10:7 0.000171178 "Marina_Grande_Public_Beach-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 804
+1:1:10:8 0.000162759 "Piazza_Umberto_I-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 623
+1:1:10:9 0.000148728 "Marina_Piccola-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 739
+1:1:10:10 0.000131891 "Chiesa_San_Michele-Anacapri_Island_of_Capri_Province_of_Naples_Campania.html" 319
+1:1:10:11 8.13796e-05 "Villa_Jovis-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 701
+1:1:10:12 6.54778e-05 "Natural_Arch-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 973
+1:1:10:13 6.45424e-05 "White_Grotta-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 974
+1:1:10:14 3.18035e-05 "Via_Camerelle-Capri_Island_of_Capri_Province_of_Naples_Campania.html" 624
+1:1:10:15 2.61911e-05 "Scala_Fenicia_Phoenician_Steps-Anacapri_Island_of_Capri_Province_of_Naples_Campan.html" 979
+1:1:10:16 2.33849e-05 "Seggiovia_Monte_Solaro-Anacapri_Island_of_Capri_Province_of_Naples_Campania.html" 938
+1:1:10:17 2.24495e-05 "Fortini_Coastal_Walk-Anacapri_Island_of_Capri_Province_of_Naples_Campania.html" 922
+1:1:11:1 0.00111593 "Le_mura_di_Lucca-Lucca_Province_of_Lucca_Tuscany.html" 358
+1:1:11:2 0.000977491 "Piazza_Anfiteatro-Lucca_Province_of_Lucca_Tuscany.html" 263
+1:1:11:3 0.000792282 "Torre_Guinigi-Lucca_Province_of_Lucca_Tuscany.html" 496
+1:1:11:4 0.000463022 "Lucca_s_Duomo_Cattedrale_di_San_Martino-Lucca_Province_of_Lucca_Tuscany.html" 264
+1:1:11:5 0.000275942 "San_Michele_in_Foro-Lucca_Province_of_Lucca_Tuscany.html" 265
+1:1:11:6 0.00019924 "Basilica_of_San_Frediano-Lucca_Province_of_Lucca_Tuscany.html" 673
+1:1:11:7 0.000130956 "Palazzo_Pfanner-Lucca_Province_of_Lucca_Tuscany.html" 525
+1:1:11:8 9.72814e-05 "Via_Fillungo-Lucca_Province_of_Lucca_Tuscany.html" 674
+1:1:11:9 9.1669e-05 "Torre_delle_Ore-Lucca_Province_of_Lucca_Tuscany.html" 526
+1:1:11:10 8.60566e-05 "Puccini_Museum_Casa_Natale-Lucca_Province_of_Lucca_Tuscany.html" 562
+1:1:11:11 3.36743e-05 "Orto_Botanico_di_Lucca-Lucca_Province_of_Lucca_Tuscany.html" 527
+1:1:12:1:1 0.000643554 "Villa_del_Balbianello-Tremezzina_Lake_Como_Lombardy.html" 280
+1:1:12:1:2 0.000629523 "Villa_Carlotta-Tremezzina_Lake_Como_Lombardy.html" 522
+1:1:12:1:3 0.000345162 "I_Giardini_di_Villa_Melzi-Bellagio_Lake_Como_Lombardy.html" 696
+1:1:12:1:4 0.000288102 "Villa_Monastero-Varenna_Lake_Como_Lombardy.html" 281
+1:1:12:1:5 6.26716e-05 "Castello_di_Vezio-Vezio_Perledo_Lake_Como_Lombardy.html" 954
+1:1:12:1:6 4.67699e-05 "Il_Giardino_Botanico_Hotel_Villa_Cipressi-Varenna_Lake_Como_Lombardy.html" 282
+1:1:12:1:7 4.11575e-05 "La_Punta_Spartivento-Bellagio_Lake_Como_Lombardy.html" 1036
+1:1:12:1:8 2.61911e-05 "Basilica_di_San_Giacomo-Bellagio_Lake_Como_Lombardy.html" 903
+1:1:12:1:9 2.33849e-05 "Parco_di_Villa_Serbelloni-Bellagio_Lake_Como_Lombardy.html" 695
+1:1:12:1:10 2.15141e-05 "Greenway_del_Lago_di_Como-Colonno_Lake_Como_Lombardy.html" 1223
+1:1:12:1:11 2.05787e-05 "Sentiero_del_Viandante-Varenna_Lake_Como_Lombardy.html" 943
+1:1:12:2:1 0.000512598 "Funicolare_Como_Brunate-Como_Lake_Como_Lombardy.html" 38
+1:1:12:2:2 0.000448991 "Cathedral_of_Como_Duomo-Como_Lake_Como_Lombardy.html" 510
+1:1:12:2:3 4.30283e-05 "Life_Electric-Como_Lake_Como_Lombardy.html" 1039
+1:1:12:2:4 3.46097e-05 "Villa_Olmo-Como_Lake_Como_Lombardy.html" 856
+1:1:12:2:5 2.89973e-05 "Faro_voltiano-Brunate_Lake_Como_Lombardy.html" 39
+1:1:12:2:6 1.96434e-05 "Basilica_di_San_Fedele-Como_Lake_Como_Lombardy.html" 554
+1:1:13:1 0.000858695 "Villa_Cimbrone_Gardens-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html" 206
+1:1:13:2 0.000782928 "Villa_Rufolo-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html" 297
+1:1:13:3 0.000406898 "Duomo_di_Sant_Andrea-Amalfi_Amalfi_Coast_Province_of_Salerno_Campania.html" 321
+1:1:13:4 0.00014031 "Duomo_di_Ravello-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html" 323
+1:1:13:5 0.000123472 "Ravello_Atrani_Walk-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html" 322
+1:1:13:6 5.98655e-05 "Le_Ville_di_Ravello-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html" 207
+1:1:13:7 5.42531e-05 "Ravello_Minori_Walk-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html" 1011
+1:1:13:8 5.14469e-05 "Museo_della_Carta-Amalfi_Amalfi_Coast_Province_of_Salerno_Campania.html" 991
+1:1:13:9 4.48991e-05 "Chiostro_del_Paradiso-Amalfi_Amalfi_Coast_Province_of_Salerno_Campania.html" 1119
+1:1:13:10 2.24495e-05 "Fontana_sant_Andrea-Amalfi_Amalfi_Coast_Province_of_Salerno_Campania.html" 1066
+1:1:13:11 2.24495e-05 "Ceramiche_d_Arte_Carmela-Ravello_Amalfi_Coast_Province_of_Salerno_Campania.html" 1228
+1:1:13:12 1.96434e-05 "Ruga_Nova_Mercatorum_Via_dei_Mercanti-Amalfi_Amalfi_Coast_Province_of_Salerno_Camp.html" 789
+1:1:13:13 1.96434e-05 "Valle_delle_Ferriere-Amalfi_Amalfi_Coast_Province_of_Salerno_Campania.html" 892
+1:1:14:1 0.00076422 "Basilica_Papale_e_Sacro_Convento_di_San_Francesco_d_Assisi-Assisi_Province_of_Per.html" 251
+1:1:14:2 0.00036574 "Basilica_di_Santa_Chiara-Assisi_Province_of_Perugia_Umbria.html" 278
+1:1:14:3 0.000271265 "Basilica_di_Santa_Maria_degli_Angeli_Porziuncola-Assisi_Province_of_Perugia_Umbria.html" 252
+1:1:14:4 0.000173984 "San_Damiano-Assisi_Province_of_Perugia_Umbria.html" 350
+1:1:14:5 0.000149664 "Museo_della_Porziuncola-Santa_Maria_degli_Angeli_Assisi_Province_of_Perugia_Umbr.html" 305
+1:1:14:6 8.6992e-05 "Eremo_delle_Carceri-Assisi_Province_of_Perugia_Umbria.html" 983
+1:1:14:7 8.51212e-05 "Rocca_Maggiore-Assisi_Province_of_Perugia_Umbria.html" 279
+1:1:14:8 5.70593e-05 "Museo_e_Foro_Romano-Assisi_Province_of_Perugia_Umbria.html" 823
+1:1:14:9 4.67699e-05 "Piazza_del_Comune-Assisi_Province_of_Perugia_Umbria.html" 836
+1:1:14:10 2.43203e-05 "Cattedrale_di_San_Rufino-Assisi_Province_of_Perugia_Umbria.html" 937
+1:1:15:1 0.000632329 "Basilica_di_Sant_Antonio-Padua_Province_of_Padua_Veneto.html" 342
+1:1:15:2 0.000522887 "Scrovegni_Chapel-Padua_Province_of_Padua_Veneto.html" 533
+1:1:15:3 0.000302133 "Prato_della_Valle-Padua_Province_of_Padua_Veneto.html" 697
+1:1:15:4 0.000167436 "Palazzo_della_Ragione-Padua_Province_of_Padua_Veneto.html" 764
+1:1:15:5 0.000165565 "Orto_Botanico_di_Padova-Padua_Province_of_Padua_Veneto.html" 343
+1:1:15:6 0.000132826 "Battistero_del_Duomo-Padua_Province_of_Padua_Veneto.html" 578
+1:1:15:7 6.3607e-05 "University_of_Padova-Padua_Province_of_Padua_Veneto.html" 534
+1:1:16:1 0.000649166 "Piazza_Tasso-Sorrento_Province_of_Naples_Campania.html" 290
+1:1:16:2 0.000229172 "Marina_Grande_Antico_Borgo_Marinaro-Sorrento_Province_of_Naples_Campania.html" 291
+1:1:16:3 0.000170242 "Chiostro_di_San_Francesco-Sorrento_Province_of_Naples_Campania.html" 316
+1:1:16:4 0.000112248 "Corso_Italia-Sorrento_Province_of_Naples_Campania.html" 318
+1:1:16:5 9.91522e-05 "Cattedrale_di_Sorrento-Sorrento_Province_of_Naples_Campania.html" 317
+1:1:16:6 9.72814e-05 "Il_Vallone_dei_Mulini-Sorrento_Province_of_Naples_Campania.html" 806
+1:1:16:7 5.51885e-05 "Basilica_di_Sant_Antonino-Sorrento_Province_of_Naples_Campania.html" 1179
+1:1:16:8 4.67699e-05 "Correale_di_Terranova_Museum-Sorrento_Province_of_Naples_Campania.html" 250
+1:1:16:9 1.96434e-05 "Museobottega_della_Tarsialignea-Sorrento_Province_of_Naples_Campania.html" 249
+1:1:17:1 0.000477053 "Footpath_Monterosso_Vernazza-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Ligu.html" 54
+1:1:17:2 0.000474247 "Vernazza-Vernazza_Cinque_Terre_Italian_Riviera_Liguria.html" 55
+1:1:17:3 0.000108506 "Castello_Doria-Vernazza_Cinque_Terre_Italian_Riviera_Liguria.html" 944
+1:1:17:4 0.000102894 "Santa_Margherita_di_Antiochia_Church-Vernazza_Cinque_Terre_Italian_Riviera_Liguri.html" 315
+1:1:17:5 9.6346e-05 "Parco_Nazionale_Cinque_Terre-Riomaggiore_Cinque_Terre_Italian_Riviera_Liguria.html" 643
+1:1:17:6 5.79947e-05 "Church_of_San_Francesco_Capuchin_Friars_Monastery-Monterosso_al_Mare_Cinque_Terre_.html" 1048
+1:1:17:7 4.30283e-05 "Sentiero_Vernazza_a_Corniglia-Vernazza_Cinque_Terre_Italian_Riviera_Liguria.html" 513
+1:1:17:8 4.30283e-05 "Il_Gigante-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" 720
+1:1:17:9 2.61911e-05 "Spiaggia_di_Fegina-Monterosso_al_Mare_Cinque_Terre_Italian_Riviera_Liguria.html" 1166
+1:1:18:1 0.000766091 "Villa_d_Este-Tivoli_Province_of_Rome_Lazio.html" 184
+1:1:18:2 0.000440572 "Villa_Adriana-Tivoli_Province_of_Rome_Lazio.html" 248
+1:1:18:3 0.000156211 "Parco_Villa_Gregoriana-Tivoli_Province_of_Rome_Lazio.html" 247
+1:1:19:1 0.000704354 "Historic_Centre_of_San_Gimignano-San_Gimignano_Tuscany.html" 139
+1:1:19:2 0.000159953 "San_Gimignano_Bell_Tower-San_Gimignano_Tuscany.html" 140
+1:1:19:3 0.000156211 "Piazza_della_Cisterna-San_Gimignano_Tuscany.html" 497
+1:1:19:4 7.10902e-05 "Collegiata_di_Santa_Maria_Assunta_Duomo_di_San_Gimignano-San_Gimignano_Tuscany.html" 811
+1:1:19:5 5.61239e-05 "Castello_Monteriggioni-Monteriggioni_Tuscany.html" 712
+1:1:19:6 3.36743e-05 "Walls_of_Monteriggioni-Monteriggioni_Tuscany.html" 1218
+1:1:19:7 2.89973e-05 "San_Gimignano_1300-San_Gimignano_Tuscany.html" 1085
+1:1:19:8 2.33849e-05 "Tenuta_Torciano_Vineyards-Ulignano_San_Gimignano_Tuscany.html" 588
+1:1:19:9 1.96434e-05 "Torre_Grossa_o_Torre_del_palazzo_del_Podesta-San_Gimignano_Tuscany.html" 1121
+1:1:20:1 0.000451797 "La_Citta_Alta-Bergamo_Province_of_Bergamo_Lombardy.html" 723
+1:1:20:2 0.000279684 "Basilica_di_Santa_Maria_Maggiore-Bergamo_Province_of_Bergamo_Lombardy.html" 868
+1:1:20:3 0.000245074 "Piazza_Vecchia-Bergamo_Province_of_Bergamo_Lombardy.html" 869
+1:1:20:4 9.72814e-05 "Cattedrale_Duomo_di_Bergamo_e_Battistero-Bergamo_Province_of_Bergamo_Lombardy.html" 870
+1:1:20:5 4.58345e-05 "Cappella_Colleoni-Bergamo_Province_of_Bergamo_Lombardy.html" 1141
+1:1:20:6 4.39637e-05 "Mura_Venete-Bergamo_Province_of_Bergamo_Lombardy.html" 1108
+1:1:20:7 2.24495e-05 "Campanone_o_Torre_Civica-Bergamo_Province_of_Bergamo_Lombardy.html" 1101
+1:1:20:8 2.24495e-05 "Castello_di_San_Vigilio-Bergamo_Province_of_Bergamo_Lombardy.html" 1138
+1:1:21:1 0.000517275 "Duomo_di_Orvieto-Orvieto_Province_of_Terni_Umbria.html" 270
+1:1:21:2 0.00015247 "Pozzo_di_San_Patrizio-Orvieto_Province_of_Terni_Umbria.html" 538
+1:1:21:3 0.000131891 "Orvieto_Sotterranea-Orvieto_Province_of_Terni_Umbria.html" 537
+1:1:21:4 0.000126279 "Orvieto_Underground-Orvieto_Province_of_Terni_Umbria.html" 837
+1:1:21:5 4.67699e-05 "Cappella_Di_San_Brizio_Duomo-Orvieto_Province_of_Terni_Umbria.html" 514
+1:1:21:6 3.92867e-05 "Torre_del_Moro-Orvieto_Province_of_Terni_Umbria.html" 1049
+1:1:21:7 3.08681e-05 "Stazione_Ferroviaria_di_Orvieto-Orvieto_Province_of_Terni_Umbria.html" 985
+1:1:21:8 2.05787e-05 "Civita_di_Bagnoregio-Civita_di_Bagnoregio_Province_of_Viterbo_Lazio.html" 601
+1:1:22:1:1 0.000269395 "Museo_Ferrari-Maranello_Province_of_Modena_Emilia_Romagna.html" 691
+1:1:22:1:2 0.000206723 "Museo_Casa_Enzo_Ferrari-Modena_Province_of_Modena_Emilia_Romagna.html" 690
+1:1:22:1:3 9.26044e-05 "Lamborghini_Museum-Sant_Agata_Bolognese_Province_of_Bologna_Emilia_Romagna.html" 909
+1:1:22:1:4 4.58345e-05 "Pushstart-Maranello_Province_of_Modena_Emilia_Romagna.html" 1084
+1:1:22:2:1 9.44752e-05 "Duomo_di_Modena-Modena_Province_of_Modena_Emilia_Romagna.html" 340
+1:1:22:2:2 2.71265e-05 "Ghirlandina-Modena_Province_of_Modena_Emilia_Romagna.html" 341
+1:1:22:2:3 2.24495e-05 "Piazza_Grande-Modena_Province_of_Modena_Emilia_Romagna.html" 1216
+1:1:23:1 0.000419058 "Archaeological_Park_of_Paestum-Paestum_Capaccio_Paestum_Province_of_Salerno_Campan.html" 234
+1:1:23:2 0.000232914 "Museo_Archeologico_Nazionale_di_Paestum-Paestum_Capaccio_Paestum_Province_of_Sale.html" 389
+1:1:23:3 2.80619e-05 "Il_Tempio_di_Nettuno_o_Poseidone_o_di_Hera_II-Paestum_Capaccio_Paestum_Province_o.html" 482
+1:1:23:4 2.33849e-05 "Tenuta_Vannulo-Capaccio_Scalo_Capaccio_Paestum_Province_of_Salerno_Campania.html" 927
+1:1:24:1 0.000169307 "Museo_del_Vetro-Murano_Veneto.html" 508
+1:1:24:2 8.79274e-05 "Cometa_di_Vetro-Murano_Veneto.html" 792
+1:1:24:3 6.92194e-05 "Duomo_di_Murano_Santi_Maria_e_Donato-Murano_Veneto.html" 1079
+1:1:24:4 2.05787e-05 "Museo_del_Merletto-Burano_Veneto.html" 969
+1:1:25:1 0.000102894 "Spiaggia_Grande-Positano_Amalfi_Coast_Province_of_Salerno_Campania.html" 638
+1:1:25:2 8.6992e-05 "Il_Sentiero_Degli_Dei-Positano_Amalfi_Coast_Province_of_Salerno_Campania.html" 727
+1:1:25:3 8.13796e-05 "Fornillo-Positano_Amalfi_Coast_Province_of_Salerno_Campania.html" 637
+1:1:25:4 2.24495e-05 "Chiesa_di_Santa_Maria_Assunta_e_Cripta_Medievale-Positano_Amalfi_Coast_Province_of.html" 1134
+1:1:26:1 0.000107571 "Portovenere-Porto_Venere_Italian_Riviera_Liguria.html" 351
+1:1:26:2 8.2315e-05 "San_Pietro_Church-Porto_Venere_Italian_Riviera_Liguria.html" 352
+1:1:27:1 0.000108506 "Vulcano_Solfatara-Pozzuoli_Province_of_Naples_Campania.html" 818
+1:1:27:2 4.58345e-05 "Flavian_Amphitheater-Pozzuoli_Province_of_Naples_Campania.html" 949
+1:1:28:1 6.73486e-05 "Museo_Ebraico_di_Roma-Rome_Lazio.html" 556
+1:1:28:2 2.15141e-05 "Ghetto_Ebraico-Rome_Lazio.html" 557
+1:1:29:1 4.86407e-05 "Punta_della_Dogana-Venice_Veneto.html" 388
+1:1:29:2 2.33849e-05 "Palazzo_Grassi-Venice_Veneto.html" 1097
+1:1:30:1 4.48991e-05 "Autodromo_Nazionale_Monza-Monza_Province_of_Monza_and_Brianza_Lombardy.html" 1143
+1:1:30:2 2.43203e-05 "Parco_di_Monza-Monza_Province_of_Monza_and_Brianza_Lombardy.html" 1142
+1:1:31:1 4.86407e-05 "Ca_Pesaro_Galleria_Internazionale_d_Arte_Moderna-Venice_Veneto.html" 993
+1:1:31:2 1.96434e-05 "Palazzo_Mocenigo-Venice_Veneto.html" 1149
+1:1:32:1 4.58345e-05 "Forum_of_Augustus-Rome_Lazio.html" 1021
+1:1:32:2 2.15141e-05 "Foro_di_Cesare-Rome_Lazio.html" 1022
+1:1:33:1 4.20929e-05 "The_Mall-Leccio_Reggello_Tuscany.html" 1069
+1:1:33:2 1.96434e-05 "Barberino_Designer_Outlet-Barberino_Di_Mugello_Tuscany.html" 1068
+1:2:1:1 0.0132995 "Halaszbastya-Budapest_Central_Hungary.html" 27
+1:2:1:2 0.0131732 "Hungarian_Parliament_Building-Budapest_Central_Hungary.html" 101
+1:2:1:3 0.0113688 "St_Stephen_s_Basilica_Szent_Istvan_Bazilika-Budapest_Central_Hungary.html" 146
+1:2:1:4 0.0103128 "Shoes_on_the_Danube-Budapest_Central_Hungary.html" 103
+1:2:1:5 0.00966266 "Szechenyi_Chain_Bridge-Budapest_Central_Hungary.html" 68
+1:2:1:6 0.00741864 "Danube_River-Budapest_Central_Hungary.html" 172
+1:2:1:7 0.00710435 "Heroes_Square-Budapest_Central_Hungary.html" 26
+1:2:1:8 0.00647202 "Varhegy-Budapest_Central_Hungary.html" 145
+1:2:1:9 0.00535422 "Matthias_Church-Budapest_Central_Hungary.html" 19
+1:2:1:10 0.00427757 "House_of_Terror_Museum-Budapest_Central_Hungary.html" 132
+1:2:1:11 0.00393241 "Gellert_Hill-Budapest_Central_Hungary.html" 102
+1:2:1:12 0.00386226 "Buda_Castle-Budapest_Central_Hungary.html" 20
+1:2:1:13 0.0038211 "Hungarian_State_Opera_House_Magyar_Allami_Operahaz-Budapest_Central_Hungary.html" 212
+1:2:1:14 0.00322057 "Central_Market_Hall-Budapest_Central_Hungary.html" 4
+1:2:1:15 0.00285577 "Great_Central_Synagogue_Nagy_Zsinagoga-Budapest_Central_Hungary.html" 113
+1:2:1:16 0.00247787 "Margaret_Island_Margitsziget-Budapest_Central_Hungary.html" 133
+1:2:1:17 0.0021617 "Hospital_in_the_Rock_Nuclear_Bunker_Museum-Budapest_Central_Hungary.html" 171
+1:2:1:18 0.00123847 "Liberty_Bridge_Szabadsag_hid-Budapest_Central_Hungary.html" 304
+1:2:1:19 0.00105606 "Budapest_Zoo_Botanical_Garden-Budapest_Central_Hungary.html" 131
+1:2:1:20 0.000954106 "Vajdahunyad_Castle_Vajdahunyadvar-Budapest_Central_Hungary.html" 235
+1:2:1:21 0.000805377 "Holocaust_Memorial_Center-Budapest_Central_Hungary.html" 363
+1:2:1:22 0.000781057 "Citadel-Budapest_Central_Hungary.html" 354
+1:2:1:23 0.000773574 "Andrassy_Avenue-Budapest_Central_Hungary.html" 420
+1:2:1:24 0.000734287 "New_York_Palace-Budapest_Central_Hungary.html" 379
+1:2:1:25 0.000677228 "Vaci_Street-Budapest_Central_Hungary.html" 528
+1:2:1:26 0.00061175 "Buda_Hill_Funicular-Budapest_Central_Hungary.html" 191
+1:2:1:27 0.00047144 "Hungarian_National_Museum-Budapest_Central_Hungary.html" 135
+1:2:1:28 0.000466763 "Statue_of_St_Stephen-Budapest_Central_Hungary.html" 474
+1:2:1:29 0.000460216 "Music_Fountain-Budapest_Central_Hungary.html" 680
+1:2:1:30 0.000438702 "Hungarian_National_Gallery_Magyar_Nemzeti_Galeria-Budapest_Central_Hungary.html" 134
+1:2:1:31 0.000245074 "Memento_Park-Budapest_Central_Hungary.html" 750
+1:2:1:32 0.000224495 "Budapest_Pinball_Museum-Budapest_Central_Hungary.html" 286
+1:2:1:33 0.000215141 "Anonymus_Szobor_Anonymous_Statue-Budapest_Central_Hungary.html" 473
+1:2:1:34 0.000183338 "Panoptikum-Budapest_Central_Hungary.html" 100
+1:2:1:35 0.000156211 "Miniversum-Budapest_Central_Hungary.html" 978
+1:2:1:36 0.000144987 "Matthias_Fountain-Budapest_Central_Hungary.html" 529
+1:2:1:37 0.000132826 "Vorosmarty_Square_Vorosmarty_ter-Budapest_Central_Hungary.html" 555
+1:2:1:38 8.51212e-05 "Gellert_Hill_Cave-Budapest_Central_Hungary.html" 330
+1:2:1:39 6.92194e-05 "Budapest_Operetta_Theatre-Budapest_Central_Hungary.html" 1031
+1:2:1:40 4.30283e-05 "Palatinus_Strand-Budapest_Central_Hungary.html" 917
+1:2:1:41 4.30283e-05 "Margaret_Bridge-Budapest_Central_Hungary.html" 955
+1:2:1:42 2.71265e-05 "WestEnd_City_Center-Budapest_Central_Hungary.html" 565
+1:2:1:43 2.71265e-05 "Gresham_Palace-Budapest_Central_Hungary.html" 1148
+1:2:1:44 2.61911e-05 "Budapest_Eye-Budapest_Central_Hungary.html" 1168
+1:2:1:45 2.33849e-05 "Budapest_History_Museum-Budapest_Central_Hungary.html" 874
+1:2:1:46 2.15141e-05 "Budapest_Keleti-Budapest_Central_Hungary.html" 1047
+1:2:1:47 2.15141e-05 "Hungarian_Jewish_Museum_and_Archives-Budapest_Central_Hungary.html" 1072
+1:2:2:1 0.0141507 "Schonbrunn_Palace-Vienna.html" 3
+1:2:2:2 0.0100873 "St_Stephen_s_Cathedral-Vienna.html" 95
+1:2:2:3 0.00675544 "Belvedere_Museum-Vienna.html" 180
+1:2:2:4 0.00620823 "Historic_Center_of_Vienna-Vienna.html" 179
+1:2:2:5 0.00478269 "Imperial_Palace_Hofburg-Vienna.html" 91
+1:2:2:6 0.0043206 "Schonbrunner_Gardens-Vienna.html" 204
+1:2:2:7 0.0039137 "Kunsthistorisches_Museum_Vienna-Vienna.html" 288
+1:2:2:8 0.00288664 "Wiener_Staatsoper-Vienna.html" 293
+1:2:2:9 0.00280526 "Tiergarten_Schoenbrunn_Zoo_Vienna-Vienna.html" 94
+1:2:2:10 0.00278936 "Stephansplatz-Vienna.html" 2
+1:2:2:11 0.0026743 "Albertina-Vienna.html" 213
+1:2:2:12 0.00251716 "Prater-Vienna.html" 274
+1:2:2:13 0.00181748 "Rathaus-Vienna.html" 143
+1:2:2:14 0.00178287 "Peterskirche_Wien-Vienna.html" 353
+1:2:2:15 0.00172861 "MuseumsQuartier_Wien-Vienna.html" 142
+1:2:2:16 0.00165846 "Natural_History_Museum_Naturhistorisches_Museum-Vienna.html" 1
+1:2:2:17 0.00109348 "Ringstrasse-Vienna.html" 475
+1:2:2:18 0.000977491 "Leopold_Museum-Vienna.html" 196
+1:2:2:19 0.000910142 "Kaiserliche_Schatzkammer_Wien-Vienna.html" 461
+1:2:2:20 0.000827827 "State_Hall_of_the_Austrian_National_Library-Vienna.html" 287
+1:2:2:21 0.00074177 "Vienna_Naschmarkt-Vienna.html" 365
+1:2:2:22 0.000716515 "Rathausplatz-Vienna.html" 541
+1:2:2:23 0.000703419 "Sisi_Museum-Vienna.html" 471
+1:2:2:24 0.000671616 "Vienna_U_Bahn-Vienna.html" 307
+1:2:2:25 0.000590236 "Hundertwasserhaus-Vienna.html" 394
+1:2:2:26 0.000559368 "Karlskirche-Vienna.html" 275
+1:2:2:27 0.000394738 "Heeresgeschichtliches_Museum-Vienna.html" 333
+1:2:2:28 0.000359193 "Stadtpark-Vienna.html" 308
+1:2:2:29 0.000358257 "Osterreichisches_Parlament-Vienna.html" 501
+1:2:2:30 0.000337679 "Kunst_Haus_Wien_Museum_Hundertwasser-Vienna.html" 509
+1:2:2:31 0.000315229 "Volksgarten-Vienna.html" 632
+1:2:2:32 0.00023572 "Haus_der_Musik-Vienna.html" 647
+1:2:2:33 0.000234785 "Danube_Tower-Vienna.html" 729
+1:2:2:34 0.000227302 "Central_Cemetery_Zentralfriedhof-Vienna.html" 289
+1:2:2:35 0.00022356 "Mozarthaus_Vienna-Vienna.html" 302
+1:2:2:36 0.000202046 "Musikverein-Vienna.html" 405
+1:2:2:37 0.000198304 "Wiener_Riesenrad-Vienna.html" 730
+1:2:2:38 0.000165565 "Secession_Building_Secessionsgebaude-Vienna.html" 661
+1:2:2:39 0.00016463 "Haus_des_Meeres_Aqua_Terra_Zoo-Vienna.html" 713
+1:2:2:40 0.000147793 "Sigmund_Freud_Museum-Vienna.html" 574
+1:2:2:41 0.000145922 "Imperial_Crypt-Vienna.html" 364
+1:2:2:42 9.1669e-05 "Technisches_Museum_Wien-Vienna.html" 583
+1:2:2:43 8.97982e-05 "Church_of_the_Jesuits-Vienna.html" 754
+1:2:2:44 8.04442e-05 "Graben_and_Kohlmarkt-Vienna.html" 907
+1:2:2:45 6.26716e-05 "Cafe_Gloriette-Vienna.html" 1102
+1:2:2:46 5.05115e-05 "Madame_Tussauds_Vienna-Vienna.html" 1146
+1:2:2:47 4.67699e-05 "Museum_of_Modern_Art_Ludwig_Foundation_MUMOK-Vienna.html" 848
+1:2:2:48 4.58345e-05 "City_Airport_Train_CAT-Vienna.html" 301
+1:2:2:49 3.27389e-05 "Votivkirche-Vienna.html" 751
+1:2:2:50 2.89973e-05 "Vienna_Ring_Tram-Vienna.html" 714
+1:2:2:51 2.61911e-05 "Jewish_Museum_Vienna_Judisches_Museum_der_Stadt_Wien-Vienna.html" 648
+1:2:2:52 2.15141e-05 "Anker_Clock-Vienna.html" 679
+1:2:2:53 2.05787e-05 "The_Third_Man_Museum-Vienna.html" 1015
+1:2:2:54 2.05787e-05 "Twin_City_Liner-Vienna.html" 1158
+1:2:2:55 1.96434e-05 "Imperial_Carriage_Museum_Vienna-Vienna.html" 908
+1:2:2:56 1.96434e-05 "Maria_Theresia_Denkmal-Vienna.html" 1096
+1:2:3:1 0.00463677 "Fortress_Hohensalzburg-Salzburg_Austrian_Alps.html" 12
+1:2:3:2 0.00367518 "Mirabell_Palace_and_Gardens-Salzburg_Austrian_Alps.html" 14
+1:2:3:3 0.00322432 "Salzburger_Altstadt-Salzburg_Austrian_Alps.html" 78
+1:2:3:4 0.00211119 "Salzburg_Cathedral-Salzburg_Austrian_Alps.html" 79
+1:2:3:5 0.00135165 "Mozart_s_Birthplace-Salzburg_Austrian_Alps.html" 221
+1:2:3:6 0.00118608 "Schloss_Hellbrunn-Salzburg_Austrian_Alps.html" 99
+1:2:3:7 0.000925108 "Untersberg-Salzburg_Austrian_Alps.html" 233
+1:2:3:8 0.000514469 "Wasserspiele_Hellbrunn-Salzburg_Austrian_Alps.html" 331
+1:2:3:9 0.000489213 "St_Peter_s_Abbey_Stift_St_Peter-Salzburg_Austrian_Alps.html" 220
+1:2:3:10 0.000452732 "Petersfriedhof-Salzburg_Austrian_Alps.html" 348
+1:2:3:11 0.000384448 "Mozart_Residence_Mozart_Wohnhaus-Salzburg_Austrian_Alps.html" 347
+1:2:3:12 0.000346097 "Red_Bull_Hangar_7-Salzburg_Austrian_Alps.html" 444
+1:2:3:13 0.000293715 "Mozartplatz-Salzburg_Austrian_Alps.html" 592
+1:2:3:14 0.00018895 "Old_Market_Square_Alter_Markt-Salzburg_Austrian_Alps.html" 959
+1:2:3:15 0.00016463 "Nonnberg_Convent-Salzburg_Austrian_Alps.html" 607
+1:2:3:16 0.000160888 "Makartsteg-Salzburg_Austrian_Alps.html" 493
+1:2:3:17 0.000160888 "Haus_der_Natur-Salzburg_Austrian_Alps.html" 577
+1:2:3:18 0.000125343 "Salzburg_Hauptbahnhof-Salzburg_Austrian_Alps.html" 222
+1:2:3:19 0.000113183 "DomQuartier_Salzburg-Salzburg_Austrian_Alps.html" 494
+1:2:3:20 9.35398e-05 "Stiegl_Brauwelt-Salzburg_Austrian_Alps.html" 796
+1:2:3:21 8.04442e-05 "Residenzgalerie_Salzburg-Salzburg_Austrian_Alps.html" 13
+1:2:3:22 7.10902e-05 "Mozart_Monument-Salzburg_Austrian_Alps.html" 214
+1:2:3:23 6.8284e-05 "MoenchsbergAufzug-Salzburg_Austrian_Alps.html" 872
+1:2:3:24 4.95761e-05 "Franziskanerkirche-Salzburg_Austrian_Alps.html" 1017
+1:2:3:25 4.20929e-05 "Residenzbrunnen-Salzburg_Austrian_Alps.html" 884
+1:2:3:26 4.11575e-05 "Kapuzinerberg-Salzburg_Austrian_Alps.html" 98
+1:2:3:27 2.43203e-05 "Linzergasse-Salzburg_Austrian_Alps.html" 641
+1:2:3:28 2.43203e-05 "Zoo_Salzburg-Anif_Austrian_Alps.html" 738
+1:2:3:29 2.33849e-05 "Old_City_Hall_Altes_Rathaus-Salzburg_Austrian_Alps.html" 960
+1:2:4:1 0.000708096 "Innsbrucker_Nordkettenbahnen-Innsbruck_Tirol_Austrian_Alps.html" 186
+1:2:4:2 0.000695 "The_Golden_Roof_Goldenes_Dachl-Innsbruck_Tirol_Austrian_Alps.html" 238
+1:2:4:3 0.000394738 "Hungerburg_Funicular-Innsbruck_Tirol_Austrian_Alps.html" 75
+1:2:4:4 0.000392867 "Altstadt_von_Innsbruck-Innsbruck_Tirol_Austrian_Alps.html" 576
+1:2:4:5 0.000361999 "Alpenzoo-Innsbruck_Tirol_Austrian_Alps.html" 56
+1:2:4:6 0.000284361 "Imperial_Palace-Innsbruck_Tirol_Austrian_Alps.html" 11
+1:2:4:7 0.000277813 "Bergisel_Ski_Jump-Innsbruck_Tirol_Austrian_Alps.html" 644
+1:2:4:8 0.000231979 "Schloss_Ambras_Innsbruck_Ambras_Castle-Innsbruck_Tirol_Austrian_Alps.html" 586
+1:2:4:9 0.00019924 "Hofkirche-Innsbruck_Tirol_Austrian_Alps.html" 10
+1:2:4:10 0.000197369 "Dom_zu_St_Jakob-Innsbruck_Tirol_Austrian_Alps.html" 9
+1:2:4:11 0.00014218 "Town_Tower_Stadtturm-Innsbruck_Tirol_Austrian_Alps.html" 57
+1:2:4:12 0.000101023 "Swarovski_Crystal_Worlds-Wattens_Tirol_Austrian_Alps.html" 832
+1:2:4:13 8.60566e-05 "Maria_Theresien_Strasse-Innsbruck_Tirol_Austrian_Alps.html" 703
+1:2:4:14 5.33177e-05 "Triumphal_Arch_Triumphpforte-Innsbruck_Tirol_Austrian_Alps.html" 895
+1:2:4:15 4.86407e-05 "Tirol_Panorama-Innsbruck_Tirol_Austrian_Alps.html" 1037
+1:2:4:16 4.77053e-05 "St_Anna_s_Column_Annasaule-Innsbruck_Tirol_Austrian_Alps.html" 732
+1:2:4:17 3.18035e-05 "Tyrolean_Folk_Art_Museum-Innsbruck_Tirol_Austrian_Alps.html" 894
+1:2:4:18 2.15141e-05 "Hofgarten-Innsbruck_Tirol_Austrian_Alps.html" 1111
+1:2:4:19 1.96434e-05 "Patscherkofelbahnen-Innsbruck_Tirol_Austrian_Alps.html" 1019
+1:2:5:1 0.000396609 "Old_Town-Hallstatt_Upper_Austria.html" 759
+1:2:5:2 0.000386319 "Salzwelten-Hallstatt_Upper_Austria.html" 667
+1:2:5:3 0.000368547 "Hallstatt_Skywalk_Welterbeblick-Hallstatt_Upper_Austria.html" 760
+1:2:5:4 0.000255364 "Central_Square_Marktplatz-Hallstatt_Upper_Austria.html" 208
+1:2:5:5 0.00014031 "Hallstatt_Ossuary-Hallstatt_Upper_Austria.html" 668
+1:2:5:6 7.7638e-05 "Hallstatter_See-Hallstatt_Upper_Austria.html" 209
+1:2:5:7 4.11575e-05 "Hallstatt_Lutheran_Church-Hallstatt_Upper_Austria.html" 890
+1:2:5:8 2.61911e-05 "Museum_Hallstatt-Hallstatt_Upper_Austria.html" 1163
+1:2:6:1 0.000858695 "Melk_Abbey-Melk_Lower_Austria.html" 138
+1:2:6:2 0.000101958 "Stift_Durnstein-Durnstein_Lower_Austria.html" 761
+1:2:6:3 8.32504e-05 "Burgruine_Duernstein-Durnstein_Lower_Austria.html" 762
+1:2:6:4 6.73486e-05 "Wachau_Valley-Joching_Lower_Austria.html" 1147
+1:2:6:5 2.52557e-05 "Wein_Wachau-Melk_Lower_Austria.html" 849
+1:2:6:6 2.05787e-05 "KZ_Gedenkstatte_Mauthausen-Mauthausen_Upper_Austria.html" 802
+1:2:7:1 0.000115989 "Eisriesenwelt-Werfen_Austrian_Alps.html" 109
+1:2:7:2 6.8284e-05 "Erlebnisburg_Hohenwerfen-Werfen_Austrian_Alps.html" 749
+1:2:7:3 4.95761e-05 "Salt_Mine_Hallein-Hallein_Austrian_Alps.html" 97
+1:2:8:1 6.8284e-05 "5_Fingers-Obertraun_Upper_Austria.html" 158
+1:2:8:2 4.48991e-05 "Hallstatt_Dachstein_Salzkammergut_Cultural_Landscape-Obertraun_Upper_Austria.html" 159
+1:2:9:1 6.64132e-05 "Christmas_Market_on_Rathausplatz-Vienna.html" 597
+1:2:9:2 4.48991e-05 "Kultur_und_Weihnachtsmarkt_Schloss_Schonbrunn-Vienna.html" 1023
+1:3:1:1 0.00287074 "Ancient_Theatre_of_Taormina-Taormina_Province_of_Messina_Sicily.html" 87
+1:3:1:2 0.00112622 "Corso_Umberto-Taormina_Province_of_Messina_Sicily.html" 88
+1:3:1:3 0.00106168 "Isola_Bella-Taormina_Province_of_Messina_Sicily.html" 226
+1:3:1:4 0.00105326 "Villa_Comunale-Taormina_Province_of_Messina_Sicily.html" 185
+1:3:1:5 0.000562174 "Piazza_IX_Aprile-Taormina_Province_of_Messina_Sicily.html" 440
+1:3:1:6 0.000122537 "Funivia_Taormina-Taormina_Province_of_Messina_Sicily.html" 692
+1:3:1:7 0.000115989 "Cattedrale_di_Taormina-Taormina_Province_of_Messina_Sicily.html" 240
+1:3:1:8 0.000108506 "Porta_Messina-Taormina_Province_of_Messina_Sicily.html" 1044
+1:3:1:9 5.33177e-05 "Chiesa_Madonna_della_Rocca-Taormina_Province_of_Messina_Sicily.html" 225
+1:3:1:10 2.24495e-05 "The_Odeon-Taormina_Province_of_Messina_Sicily.html" 1086
+1:3:1:11 2.05787e-05 "Lido_Mazzaro-Taormina_Province_of_Messina_Sicily.html" 675
+1:3:1:12 1.96434e-05 "Porta_Catania_di_Taormina-Taormina_Province_of_Messina_Sicily.html" 1055
+1:3:2:1 0.00180064 "Ortigia-Syracuse_Province_of_Syracuse_Sicily.html" 198
+1:3:2:2 0.00111406 "Syracuse_Cathedral-Syracuse_Province_of_Syracuse_Sicily.html" 298
+1:3:2:3 0.000954106 "Teatro_Greco-Syracuse_Province_of_Syracuse_Sicily.html" 381
+1:3:2:4 0.000696871 "Ear_of_Dionysius_Orecchio_di_Dionisio-Syracuse_Province_of_Syracuse_Sicily.html" 434
+1:3:2:5 0.000266588 "Museo_Archeologico_Regionale_Paolo_Orsi-Syracuse_Province_of_Syracuse_Sicily.html" 399
+1:3:2:6 0.000263782 "Parco_Archeologico_della_Neapolis-Syracuse_Province_of_Syracuse_Sicily.html" 197
+1:3:2:7 0.000213271 "Temple_of_Apollo_Tempio_di_Apollo-Syracuse_Province_of_Syracuse_Sicily.html" 299
+1:3:2:8 0.000189886 "Fountain_of_Diana-Syracuse_Province_of_Syracuse_Sicily.html" 398
+1:3:2:9 0.000169307 "Chiesa_di_San_Giovanni_Alle_Catacombe-Syracuse_Province_of_Syracuse_Sicily.html" 400
+1:3:2:10 9.72814e-05 "La_Piazza_Duomo-Syracuse_Province_of_Syracuse_Sicily.html" 815
+1:3:2:11 8.51212e-05 "Fonte_Aretusa-Syracuse_Province_of_Syracuse_Sicily.html" 864
+1:3:2:12 6.92194e-05 "Maniace_Castle-Syracuse_Province_of_Syracuse_Sicily.html" 300
+1:3:2:13 4.77053e-05 "Santuario_Madonna_delle_Lacrime-Syracuse_Province_of_Syracuse_Sicily.html" 728
+1:3:2:14 2.33849e-05 "Chiesa_di_Santa_Lucia_alla_Badia-Syracuse_Province_of_Syracuse_Sicily.html" 1098
+1:3:3:1 0.00107009 "Cattedrale_di_Palermo-Palermo_Province_of_Palermo_Sicily.html" 372
+1:3:3:2 0.000839987 "Norman_Palace-Palermo_Province_of_Palermo_Sicily.html" 445
+1:3:3:3 0.000630458 "Duomo_di_Monreale-Monreale_Province_of_Palermo_Sicily.html" 163
+1:3:3:4 0.000335808 "Catacombe_dei_Cappuccini-Palermo_Province_of_Palermo_Sicily.html" 684
+1:3:3:5 0.000292779 "Teatro_Massimo-Palermo_Province_of_Palermo_Sicily.html" 611
+1:3:3:6 0.00024601 "Fontana_della_Vergogna_Fontana_Pretoria-Palermo_Province_of_Palermo_Sicily.html" 373
+1:3:3:7 0.000231043 "Santa_Maria_dell_Ammiraglio_La_Martorana-Palermo_Province_of_Palermo_Sicily.html" 532
+1:3:3:8 0.000210464 "Quattro_Canti-Palermo_Province_of_Palermo_Sicily.html" 844
+1:3:3:9 0.000115989 "Piazza_Pretoria-Palermo_Province_of_Palermo_Sicily.html" 843
+1:3:3:10 7.7638e-05 "Church_of_San_Cataldo-Palermo_Province_of_Palermo_Sicily.html" 581
+1:3:3:11 5.70593e-05 "Oratorio_di_Santa_Cita-Palermo_Province_of_Palermo_Sicily.html" 885
+1:3:3:12 3.92867e-05 "Orto_Botanico_di_Palermo-Palermo_Province_of_Palermo_Sicily.html" 1051
+1:3:3:13 3.92867e-05 "Mercato_Ballaro-Palermo_Province_of_Palermo_Sicily.html" 1157
+1:3:3:14 2.24495e-05 "Spiaggia_di_Mondello-Mondello_Palermo_Province_of_Palermo_Sicily.html" 610
+1:3:3:15 2.15141e-05 "Chiostro_dei_Benedettini-Monreale_Province_of_Palermo_Sicily.html" 726
+1:3:4:1 0.0020981 "Valle_dei_Templi-Agrigento_Province_of_Agrigento_Sicily.html" 164
+1:3:4:2 0.000605202 "Villa_Romana_del_Casale-Piazza_Armerina_Province_of_Enna_Sicily.html" 162
+1:3:4:3 0.000381642 "Tempio_della_Concordia-Agrigento_Province_of_Agrigento_Sicily.html" 443
+1:3:4:4 0.000172113 "Museo_Archeologico_Regionale_di_Agrigento-Agrigento_Province_of_Agrigento_Sicily.html" 390
+1:3:4:5 0.00011786 "Tempio_di_Giunone-Agrigento_Province_of_Agrigento_Sicily.html" 735
+1:3:4:6 0.000114119 "Scala_dei_Turchi-Realmonte_Province_of_Agrigento_Sicily.html" 768
+1:3:4:7 0.000113183 "Parco_Archeologico_Selinunte-Marinella_di_Selinunte_Castelvetrano_Province_of_Tra.html" 769
+1:3:4:8 0.000111312 "Tempio_di_Ercole-Agrigento_Province_of_Agrigento_Sicily.html" 736
+1:3:4:9 4.67699e-05 "Piazza_Armerina-Piazza_Armerina_Province_of_Enna_Sicily.html" 161
+1:3:4:10 4.30283e-05 "Il_Giardino_della_Kolymbethra-Agrigento_Province_of_Agrigento_Sicily.html" 1024
+1:3:4:11 3.36743e-05 "Statua_di_Icaro_caduto-Agrigento_Province_of_Agrigento_Sicily.html" 803
+1:3:4:12 2.52557e-05 "Eraclea_Minoa-Agrigento_Province_of_Agrigento_Sicily.html" 1120
+1:3:4:13 2.24495e-05 "Tempio_dei_Dioscuri-Agrigento_Province_of_Agrigento_Sicily.html" 737
+1:3:4:14 1.96434e-05 "Staircase_of_Santa_Maria_del_Monte-Caltagirone_Province_of_Catania_Sicily.html" 1091
+1:3:5:1 0.00132359 "Monte_Etna-Catania_Province_of_Catania_Sicily.html" 237
+1:3:5:2 0.000320841 "Piazza_Duomo-Catania_Province_of_Catania_Sicily.html" 548
+1:3:5:3 0.000192692 "Basilica_Catedrale_Sant_Agata_V_M_Catania-Catania_Province_of_Catania_Sicily.html" 547
+1:3:5:4 0.000126279 "Parco_Archeologico_Greco_Romano_di_Catania-Catania_Province_of_Catania_Sicily.html" 454
+1:3:5:5 0.000110377 "Monastero_dei_Benedettini-Catania_Province_of_Catania_Sicily.html" 560
+1:3:5:6 8.97982e-05 "Giardino_Bellini-Catania_Province_of_Catania_Sicily.html" 455
+1:3:5:7 7.85734e-05 "Gola_dell_Alcantara-Motta_Camastra_Province_of_Messina_Sicily.html" 464
+1:3:5:8 3.18035e-05 "Castello_Normanno-Aci_Castello_Province_of_Catania_Sicily.html" 702
+1:3:5:9 2.33849e-05 "Museo_Storico_dello_Sbarco_in_Sicilia_1943-Catania_Province_of_Catania_Sicily.html" 919
+1:3:5:10 2.15141e-05 "Gambino_Winery-Linguaglossa_Province_of_Catania_Sicily.html" 1054
+1:3:6:1 0.000431218 "Duomo_di_Cefalu-Cefalu_Province_of_Palermo_Sicily.html" 370
+1:3:6:2 0.000277813 "Cefalu_Coast-Cefalu_Province_of_Palermo_Sicily.html" 371
+1:3:6:3 0.000221689 "Rocca_di_Cefalu-Cefalu_Province_of_Palermo_Sicily.html" 485
+1:3:6:4 0.000128149 "Lavatoio_Medievale-Cefalu_Province_of_Palermo_Sicily.html" 369
+1:3:6:5 2.15141e-05 "Museo_Mandralisca-Cefalu_Province_of_Palermo_Sicily.html" 1140
+1:3:7:1 0.000267524 "Tempio_di_Segesta-Calatafimi_Segesta_Province_of_Trapani_Sicily.html" 718
+1:3:7:2 0.000256299 "Funierice_Service-Erice_Province_of_Trapani_Sicily.html" 744
+1:3:7:3 7.57672e-05 "Teatro_Greco_di_Segesta-Calatafimi_Segesta_Province_of_Trapani_Sicily.html" 719
+1:3:7:4 5.23823e-05 "Castello_di_Venere-Erice_Province_of_Trapani_Sicily.html" 694
+1:3:7:5 4.86407e-05 "Spiaggia_di_San_Vito_lo_Capo-San_Vito_lo_Capo_Province_of_Trapani_Sicily.html" 476
+1:3:7:6 4.67699e-05 "Museo_del_Sale-Paceco_Province_of_Trapani_Sicily.html" 1175
+1:3:7:7 3.64805e-05 "Riserva_Naturale_Saline_Di_Trapani_E_Paceco-Trapani_Province_of_Trapani_Sicily.html" 1187
+1:3:7:8 2.05787e-05 "Riserva_Naturale_dello_Zingaro-Castellammare_del_Golfo_Province_of_Trapani_Sicily.html" 989
+1:3:7:9 2.05787e-05 "IL_Duomo-Erice_Province_of_Trapani_Sicily.html" 693
+1:3:8:1 0.000260041 "Ragusa_Ibla-Ragusa_Province_of_Ragusa_Sicily.html" 239
+1:3:8:2 8.04442e-05 "Duomo_di_San_Giorgio-Ragusa_Province_of_Ragusa_Sicily.html" 600
+1:3:8:3 6.92194e-05 "Giardini_Iblei-Ragusa_Province_of_Ragusa_Sicily.html" 982
+1:3:8:4 2.99327e-05 "Scicli-Scicli_Province_of_Ragusa_Sicily.html" 1087
+1:3:9:1 6.26716e-05 "Castillo_de_Castelmola-Castelmola_Province_of_Messina_Sicily.html" 598
+1:3:9:2 2.61911e-05 "Bar_Turrisi-Castelmola_Province_of_Messina_Sicily.html" 1041
+1:3:10:1 4.48991e-05 "Palazzo_degli_Elefanti-Catania_Province_of_Catania_Sicily.html" 561
+1:3:10:2 2.52557e-05 "Fontana_dell_Amenano-Catania_Province_of_Catania_Sicily.html" 1127
+1:3:11:1 4.02221e-05 "La_Dea_di_Morgantina-Aidone_Province_of_Enna_Sicily.html" 1169
+1:3:11:2 1.96434e-05 "Museo_Archeologico_di_Aidone-Aidone_Province_of_Enna_Sicily.html" 1174
+1:4:1:1 0.000782928 "Monte_Baldo-Malcesine_Province_of_Verona_Veneto.html" 433
+1:4:1:2 0.000626716 "Castello_Scaligero-Malcesine_Province_of_Verona_Veneto.html" 432
+1:4:1:3 0.000321777 "Ferry_from_Malcesine_to_Limone_and_Riva-Malcesine_Province_of_Verona_Veneto.html" 487
+1:4:2:1 0.000290909 "Gardaland_Park-Castelnuovo_del_Garda_Province_of_Verona_Veneto.html" 519
+1:4:2:2 0.000129085 "Movieland_Park-Lazise_Province_of_Verona_Veneto.html" 392
+1:4:2:3 0.000124408 "Gardaland_SEA_LIFE_Aquarium-Castelnuovo_del_Garda_Province_of_Verona_Veneto.html" 520
+1:4:2:4 9.72814e-05 "Caneva_The_Aquapark-Lazise_Province_of_Verona_Veneto.html" 393
+1:4:2:5 4.48991e-05 "Lago_di_Garda-Garda_Province_of_Verona_Veneto.html" 654
+1:4:3:1 0.000119731 "Grotte_di_Catullo-Sirmione_Province_of_Brescia_Lombardy.html" 615
+1:4:3:2 5.05115e-05 "Jamaica_Beach-Sirmione_Province_of_Brescia_Lombardy.html" 616
+1:4:3:3 2.15141e-05 "Centro_Storico_Sirmione-Sirmione_Province_of_Brescia_Lombardy.html" 1181
+1:5:1:1 0.000501373 "I_Trulli_di_Alberobello_World_Heritage_Site-Alberobello_Province_of_Bari_Puglia.html" 257
+1:5:1:2 0.000474247 "Sassi_di_Matera-Matera_Province_of_Matera_Basilicata.html" 283
+1:5:1:3 9.82168e-05 "Grotte_di_Castellana-Castellana_Grotte_Province_of_Bari_Puglia.html" 964
+1:5:1:4 6.54778e-05 "Parrocchia_Sant_Antonio_di_Padova-Alberobello_Province_of_Bari_Puglia.html" 284
+1:5:1:5 6.17362e-05 "Trullo_Sovrano-Alberobello_Province_of_Bari_Puglia.html" 904
+1:5:1:6 5.05115e-05 "Casa_Noha-Matera_Province_of_Matera_Basilicata.html" 776
+1:5:1:7 4.58345e-05 "Casa_Grotta_di_Vico_Solitario-Matera_Province_of_Matera_Basilicata.html" 781
+1:5:1:8 2.89973e-05 "Parco_della_Murgia_Materana-Matera_Province_of_Matera_Basilicata.html" 1208
+1:5:1:9 2.71265e-05 "Cattedrale_di_Matera-Matera_Province_of_Matera_Basilicata.html" 1100
+1:5:1:10 2.61911e-05 "Cripta_del_Peccato_Originale-Matera_Province_of_Matera_Basilicata.html" 1099
+1:5:1:11 2.52557e-05 "Church_of_Santa_Maria_de_Idris-Matera_Province_of_Matera_Basilicata.html" 911
+1:5:1:12 2.43203e-05 "Centro_Storico_Locorotondo-Locorotondo_Province_of_Bari_Puglia.html" 1058
+1:5:1:13 2.33849e-05 "Parco_delle_Chiese_Rupestri_di_Matera-Matera_Province_of_Matera_Basilicata.html" 635
+1:5:1:14 2.33849e-05 "Castel_del_Monte-Andria_Province_of_Barletta_Andria_Trani_Puglia.html" 725
+1:5:1:15 2.15141e-05 "Parrocchia_Santuario_Basilica_S_S_Cosma_E_Damiano-Alberobello_Province_of_Bari_Pu.html" 531
+1:5:1:16 1.96434e-05 "Sassi_in_Miniatura-Matera_Province_of_Matera_Basilicata.html" 1224
+1:5:2:1 0.000186144 "Centro_Storico_Lecce-Lecce_Province_of_Lecce_Puglia.html" 366
+1:5:2:2 0.000123472 "Duomo_di_Lecce-Lecce_Province_of_Lecce_Puglia.html" 367
+1:5:2:3 0.000120666 "Basilica_di_Santa_Croce-Lecce_Province_of_Lecce_Puglia.html" 368
+1:5:3:1 0.000209529 "Basilica_San_Nicola-Bari_Province_of_Bari_Puglia.html" 709
+1:5:3:2 9.26044e-05 "Citta_Vecchia_Bari-Bari_Province_of_Bari_Puglia.html" 824
+1:5:3:3 5.89301e-05 "Cattedrale_di_San_Sabino-Bari_Province_of_Bari_Puglia.html" 710
+1:5:3:4 2.61911e-05 "Castello_Normanno_Svevo-Bari_Province_of_Bari_Puglia.html" 1038
+1:5:4:1 7.7638e-05 "Centro_Storico_di_Polignano_a_Mare-Polignano_a_Mare_Province_of_Bari_Puglia.html" 256
+1:5:4:2 3.46097e-05 "Statua_di_Domenico_Modugno-Polignano_a_Mare_Province_of_Bari_Puglia.html" 992
+1:6:1 4.02221e-05 "Ston_City_Walls-Ston_Peljesac_Peninsula_Dubrovnik_Neretva_County_Dalmatia.html" 899
+1:6:2 4.02221e-05 "Ston_Salt_Works-Ston_Peljesac_Peninsula_Dubrovnik_Neretva_County_Dalmatia.html" 900
+2:1:1:1 0.00322993 "Palazzo_di_Diocleziano-Split_Split_Dalmatia_County_Dalmatia.html" 21
+2:1:1:2 0.00117486 "Cathedral_of_Saint_Domnius-Split_Split_Dalmatia_County_Dalmatia.html" 37
+2:1:1:3 0.0011337 "Marjan_Park-Split_Split_Dalmatia_County_Dalmatia.html" 123
+2:1:1:4 0.000992457 "Old_Split-Split_Split_Dalmatia_County_Dalmatia.html" 211
+2:1:1:5 0.000713708 "The_Peristyle_of_Diocletian_s_Palace-Split_Split_Dalmatia_County_Dalmatia.html" 456
+2:1:1:6 0.000521017 "Riva_Harbor-Split_Split_Dalmatia_County_Dalmatia.html" 23
+2:1:1:7 0.000462086 "Grgur_Ninski_Statue-Split_Split_Dalmatia_County_Dalmatia.html" 535
+2:1:1:8 0.000170242 "Fruit_s_Square_Trg_Brace_Radic-Split_Split_Dalmatia_County_Dalmatia.html" 685
+2:1:1:9 0.000163695 "Klis_Fortress-Klis_Split_Split_Dalmatia_County_Dalmatia.html" 447
+2:1:1:10 0.000153405 "Galerija_Mestrovic-Split_Split_Dalmatia_County_Dalmatia.html" 446
+2:1:1:11 0.000104765 "Froggyland-Split_Split_Dalmatia_County_Dalmatia.html" 210
+2:1:1:12 0.000103829 "Temple_of_Jupiter-Split_Split_Dalmatia_County_Dalmatia.html" 981
+2:1:1:13 7.48318e-05 "Bacvice_Beach-Split_Split_Dalmatia_County_Dalmatia.html" 488
+2:1:1:14 6.45424e-05 "City_Clock-Split_Split_Dalmatia_County_Dalmatia.html" 633
+2:1:1:15 5.61239e-05 "Pjaca-Split_Split_Dalmatia_County_Dalmatia.html" 883
+2:1:1:16 3.08681e-05 "Eastern_Silver_Gate-Split_Split_Dalmatia_County_Dalmatia.html" 1198
+2:1:1:17 2.80619e-05 "Archaeological_Museum_Split-Split_Split_Dalmatia_County_Dalmatia.html" 22
+2:1:1:18 2.80619e-05 "Ethnographic_Museum_Split-Split_Split_Dalmatia_County_Dalmatia.html" 292
+2:1:1:19 2.43203e-05 "City_Museum_of_Split-Split_Split_Dalmatia_County_Dalmatia.html" 902
+2:1:1:20 2.33849e-05 "Green_Market-Split_Split_Dalmatia_County_Dalmatia.html" 1209
+2:1:1:21 2.24495e-05 "Kasuni_Beach-Split_Split_Dalmatia_County_Dalmatia.html" 1013
+2:1:1:22 2.05787e-05 "Dioklecijanova_Cardo_Maximus-Split_Split_Dalmatia_County_Dalmatia.html" 1095
+2:1:1:23 1.96434e-05 "Prokurative-Split_Split_Dalmatia_County_Dalmatia.html" 1162
+2:1:2:1 0.00137036 "Museum_of_Broken_Relationships-Zagreb_Central_Croatia.html" 294
+2:1:2:2 0.00103174 "St_Mark_s_Church_Crkva_sv_Marka-Zagreb_Central_Croatia.html" 499
+2:1:2:3 0.000997134 "Upper_Town_Gornji_Grad-Zagreb_Central_Croatia.html" 118
+2:1:2:4 0.00064636 "Cathedral_of_the_Assumption-Zagreb_Central_Croatia.html" 120
+2:1:2:5 0.000589301 "Tkalciceva-Zagreb_Central_Croatia.html" 636
+2:1:2:6 0.000485471 "Mirogoj_Cemetery-Zagreb_Central_Croatia.html" 559
+2:1:2:7 0.000416252 "Jelacic_Square_Trg_Bana_Josipa_Jelacica-Zagreb_Central_Croatia.html" 631
+2:1:2:8 0.000307746 "Funicular_Railway-Zagreb_Central_Croatia.html" 630
+2:1:2:9 0.000274072 "Lower_Town-Zagreb_Central_Croatia.html" 121
+2:1:2:10 0.000253493 "Croatian_Museum_of_Naive_Art-Zagreb_Central_Croatia.html" 160
+2:1:2:11 0.000186144 "Zagreb_360-Zagreb_Central_Croatia.html" 295
+2:1:2:12 0.000163695 "Zrinjevac-Zagreb_Central_Croatia.html" 119
+2:1:2:13 0.000150599 "Lotrscak_Tower-Zagreb_Central_Croatia.html" 717
+2:1:2:14 0.000135633 "Porta_di_Pietra_Kamenita_Vrata-Zagreb_Central_Croatia.html" 918
+2:1:2:15 0.000114119 "Maksimir_Park_Maksimirirski_perivoj-Zagreb_Central_Croatia.html" 645
+2:1:2:16 6.73486e-05 "Dolac_Market-Zagreb_Central_Croatia.html" 1076
+2:1:2:17 5.42531e-05 "Museum_of_Illusions-Zagreb_Central_Croatia.html" 950
+2:1:2:18 4.95761e-05 "Ban_Josip_Jelacic_Monument-Zagreb_Central_Croatia.html" 500
+2:1:2:19 2.99327e-05 "Tortureum_Museum_of_Torture-Zagreb_Central_Croatia.html" 1171
+2:1:2:20 2.33849e-05 "King_Tomislav_Square-Zagreb_Central_Croatia.html" 1081
+2:1:2:21 2.33849e-05 "Botanical_Garden-Zagreb_Central_Croatia.html" 1197
+2:1:2:22 2.05787e-05 "Zagreb_Zoo-Zagreb_Central_Croatia.html" 646
+2:1:3:1 0.00141058 "Sea_Organ_Morske_Orgulje-Zadar_Zadar_County_Dalmatia.html" 166
+2:1:3:2 0.000947558 "Greeting_to_the_Sun_Il_Saluto_al_Sole-Zadar_Zadar_County_Dalmatia.html" 165
+2:1:3:3 0.000364805 "Zadar_Land_City_Gates-Zadar_Zadar_County_Dalmatia.html" 167
+2:1:3:4 0.000337679 "Church_of_St_Donat-Zadar_Zadar_County_Dalmatia.html" 168
+2:1:3:5 0.000215141 "The_Forum-Zadar_Zadar_County_Dalmatia.html" 169
+2:1:3:6 0.00014218 "Paklenica_National_Park-Starigrad_Paklenica_Zadar_County_Dalmatia.html" 787
+2:1:3:7 0.000115054 "Paseo_Maritimo-Zadar_Zadar_County_Dalmatia.html" 170
+2:1:3:8 7.01548e-05 "Museum_of_Ancient_Glass-Zadar_Zadar_County_Dalmatia.html" 664
+2:1:3:9 6.45424e-05 "Five_Wells_Square_Trg_5_Bunara-Zadar_Zadar_County_Dalmatia.html" 655
+2:1:3:10 5.51885e-05 "Archaeological_Museum_Zadar-Zadar_Zadar_County_Dalmatia.html" 412
+2:1:3:11 4.67699e-05 "Zadar_Cathedral-Zadar_Zadar_County_Dalmatia.html" 1145
+2:1:3:12 2.71265e-05 "Museum_of_Illusions-Zadar_Zadar_County_Dalmatia.html" 1103
+2:1:4:1 0.00230295 "Plitvice_Lakes_National_Park-Plitvice_Lakes_National_Park_Central_Croatia.html" 36
+2:1:4:2 0.000183338 "Veliki_Slap-Plitvice_Lakes_National_Park_Central_Croatia.html" 819
+2:1:4:3 0.000180532 "The_Lower_Lakes-Plitvice_Lakes_National_Park_Central_Croatia.html" 801
+2:1:4:4 0.000108506 "Rastoke-Slunj_Karlovac_County_Central_Croatia.html" 891
+2:1:4:5 2.80619e-05 "Barac_Caves-Nova_Krslja_Plitvice_Lakes_National_Park_Central_Croatia.html" 1184
+2:1:5:1 0.000533177 "Historic_City_of_Trogir-Trogir_Split_Dalmatia_County_Dalmatia.html" 656
+2:1:5:2 0.000241333 "The_St_Lawrence_Cathedral_and_Bell_Tower-Trogir_Split_Dalmatia_County_Dalmatia.html" 657
+2:1:5:3 0.000197369 "Central_Square_in_Trogir-Trogir_Split_Dalmatia_County_Dalmatia.html" 763
+2:1:5:4 0.000159018 "Fortress_Kamerlengo-Trogir_Split_Dalmatia_County_Dalmatia.html" 658
+2:1:6:1 0.00059959 "Tvrdava_Fortica-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 503
+2:1:6:2 0.000201111 "Pakleni_Islands-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 544
+2:1:6:3 6.73486e-05 "Franciscan_Monastery-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 628
+2:1:6:4 6.26716e-05 "Dubovica-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 504
+2:1:6:5 5.79947e-05 "St_Stephen_s_Cathedral-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 627
+2:1:6:6 2.43203e-05 "Milna-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 505
+2:1:6:7 2.33849e-05 "Jerolim_Island-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 1210
+2:1:6:8 1.96434e-05 "The_Harbour_of_Hvar-Hvar_Hvar_Island_Split_Dalmatia_County_Dalmatia.html" 626
+2:1:7:1 0.000234785 "Zlatni_Rat_Beach_Golden_Horn-Bol_Brac_Island_Split_Dalmatia_County_Dalmatia.html" 156
+2:1:7:2 0.000162759 "Vidova_Gora-Bol_Brac_Island_Split_Dalmatia_County_Dalmatia.html" 157
+2:1:7:3 2.24495e-05 "Blaca-Bol_Brac_Island_Split_Dalmatia_County_Dalmatia.html" 1165
+2:1:8:1 0.000179596 "Korcula_Old_City-Korcula_Island_Dubrovnik_Neretva_County_Dalmatia.html" 747
+2:1:8:2 9.72814e-05 "Mljet_National_Park-Mljet_Island_Dubrovnik_Neretva_County_Dalmatia.html" 941
+2:1:8:3 4.67699e-05 "St_Mark_s_Cathedral-Korcula_Town_Korcula_Island_Dubrovnik_Neretva_County_Dalmati.html" 965
+2:1:8:4 2.71265e-05 "Marco_Polo_House-Korcula_Island_Dubrovnik_Neretva_County_Dalmatia.html" 888
+2:1:8:5 2.61911e-05 "St_Mary_Island-Mljet_National_Park_Dubrovnik_Neretva_County_Dalmatia.html" 942
+2:1:8:6 2.15141e-05 "Marco_Polo_Museum-Korcula_Town_Korcula_Island_Dubrovnik_Neretva_County_Dalmatia.html" 748
+2:1:9:1 0.000141245 "The_Cathedral_of_St_James_in_Sibenik-Sibenik_Sibenik_Knin_County_Dalmatia.html" 785
+2:1:9:2 9.1669e-05 "St_Michael_s_Fortress-Sibenik_Sibenik_Knin_County_Dalmatia.html" 873
+2:1:9:3 5.79947e-05 "Medieval_Mediteranean_Garden-Sibenik_Sibenik_Knin_County_Dalmatia.html" 791
+2:1:9:4 2.24495e-05 "Town_Hall_Sibenik-Sibenik_Sibenik_Knin_County_Dalmatia.html" 1053
+2:2:1:1 0.00249938 "Ljubljana_Old_Town-Ljubljana_Upper_Carniola_Region.html" 129
+2:2:1:2 0.00224308 "Ljubljanski_Grad-Ljubljana_Upper_Carniola_Region.html" 377
+2:2:1:3 0.00153779 "Triple_Bridge_Tromostovje-Ljubljana_Upper_Carniola_Region.html" 130
+2:2:1:4 0.00117392 "Dragon_Bridge_Zmajski_Most-Ljubljana_Upper_Carniola_Region.html" 303
+2:2:1:5 0.000956912 "Preseren_Square-Ljubljana_Upper_Carniola_Region.html" 489
+2:2:1:6 0.000760478 "The_Ljubljana_Castle-Ljubljana_Upper_Carniola_Region.html" 335
+2:2:1:7 0.000593978 "Tivoli_Park-Ljubljana_Upper_Carniola_Region.html" 413
+2:2:1:8 0.000509792 "River_Ljubljanica_Kanal-Ljubljana_Upper_Carniola_Region.html" 619
+2:2:1:9 0.000419058 "Cathedral_of_St_Nicholas_Stolnica_Sv_Nikolaja-Ljubljana_Upper_Carniola_Region.html" 408
+2:2:1:10 0.000202981 "Butcher_s_Bridge-Ljubljana_Upper_Carniola_Region.html" 752
+2:2:1:11 0.000136568 "Metelkova-Ljubljana_Upper_Carniola_Region.html" 967
+2:2:1:12 0.000110377 "Vodnik_Square_Vodnikov_trg-Ljubljana_Upper_Carniola_Region.html" 952
+2:2:1:13 0.000101958 "Franciscan_Church_Franciskanska_cerkev-Ljubljana_Upper_Carniola_Region.html" 988
+2:2:1:14 5.05115e-05 "Skyscraper_Neboticnik-Ljubljana_Upper_Carniola_Region.html" 376
+2:2:1:15 5.05115e-05 "House_of_Illusions-Ljubljana_Upper_Carniola_Region.html" 451
+2:2:1:16 4.02221e-05 "Tourist_Information_Centre_Ljubljana-Ljubljana_Upper_Carniola_Region.html" 931
+2:2:1:17 3.08681e-05 "Shoemaker_s_Bridge_Cevljarski_Most-Ljubljana_Upper_Carniola_Region.html" 753
+2:2:1:18 2.15141e-05 "Town_Hall_Magistrat-Ljubljana_Upper_Carniola_Region.html" 758
+2:2:2:1 0.00329354 "Lake_Bled-Bled_Upper_Carniola_Region.html" 71
+2:2:2:2 0.00215048 "Vintgar_Gorge-Bled_Upper_Carniola_Region.html" 114
+2:2:2:3 0.00208032 "Bled_Castle_Blejski_Grad-Bled_Upper_Carniola_Region.html" 116
+2:2:2:4 0.00154247 "Bled_Island-Bled_Upper_Carniola_Region.html" 115
+2:2:2:5 0.00055282 "Lake_Bohinj-Bohinjsko_Jezero_Upper_Carniola_Region.html" 272
+2:2:2:6 0.000290909 "Waterfall_Savica-Bohinjsko_Jezero_Upper_Carniola_Region.html" 271
+2:2:2:7 0.000253493 "Straza_Bled-Bled_Upper_Carniola_Region.html" 309
+2:2:2:8 0.00023572 "Vogel_Ski_Center-Bohinjsko_Jezero_Upper_Carniola_Region.html" 450
+2:2:2:9 0.000172113 "Church_of_the_Assumption-Bled_Upper_Carniola_Region.html" 629
+2:2:2:10 0.000133762 "St_Martin_s_Parish_Church-Bled_Upper_Carniola_Region.html" 515
+2:2:2:11 9.44752e-05 "Triglav_National_Park-Bled_Upper_Carniola_Region.html" 70
+2:2:2:12 2.43203e-05 "Mala_Osojnica-Bled_Upper_Carniola_Region.html" 1094
+2:2:3:1 0.00141432 "Postojna_Cave-Postojna_Inner_Carniola_Region.html" 117
+2:2:3:2 0.000968137 "Predjama_Castle-Postojna_Inner_Carniola_Region.html" 566
+2:2:3:3 0.000303069 "Skocjanske_Jame-Skocjan_Slovenian_Littoral_Region.html" 543
+2:2:3:4 7.2961e-05 "Lipica_Stud_Farm_Kobilarna_Lipica-Lipica_Slovenian_Littoral_Region.html" 452
+2:3:1:1 0.00102333 "Amphitheatre_de_Pula-Pula_Istria.html" 374
+2:3:1:2 0.00051634 "Temple_Of_Augustus-Pula_Istria.html" 425
+2:3:1:3 0.000359193 "Arco_dei_Sergi-Pula_Istria.html" 375
+2:3:1:4 0.000186144 "Aquarium_Pula-Pula_Istria.html" 812
+2:3:1:5 0.000159018 "Kastel-Pula_Istria.html" 386
+2:3:1:6 0.000121602 "Floor_mosaic_The_Punishment_of_Dirce-Pula_Istria.html" 385
+2:3:1:7 2.43203e-05 "Kamenjak_National_Park-Premantura_Istria.html" 1113
+2:3:1:8 1.96434e-05 "Medulin_Village-Pula_Istria.html" 1180
+2:3:2:1 0.000727739 "Old_Town-Rovinj_Istria.html" 406
+2:3:2:2 0.000426541 "Church_of_St_Euphemia-Rovinj_Istria.html" 436
+2:3:2:3 0.000401286 "Port_of_Rovinj-Rovinj_Istria.html" 407
+2:3:2:4 8.32504e-05 "Main_Street-Rovinj_Istria.html" 1001
+2:3:2:5 6.3607e-05 "Punta_Corrente-Rovinj_Istria.html" 437
+2:3:2:6 3.08681e-05 "Balbi_Arch-Rovinj_Istria.html" 1116
+2:3:2:7 2.61911e-05 "Brijuni_Islands-Rovinj_Istria.html" 672
+2:3:3:1 0.000367611 "Porec_Old_Town-Porec_Istria.html" 25
+2:3:3:2 0.000276878 "Euphrasius_Basilica-Porec_Istria.html" 24
+2:3:3:3 6.26716e-05 "Round_Tower-Porec_Istria.html" 996
+2:3:3:4 4.30283e-05 "Decumanus_Street-Porec_Istria.html" 790
+2:3:3:5 2.24495e-05 "Aquapark_Aquacolors_Porec-Porec_Istria.html" 765
+2:3:3:6 1.96434e-05 "Jama_Grotta_Baredine-Porec_Istria.html" 1213
+3:1 0.000920431 "Museo_Egizio-Turin_Province_of_Turin_Piedmont.html" 338
+3:2 0.000665068 "Museo_Nazionale_del_Cinema-Turin_Province_of_Turin_Piedmont.html" 187
+3:3 0.000484536 "Mole_Antonelliana-Turin_Province_of_Turin_Piedmont.html" 665
+3:4 0.000367611 "Museo_Nazionale_dell_Automobile-Turin_Province_of_Turin_Piedmont.html" 337
+3:5 0.000311487 "Piazza_San_Carlo-Turin_Province_of_Turin_Piedmont.html" 549
+3:6 0.000213271 "Palazzo_Reale-Turin_Province_of_Turin_Piedmont.html" 339
+3:7 0.000207658 "Juventus_Stadium-Turin_Province_of_Turin_Piedmont.html" 766
+3:8 0.000177726 "Piazza_Castello-Turin_Province_of_Turin_Piedmont.html" 188
+3:9 7.01548e-05 "Parco_del_Valentino-Turin_Province_of_Turin_Piedmont.html" 571
+3:10 4.67699e-05 "Real_Chiesa_di_San_Lorenzo-Turin_Province_of_Turin_Piedmont.html" 1112
+3:11 4.48991e-05 "Duomo_di_Torino_e_Cappella_della_Sacra_Sindone-Turin_Province_of_Turin_Piedmont.html" 580
+3:12 2.89973e-05 "J_Museum_Museo_Della_Juventus-Turin_Province_of_Turin_Piedmont.html" 1029
+3:13 2.61911e-05 "Armeria_Reale-Turin_Province_of_Turin_Piedmont.html" 867
+3:14 2.15141e-05 "Museum_of_the_Holy_Shroud_Museo_della_Sindone-Turin_Province_of_Turin_Piedmont.html" 757
+4:1 0.00056498 "Mausoleo_di_Galla_Placidia-Ravenna_Province_of_Ravenna_Emilia_Romagna.html" 458
+4:2 0.000526629 "Basilica_San_Vitale-Ravenna_Province_of_Ravenna_Emilia_Romagna.html" 457
+4:3 0.000393802 "Basilica_di_Sant_Apollinare_Nuovo-Ravenna_Province_of_Ravenna_Emilia_Romagna.html" 460
+4:4 0.000330195 "Battistero_Neoniano_Battistero_degli_Ortodossi-Ravenna_Province_of_Ravenna_Emilia_.html" 779
+4:5 0.000160888 "Dante_s_tomb_and_Quadrarco_of_Braccioforte-Ravenna_Province_of_Ravenna_Emilia_Roma.html" 994
+4:6 0.000155276 "Basilica_di_Sant_Apollinare_in_Classe-Classe_Province_of_Ravenna_Emilia_Romagna.html" 459
+4:7 0.000155276 "Battistero_degli_Ariani-Ravenna_Province_of_Ravenna_Emilia_Romagna.html" 905
+4:8 6.08009e-05 "Archiepiscopal_Museum-Ravenna_Province_of_Ravenna_Emilia_Romagna.html" 780
+4:9 2.43203e-05 "Basilica_di_San_Francesco_Ravenna-Ravenna_Province_of_Ravenna_Emilia_Romagna.html" 995
+5:1 0.000503244 "Cavtat_Old_Town-Cavtat_Konavle_Dubrovnik_Neretva_County_Dalmatia.html" 324
+5:2 0.000358257 "Cavtat_Cemetery-Cavtat_Konavle_Dubrovnik_Neretva_County_Dalmatia.html" 325
+5:3 0.00030494 "Cavtat_Seaside_Promenade-Cavtat_Konavle_Dubrovnik_Neretva_County_Dalmatia.html" 442
+5:4 0.000148728 "Church_of_Our_Lady_of_the_Snow-Cavtat_Konavle_Dubrovnik_Neretva_County_Dalmatia.html" 805
+5:5 0.000144051 "Church_of_St_Nicholas-Cavtat_Konavle_Dubrovnik_Neretva_County_Dalmatia.html" 326
+5:6 5.98655e-05 "Vlaho_Bukovac_House-Cavtat_Konavle_Dubrovnik_Neretva_County_Dalmatia.html" 441
+6:1 0.000255364 "Via_Giuseppe_Garibaldi-Genoa_Italian_Riviera_Liguria.html" 612
+6:2 0.000228237 "Cattedrale_di_San_Lorenzo_Duomo_di_Genova-Genoa_Italian_Riviera_Liguria.html" 524
+6:3 0.000227302 "Aquarium_of_Genoa-Genoa_Italian_Riviera_Liguria.html" 642
+6:4 0.000202981 "Piazza_Raffaele_De_Ferrari-Genoa_Italian_Riviera_Liguria.html" 582
+6:5 0.000173984 "Old_Port-Genoa_Italian_Riviera_Liguria.html" 523
+6:6 0.000147793 "Boccadasse-Genoa_Italian_Riviera_Liguria.html" 329
+6:7 7.85734e-05 "Galata_Museo_del_Mare-Genoa_Italian_Riviera_Liguria.html" 786
+6:8 2.89973e-05 "Passeggiata_Anita_Garibaldi_a_Nervi-Genoa_Italian_Riviera_Liguria.html" 1043
+6:9 2.71265e-05 "Spianata_Castelletto-Genoa_Italian_Riviera_Liguria.html" 328
+6:10 1.96434e-05 "Museo_di_Palazzo_Reale-Genoa_Italian_Riviera_Liguria.html" 613
+7:1 0.000382578 "Piazza_dell_Unita_d_Italia-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 173
+7:2 0.000330195 "Castello_di_Miramare_Museo_Storico-Trieste_Province_of_Trieste_Friuli_Venezia_Giul.html" 816
+7:3 0.000109442 "Opicina_Tramway-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 174
+7:4 0.000104765 "Cattedrale_di_San_Giusto_Martire-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 865
+7:5 6.64132e-05 "Canale_Grande-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 430
+7:6 4.58345e-05 "Castello_di_San_Giusto-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 740
+7:7 4.11575e-05 "Civico_Museo_della_Risiera_di_San_Sabba-Trieste_Province_of_Trieste_Friuli_Venezia.html" 1170
+7:8 2.71265e-05 "Museo_Revoltella-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 1074
+7:9 2.33849e-05 "Teatro_Romano_di_Trieste-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 617
+7:10 2.15141e-05 "Trieste_Infopoint-Trieste_Province_of_Trieste_Friuli_Venezia_Giulia.html" 1154
+8:1 0.000246945 "Mottarone_Cable_Car-Stresa_Lake_Maggiore_Piedmont.html" 217
+8:2 0.000203917 "Palazzo_Borromeo-Isola_Bella_Stresa_Lake_Maggiore_Piedmont.html" 479
+8:3 9.91522e-05 "Botanical_Gardens_Of_Villa_Taranto-Verbania_Lake_Maggiore_Piedmont.html" 467
+8:4 7.48318e-05 "Giardino_Botanico_Alpinia-Stresa_Lake_Maggiore_Piedmont.html" 808
+8:5 7.38964e-05 "Park_Pallavicino-Stresa_Lake_Maggiore_Piedmont.html" 218
+8:6 5.70593e-05 "Lago_Maggiore-Verbania_Lake_Maggiore_Piedmont.html" 468
+9:1 0.000191757 "Kitzsteinhorn-Kaprun_Austrian_Alps.html" 506
+9:2 0.000191757 "Zell_Am_See-Zell_am_See_Austrian_Alps.html" 669
+9:3 0.000173984 "Lake_Zell-Zell_am_See_Austrian_Alps.html" 507
+9:4 5.23823e-05 "Gipfelwelt_3000-Zell_am_See_Austrian_Alps.html" 857
+10:1 0.000131891 "Frecce_delle_Grotte_di_Antonio_Piccinnu-Alghero_Province_of_Sassari_Sardinia.html" 415
+10:2 0.000129085 "Spiaggia_di_Maria_Pia-Alghero_Province_of_Sassari_Sardinia.html" 416
+10:3 0.000119731 "Capo_Caccia_Vertical_Cliffs-Alghero_Province_of_Sassari_Sardinia.html" 572
+10:4 5.33177e-05 "La_Pelosa_Beach-Stintino_Province_of_Sassari_Sardinia.html" 1196
+10:5 4.67699e-05 "Spiaggia_Mugoni-Alghero_Province_of_Sassari_Sardinia.html" 997
+10:6 2.24495e-05 "Nuraghe_di_Palmavera-Alghero_Province_of_Sassari_Sardinia.html" 1075
+10:7 2.05787e-05 "Grotta_di_Nettuno-Alghero_Province_of_Sassari_Sardinia.html" 901
+11:1 0.000189886 "Cattedrale_di_Parma-Parma_Province_of_Parma_Emilia_Romagna.html" 462
+11:2 0.000149664 "Battistero_di_Parma-Parma_Province_of_Parma_Emilia_Romagna.html" 463
+11:3 9.6346e-05 "Teatro_Farnese-Parma_Province_of_Parma_Emilia_Romagna.html" 859
+11:4 2.43203e-05 "Parco_Ducale-Parma_Province_of_Parma_Emilia_Romagna.html" 1164
+12:1 0.000143116 "Teatro_Olimpico-Vicenza_Province_of_Vicenza_Veneto.html" 782
+12:2 8.2315e-05 "Basilica_Palladiana-Vicenza_Province_of_Vicenza_Veneto.html" 783
+12:3 8.04442e-05 "Piazza_dei_Signori-Vicenza_Province_of_Vicenza_Veneto.html" 1067
+12:4 6.45424e-05 "Villa_La_Rotonda_by_Andrea_Palladio-Vicenza_Province_of_Vicenza_Veneto.html" 1117
+12:5 2.05787e-05 "Villa_Valmarana_ai_Nani-Vicenza_Province_of_Vicenza_Veneto.html" 1227
+13:1 0.000127214 "Uhrturm-Graz_Styria.html" 424
+13:2 0.000115054 "Altstadt_von_Graz-Graz_Styria.html" 1137
+13:3 9.44752e-05 "Schlossberg-Graz_Styria.html" 1080
+13:4 5.05115e-05 "Schloss_Eggenberg-Graz_Styria.html" 423
+14:1 0.000131891 "Lungo_Mare-Opatija_Primorje_Gorski_Kotar_County.html" 935
+14:2 0.000112248 "Maiden_With_The_Seagull-Opatija_Primorje_Gorski_Kotar_County.html" 584
+14:3 7.85734e-05 "Volosko-Opatija_Primorje_Gorski_Kotar_County.html" 936
+14:4 6.26716e-05 "The_Angiolina_Park_Villa_Angiolina-Opatija_Primorje_Gorski_Kotar_County.html" 585
+15:1 0.000141245 "San_Giulio_Island-Orta_San_Giulio_Province_of_Novara_Piedmont.html" 734
+15:2 0.000130956 "Lake_Orta-Orta_San_Giulio_Province_of_Novara_Piedmont.html" 553
+15:3 8.51212e-05 "Sacro_Monte_di_Orta-Orta_San_Giulio_Province_of_Novara_Piedmont.html" 552
+16:1 0.000136568 "Tartini_Square_Tartinijev_trg-Piran_Slovenian_Istria_Slovenian_Littoral_Region.html" 466
+16:2 0.000111312 "Piran_Town_Walls-Piran_Slovenian_Istria_Slovenian_Littoral_Region.html" 640
+16:3 0.0001057 "Church_of_St_George-Piran_Slovenian_Istria_Slovenian_Littoral_Region.html" 465
+17:1 0.000136568 "The_Bastion-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html" 419
+17:2 7.20256e-05 "Santa_Barbara_Church-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html" 564
+17:3 5.51885e-05 "Old_Ponale_Road_Path-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html" 563
+17:4 3.18035e-05 "MAG_Museo_Alto_Garda-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html" 755
+17:5 2.05787e-05 "Piazza_3_Novembre-Riva_Del_Garda_Province_of_Trento_Trentino_Alto_Adige.html" 418
+18:1 0.000102894 "Eger_Castle-Eger_Heves_County_Northern_Hungary.html" 605
+18:2 8.32504e-05 "Dobo_Square-Eger_Heves_County_Northern_Hungary.html" 604
+18:3 6.64132e-05 "Valley_of_the_Beautiful_Women-Eger_Heves_County_Northern_Hungary.html" 606
+18:4 5.05115e-05 "The_Basilica-Eger_Heves_County_Northern_Hungary.html" 603
+19:1 0.000102894 "Abbazia_di_Montecassino-Cassino_Province_of_Frosinone_Lazio.html" 976
+19:2 7.67026e-05 "Cassino_Memorial-Cassino_Province_of_Frosinone_Lazio.html" 975
+19:3 6.26716e-05 "Monte_Cassino_Polish_War_Cemetery-Cassino_Province_of_Frosinone_Lazio.html" 977
+19:4 2.15141e-05 "Historiale_di_Cassino-Cassino_Province_of_Frosinone_Lazio.html" 1199
+20:1 0.000128149 "South_Tyrol_Museum_of_Archaeology-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Ad.html" 403
+20:2 8.2315e-05 "Cable_Car_Renon-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html" 775
+20:3 2.61911e-05 "Runkelstein_Castle-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html" 980
+20:4 1.96434e-05 "Piazza_Walther-Bolzano_Province_of_South_Tyrol_Trentino_Alto_Adige.html" 404
+21:1 7.95088e-05 "Palazzo_Ducale_Mantova-Mantua_Province_of_Mantua_Lombardy.html" 851
+21:2 6.17362e-05 "Palazzo_Te-Mantua_Province_of_Mantua_Lombardy.html" 850
+21:3 4.30283e-05 "Basilica_di_Sant_Andrea_di_Mantova-Mantua_Province_of_Mantua_Lombardy.html" 1025
+21:4 4.11575e-05 "Rotonda_di_San_Lorenzo-Mantua_Province_of_Mantua_Lombardy.html" 990
+21:5 1.96434e-05 "Camera_degli_Sposi-Mantua_Province_of_Mantua_Lombardy.html" 1059
+22:1 8.97982e-05 "Duomo_di_Spoleto-Spoleto_Province_of_Perugia_Umbria.html" 926
+22:2 8.51212e-05 "Ponte_delle_Torri-Spoleto_Province_of_Perugia_Umbria.html" 925
+22:3 4.39637e-05 "La_Rocca-Spoleto_Province_of_Perugia_Umbria.html" 1191
+23:1 0.000109442 "Il_Vittoriale_degli_Italiani-Gardone_Riviera_Province_of_Brescia_Lombardy.html" 704
+23:2 0.000109442 "Heller_Garden-Gardone_Riviera_Province_of_Brescia_Lombardy.html" 705
+24:1 7.7638e-05 "Cathedral_of_Santa_Maria-Cagliari_Province_of_Cagliari_Sardinia.html" 659
+24:2 5.98655e-05 "Bastione_di_Saint_Remy-Cagliari_Province_of_Cagliari_Sardinia.html" 660
+24:3 5.79947e-05 "Poetto-Cagliari_Province_of_Cagliari_Sardinia.html" 968
+24:4 2.15141e-05 "Torre_dell_Elefante-Cagliari_Province_of_Cagliari_Sardinia.html" 1073
+25:1 0.000102894 "Passo_di_Gavia-Bormio_Province_of_Sondrio_Lombardy.html" 671
+25:2 7.7638e-05 "Stelvio_Pass-Bormio_Province_of_Sondrio_Lombardy.html" 670
+25:3 2.52557e-05 "Laghi_di_Cancano-Bormio_Province_of_Sondrio_Lombardy.html" 858
+26:1 7.67026e-05 "Duomo_di_Salerno-Salerno_Amalfi_Coast_Province_of_Salerno_Campania.html" 871
+26:2 5.05115e-05 "Centro_Storico_Salerno-Salerno_Amalfi_Coast_Province_of_Salerno_Campania.html" 484
+26:3 4.95761e-05 "Lungomare_di_Salerno-Salerno_Amalfi_Coast_Province_of_Salerno_Campania.html" 483
+26:4 2.71265e-05 "Giardino_della_Minerva-Salerno_Amalfi_Coast_Province_of_Salerno_Campania.html" 1221
+27:1 6.92194e-05 "Postlingbergbahn-Linz_Upper_Austria.html" 799
+27:2 6.3607e-05 "Hauptplatz-Linz_Upper_Austria.html" 1131
+27:3 3.74159e-05 "Ars_Electronica_Center-Linz_Upper_Austria.html" 800
+27:4 3.18035e-05 "Mariendom-Linz_Upper_Austria.html" 1193
+28:1 8.97982e-05 "Castello_Aragonese-Ischia_Isola_d_Ischia_Province_of_Naples_Campania.html" 855
+28:2 4.02221e-05 "Maronti_Beach-Ischia_Isola_d_Ischia_Province_of_Naples_Campania.html" 1052
+28:3 2.89973e-05 "Sant_Angelo_Serrara_Fontana-Isola_d_Ischia_Province_of_Naples_Campania.html" 854
+28:4 2.05787e-05 "Negombo-Lacco_Ameno_Isola_d_Ischia_Province_of_Naples_Campania.html" 881
+29:1 6.08009e-05 "Vrsic_Pass_Julian_Alps-Kranjska_Gora_Upper_Carniola_Region.html" 933
+29:2 5.98655e-05 "Lake_Jasna-Kranjska_Gora_Upper_Carniola_Region.html" 932
+29:3 5.89301e-05 "The_Russian_chapel-Kranjska_Gora_Upper_Carniola_Region.html" 934
+30:1 8.88628e-05 "Castello_Estense-Ferrara_Province_of_Ferrara_Emilia_Romagna.html" 481
+30:2 3.27389e-05 "Centro_Storico_Ferrara-Ferrara_Province_of_Ferrara_Emilia_Romagna.html" 480
+30:3 3.08681e-05 "Palazzo_dei_Diamanti-Ferrara_Province_of_Ferrara_Emilia_Romagna.html" 860
+30:4 2.52557e-05 "Ferrara_Cathedral-Ferrara_Province_of_Ferrara_Emilia_Romagna.html" 741
+31:1 8.6992e-05 "Carosello_3000_Ski_Area_Livigno-Livigno_Province_of_Sondrio_Lombardy.html" 550
+31:2 8.6992e-05 "Mottolino_Fun_Mountain-Livigno_Province_of_Sondrio_Lombardy.html" 551
+32:1 8.6992e-05 "Esztergom_Basilica_Cathedral-Esztergom_Komarom_Esztergom_County_Central_Transdanub.html" 596
+32:2 4.39637e-05 "Maria_Valeria_Bridge-Esztergom_Komarom_Esztergom_County_Central_Transdanubia.html" 882
+32:3 2.33849e-05 "Visegrad_Citadel-Visegrad_Pest_County_Central_Hungary.html" 595
+32:4 1.96434e-05 "Statue_of_King_Saint_Stephen-Esztergom_Komarom_Esztergom_County_Central_Transdanu.html" 827
+33:1 8.13796e-05 "Montecatini_Alto-Montecatini_Terme_Province_of_Pistoia_Tuscany.html" 662
+33:2 8.13796e-05 "Stazione_di_Montecatini_Terme_Monsummano-Montecatini_Terme_Province_of_Pistoia_Tu.html" 663
+34:1 7.85734e-05 "Museo_Nazionale_Tarquiniense-Tarquinia_Province_of_Viterbo_Lazio.html" 383
+34:2 7.85734e-05 "Necropoli_di_Tarquinia-Tarquinia_Province_of_Viterbo_Lazio.html" 384
+35:1 7.20256e-05 "Santa_Margherita_Ligure-Santa_Margherita_Ligure_Italian_Riviera_Liguria.html" 683
+35:2 2.52557e-05 "Ente_Parco_di_Portofino-Santa_Margherita_Ligure_Italian_Riviera_Liguria.html" 1214
+35:3 2.43203e-05 "Chiesa_di_Santa_Margherita_d_Antiochia_Santuario_di_Nostra_Signora_della_Rosa-San.html" 1225
+35:4 2.24495e-05 "Villa_Durazzo-Santa_Margherita_Ligure_Italian_Riviera_Liguria.html" 682
+36:1 7.10902e-05 "Bell_Tower_and_Astronomical_Clock_Orologio_Astronomico-Messina_Province_of_Messina.html" 838
+36:2 7.10902e-05 "Duomo_di_Messina-Messina_Province_of_Messina_Sicily.html" 839
+37:1 7.10902e-05 "Lago_di_Tenno-Tenno_Province_of_Trento_Trentino_Alto_Adige.html" 1008
+37:2 5.05115e-05 "Parco_Grotta_Cascata_Varone-Tenno_Province_of_Trento_Trentino_Alto_Adige.html" 1007
+37:3 2.05787e-05 "Medieval_Village_of_Canale-Tenno_Province_of_Trento_Trentino_Alto_Adige.html" 1107
+38:1 6.54778e-05 "Piazza_Grande_a_Montepulciano-Montepulciano_Tuscany.html" 609
+38:2 3.55451e-05 "Duomo-Montepulciano_Tuscany.html" 608
+38:3 2.99327e-05 "Tempio_di_San_Biagio-Montepulciano_Tuscany.html" 1130
+39:1 6.3607e-05 "The_Tiberius_Bridge-Rimini_Province_of_Rimini_Emilia_Romagna.html" 745
+39:2 6.3607e-05 "Arco_d_Augusto-Rimini_Province_of_Rimini_Emilia_Romagna.html" 746
+40:1 6.17362e-05 "Kozjak_Waterfalls-Kobarid_Slovenian_Littoral_Region.html" 743
+40:2 4.11575e-05 "Kobarid_Museum_Kobariski_muzej-Kobarid_Slovenian_Littoral_Region.html" 1178
+40:3 2.05787e-05 "Bridge_of_Napoleon-Kobarid_Slovenian_Littoral_Region.html" 742
+41:1 5.98655e-05 "Hilltop_Walled_Ancient_City_of_Motovun-Motovun_Istria.html" 842
+41:2 3.83513e-05 "Groznjan_Hilltop_village_of_artists_Istria_Croatia-Groznjan_Istria.html" 1083
+41:3 2.15141e-05 "Ancient_City_Walls-Motovun_Istria.html" 841
+42:1 5.89301e-05 "Spiaggia_La_Cinta-San_Teodoro_Province_of_Olbia_Tempio_Sardinia.html" 1189
+42:2 3.18035e-05 "Lu_Impostu_Beach-San_Teodoro_Province_of_Olbia_Tempio_Sardinia.html" 1190
+42:3 2.71265e-05 "Cala_Brandinchi-Capo_Coda_Cavallo_Province_of_Olbia_Tempio_Sardinia.html" 1217
+43:1 5.14469e-05 "Mayrhofner_Bergbahnen-Mayrhofen_Tirol_Austrian_Alps.html" 1070
+43:2 2.89973e-05 "Penkenbahn_Mayrhofen_Zillertal-Mayrhofen_Tirol_Austrian_Alps.html" 1071
+43:3 2.24495e-05 "Walking_Trails-Mayrhofen_Tirol_Austrian_Alps.html" 1159
+44:1 4.77053e-05 "Leonardo_s_Birthplace_Casa_Natale_di_Leonardo-Vinci_Tuscany.html" 920
+44:2 4.77053e-05 "Museo_Leonardiano-Vinci_Tuscany.html" 921
+45:1 4.67699e-05 "Palazzo_Ducale_di_Urbino-Urbino_Province_of_Pesaro_and_Urbino_Marche.html" 913
+45:2 2.52557e-05 "Galleria_Nazionale_delle_Marche-Urbino_Province_of_Pesaro_and_Urbino_Marche.html" 984
+45:3 2.15141e-05 "Oratorio_di_San_Giovanni_Battista-Urbino_Province_of_Pesaro_and_Urbino_Marche.html" 914
+46:1 4.67699e-05 "Minimetro-Perugia_Province_of_Perugia_Umbria.html" 1088
+46:2 2.33849e-05 "Lake_Trasimeno-Perugia_Province_of_Perugia_Umbria.html" 1089
+46:3 2.33849e-05 "Rocca_Paolina-Perugia_Province_of_Perugia_Umbria.html" 1114
+47:1 4.48991e-05 "Cascata_dell_Hofentol-Guardia_Folgaria_Province_of_Trento_Trentino_Alto_Adige.html" 652
+47:2 4.48991e-05 "Guardia_di_Folgaria-Folgaria_Province_of_Trento_Trentino_Alto_Adige.html" 653
+48:1 4.30283e-05 "Centro_Storico_Otranto-Otranto_Province_of_Lecce_Puglia.html" 945
+48:2 4.30283e-05 "Cattedrale_di_Otranto-Otranto_Province_of_Lecce_Puglia.html" 946
+49:1 4.11575e-05 "Grossglockner_High_Alpine_Road-Heiligenblut_Carinthia_Austrian_Alps.html" 649
+49:2 2.15141e-05 "Grossglockner_National_Park-Heiligenblut_Carinthia_Austrian_Alps.html" 1093
+49:3 1.96434e-05 "Krimml_Falls_Krimmler_Wasserfalle-Krimml_Austrian_Alps.html" 650
+50:1 4.11575e-05 "Basilica_di_Santa_Margherita-Cortona_Province_of_Arezzo_Tuscany.html" 947
+50:2 4.11575e-05 "Piazza_della_Repubblica-Cortona_Province_of_Arezzo_Tuscany.html" 948
+51:1 4.02221e-05 "Makarska_Harbour-Makarska_Split_Dalmatia_County_Dalmatia.html" 1010
+51:2 2.05787e-05 "The_Peninsula_of_St_Peter-Makarska_Split_Dalmatia_County_Dalmatia.html" 1009
+51:3 1.96434e-05 "St_Mark_s_Church-Makarska_Split_Dalmatia_County_Dalmatia.html" 1139
+52:1 3.92867e-05 "Tropea_Beach-Tropea_Province_of_Vibo_Valentia_Calabria.html" 421
+52:2 3.92867e-05 "The_Sanctuary_of_Santa_Maria_dell_Isola-Tropea_Province_of_Vibo_Valentia_Calabria.html" 422
+53:1 3.64805e-05 "Borghetto_sul_Mincio-Valeggio_Sul_Mincio_Province_of_Verona_Veneto.html" 928
+53:2 3.64805e-05 "Parco_Giardino_Sigurta-Valeggio_Sul_Mincio_Province_of_Verona_Veneto.html" 929
+54:1 3.64805e-05 "Centro_Storico_Bosa-Bosa_Province_of_Oristano_Sardinia.html" 971
+54:2 3.64805e-05 "Castello_di_Bosa-Bosa_Province_of_Oristano_Sardinia.html" 972
+55:1 3.64805e-05 "Ponte_degli_Alpini-Bassano_Del_Grappa_Province_of_Vicenza_Veneto.html" 1160
+55:2 3.64805e-05 "Poli_Museo_della_Grappa-Bassano_Del_Grappa_Province_of_Vicenza_Veneto.html" 1161
+56:1 3.55451e-05 "Cave_Bisevo-Bisevo_Split_Dalmatia_County_Dalmatia.html" 688
+56:2 3.55451e-05 "Stiniva_Cove-Vis_Island_of_Vis_Split_Dalmatia_County_Dalmatia.html" 689
+57:1 3.55451e-05 "Museum_of_Tourism-Limone_sul_Garda_Province_of_Brescia_Lombardy.html" 879
+57:2 3.55451e-05 "La_Limonaia_del_Castel-Limone_sul_Garda_Province_of_Brescia_Lombardy.html" 880
+58:1 3.55451e-05 "Grawa_Wasserfall-Neustift_im_Stubaital_Tirol_Austrian_Alps.html" 1027
+58:2 3.55451e-05 "Stubaier_Gletscher-Neustift_im_Stubaital_Tirol_Austrian_Alps.html" 1028
+59:1 3.46097e-05 "Trsat_Castle-Rijeka_Primorje_Gorski_Kotar_County.html" 1045
+59:2 3.46097e-05 "Korzo-Rijeka_Primorje_Gorski_Kotar_County.html" 1046
+60:1 3.46097e-05 "Koper_Cathedral_and_Bell_Tower-Koper_Slovenian_Istria_Slovenian_Littoral_Region.html" 1155
+60:2 3.46097e-05 "Praetorian_Palace-Koper_Slovenian_Istria_Slovenian_Littoral_Region.html" 1156
+61:1 3.46097e-05 "Museo_del_Violino-Cremona_Province_of_Cremona_Lombardy.html" 1200
+61:2 3.46097e-05 "Torrazzo_of_Cremona_Vertical_Museum-Cremona_Province_of_Cremona_Lombardy.html" 1201
+62:1 3.36743e-05 "Cervino_Breuil_Cervinia_Ski_Area-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html" 828
+62:2 3.36743e-05 "Nol_Ski-Breuil_Cervinia_Valtournenche_Valle_d_Aosta.html" 829
+63:1 3.27389e-05 "Bergbahn_Kitzbuhel-Kitzbuhel_Tirol_Austrian_Alps.html" 477
+63:2 3.27389e-05 "Schwarzsee-Kitzbuhel_Tirol_Austrian_Alps.html" 478
+64:1 3.27389e-05 "Museo_Etrusco_Guarnacci-Volterra_Province_of_Pisa_Tuscany.html" 809
+64:2 3.27389e-05 "Teatro_Romano_Roman_Theater_Baths-Volterra_Province_of_Pisa_Tuscany.html" 810
+65:1 3.27389e-05 "Musei_di_Fiesole-Fiesole_Tuscany.html" 956
+65:2 3.27389e-05 "Convento_di_San_Francesco-Fiesole_Tuscany.html" 957
+66:1 2.99327e-05 "Omis_Cetina_Canyon-Omis_Split_Dalmatia_County_Dalmatia.html" 1034
+66:2 2.99327e-05 "Omis_and_Cetina_River-Omis_Split_Dalmatia_County_Dalmatia.html" 1035
+67:1 2.89973e-05 "National_Park_Brijuni_Nacionalni_Park_Brijuni-Brijuni_National_Park_Istria.html" 834
+67:2 2.89973e-05 "Tito_s_Museum-Brijuni_National_Park_Istria.html" 835
+68:1 2.89973e-05 "Piazza_Pio_II-Pienza_Tuscany.html" 861
+68:2 2.89973e-05 "Il_Duomo_di_Pienza-Pienza_Tuscany.html" 862
+69:1 2.80619e-05 "Piazza_Duomo-Trento_Province_of_Trento_Trentino_Alto_Adige.html" 438
+69:2 2.80619e-05 "Castello_del_Buonconsiglio_Monumenti_e_Collezioni_Provinciali-Trento_Province_of_T.html" 439
+70:1 2.80619e-05 "Stubnerkogel_Suspension_Bridge-Bad_Gastein_Austrian_Alps.html" 821
+70:2 2.80619e-05 "Bad_Gasteiner_Wasserfall-Bad_Gastein_Austrian_Alps.html" 822
+71:1 2.80619e-05 "Castello_Brown-Portofino_Italian_Riviera_Liguria.html" 1194
+71:2 2.80619e-05 "Church_of_San_Giorgio-Portofino_Italian_Riviera_Liguria.html" 1195
+72:1 2.80619e-05 "La_Funivia_Rapallo_Montallegro-Rapallo_Italian_Riviera_Liguria.html" 1204
+72:2 2.80619e-05 "Santuario_di_Montallegro-Rapallo_Italian_Riviera_Liguria.html" 1205
+73:1 2.71265e-05 "Skywalk_Dachstein-Ramsau_am_Dachstein_Styria.html" 545
+73:2 2.71265e-05 "Dachstein_Suspension_Bridge-Ramsau_am_Dachstein_Styria.html" 546
+74:1 2.71265e-05 "Su_Nuraxi-Barumini_Province_of_Medio_Campidano_Sardinia.html" 886
+74:2 2.71265e-05 "Casa_Zapata_Museum-Barumini_Province_of_Medio_Campidano_Sardinia.html" 887
+75:1 2.61911e-05 "Museo_Archeologico_Nazionale_di_Reggio_Calabria-Reggio_Calabria_Province_of_Reggi.html" 469
+75:2 2.61911e-05 "Lungomare_Falcomata-Reggio_Calabria_Province_of_Reggio_Calabria_Calabria.html" 470
+76:1 2.61911e-05 "Old_Castle_Stari_Grad-Varazdin_Varazdin_County_Central_Croatia.html" 698
+76:2 2.61911e-05 "Main_Square-Varazdin_Varazdin_County_Central_Croatia.html" 699
+77:1 2.61911e-05 "Blue_Lake-Imotski_Split_Dalmatia_County_Dalmatia.html" 1032
+77:2 2.61911e-05 "Red_Lake-Imotski_Split_Dalmatia_County_Dalmatia.html" 1033
+78:1 2.61911e-05 "Parco_dei_Mostri-Bomarzo_Province_of_Viterbo_Lazio.html" 1135
+78:2 2.61911e-05 "Villa_Lante-Bagnaia_Viterbo_Province_of_Viterbo_Lazio.html" 1136
+79:1 2.52557e-05 "Pista_Ciclopedonale_Levanto_Framura-Levanto_Italian_Riviera_Liguria.html" 511
+79:2 2.52557e-05 "Levanto_Beach-Levanto_Italian_Riviera_Liguria.html" 512
+80:1 2.52557e-05 "Lillafured-Miskolc_Borsod_Abauj_Zemplen_County_Northern_Hungary.html" 896
+80:2 2.52557e-05 "Castle_of_Diosgyor-Miskolc_Borsod_Abauj_Zemplen_County_Northern_Hungary.html" 897
+81:1 2.52557e-05 "Vetta_d_Italia_Predoi-Predoi_Province_of_South_Tyrol_Trentino_Alto_Adige.html" 986
+81:2 2.52557e-05 "South_Tyrol_Museum_of_Mining_Predoi-Predoi_Province_of_South_Tyrol_Trentino_Alto.html" 987
+82:1 2.52557e-05 "Skyway_Monte_Bianco-Courmayeur_Valle_d_Aosta.html" 1063
+82:2 2.52557e-05 "Val_Ferret-Courmayeur_Valle_d_Aosta.html" 1064
+83:1 2.43203e-05 "I_Giardini_di_Castel_Trauttmansdorff-Merano_Province_of_South_Tyrol_Trentino_Alto.html" 1172
+83:2 2.43203e-05 "Tappeiner_Promenade-Merano_Province_of_South_Tyrol_Trentino_Alto_Adige.html" 1173
+84:1 2.33849e-05 "Bay_of_Silence-Sestri_Levante_Italian_Riviera_Liguria.html" 266
+84:2 2.33849e-05 "Hike_the_Punta_Manara-Sestri_Levante_Italian_Riviera_Liguria.html" 267
+85:1 2.33849e-05 "La_Loggia_del_Grano-Comacchio_Province_of_Ferrara_Emilia_Romagna.html" 686
+85:2 2.33849e-05 "Ponte_Degli_Sbirri-Comacchio_Province_of_Ferrara_Emilia_Romagna.html" 687
+86:1 2.33849e-05 "Veli_Rat_lighthouse-Veli_rat_Dugi_Island_Zadar_County_Dalmatia.html" 877
+86:2 2.33849e-05 "Sakarun_Beach-Dugi_Island_Zadar_County_Dalmatia.html" 878
+87:1 2.33849e-05 "Radovljica_Old_Town-Radovljica_Upper_Carniola_Region.html" 1105
+87:2 2.33849e-05 "Beekeeping_Museum_Cebelarski_muzej-Radovljica_Upper_Carniola_Region.html" 1106
+88:1 2.24495e-05 "Abbazia_di_Sant_Antimo-Castelnuovo_dell_Abate_Montalcino_Tuscany.html" 154
+88:2 2.24495e-05 "Fortezza_di_Montalcino-Montalcino_Tuscany.html" 155
+89:1 2.24495e-05 "Duomo_di_Enna-Enna_Province_of_Enna_Sicily.html" 401
+89:2 2.24495e-05 "Castello_di_Lombardia-Enna_Province_of_Enna_Sicily.html" 402
+90:1 2.24495e-05 "Duomo_San_Donato-Arezzo_Province_of_Arezzo_Tuscany.html" 410
+90:2 2.24495e-05 "Church_of_San_Francesco_Arezzo-Arezzo_Province_of_Arezzo_Tuscany.html" 411
+91:1 2.24495e-05 "Main_Square_Fo_ter-Szentendre_Pest_County_Central_Hungary.html" 852
+91:2 2.24495e-05 "Szamos_Marzipan_Exhibition_and_Workshop-Szentendre_Pest_County_Central_Hungary.html" 853
+92:1 2.24495e-05 "Natur_Eis_Palast-Hintertux_Tirol_Austrian_Alps.html" 1152
+92:2 2.24495e-05 "Hintertuxer_Gletscher-Hintertux_Tirol_Austrian_Alps.html" 1153
+93:1 2.24495e-05 "Basilika_St_Michael-Mondsee_Upper_Austria.html" 1176
+93:2 2.24495e-05 "Alpenseebad_Mondsee-Mondsee_Upper_Austria.html" 1177
+94:1 2.24495e-05 "Olympiabad_Seefeld-Seefeld_in_Tirol_Tirol_Austrian_Alps.html" 1202
+94:2 2.24495e-05 "Rosshutte-Seefeld_in_Tirol_Tirol_Austrian_Alps.html" 1203
+95:1 2.15141e-05 "Lake_Worthersee-Klagenfurt_Carinthia_Austrian_Alps.html" 794
+95:2 2.15141e-05 "Minimundus-Klagenfurt_Carinthia_Austrian_Alps.html" 795
+96:1 2.15141e-05 "National_Park_Krka_Waterfalls-Skradin_Sibenik_Knin_County_Dalmatia.html" 961
+96:2 2.15141e-05 "Roski_Slap-Skradin_Sibenik_Knin_County_Dalmatia.html" 962
+97:1 2.15141e-05 "Cala_Mariolu-Baunei_Province_of_Ogliastra_Sardinia.html" 1003
+97:2 2.15141e-05 "Cala_Goloritze-Baunei_Province_of_Ogliastra_Sardinia.html" 1004
+98:1 2.15141e-05 "Borgo_Storico_di_Manarola-Manarola_Cinque_Terre_Italian_Riviera_Liguria.html" 1128
+98:2 2.15141e-05 "Borgo_Storico_di_Riomaggiore-Riomaggiore_Cinque_Terre_Italian_Riviera_Liguria.html" 1129
+99:1 2.15141e-05 "Piazza_IV_Novembre-Perugia_Province_of_Perugia_Umbria.html" 1132
+99:2 2.15141e-05 "Vieille_Ville-Perugia_Province_of_Perugia_Umbria.html" 1133
+100:1 2.05787e-05 "Fortress_Starigrad_Fortica-Omis_Split_Dalmatia_County_Dalmatia.html" 356
+100:2 2.05787e-05 "Fortress_Mirabella_Peovica-Omis_Split_Dalmatia_County_Dalmatia.html" 357
+101:1 2.05787e-05 "Sand_Nativity-Jesolo_Veneto.html" 706
+101:2 2.05787e-05 "Piazza_Mazzini-Jesolo_Veneto.html" 707
+102:1 2.05787e-05 "Double_Gate_Twin_Gate_Dvojna_vrata-Pula_Istria.html" 715
+102:2 2.05787e-05 "Gate_of_Hercules_Porta_Herculanea-Pula_Istria.html" 716
+103:1 2.05787e-05 "Castello_di_Brolio-Gaiole_in_Chianti_Tuscany.html" 1056
+103:2 2.05787e-05 "Castello_di_Meleto-Gaiole_in_Chianti_Tuscany.html" 1057
+104:1 2.05787e-05 "Cantina_Zeni_e_Museo_del_Vino-Bardolino_Province_of_Verona_Veneto.html" 1060
+104:2 2.05787e-05 "Museo_Dell_olio_D_oliva-Cisano_Bardolino_Province_of_Verona_Veneto.html" 1061
+105:1 2.05787e-05 "Casa_Maritale_Di_Santa_Rita-Roccaporena_Cascia_Province_of_Perugia_Umbria.html" 1077
+105:2 2.05787e-05 "Il_Lazzaretto-Roccaporena_Cascia_Province_of_Perugia_Umbria.html" 1078
+106:1 2.05787e-05 "Monument_to_Imre_Nagy_Remembrance_Day_Oct_23-Budapest_Central_Hungary.html" 1150
+106:2 2.05787e-05 "Szabadsag_Square-Budapest_Central_Hungary.html" 1151
+107:1 2.05787e-05 "Skirunde_Der_Weisse_Ring-Lech_Vorarlberg_Austrian_Alps.html" 1185
+107:2 2.05787e-05 "Ski_Arlberg-Lech_Vorarlberg_Austrian_Alps.html" 1186
+108:1 2.05787e-05 "Castello_di_Trani-Trani_Province_of_Barletta_Andria_Trani_Puglia.html" 1219
+108:2 2.05787e-05 "Cattedrale_di_Trani-Trani_Province_of_Barletta_Andria_Trani_Puglia.html" 1220
+109:1 1.96434e-05 "Scalata_al_Cratere-Isola_Vulcano_Aeolian_Islands_Islands_of_Sicily_Sicily.html" 939
+109:2 1.96434e-05 "Terme_di_Vulcano-Isola_Vulcano_Aeolian_Islands_Islands_of_Sicily_Sicily.html" 940
+110:1 1.96434e-05 "Michelangelo_Fortress-Civitavecchia_Province_of_Rome_Lazio.html" 999
+110:2 1.96434e-05 "Civitavecchia_Port-Civitavecchia_Province_of_Rome_Lazio.html" 1000
+111:1 1.96434e-05 "SchafbergBahn-St_Wolfgang_Upper_Austria.html" 1123
+111:2 1.96434e-05 "Pfarre_St_Wolfgang-St_Wolfgang_Upper_Austria.html" 1124
+112:1 1.96434e-05 "Museo_di_Santa_Giulia-Brescia_Province_of_Brescia_Lombardy.html" 1182
+112:2 1.96434e-05 "Tempio_Capitolino_e_Piazza_del_Foro-Brescia_Province_of_Brescia_Lombardy.html" 1183
+113:1 1.96434e-05 "Krapina_Neanderthal_Museum-Krapina_Krapina_Zagorje_County_Central_Croatia.html" 1211
+113:2 1.96434e-05 "Trakoscan_Castle_Dvor_Trakoscan-Trakoscan_Varazdin_County_Central_Croatia.html" 1212
+*Links undirected
+#*Links path exitFlow numEdges numChildren
+*Links root 0.0 1 113
+1 2 4.30283e-05
+*Links 1 4.30283e-05 3 6
+1 4 8.2315e-05
+1 3 7.7638e-05
+1 2 5.05115e-05
+*Links 1:1 0.000253493 62 33
+1 2 0.00500344
+1 3 0.00301011
+1 5 0.00218977
+2 3 0.00211868
+2 7 0.00170804
+1 7 0.00125905
+2 8 0.000576205
+3 4 0.000524758
+1 4 0.000509792
+2 4 0.000480794
+5 10 0.000411575
+3 7 0.000358257
+3 6 0.000330195
+5 13 0.000328325
+1 18 0.000313358
+4 12 0.000254428
+2 5 0.000230108
+5 16 0.000219818
+5 7 0.000208594
+8 19 0.000207658
+1 8 0.000202981
+7 11 0.000196434
+5 23 0.000181467
+3 24 0.000165565
+7 8 0.000161824
+3 5 0.000159018
+2 19 0.000153405
+4 7 0.000114119
+2 17 0.000103829
+1 10 9.91522e-05
+7 17 9.54106e-05
+4 6 8.79274e-05
+3 8 8.41858e-05
+1 17 7.2961e-05
+5 27 6.26716e-05
+5 25 6.26716e-05
+7 19 5.98655e-05
+10 13 4.95761e-05
+4 20 4.86407e-05
+1 14 4.86407e-05
+4 17 4.86407e-05
+1 21 4.77053e-05
+1 28 4.58345e-05
+2 11 4.30283e-05
+14 21 3.18035e-05
+3 31 2.89973e-05
+1 19 2.80619e-05
+1 16 2.61911e-05
+3 29 2.52557e-05
+6 7 2.52557e-05
+17 26 2.52557e-05
+1 32 2.43203e-05
+4 5 2.43203e-05
+13 25 2.33849e-05
+3 15 2.24495e-05
+7 33 2.24495e-05
+8 11 2.24495e-05
+2 9 2.15141e-05
+7 22 2.15141e-05
+4 30 2.05787e-05
+5 14 2.05787e-05
+2 14 1.96434e-05
+*Links 1:1:1 0.0129319 689 94
+1 2 0.0136437
+1 3 0.013365
+2 3 0.00868704
+2 4 0.00390809
+5 6 0.00359006
+3 4 0.00331786
+1 7 0.00317568
+2 8 0.0031738
+6 10 0.00298205
+2 7 0.00278561
+5 10 0.00251903
+1 5 0.00245729
+7 9 0.00221783
+1 4 0.00214861
+1 6 0.00209342
+3 7 0.00209155
+1 9 0.00195685
+2 5 0.00187547
+3 5 0.00185115
+2 9 0.00181374
+2 6 0.00160047
+3 9 0.001448
+1 8 0.00140497
+4 7 0.00137597
+3 8 0.00132546
+4 9 0.0012104
+3 11 0.00120386
+5 13 0.00111499
+1 11 0.00111219
+10 13 0.00107851
+4 8 0.00107009
+3 6 0.00104297
+3 12 0.000925108
+1 12 0.000901723
+2 15 0.000889563
+2 11 0.000814731
+2 12 0.000805377
+1 10 0.000801636
+2 10 0.00070529
+8 9 0.000704354
+7 8 0.00069313
+5 20 0.000689388
+2 14 0.000671616
+6 13 0.000617362
+10 16 0.000608944
+6 8 0.000585559
+4 6 0.000576205
+2 17 0.000567786
+5 16 0.000564045
+4 15 0.000550949
+4 5 0.000534112
+1 15 0.000502309
+1 16 0.000496696
+8 10 0.000495761
+5 8 0.000492955
+3 14 0.000480794
+1 14 0.000479859
+13 16 0.000476117
+4 11 0.000470505
+6 7 0.000463022
+3 18 0.000458345
+3 15 0.00044712
+2 19 0.000434025
+6 9 0.000416252
+4 12 0.000411575
+3 10 0.00041064
+10 20 0.000407833
+4 14 0.00040035
+2 16 0.00037603
+1 18 0.000364805
+5 7 0.000357322
+13 20 0.000357322
+7 15 0.000339549
+1 17 0.000333002
+6 16 0.000330195
+7 10 0.000327389
+7 12 0.000321777
+1 19 0.000312423
+7 11 0.000312423
+5 9 0.000304004
+1 22 0.000291844
+4 17 0.000289038
+6 20 0.000287167
+12 18 0.000287167
+2 21 0.000279684
+14 17 0.000279684
+3 22 0.000275007
+3 17 0.000272201
+9 11 0.000269395
+3 21 0.000265653
+7 14 0.000264718
+9 15 0.000264718
+3 19 0.000262847
+5 28 0.000259105
+2 23 0.000243203
+9 17 0.000242268
+8 14 0.000237591
+4 10 0.000233849
+7 17 0.000231043
+3 25 0.000230108
+6 14 0.000230108
+9 14 0.000228237
+8 15 0.000227302
+11 12 0.000225431
+1 23 0.000224495
+8 17 0.000224495
+2 18 0.00022356
+4 21 0.000222625
+2 13 0.000220754
+5 14 0.000220754
+15 24 0.0002114
+9 12 0.000210464
+9 10 0.000208594
+1 13 0.000207658
+6 11 0.000207658
+3 23 0.000202046
+4 19 0.00018895
+3 16 0.000181467
+8 11 0.000179596
+14 15 0.00017679
+3 26 0.000175855
+11 15 0.000172113
+8 12 0.000168372
+1 21 0.000166501
+3 13 0.00016463
+8 16 0.000163695
+1 31 0.000162759
+8 27 0.000161824
+2 22 0.000159953
+5 11 0.000159953
+7 21 0.000156211
+8 19 0.000155276
+4 18 0.000154341
+1 25 0.00015247
+10 28 0.000150599
+18 22 0.000150599
+1 34 0.000148728
+11 19 0.000148728
+2 31 0.000147793
+4 23 0.000146857
+4 29 0.000146857
+1 32 0.000144987
+15 17 0.000144051
+2 25 0.000138439
+12 23 0.000138439
+1 30 0.000137503
+13 28 0.000136568
+2 24 0.000134697
+3 38 0.000133762
+8 13 0.000133762
+2 30 0.000132826
+5 12 0.000130956
+3 24 0.000128149
+10 14 0.000127214
+1 24 0.000124408
+6 17 0.000122537
+6 28 0.000122537
+3 34 0.000119731
+16 20 0.000119731
+11 14 0.00011786
+5 17 0.000116925
+1 39 0.000115989
+7 18 0.000115054
+6 15 0.000113183
+11 23 0.000113183
+8 32 0.000112248
+8 21 0.000111312
+11 18 0.000111312
+17 21 0.000111312
+9 21 0.000110377
+3 29 0.000109442
+2 33 0.000108506
+12 14 0.000107571
+2 27 0.000106635
+1 29 0.000104765
+2 29 0.000103829
+1 42 0.000102894
+3 31 0.000100088
+4 13 0.000100088
+11 22 0.000100088
+11 36 9.91522e-05
+1 33 9.82168e-05
+3 36 9.82168e-05
+7 19 9.82168e-05
+9 19 9.82168e-05
+2 34 9.72814e-05
+10 44 9.6346e-05
+8 30 9.54106e-05
+12 15 9.54106e-05
+15 19 9.44752e-05
+3 56 9.35398e-05
+4 26 9.35398e-05
+6 12 9.35398e-05
+18 34 9.35398e-05
+8 33 9.26044e-05
+15 21 9.1669e-05
+2 32 9.07336e-05
+3 39 9.07336e-05
+5 15 9.07336e-05
+11 26 9.07336e-05
+4 24 8.97982e-05
+9 18 8.97982e-05
+10 15 8.97982e-05
+3 35 8.88628e-05
+14 21 8.88628e-05
+20 28 8.79274e-05
+2 40 8.6992e-05
+3 32 8.6992e-05
+5 18 8.6992e-05
+6 44 8.60566e-05
+14 19 8.60566e-05
+1 37 8.51212e-05
+3 27 8.51212e-05
+10 45 8.51212e-05
+6 19 8.41858e-05
+7 23 8.41858e-05
+1 40 8.13796e-05
+1 41 8.13796e-05
+3 37 7.95088e-05
+4 25 7.95088e-05
+10 12 7.95088e-05
+1 38 7.85734e-05
+3 30 7.85734e-05
+6 45 7.85734e-05
+12 22 7.85734e-05
+3 41 7.67026e-05
+4 16 7.67026e-05
+4 27 7.67026e-05
+8 29 7.67026e-05
+7 22 7.57672e-05
+14 49 7.57672e-05
+1 27 7.48318e-05
+7 13 7.38964e-05
+2 37 7.2961e-05
+12 17 7.2961e-05
+2 41 7.20256e-05
+7 16 7.20256e-05
+10 46 7.20256e-05
+9 22 7.01548e-05
+25 26 7.01548e-05
+2 35 6.92194e-05
+5 19 6.92194e-05
+3 33 6.8284e-05
+13 14 6.8284e-05
+2 38 6.73486e-05
+3 40 6.73486e-05
+8 55 6.73486e-05
+9 16 6.73486e-05
+9 32 6.73486e-05
+10 11 6.73486e-05
+11 41 6.73486e-05
+11 39 6.64132e-05
+1 36 6.54778e-05
+4 22 6.54778e-05
+6 42 6.54778e-05
+11 17 6.54778e-05
+11 35 6.54778e-05
+2 26 6.45424e-05
+3 42 6.45424e-05
+4 33 6.45424e-05
+1 43 6.3607e-05
+1 47 6.3607e-05
+2 42 6.3607e-05
+1 35 6.26716e-05
+11 21 6.26716e-05
+1 63 6.17362e-05
+8 31 6.17362e-05
+9 43 6.17362e-05
+12 40 6.17362e-05
+8 43 6.08009e-05
+1 26 5.98655e-05
+6 31 5.98655e-05
+9 13 5.98655e-05
+10 17 5.98655e-05
+11 24 5.98655e-05
+12 34 5.98655e-05
+13 45 5.98655e-05
+1 50 5.89301e-05
+2 43 5.89301e-05
+6 46 5.89301e-05
+22 23 5.89301e-05
+2 48 5.79947e-05
+17 19 5.79947e-05
+13 46 5.70593e-05
+6 29 5.61239e-05
+6 37 5.61239e-05
+1 58 5.51885e-05
+3 52 5.51885e-05
+5 25 5.51885e-05
+11 25 5.51885e-05
+5 31 5.42531e-05
+9 23 5.42531e-05
+13 44 5.42531e-05
+17 33 5.42531e-05
+8 18 5.33177e-05
+9 33 5.33177e-05
+14 27 5.33177e-05
+2 36 5.23823e-05
+12 19 5.23823e-05
+18 26 5.23823e-05
+21 23 5.23823e-05
+22 39 5.23823e-05
+2 53 5.14469e-05
+2 55 5.14469e-05
+4 32 5.14469e-05
+7 37 5.14469e-05
+12 25 5.14469e-05
+14 16 5.14469e-05
+16 45 5.14469e-05
+23 24 5.14469e-05
+22 25 5.05115e-05
+25 38 5.05115e-05
+2 52 4.95761e-05
+3 43 4.95761e-05
+2 64 4.86407e-05
+3 58 4.86407e-05
+4 34 4.86407e-05
+6 21 4.86407e-05
+7 25 4.86407e-05
+13 57 4.86407e-05
+16 28 4.86407e-05
+21 24 4.86407e-05
+1 54 4.77053e-05
+11 37 4.77053e-05
+18 25 4.77053e-05
+1 48 4.67699e-05
+20 44 4.67699e-05
+5 45 4.58345e-05
+7 30 4.58345e-05
+12 26 4.58345e-05
+2 54 4.48991e-05
+4 30 4.48991e-05
+5 23 4.48991e-05
+5 59 4.48991e-05
+6 22 4.48991e-05
+8 74 4.48991e-05
+41 77 4.48991e-05
+1 52 4.39637e-05
+1 56 4.39637e-05
+1 61 4.39637e-05
+2 58 4.39637e-05
+4 36 4.39637e-05
+5 21 4.39637e-05
+5 34 4.39637e-05
+6 18 4.39637e-05
+14 24 4.39637e-05
+19 21 4.39637e-05
+1 20 4.30283e-05
+2 39 4.30283e-05
+12 24 4.30283e-05
+44 51 4.30283e-05
+2 49 4.20929e-05
+4 37 4.20929e-05
+12 67 4.20929e-05
+17 23 4.20929e-05
+18 73 4.20929e-05
+22 26 4.20929e-05
+1 53 4.11575e-05
+2 20 4.11575e-05
+2 60 4.11575e-05
+3 50 4.11575e-05
+5 24 4.11575e-05
+5 42 4.11575e-05
+6 36 4.11575e-05
+7 42 4.11575e-05
+10 51 4.11575e-05
+15 22 4.11575e-05
+1 28 4.02221e-05
+1 68 4.02221e-05
+3 20 4.02221e-05
+5 22 4.02221e-05
+5 46 4.02221e-05
+13 51 4.02221e-05
+14 31 4.02221e-05
+17 24 4.02221e-05
+27 33 4.02221e-05
+1 60 3.92867e-05
+1 64 3.92867e-05
+4 78 3.92867e-05
+5 29 3.92867e-05
+6 27 3.92867e-05
+8 24 3.92867e-05
+8 40 3.92867e-05
+9 30 3.92867e-05
+10 59 3.92867e-05
+14 37 3.92867e-05
+15 29 3.92867e-05
+18 23 3.92867e-05
+6 30 3.83513e-05
+6 59 3.83513e-05
+7 26 3.83513e-05
+9 31 3.83513e-05
+16 44 3.83513e-05
+16 57 3.83513e-05
+3 54 3.74159e-05
+3 61 3.74159e-05
+10 19 3.74159e-05
+15 23 3.74159e-05
+17 37 3.74159e-05
+19 27 3.74159e-05
+20 51 3.74159e-05
+2 61 3.64805e-05
+3 48 3.64805e-05
+3 79 3.64805e-05
+4 38 3.64805e-05
+6 51 3.64805e-05
+7 31 3.64805e-05
+7 47 3.64805e-05
+8 23 3.64805e-05
+8 25 3.64805e-05
+14 33 3.64805e-05
+17 27 3.64805e-05
+25 52 3.64805e-05
+32 33 3.64805e-05
+2 50 3.55451e-05
+4 35 3.55451e-05
+4 43 3.55451e-05
+8 53 3.55451e-05
+9 24 3.55451e-05
+12 21 3.55451e-05
+17 22 3.55451e-05
+46 57 3.55451e-05
+2 47 3.46097e-05
+6 25 3.46097e-05
+8 47 3.46097e-05
+12 41 3.46097e-05
+12 48 3.46097e-05
+14 23 3.46097e-05
+16 46 3.46097e-05
+19 23 3.46097e-05
+23 35 3.46097e-05
+35 40 3.46097e-05
+43 53 3.46097e-05
+2 28 3.36743e-05
+3 53 3.36743e-05
+3 60 3.36743e-05
+4 39 3.36743e-05
+7 40 3.36743e-05
+22 31 3.36743e-05
+27 65 3.36743e-05
+30 60 3.36743e-05
+35 38 3.36743e-05
+4 31 3.27389e-05
+4 55 3.27389e-05
+4 66 3.27389e-05
+5 30 3.27389e-05
+5 51 3.27389e-05
+7 24 3.27389e-05
+7 33 3.27389e-05
+10 31 3.27389e-05
+10 80 3.27389e-05
+14 32 3.27389e-05
+14 40 3.27389e-05
+27 32 3.27389e-05
+37 41 3.27389e-05
+38 52 3.27389e-05
+5 44 3.18035e-05
+7 41 3.18035e-05
+7 43 3.18035e-05
+9 27 3.18035e-05
+10 57 3.18035e-05
+11 34 3.18035e-05
+11 42 3.18035e-05
+13 17 3.18035e-05
+14 29 3.18035e-05
+19 24 3.18035e-05
+26 39 3.18035e-05
+1 75 3.08681e-05
+2 69 3.08681e-05
+3 63 3.08681e-05
+3 65 3.08681e-05
+8 54 3.08681e-05
+11 52 3.08681e-05
+14 18 3.08681e-05
+17 30 3.08681e-05
+1 81 2.99327e-05
+3 67 2.99327e-05
+7 39 2.99327e-05
+9 47 2.99327e-05
+12 38 2.99327e-05
+14 22 2.99327e-05
+17 40 2.99327e-05
+18 39 2.99327e-05
+19 36 2.99327e-05
+22 24 2.99327e-05
+22 34 2.99327e-05
+23 26 2.99327e-05
+3 64 2.89973e-05
+3 68 2.89973e-05
+4 40 2.89973e-05
+4 49 2.89973e-05
+8 20 2.89973e-05
+15 32 2.89973e-05
+17 35 2.89973e-05
+23 38 2.89973e-05
+1 73 2.80619e-05
+1 82 2.80619e-05
+2 63 2.80619e-05
+2 71 2.80619e-05
+3 66 2.80619e-05
+5 27 2.80619e-05
+6 23 2.80619e-05
+6 58 2.80619e-05
+7 29 2.80619e-05
+8 49 2.80619e-05
+9 25 2.80619e-05
+11 38 2.80619e-05
+12 35 2.80619e-05
+17 18 2.80619e-05
+17 62 2.80619e-05
+21 26 2.80619e-05
+21 35 2.80619e-05
+21 40 2.80619e-05
+4 42 2.71265e-05
+7 48 2.71265e-05
+8 83 2.71265e-05
+12 30 2.71265e-05
+13 15 2.71265e-05
+14 35 2.71265e-05
+17 49 2.71265e-05
+18 48 2.71265e-05
+25 36 2.71265e-05
+27 47 2.71265e-05
+1 70 2.61911e-05
+2 56 2.61911e-05
+2 62 2.61911e-05
+3 71 2.61911e-05
+4 54 2.61911e-05
+6 41 2.61911e-05
+6 43 2.61911e-05
+8 22 2.61911e-05
+8 37 2.61911e-05
+9 37 2.61911e-05
+9 40 2.61911e-05
+10 72 2.61911e-05
+11 29 2.61911e-05
+12 16 2.61911e-05
+15 18 2.61911e-05
+16 17 2.61911e-05
+17 43 2.61911e-05
+23 34 2.61911e-05
+2 66 2.52557e-05
+2 76 2.52557e-05
+5 26 2.52557e-05
+5 37 2.52557e-05
+5 57 2.52557e-05
+8 50 2.52557e-05
+9 26 2.52557e-05
+9 29 2.52557e-05
+9 48 2.52557e-05
+9 62 2.52557e-05
+11 31 2.52557e-05
+11 40 2.52557e-05
+14 50 2.52557e-05
+17 47 2.52557e-05
+21 49 2.52557e-05
+22 36 2.52557e-05
+24 36 2.52557e-05
+24 38 2.52557e-05
+26 38 2.52557e-05
+30 32 2.52557e-05
+2 70 2.43203e-05
+3 49 2.43203e-05
+7 38 2.43203e-05
+8 38 2.43203e-05
+10 30 2.43203e-05
+12 36 2.43203e-05
+16 51 2.43203e-05
+17 32 2.43203e-05
+18 19 2.43203e-05
+21 32 2.43203e-05
+25 34 2.43203e-05
+25 35 2.43203e-05
+40 41 2.43203e-05
+1 62 2.33849e-05
+3 70 2.33849e-05
+5 33 2.33849e-05
+5 58 2.33849e-05
+7 27 2.33849e-05
+7 32 2.33849e-05
+7 50 2.33849e-05
+7 54 2.33849e-05
+8 69 2.33849e-05
+15 25 2.33849e-05
+15 26 2.33849e-05
+27 29 2.33849e-05
+34 39 2.33849e-05
+43 47 2.33849e-05
+2 65 2.24495e-05
+4 48 2.24495e-05
+6 50 2.24495e-05
+6 72 2.24495e-05
+8 42 2.24495e-05
+8 62 2.24495e-05
+8 84 2.24495e-05
+9 39 2.24495e-05
+9 41 2.24495e-05
+9 50 2.24495e-05
+10 29 2.24495e-05
+13 59 2.24495e-05
+14 30 2.24495e-05
+14 36 2.24495e-05
+17 29 2.24495e-05
+18 24 2.24495e-05
+19 41 2.24495e-05
+21 33 2.24495e-05
+23 25 2.24495e-05
+55 74 2.24495e-05
+1 85 2.15141e-05
+1 87 2.15141e-05
+3 28 2.15141e-05
+4 20 2.15141e-05
+4 41 2.15141e-05
+5 50 2.15141e-05
+5 72 2.15141e-05
+6 24 2.15141e-05
+6 57 2.15141e-05
+7 34 2.15141e-05
+8 86 2.15141e-05
+9 53 2.15141e-05
+14 26 2.15141e-05
+15 35 2.15141e-05
+17 36 2.15141e-05
+17 88 2.15141e-05
+19 22 2.15141e-05
+19 35 2.15141e-05
+22 42 2.15141e-05
+24 25 2.15141e-05
+27 89 2.15141e-05
+28 44 2.15141e-05
+29 30 2.15141e-05
+36 37 2.15141e-05
+36 39 2.15141e-05
+36 41 2.15141e-05
+1 55 2.05787e-05
+1 65 2.05787e-05
+1 66 2.05787e-05
+1 69 2.05787e-05
+6 26 2.05787e-05
+7 49 2.05787e-05
+8 61 2.05787e-05
+8 76 2.05787e-05
+12 13 2.05787e-05
+14 42 2.05787e-05
+14 43 2.05787e-05
+14 54 2.05787e-05
+17 25 2.05787e-05
+17 41 2.05787e-05
+21 27 2.05787e-05
+21 38 2.05787e-05
+24 35 2.05787e-05
+33 47 2.05787e-05
+33 49 2.05787e-05
+1 59 1.96434e-05
+1 71 1.96434e-05
+1 92 1.96434e-05
+2 68 1.96434e-05
+2 75 1.96434e-05
+2 91 1.96434e-05
+2 93 1.96434e-05
+3 90 1.96434e-05
+3 94 1.96434e-05
+4 56 1.96434e-05
+5 32 1.96434e-05
+5 43 1.96434e-05
+6 32 1.96434e-05
+6 33 1.96434e-05
+6 35 1.96434e-05
+6 39 1.96434e-05
+6 53 1.96434e-05
+7 35 1.96434e-05
+8 26 1.96434e-05
+9 42 1.96434e-05
+10 21 1.96434e-05
+12 31 1.96434e-05
+12 39 1.96434e-05
+15 39 1.96434e-05
+15 48 1.96434e-05
+18 35 1.96434e-05
+20 46 1.96434e-05
+21 22 1.96434e-05
+22 67 1.96434e-05
+24 26 1.96434e-05
+26 35 1.96434e-05
+26 36 1.96434e-05
+26 56 1.96434e-05
+27 55 1.96434e-05
+30 43 1.96434e-05
+32 47 1.96434e-05
+*Links 1:1:2 0.0104587 299 42
+1 2 0.00351335
+1 3 0.00213925
+1 4 0.00185676
+2 3 0.00164349
+3 4 0.00161075
+2 4 0.00123005
+3 5 0.00113931
+4 5 0.00109909
+1 5 0.00107384
+4 7 0.00094101
+2 5 0.000902659
+3 7 0.000862437
+2 6 0.000843729
+3 6 0.00083531
+1 7 0.000831569
+5 7 0.000824085
+1 6 0.000817538
+5 6 0.00070529
+4 6 0.000652908
+6 9 0.000619233
+2 7 0.000568722
+3 8 0.000482665
+3 11 0.000477053
+1 8 0.000476117
+6 7 0.000476117
+2 8 0.000470505
+1 9 0.000449926
+2 10 0.000419994
+4 9 0.000396609
+4 13 0.000386319
+2 12 0.000381642
+1 11 0.000380707
+1 10 0.000373224
+2 9 0.000368547
+3 10 0.000338614
+6 10 0.000328325
+4 8 0.000313358
+3 9 0.00030681
+5 10 0.000293715
+5 8 0.000291844
+5 11 0.000288102
+1 13 0.000269395
+2 11 0.000260976
+6 12 0.000259105
+4 11 0.000256299
+1 12 0.000237591
+5 9 0.000236656
+7 8 0.000229172
+6 8 0.000218883
+2 16 0.0002114
+8 10 0.000209529
+7 10 0.000197369
+1 14 0.000192692
+4 10 0.000185209
+8 11 0.000184273
+11 14 0.000183338
+1 16 0.000180532
+6 11 0.000178661
+3 15 0.000177726
+2 14 0.000172113
+4 14 0.000171178
+6 19 0.000170242
+7 11 0.000168372
+2 18 0.000159018
+2 13 0.000155276
+2 17 0.000151534
+3 12 0.000149664
+11 15 0.000149664
+2 15 0.000147793
+3 14 0.000146857
+2 20 0.000144987
+7 9 0.000137503
+7 14 0.000136568
+12 18 0.000135633
+6 18 0.000133762
+1 15 0.000131891
+4 12 0.000125343
+1 18 0.000124408
+3 17 0.000124408
+7 13 0.000124408
+1 17 0.000122537
+6 15 0.000121602
+3 13 0.000120666
+1 20 0.000119731
+8 16 0.000119731
+3 16 0.000115989
+4 18 0.000115989
+10 16 0.000113183
+10 11 0.000111312
+5 14 0.000108506
+15 17 0.000108506
+9 12 0.000106635
+3 18 0.000104765
+5 15 0.000104765
+10 15 0.000104765
+1 21 0.000101958
+6 23 9.72814e-05
+8 13 9.54106e-05
+5 25 9.26044e-05
+6 17 9.1669e-05
+4 16 8.97982e-05
+6 14 8.97982e-05
+8 9 8.97982e-05
+9 11 8.88628e-05
+6 22 8.79274e-05
+1 19 8.6992e-05
+2 19 8.60566e-05
+3 20 8.60566e-05
+6 20 8.51212e-05
+11 17 8.51212e-05
+2 21 8.41858e-05
+9 10 8.41858e-05
+10 12 8.41858e-05
+3 19 7.7638e-05
+7 12 7.67026e-05
+8 14 7.57672e-05
+6 13 7.48318e-05
+3 21 7.2961e-05
+7 22 7.20256e-05
+5 13 7.10902e-05
+8 21 7.10902e-05
+16 17 7.10902e-05
+4 20 6.73486e-05
+8 12 6.73486e-05
+4 19 6.64132e-05
+6 28 6.54778e-05
+8 15 6.54778e-05
+11 13 6.54778e-05
+13 14 6.54778e-05
+7 15 6.45424e-05
+7 16 6.45424e-05
+5 12 6.3607e-05
+9 19 6.3607e-05
+2 27 6.26716e-05
+5 16 6.26716e-05
+6 16 6.26716e-05
+9 15 6.26716e-05
+9 17 6.17362e-05
+2 24 6.08009e-05
+12 19 6.08009e-05
+12 20 6.08009e-05
+4 15 5.89301e-05
+5 18 5.89301e-05
+9 18 5.79947e-05
+10 14 5.79947e-05
+10 22 5.79947e-05
+12 16 5.79947e-05
+14 15 5.79947e-05
+1 24 5.70593e-05
+2 26 5.70593e-05
+16 21 5.70593e-05
+3 25 5.61239e-05
+7 25 5.61239e-05
+8 17 5.61239e-05
+22 23 5.61239e-05
+8 20 5.33177e-05
+9 13 5.33177e-05
+5 17 5.23823e-05
+6 30 5.23823e-05
+5 19 5.14469e-05
+9 14 5.14469e-05
+1 25 5.05115e-05
+5 23 5.05115e-05
+9 16 4.95761e-05
+10 23 4.95761e-05
+2 25 4.86407e-05
+7 23 4.86407e-05
+9 24 4.86407e-05
+18 29 4.86407e-05
+6 24 4.77053e-05
+10 17 4.77053e-05
+1 22 4.67699e-05
+1 23 4.67699e-05
+5 22 4.67699e-05
+10 13 4.67699e-05
+3 23 4.58345e-05
+10 26 4.58345e-05
+14 17 4.58345e-05
+15 16 4.58345e-05
+19 24 4.58345e-05
+7 18 4.48991e-05
+12 24 4.39637e-05
+8 19 4.30283e-05
+10 19 4.30283e-05
+11 25 4.30283e-05
+2 35 4.11575e-05
+3 22 4.11575e-05
+6 26 4.11575e-05
+7 17 4.11575e-05
+8 25 4.11575e-05
+11 18 4.11575e-05
+4 17 4.02221e-05
+11 16 4.02221e-05
+11 12 3.92867e-05
+12 17 3.92867e-05
+2 22 3.83513e-05
+5 20 3.83513e-05
+8 18 3.83513e-05
+16 20 3.83513e-05
+2 23 3.74159e-05
+3 24 3.74159e-05
+17 21 3.74159e-05
+10 18 3.64805e-05
+13 16 3.64805e-05
+6 21 3.55451e-05
+9 20 3.55451e-05
+12 15 3.55451e-05
+12 27 3.55451e-05
+13 21 3.55451e-05
+3 26 3.46097e-05
+12 13 3.46097e-05
+20 24 3.46097e-05
+1 26 3.36743e-05
+1 32 3.36743e-05
+8 23 3.36743e-05
+8 24 3.36743e-05
+8 30 3.36743e-05
+10 24 3.36743e-05
+15 22 3.36743e-05
+1 27 3.27389e-05
+4 21 3.27389e-05
+4 29 3.27389e-05
+10 21 3.27389e-05
+2 37 3.18035e-05
+16 24 3.18035e-05
+5 21 3.08681e-05
+6 25 3.08681e-05
+7 19 3.08681e-05
+15 23 3.08681e-05
+17 19 3.08681e-05
+4 24 2.99327e-05
+4 26 2.99327e-05
+6 27 2.99327e-05
+6 29 2.99327e-05
+11 19 2.99327e-05
+2 38 2.89973e-05
+19 27 2.89973e-05
+12 26 2.80619e-05
+17 20 2.80619e-05
+18 20 2.80619e-05
+2 29 2.71265e-05
+7 21 2.71265e-05
+10 20 2.71265e-05
+12 22 2.71265e-05
+22 28 2.71265e-05
+1 33 2.61911e-05
+2 39 2.61911e-05
+4 25 2.61911e-05
+7 20 2.61911e-05
+8 22 2.61911e-05
+12 21 2.61911e-05
+15 19 2.61911e-05
+14 16 2.52557e-05
+15 21 2.52557e-05
+16 19 2.52557e-05
+18 27 2.52557e-05
+24 31 2.52557e-05
+28 30 2.52557e-05
+2 34 2.43203e-05
+3 27 2.43203e-05
+4 22 2.43203e-05
+4 23 2.43203e-05
+12 14 2.43203e-05
+1 40 2.33849e-05
+4 33 2.33849e-05
+5 26 2.33849e-05
+10 25 2.33849e-05
+12 28 2.33849e-05
+19 34 2.33849e-05
+2 41 2.24495e-05
+9 31 2.24495e-05
+11 23 2.24495e-05
+19 31 2.24495e-05
+20 33 2.24495e-05
+4 27 2.15141e-05
+5 24 2.15141e-05
+7 28 2.15141e-05
+9 23 2.15141e-05
+13 17 2.15141e-05
+2 31 2.05787e-05
+3 28 2.05787e-05
+4 32 2.05787e-05
+8 26 2.05787e-05
+10 27 2.05787e-05
+11 22 2.05787e-05
+22 26 2.05787e-05
+23 25 2.05787e-05
+5 27 1.96434e-05
+6 32 1.96434e-05
+6 36 1.96434e-05
+6 42 1.96434e-05
+9 29 1.96434e-05
+9 30 1.96434e-05
+13 20 1.96434e-05
+15 25 1.96434e-05
+16 18 1.96434e-05
+16 26 1.96434e-05
+19 36 1.96434e-05
+22 25 1.96434e-05
+*Links 1:1:3 0.00689014 275 44
+1 2 0.0043945
+1 3 0.00366021
+3 4 0.00306343
+2 4 0.00291376
+2 3 0.00285577
+1 4 0.00188857
+1 5 0.00179877
+2 5 0.0012104
+3 5 0.000936333
+1 6 0.000737093
+4 5 0.000688453
+3 6 0.000683776
+5 8 0.000632329
+1 8 0.000515404
+1 7 0.000512598
+4 6 0.000475182
+2 7 0.000433089
+3 7 0.000393802
+4 7 0.000375094
+2 6 0.00036387
+1 10 0.000308681
+4 8 0.00030681
+2 8 0.000285296
+3 8 0.000281555
+5 6 0.000269395
+4 9 0.000232914
+2 10 0.000225431
+3 9 0.000225431
+3 11 0.000224495
+2 11 0.000212335
+2 9 0.000209529
+1 11 0.000195498
+1 12 0.000192692
+4 11 0.000178661
+1 9 0.000172113
+5 7 0.000163695
+9 13 0.000163695
+3 10 0.000149664
+5 10 0.000148728
+2 14 0.000145922
+2 13 0.000144987
+4 13 0.00014218
+1 14 0.000133762
+4 14 0.000133762
+4 10 0.00013002
+2 15 0.000127214
+1 15 0.000125343
+6 7 0.000124408
+7 14 0.000123472
+3 13 0.000122537
+5 23 0.000120666
+4 20 0.00011786
+6 8 0.000115989
+3 14 0.000113183
+5 18 0.000112248
+5 9 0.000103829
+1 21 0.000101958
+3 15 9.91522e-05
+5 26 9.91522e-05
+2 18 9.72814e-05
+7 11 9.72814e-05
+5 11 9.6346e-05
+1 18 9.26044e-05
+3 12 9.26044e-05
+6 11 9.07336e-05
+7 10 8.97982e-05
+19 31 8.97982e-05
+6 10 8.88628e-05
+9 11 8.88628e-05
+1 24 8.6992e-05
+7 12 8.6992e-05
+7 17 8.6992e-05
+1 19 8.60566e-05
+2 28 8.60566e-05
+4 16 8.60566e-05
+1 13 8.51212e-05
+2 12 8.2315e-05
+7 15 8.04442e-05
+4 15 7.7638e-05
+4 17 7.7638e-05
+5 20 7.7638e-05
+5 22 7.7638e-05
+7 9 7.7638e-05
+8 23 7.7638e-05
+8 10 7.67026e-05
+10 15 7.67026e-05
+5 15 7.38964e-05
+7 16 7.2961e-05
+5 17 7.20256e-05
+3 16 7.10902e-05
+4 28 7.10902e-05
+3 17 6.92194e-05
+5 25 6.64132e-05
+6 9 6.64132e-05
+3 20 6.54778e-05
+5 19 6.54778e-05
+1 16 6.45424e-05
+7 8 6.45424e-05
+1 25 6.3607e-05
+2 26 6.3607e-05
+5 12 6.3607e-05
+1 20 6.26716e-05
+2 21 6.26716e-05
+1 17 6.17362e-05
+1 22 6.08009e-05
+1 26 6.08009e-05
+5 27 6.08009e-05
+7 13 5.98655e-05
+4 12 5.89301e-05
+4 24 5.89301e-05
+6 14 5.70593e-05
+8 24 5.70593e-05
+5 21 5.61239e-05
+8 21 5.51885e-05
+1 30 5.42531e-05
+2 17 5.42531e-05
+11 13 5.42531e-05
+4 22 5.33177e-05
+2 19 5.23823e-05
+3 18 5.23823e-05
+5 30 5.23823e-05
+2 25 5.14469e-05
+8 12 5.14469e-05
+10 11 5.14469e-05
+2 32 4.95761e-05
+6 12 4.95761e-05
+1 23 4.86407e-05
+3 24 4.86407e-05
+5 24 4.86407e-05
+9 16 4.77053e-05
+11 14 4.77053e-05
+1 28 4.67699e-05
+1 27 4.58345e-05
+1 32 4.58345e-05
+3 19 4.58345e-05
+6 15 4.58345e-05
+11 12 4.58345e-05
+2 16 4.48991e-05
+2 22 4.39637e-05
+2 29 4.39637e-05
+3 21 4.39637e-05
+3 22 4.39637e-05
+3 28 4.39637e-05
+4 18 4.39637e-05
+5 14 4.39637e-05
+8 18 4.39637e-05
+8 20 4.39637e-05
+12 16 4.39637e-05
+4 19 4.30283e-05
+7 28 4.30283e-05
+5 13 4.11575e-05
+9 12 4.11575e-05
+11 15 4.11575e-05
+12 15 4.11575e-05
+2 20 4.02221e-05
+6 24 4.02221e-05
+9 17 4.02221e-05
+1 29 3.92867e-05
+4 32 3.92867e-05
+8 9 3.92867e-05
+8 25 3.92867e-05
+9 10 3.92867e-05
+3 26 3.83513e-05
+5 34 3.83513e-05
+8 15 3.83513e-05
+19 22 3.83513e-05
+2 24 3.64805e-05
+2 27 3.64805e-05
+4 29 3.64805e-05
+7 36 3.64805e-05
+13 14 3.64805e-05
+17 20 3.64805e-05
+2 30 3.55451e-05
+4 25 3.55451e-05
+5 29 3.55451e-05
+10 16 3.55451e-05
+10 25 3.55451e-05
+2 23 3.46097e-05
+2 31 3.27389e-05
+3 27 3.27389e-05
+7 20 3.27389e-05
+14 28 3.27389e-05
+4 21 3.18035e-05
+5 16 3.18035e-05
+10 21 3.18035e-05
+13 16 3.18035e-05
+1 31 3.08681e-05
+5 32 3.08681e-05
+8 11 3.08681e-05
+15 16 3.08681e-05
+16 20 3.08681e-05
+3 30 2.99327e-05
+4 27 2.99327e-05
+9 15 2.99327e-05
+11 16 2.99327e-05
+12 23 2.99327e-05
+1 33 2.89973e-05
+1 35 2.89973e-05
+3 25 2.89973e-05
+5 37 2.89973e-05
+8 22 2.89973e-05
+9 14 2.89973e-05
+7 18 2.80619e-05
+7 29 2.80619e-05
+18 31 2.80619e-05
+4 30 2.71265e-05
+6 13 2.71265e-05
+6 16 2.71265e-05
+6 21 2.71265e-05
+7 27 2.71265e-05
+8 26 2.71265e-05
+8 27 2.71265e-05
+10 12 2.71265e-05
+10 14 2.71265e-05
+10 27 2.71265e-05
+2 36 2.61911e-05
+3 29 2.61911e-05
+3 32 2.61911e-05
+4 26 2.61911e-05
+15 23 2.61911e-05
+17 23 2.61911e-05
+2 33 2.52557e-05
+2 37 2.52557e-05
+9 25 2.52557e-05
+14 16 2.52557e-05
+21 25 2.52557e-05
+2 34 2.43203e-05
+4 23 2.43203e-05
+6 25 2.43203e-05
+12 13 2.43203e-05
+12 17 2.43203e-05
+12 24 2.43203e-05
+13 17 2.43203e-05
+1 34 2.33849e-05
+1 36 2.33849e-05
+5 33 2.33849e-05
+5 38 2.33849e-05
+6 20 2.24495e-05
+7 21 2.24495e-05
+7 22 2.24495e-05
+8 16 2.24495e-05
+8 30 2.24495e-05
+10 24 2.24495e-05
+12 14 2.24495e-05
+15 21 2.24495e-05
+15 25 2.24495e-05
+18 22 2.24495e-05
+27 42 2.24495e-05
+3 33 2.15141e-05
+3 35 2.15141e-05
+5 43 2.15141e-05
+7 26 2.15141e-05
+8 19 2.15141e-05
+1 40 2.05787e-05
+3 23 2.05787e-05
+4 38 2.05787e-05
+4 39 2.05787e-05
+9 33 2.05787e-05
+9 35 2.05787e-05
+10 13 2.05787e-05
+10 22 2.05787e-05
+22 44 2.05787e-05
+1 39 1.96434e-05
+1 41 1.96434e-05
+2 35 1.96434e-05
+4 31 1.96434e-05
+4 34 1.96434e-05
+5 40 1.96434e-05
+5 41 1.96434e-05
+6 26 1.96434e-05
+10 29 1.96434e-05
+11 33 1.96434e-05
+16 17 1.96434e-05
+18 21 1.96434e-05
+23 27 1.96434e-05
+*Links 1:1:4 0.002114 129 31
+1 2 0.0033534
+1 4 0.00130862
+2 3 0.000782928
+1 3 0.00062391
+1 5 0.000582753
+2 5 0.000541595
+2 4 0.000536918
+1 6 0.00047144
+2 6 0.000429348
+1 7 0.000391932
+2 8 0.000224495
+1 12 0.000222625
+3 5 0.000221689
+3 6 0.000221689
+1 8 0.000206723
+2 7 0.000191757
+1 10 0.00018895
+4 6 0.000174919
+1 11 0.000166501
+4 5 0.000163695
+1 9 0.000162759
+3 4 0.000159953
+3 9 0.000144987
+2 9 0.000133762
+1 16 0.000130956
+2 12 0.000129085
+3 7 0.000120666
+4 7 0.000120666
+3 8 0.000118796
+1 13 0.000113183
+6 7 0.000107571
+4 10 9.54106e-05
+5 6 9.35398e-05
+2 14 8.79274e-05
+2 16 8.79274e-05
+5 8 8.60566e-05
+2 10 8.2315e-05
+2 13 7.95088e-05
+3 15 7.57672e-05
+2 11 7.2961e-05
+6 9 7.2961e-05
+2 15 7.20256e-05
+4 9 7.10902e-05
+8 14 7.10902e-05
+3 11 6.92194e-05
+6 8 6.92194e-05
+1 19 6.73486e-05
+3 12 6.54778e-05
+4 11 5.79947e-05
+3 14 5.70593e-05
+1 15 5.51885e-05
+5 9 5.51885e-05
+8 15 5.42531e-05
+1 14 5.33177e-05
+5 11 5.33177e-05
+3 13 5.23823e-05
+3 10 5.05115e-05
+9 13 5.05115e-05
+1 18 4.95761e-05
+4 13 4.86407e-05
+9 17 4.77053e-05
+1 21 4.67699e-05
+1 24 4.67699e-05
+5 7 4.58345e-05
+2 18 4.48991e-05
+15 20 4.48991e-05
+1 17 4.39637e-05
+5 10 4.39637e-05
+6 14 4.39637e-05
+7 13 4.39637e-05
+3 19 4.20929e-05
+4 8 4.02221e-05
+1 23 3.83513e-05
+3 16 3.83513e-05
+8 12 3.83513e-05
+2 17 3.74159e-05
+3 17 3.74159e-05
+6 11 3.55451e-05
+6 13 3.55451e-05
+7 9 3.55451e-05
+5 12 3.46097e-05
+9 14 3.46097e-05
+2 19 3.36743e-05
+2 24 3.36743e-05
+2 25 3.27389e-05
+4 12 3.27389e-05
+7 8 3.27389e-05
+2 27 3.18035e-05
+3 20 3.18035e-05
+1 25 3.08681e-05
+2 23 3.08681e-05
+6 15 3.08681e-05
+8 9 3.08681e-05
+6 17 2.99327e-05
+10 13 2.99327e-05
+10 23 2.99327e-05
+1 26 2.89973e-05
+1 28 2.89973e-05
+2 20 2.89973e-05
+5 14 2.89973e-05
+14 15 2.89973e-05
+1 20 2.80619e-05
+5 18 2.80619e-05
+4 17 2.71265e-05
+9 22 2.71265e-05
+2 22 2.61911e-05
+4 14 2.61911e-05
+5 13 2.61911e-05
+6 12 2.61911e-05
+8 11 2.61911e-05
+9 11 2.61911e-05
+11 13 2.61911e-05
+1 22 2.52557e-05
+1 29 2.52557e-05
+2 26 2.52557e-05
+3 18 2.52557e-05
+6 18 2.52557e-05
+3 22 2.43203e-05
+2 30 2.33849e-05
+1 31 2.24495e-05
+7 10 2.24495e-05
+3 21 2.15141e-05
+8 20 2.15141e-05
+2 21 2.05787e-05
+5 16 2.05787e-05
+7 17 2.05787e-05
+6 21 1.96434e-05
+8 19 1.96434e-05
+10 11 1.96434e-05
+*Links 1:1:5 0.00415691 112 41
+1 2 0.000921367
+1 3 0.000897982
+2 3 0.000439637
+1 4 0.000248816
+2 4 0.000238526
+4 5 0.0002114
+3 4 0.000208594
+1 13 0.000167436
+1 8 0.000159953
+4 15 0.000119731
+4 6 0.000106635
+1 24 0.000103829
+5 11 8.88628e-05
+8 12 8.51212e-05
+4 10 8.2315e-05
+5 6 8.04442e-05
+1 12 7.48318e-05
+4 7 7.10902e-05
+2 5 6.8284e-05
+4 11 6.73486e-05
+2 28 6.64132e-05
+5 7 6.64132e-05
+4 14 6.54778e-05
+1 5 6.26716e-05
+1 6 6.26716e-05
+5 16 5.98655e-05
+4 9 5.79947e-05
+3 6 5.33177e-05
+1 26 5.05115e-05
+4 16 4.77053e-05
+5 18 4.77053e-05
+7 34 4.77053e-05
+12 22 4.67699e-05
+3 5 4.58345e-05
+3 9 4.58345e-05
+4 18 4.48991e-05
+2 6 4.11575e-05
+1 7 3.92867e-05
+2 29 3.92867e-05
+5 20 3.92867e-05
+1 23 3.83513e-05
+5 10 3.64805e-05
+4 17 3.55451e-05
+2 11 3.46097e-05
+9 21 3.46097e-05
+2 7 3.36743e-05
+4 19 3.36743e-05
+8 13 3.36743e-05
+4 31 3.27389e-05
+5 19 3.27389e-05
+8 22 3.27389e-05
+9 17 3.27389e-05
+10 16 3.27389e-05
+1 22 3.18035e-05
+4 36 3.18035e-05
+9 30 3.18035e-05
+9 14 3.08681e-05
+1 9 2.99327e-05
+1 17 2.99327e-05
+1 18 2.99327e-05
+1 21 2.99327e-05
+1 32 2.99327e-05
+5 15 2.99327e-05
+6 7 2.99327e-05
+16 19 2.99327e-05
+4 20 2.89973e-05
+12 13 2.89973e-05
+1 14 2.80619e-05
+5 33 2.80619e-05
+1 38 2.71265e-05
+3 7 2.71265e-05
+7 11 2.71265e-05
+7 27 2.71265e-05
+23 37 2.71265e-05
+1 29 2.61911e-05
+2 26 2.61911e-05
+6 20 2.52557e-05
+1 25 2.43203e-05
+2 9 2.43203e-05
+3 10 2.43203e-05
+3 15 2.43203e-05
+4 35 2.43203e-05
+4 39 2.43203e-05
+3 14 2.33849e-05
+3 17 2.33849e-05
+4 21 2.33849e-05
+4 27 2.33849e-05
+4 40 2.33849e-05
+5 14 2.33849e-05
+8 25 2.33849e-05
+12 25 2.33849e-05
+21 30 2.33849e-05
+25 32 2.33849e-05
+2 10 2.24495e-05
+6 11 2.24495e-05
+9 10 2.24495e-05
+11 19 2.24495e-05
+5 31 2.15141e-05
+10 33 2.15141e-05
+2 13 2.05787e-05
+2 15 2.05787e-05
+5 17 2.05787e-05
+5 27 2.05787e-05
+7 9 2.05787e-05
+10 14 2.05787e-05
+14 16 2.05787e-05
+2 41 1.96434e-05
+3 11 1.96434e-05
+3 23 1.96434e-05
+4 23 1.96434e-05
+5 35 1.96434e-05
+10 20 1.96434e-05
+*Links 1:1:6 0.000525694 86 22
+1 2 0.000718385
+3 4 0.000428412
+1 3 0.000362934
+1 4 0.000301198
+2 3 0.000285296
+1 5 0.00018708
+2 4 0.000165565
+1 6 0.000134697
+1 8 0.000130956
+1 9 0.000125343
+2 5 0.00011786
+1 7 9.54106e-05
+3 8 8.51212e-05
+3 9 8.41858e-05
+5 9 8.41858e-05
+3 5 8.32504e-05
+6 7 8.2315e-05
+1 11 7.7638e-05
+4 8 7.7638e-05
+3 7 7.67026e-05
+3 6 7.57672e-05
+2 8 7.48318e-05
+2 9 7.48318e-05
+1 10 7.20256e-05
+4 10 7.01548e-05
+1 12 6.64132e-05
+3 10 6.54778e-05
+4 5 6.54778e-05
+2 10 6.26716e-05
+4 6 6.26716e-05
+1 15 6.17362e-05
+2 11 6.08009e-05
+4 9 6.08009e-05
+4 7 5.98655e-05
+1 14 5.89301e-05
+5 6 5.89301e-05
+5 7 5.61239e-05
+7 10 5.61239e-05
+6 8 5.51885e-05
+8 10 5.51885e-05
+5 8 5.23823e-05
+7 11 5.23823e-05
+2 6 5.05115e-05
+3 11 5.05115e-05
+1 13 4.67699e-05
+2 7 4.58345e-05
+2 13 4.20929e-05
+7 8 3.92867e-05
+2 14 3.83513e-05
+2 15 3.83513e-05
+3 13 3.83513e-05
+2 12 3.64805e-05
+4 13 3.64805e-05
+8 9 3.64805e-05
+2 18 3.55451e-05
+9 11 3.46097e-05
+5 11 3.18035e-05
+6 9 3.18035e-05
+6 11 3.18035e-05
+7 16 3.18035e-05
+10 12 3.18035e-05
+2 17 2.99327e-05
+5 10 2.99327e-05
+8 12 2.99327e-05
+3 14 2.89973e-05
+5 14 2.89973e-05
+9 10 2.80619e-05
+11 13 2.71265e-05
+4 11 2.61911e-05
+1 19 2.52557e-05
+3 12 2.52557e-05
+7 9 2.52557e-05
+10 11 2.52557e-05
+4 12 2.43203e-05
+2 20 2.33849e-05
+6 10 2.33849e-05
+5 12 2.24495e-05
+5 13 2.24495e-05
+5 15 2.24495e-05
+11 15 2.24495e-05
+2 21 2.05787e-05
+1 17 1.96434e-05
+2 22 1.96434e-05
+6 14 1.96434e-05
+6 16 1.96434e-05
+7 12 1.96434e-05
+*Links 1:1:7 0.0042308 20 8
+1 2 0.000868984
+1 3 0.000608009
+2 4 0.000397544
+1 4 0.00038819
+2 3 0.000290909
+4 5 0.000161824
+3 4 0.000146857
+1 5 9.54106e-05
+1 6 7.67026e-05
+2 5 7.67026e-05
+3 6 5.51885e-05
+3 5 5.33177e-05
+4 6 4.95761e-05
+2 6 4.39637e-05
+1 8 3.83513e-05
+1 7 3.36743e-05
+4 7 2.80619e-05
+5 6 2.61911e-05
+6 7 2.52557e-05
+2 7 1.96434e-05
+*Links 1:1:8 0.0012553 33 14
+1 2 0.00124221
+2 3 0.000212335
+1 4 0.000182403
+1 3 0.000134697
+2 4 0.000133762
+1 5 0.000123472
+2 5 8.88628e-05
+2 6 7.20256e-05
+1 6 5.61239e-05
+2 9 5.14469e-05
+6 7 4.77053e-05
+1 9 4.39637e-05
+2 7 4.30283e-05
+2 10 3.92867e-05
+1 13 3.83513e-05
+1 10 3.74159e-05
+1 7 3.64805e-05
+3 5 3.46097e-05
+3 7 3.36743e-05
+4 5 3.36743e-05
+7 8 3.18035e-05
+2 8 3.08681e-05
+2 11 3.08681e-05
+4 9 2.99327e-05
+3 4 2.80619e-05
+3 8 2.43203e-05
+1 8 2.33849e-05
+3 6 2.33849e-05
+1 11 2.24495e-05
+1 12 2.24495e-05
+1 14 2.24495e-05
+6 8 2.24495e-05
+2 12 1.96434e-05
+*Links 1:1:9 2.15141e-05 38 14
+1 2 0.000448055
+1 4 0.000166501
+1 3 0.000161824
+2 3 0.00015247
+2 5 0.000111312
+1 6 0.000109442
+2 4 0.0001057
+1 5 0.000104765
+2 6 8.6992e-05
+3 4 8.13796e-05
+3 5 6.92194e-05
+1 7 6.8284e-05
+3 6 6.8284e-05
+4 5 6.54778e-05
+2 7 5.61239e-05
+1 8 5.51885e-05
+7 8 5.23823e-05
+4 8 5.14469e-05
+4 9 4.48991e-05
+2 8 4.02221e-05
+3 7 3.92867e-05
+3 8 3.83513e-05
+3 11 3.55451e-05
+1 10 3.46097e-05
+5 7 3.36743e-05
+3 10 3.27389e-05
+3 9 3.18035e-05
+4 10 3.18035e-05
+4 7 3.08681e-05
+6 7 2.71265e-05
+5 6 2.61911e-05
+1 11 2.43203e-05
+2 9 2.43203e-05
+1 12 2.33849e-05
+1 13 2.33849e-05
+2 10 2.15141e-05
+1 9 2.05787e-05
+1 14 1.96434e-05
+*Links 1:1:10 0.000560303 36 17
+1 2 0.000242268
+2 5 0.000141245
+3 4 0.000141245
+1 4 9.6346e-05
+1 5 7.95088e-05
+4 6 7.67026e-05
+2 3 5.89301e-05
+2 10 5.89301e-05
+3 5 5.51885e-05
+1 3 5.14469e-05
+7 8 4.95761e-05
+4 9 4.86407e-05
+5 10 4.86407e-05
+2 4 4.58345e-05
+6 13 4.39637e-05
+1 6 4.30283e-05
+3 6 4.30283e-05
+3 8 4.20929e-05
+3 9 4.11575e-05
+4 8 3.92867e-05
+3 12 3.74159e-05
+3 7 3.64805e-05
+3 11 3.36743e-05
+4 5 3.27389e-05
+1 9 3.18035e-05
+8 14 3.18035e-05
+1 7 2.89973e-05
+4 7 2.89973e-05
+11 12 2.80619e-05
+7 9 2.71265e-05
+2 15 2.61911e-05
+1 10 2.43203e-05
+2 16 2.33849e-05
+2 17 2.24495e-05
+4 13 2.05787e-05
+1 11 1.96434e-05
+*Links 1:1:11 0.000261911 28 11
+1 2 0.000304004
+1 3 0.000296521
+2 3 0.000231979
+2 4 0.000141245
+1 4 0.000106635
+3 4 7.67026e-05
+2 5 6.64132e-05
+4 5 6.45424e-05
+2 6 5.33177e-05
+2 7 4.86407e-05
+1 7 4.77053e-05
+4 6 4.67699e-05
+5 6 4.67699e-05
+1 5 4.20929e-05
+1 10 4.20929e-05
+2 8 4.02221e-05
+3 7 3.46097e-05
+1 11 3.36743e-05
+1 8 3.27389e-05
+3 9 3.27389e-05
+3 5 3.18035e-05
+2 9 2.99327e-05
+1 6 2.89973e-05
+1 9 2.89973e-05
+5 8 2.43203e-05
+3 6 2.33849e-05
+2 10 2.24495e-05
+3 10 2.15141e-05
+*Links 1:1:12 0.000254428 1 2
+1 2 0.00014218
+*Links 1:1:12:1 0.000253493 14 11
+1 2 0.000354516
+2 3 0.000106635
+1 3 7.95088e-05
+1 4 6.17362e-05
+2 4 6.08009e-05
+4 6 4.67699e-05
+3 4 4.20929e-05
+3 7 4.11575e-05
+4 5 3.55451e-05
+1 5 2.71265e-05
+3 8 2.61911e-05
+3 9 2.33849e-05
+2 10 2.15141e-05
+4 11 2.05787e-05
+*Links 1:1:12:2 0.000285296 6 6
+1 2 0.000275007
+1 4 3.46097e-05
+1 5 2.89973e-05
+1 3 2.15141e-05
+2 3 2.15141e-05
+2 6 1.96434e-05
+*Links 1:1:13 0.000401286 17 13
+1 2 0.000430283
+2 4 8.60566e-05
+1 5 7.57672e-05
+2 3 6.3607e-05
+1 4 5.42531e-05
+3 8 5.14469e-05
+1 3 5.05115e-05
+2 5 4.77053e-05
+3 9 4.48991e-05
+1 6 3.74159e-05
+1 7 2.99327e-05
+2 7 2.43203e-05
+2 6 2.24495e-05
+2 11 2.24495e-05
+3 10 2.24495e-05
+3 12 1.96434e-05
+3 13 1.96434e-05
+*Links 1:1:14 0.000120666 19 10
+1 2 0.000178661
+1 3 0.000134697
+1 5 7.48318e-05
+2 3 6.17362e-05
+1 6 5.98655e-05
+1 7 5.70593e-05
+1 4 5.33177e-05
+3 4 3.92867e-05
+3 5 3.55451e-05
+2 4 3.46097e-05
+1 8 3.36743e-05
+2 7 2.80619e-05
+1 9 2.71265e-05
+4 6 2.71265e-05
+1 10 2.43203e-05
+2 8 2.33849e-05
+2 5 1.96434e-05
+2 9 1.96434e-05
+4 5 1.96434e-05
+*Links 1:1:15 2.24495e-05 16 7
+1 2 0.000299327
+1 3 0.000149664
+2 5 5.61239e-05
+2 3 4.86407e-05
+2 6 4.77053e-05
+1 4 4.48991e-05
+1 5 4.48991e-05
+3 5 4.30283e-05
+2 4 4.11575e-05
+1 6 3.74159e-05
+3 4 3.64805e-05
+1 7 3.36743e-05
+2 7 2.99327e-05
+3 6 2.43203e-05
+4 6 2.33849e-05
+4 5 2.15141e-05
+*Links 1:1:16 0.00024601 13 9
+1 2 0.000136568
+1 4 8.60566e-05
+1 3 8.13796e-05
+1 6 4.95761e-05
+1 5 4.58345e-05
+2 3 3.83513e-05
+1 7 3.27389e-05
+3 5 3.08681e-05
+1 8 2.71265e-05
+2 4 2.61911e-05
+5 7 2.24495e-05
+3 6 1.96434e-05
+8 9 1.96434e-05
+*Links 1:1:17 0.000346097 12 9
+1 2 0.000131891
+2 3 8.04442e-05
+2 4 7.48318e-05
+2 5 4.67699e-05
+1 6 3.83513e-05
+1 5 2.89973e-05
+3 4 2.80619e-05
+1 9 2.61911e-05
+1 8 2.33849e-05
+2 7 2.33849e-05
+1 7 1.96434e-05
+6 8 1.96434e-05
+*Links 1:1:18 0.000313358 3 3
+1 2 0.000368547
+1 3 0.000106635
+2 3 4.95761e-05
+*Links 1:1:19 0.000448991 10 9
+1 2 0.000101958
+1 3 6.26716e-05
+2 3 3.83513e-05
+1 4 3.64805e-05
+3 4 3.46097e-05
+5 6 3.36743e-05
+1 7 2.89973e-05
+1 8 2.33849e-05
+1 5 2.24495e-05
+1 9 1.96434e-05
+*Links 1:1:20 4.86407e-05 12 8
+1 2 0.000155276
+1 3 0.000128149
+2 3 6.45424e-05
+2 4 3.74159e-05
+1 4 3.08681e-05
+3 4 2.89973e-05
+1 5 2.33849e-05
+3 6 2.33849e-05
+1 7 2.24495e-05
+1 8 2.24495e-05
+2 5 2.24495e-05
+1 6 2.05787e-05
+*Links 1:1:21 7.95088e-05 9 8
+1 4 0.000103829
+1 3 9.91522e-05
+1 2 9.72814e-05
+1 5 4.67699e-05
+1 6 3.92867e-05
+2 3 3.27389e-05
+1 7 3.08681e-05
+2 4 2.24495e-05
+1 8 2.05787e-05
+*Links 1:1:22 2.15141e-05 1 2
+1 2 4.48991e-05
+*Links 1:1:22:1 6.64132e-05 4 4
+1 2 0.000135633
+1 3 6.64132e-05
+1 4 4.58345e-05
+2 3 2.61911e-05
+*Links 1:1:22:2 4.48991e-05 2 3
+1 2 2.71265e-05
+1 3 2.24495e-05
+*Links 1:1:23 0.000181467 3 4
+1 2 0.000209529
+1 3 2.80619e-05
+1 4 2.33849e-05
+*Links 1:1:24 0.000165565 4 4
+1 3 2.52557e-05
+2 3 2.33849e-05
+1 2 2.15141e-05
+1 4 2.05787e-05
+*Links 1:1:25 8.60566e-05 3 4
+1 3 5.89301e-05
+1 4 2.24495e-05
+2 3 2.24495e-05
+*Links 1:1:26 2.52557e-05 1 2
+1 2 8.2315e-05
+*Links 1:1:27 6.26716e-05 1 2
+1 2 4.58345e-05
+*Links 1:1:28 4.58345e-05 1 2
+1 2 2.15141e-05
+*Links 1:1:29 2.52557e-05 1 2
+1 2 2.33849e-05
+*Links 1:1:30 2.05787e-05 1 2
+1 2 2.43203e-05
+*Links 1:1:31 2.89973e-05 1 2
+1 2 1.96434e-05
+*Links 1:1:32 2.43203e-05 1 2
+1 2 2.15141e-05
+*Links 1:1:33 2.24495e-05 1 2
+1 2 1.96434e-05
+*Links 1:2 5.05115e-05 10 9
+1 2 0.00137784
+2 3 0.000637006
+2 6 0.000397544
+1 6 0.000138439
+3 6 9.1669e-05
+3 5 7.10902e-05
+2 9 6.45424e-05
+3 7 5.05115e-05
+3 4 4.11575e-05
+5 8 2.33849e-05
+*Links 1:2:1 0.00151628 396 47
+1 2 0.002809
+1 3 0.00176977
+2 3 0.00175761
+2 4 0.00157895
+1 4 0.00154715
+3 4 0.00133294
+3 5 0.00112809
+2 5 0.00101865
+1 5 0.000997134
+1 8 0.000909207
+2 6 0.000883951
+1 6 0.00086992
+5 6 0.000864307
+4 5 0.00085963
+5 7 0.000797894
+4 6 0.000787605
+1 9 0.000772638
+5 8 0.000744577
+6 8 0.000712773
+3 6 0.000692194
+3 8 0.000664132
+4 8 0.000607073
+2 8 0.000550014
+3 9 0.000549078
+3 7 0.000536918
+2 7 0.000507921
+1 7 0.000494825
+6 7 0.000485471
+5 9 0.000477988
+5 12 0.000462086
+3 13 0.000455539
+2 9 0.000449926
+4 10 0.000426541
+7 11 0.000425606
+2 10 0.000419994
+4 7 0.000416252
+2 13 0.000414381
+8 9 0.000399415
+7 9 0.00037603
+1 13 0.000369482
+4 9 0.000367611
+7 8 0.00035358
+7 12 0.00035358
+4 13 0.00035171
+5 11 0.000344226
+2 12 0.000330195
+5 13 0.000330195
+3 10 0.000326454
+11 12 0.000320841
+1 10 0.000318035
+7 10 0.000305875
+2 11 0.000302133
+1 12 0.000300263
+1 11 0.000289038
+6 9 0.000286232
+3 12 0.000279684
+4 15 0.000267524
+2 14 0.000266588
+3 15 0.00025817
+9 12 0.00025817
+3 11 0.000252557
+1 14 0.000250687
+8 13 0.000246945
+4 14 0.000238526
+6 13 0.000237591
+10 17 0.000237591
+2 17 0.000231979
+4 11 0.000230108
+3 14 0.000222625
+1 17 0.000219818
+6 11 0.000215141
+6 12 0.000215141
+7 13 0.000214206
+2 15 0.000213271
+5 10 0.000209529
+4 17 0.000203917
+10 15 0.000202046
+7 16 0.00019924
+7 15 0.000197369
+5 14 0.000195498
+8 11 0.000195498
+10 14 0.000192692
+11 16 0.000191757
+7 20 0.00018895
+7 14 0.000186144
+4 12 0.000183338
+2 16 0.000181467
+9 11 0.000179596
+10 13 0.000179596
+5 16 0.000177726
+6 14 0.000172113
+9 13 0.000170242
+1 16 0.000165565
+1 15 0.000160888
+3 17 0.000159953
+4 16 0.000159018
+7 18 0.00015247
+8 14 0.000151534
+8 10 0.000149664
+9 17 0.000148728
+12 13 0.000146857
+14 15 0.000144051
+3 16 0.000141245
+8 12 0.000141245
+12 16 0.000136568
+11 14 0.000134697
+9 14 0.000133762
+6 10 0.000132826
+5 17 0.000130956
+5 15 0.000127214
+11 18 0.000122537
+10 11 0.000120666
+6 16 0.00011786
+6 15 0.000116925
+5 18 0.000115989
+9 10 0.000115989
+13 15 0.000115989
+9 15 0.000113183
+7 19 0.000112248
+8 16 0.000108506
+11 13 0.000106635
+2 19 0.0001057
+16 29 0.000100088
+10 12 9.72814e-05
+8 15 9.54106e-05
+11 15 9.44752e-05
+12 14 9.1669e-05
+10 16 9.07336e-05
+13 17 9.07336e-05
+7 17 8.97982e-05
+10 19 8.88628e-05
+15 16 8.88628e-05
+7 22 8.6992e-05
+7 23 8.6992e-05
+4 21 8.51212e-05
+12 15 8.51212e-05
+1 19 8.41858e-05
+10 21 8.13796e-05
+12 18 8.04442e-05
+12 17 7.95088e-05
+16 19 7.95088e-05
+10 31 7.85734e-05
+13 14 7.85734e-05
+2 24 7.67026e-05
+9 16 7.67026e-05
+14 16 7.67026e-05
+2 22 7.57672e-05
+14 25 7.48318e-05
+1 26 7.2961e-05
+5 26 7.2961e-05
+7 24 7.2961e-05
+3 19 7.10902e-05
+8 17 7.10902e-05
+11 17 7.10902e-05
+13 16 7.01548e-05
+6 19 6.45424e-05
+2 18 6.3607e-05
+15 21 6.3607e-05
+3 18 6.26716e-05
+9 18 6.26716e-05
+2 21 6.17362e-05
+4 19 6.17362e-05
+3 21 6.08009e-05
+5 21 5.98655e-05
+14 17 5.98655e-05
+6 17 5.89301e-05
+6 18 5.89301e-05
+7 25 5.89301e-05
+11 22 5.89301e-05
+3 24 5.79947e-05
+12 20 5.79947e-05
+14 18 5.79947e-05
+1 20 5.70593e-05
+1 22 5.70593e-05
+3 20 5.70593e-05
+23 25 5.61239e-05
+5 22 5.51885e-05
+7 21 5.51885e-05
+2 25 5.33177e-05
+7 29 5.33177e-05
+12 26 5.33177e-05
+16 17 5.33177e-05
+1 24 5.23823e-05
+5 19 5.23823e-05
+9 20 5.23823e-05
+5 25 5.14469e-05
+10 24 5.14469e-05
+14 26 5.14469e-05
+2 20 5.05115e-05
+5 23 5.05115e-05
+7 28 5.05115e-05
+7 33 5.05115e-05
+3 25 4.95761e-05
+11 19 4.95761e-05
+15 17 4.86407e-05
+1 21 4.67699e-05
+2 26 4.67699e-05
+10 22 4.67699e-05
+15 27 4.67699e-05
+17 21 4.67699e-05
+23 28 4.67699e-05
+4 18 4.58345e-05
+4 24 4.58345e-05
+15 24 4.58345e-05
+1 18 4.48991e-05
+1 25 4.48991e-05
+4 26 4.48991e-05
+10 23 4.48991e-05
+4 29 4.39637e-05
+10 27 4.39637e-05
+13 24 4.39637e-05
+15 23 4.39637e-05
+18 20 4.39637e-05
+3 22 4.30283e-05
+3 23 4.30283e-05
+3 27 4.30283e-05
+16 18 4.30283e-05
+16 22 4.30283e-05
+1 32 4.20929e-05
+1 34 4.20929e-05
+5 20 4.20929e-05
+6 22 4.20929e-05
+9 26 4.20929e-05
+1 28 4.11575e-05
+2 27 4.11575e-05
+2 32 4.11575e-05
+5 28 4.11575e-05
+8 19 4.11575e-05
+14 27 4.11575e-05
+28 36 4.11575e-05
+1 30 4.02221e-05
+3 30 4.02221e-05
+4 22 4.02221e-05
+11 20 4.02221e-05
+14 38 4.02221e-05
+16 20 4.02221e-05
+2 29 3.92867e-05
+11 21 3.83513e-05
+12 19 3.83513e-05
+27 30 3.83513e-05
+1 29 3.74159e-05
+2 34 3.74159e-05
+13 23 3.74159e-05
+15 22 3.74159e-05
+3 29 3.64805e-05
+11 29 3.64805e-05
+14 23 3.64805e-05
+2 30 3.55451e-05
+3 26 3.55451e-05
+10 18 3.55451e-05
+11 24 3.55451e-05
+12 22 3.55451e-05
+15 20 3.55451e-05
+5 24 3.46097e-05
+10 32 3.46097e-05
+11 25 3.46097e-05
+20 33 3.46097e-05
+4 32 3.36743e-05
+4 35 3.36743e-05
+5 27 3.36743e-05
+6 21 3.36743e-05
+6 24 3.36743e-05
+6 26 3.36743e-05
+8 18 3.36743e-05
+13 21 3.36743e-05
+4 31 3.27389e-05
+5 30 3.27389e-05
+7 26 3.27389e-05
+9 28 3.27389e-05
+15 18 3.27389e-05
+1 23 3.18035e-05
+2 23 3.18035e-05
+4 23 3.18035e-05
+6 25 3.18035e-05
+17 34 3.18035e-05
+1 27 3.08681e-05
+6 28 3.08681e-05
+8 22 3.08681e-05
+8 26 3.08681e-05
+12 21 3.08681e-05
+13 18 3.08681e-05
+14 19 3.08681e-05
+14 31 3.08681e-05
+15 30 3.08681e-05
+17 19 3.08681e-05
+1 31 2.99327e-05
+3 32 2.99327e-05
+8 21 2.99327e-05
+14 20 2.99327e-05
+14 22 2.99327e-05
+9 21 2.89973e-05
+10 20 2.89973e-05
+10 34 2.89973e-05
+19 20 2.89973e-05
+25 37 2.89973e-05
+9 24 2.80619e-05
+12 24 2.80619e-05
+15 28 2.80619e-05
+17 24 2.80619e-05
+25 26 2.80619e-05
+4 25 2.71265e-05
+5 43 2.71265e-05
+9 22 2.71265e-05
+10 30 2.71265e-05
+13 19 2.71265e-05
+14 42 2.71265e-05
+18 24 2.71265e-05
+2 35 2.61911e-05
+3 35 2.61911e-05
+3 44 2.61911e-05
+6 23 2.61911e-05
+7 27 2.61911e-05
+10 26 2.61911e-05
+10 35 2.61911e-05
+12 30 2.61911e-05
+13 30 2.61911e-05
+14 21 2.61911e-05
+15 25 2.61911e-05
+16 23 2.61911e-05
+18 28 2.61911e-05
+28 33 2.61911e-05
+2 31 2.52557e-05
+8 25 2.52557e-05
+15 29 2.52557e-05
+17 31 2.52557e-05
+18 22 2.52557e-05
+18 23 2.52557e-05
+20 22 2.52557e-05
+6 20 2.43203e-05
+8 24 2.43203e-05
+9 25 2.43203e-05
+9 30 2.43203e-05
+14 30 2.43203e-05
+15 19 2.43203e-05
+16 24 2.43203e-05
+18 36 2.43203e-05
+20 29 2.43203e-05
+1 38 2.33849e-05
+1 39 2.33849e-05
+3 39 2.33849e-05
+4 20 2.33849e-05
+4 27 2.33849e-05
+8 20 2.33849e-05
+8 30 2.33849e-05
+9 23 2.33849e-05
+15 33 2.33849e-05
+17 32 2.33849e-05
+19 35 2.33849e-05
+20 24 2.33849e-05
+23 30 2.33849e-05
+23 37 2.33849e-05
+30 45 2.33849e-05
+2 39 2.24495e-05
+3 31 2.24495e-05
+4 34 2.24495e-05
+6 30 2.24495e-05
+16 21 2.24495e-05
+18 29 2.24495e-05
+2 40 2.15141e-05
+2 46 2.15141e-05
+5 37 2.15141e-05
+8 23 2.15141e-05
+11 38 2.15141e-05
+13 27 2.15141e-05
+15 47 2.15141e-05
+16 40 2.15141e-05
+16 41 2.15141e-05
+19 29 2.15141e-05
+20 23 2.15141e-05
+23 27 2.15141e-05
+25 41 2.15141e-05
+2 28 2.05787e-05
+3 34 2.05787e-05
+4 33 2.05787e-05
+6 27 2.05787e-05
+7 35 2.05787e-05
+9 36 2.05787e-05
+10 28 2.05787e-05
+10 33 2.05787e-05
+11 26 2.05787e-05
+14 28 2.05787e-05
+16 25 2.05787e-05
+22 28 2.05787e-05
+5 29 1.96434e-05
+7 36 1.96434e-05
+7 37 1.96434e-05
+8 27 1.96434e-05
+9 27 1.96434e-05
+10 25 1.96434e-05
+14 37 1.96434e-05
+15 36 1.96434e-05
+17 26 1.96434e-05
+19 32 1.96434e-05
+23 33 1.96434e-05
+28 37 1.96434e-05
+33 36 1.96434e-05
+*Links 1:2:2 0.00252744 393 56
+1 2 0.00187454
+1 4 0.00173797
+1 3 0.00127588
+1 5 0.00104577
+1 6 0.0010411
+2 3 0.00094101
+2 4 0.000854018
+1 9 0.000830633
+1 7 0.000801636
+2 5 0.000734287
+1 8 0.000580882
+2 10 0.000503244
+3 5 0.000492955
+2 6 0.000470505
+3 4 0.000390061
+4 7 0.00038819
+3 11 0.000381642
+4 5 0.000374159
+3 7 0.000366676
+4 6 0.000364805
+2 14 0.000358257
+1 12 0.000346097
+2 7 0.000334872
+6 9 0.000321777
+2 8 0.000308681
+3 8 0.00030681
+3 6 0.000299327
+2 12 0.000284361
+1 11 0.000274072
+2 11 0.000271265
+2 13 0.000256299
+1 13 0.000253493
+5 6 0.000236656
+2 9 0.000231043
+1 10 0.000230108
+1 16 0.000227302
+5 7 0.000226366
+4 8 0.000222625
+5 8 0.000220754
+7 8 0.000212335
+2 15 0.000203917
+7 11 0.000203917
+1 14 0.000195498
+4 9 0.000183338
+2 16 0.000178661
+4 10 0.000174919
+9 12 0.000166501
+3 10 0.000165565
+6 7 0.000163695
+3 15 0.000162759
+9 16 0.000162759
+2 17 0.000158082
+3 9 0.000156211
+3 18 0.000154341
+7 16 0.000148728
+4 12 0.000147793
+4 13 0.000146857
+5 13 0.000146857
+1 15 0.000145922
+3 12 0.000145922
+1 21 0.000141245
+6 12 0.000139374
+5 11 0.000138439
+3 14 0.000133762
+7 9 0.000133762
+4 11 0.000131891
+2 24 0.000130956
+5 9 0.00013002
+5 10 0.000128149
+8 11 0.000128149
+2 20 0.000124408
+6 10 0.000124408
+3 13 0.000121602
+1 17 0.000119731
+11 18 0.000118796
+5 14 0.000116925
+6 8 0.000115989
+10 15 0.000115054
+1 19 0.000112248
+10 14 0.000110377
+4 14 0.000108506
+3 16 0.000107571
+10 12 0.000106635
+1 20 0.0001057
+10 11 0.000104765
+4 15 0.000103829
+1 23 0.000101958
+2 21 9.72814e-05
+6 11 9.54106e-05
+2 22 9.44752e-05
+4 16 9.44752e-05
+10 13 9.44752e-05
+3 17 9.35398e-05
+2 19 9.26044e-05
+11 15 9.1669e-05
+12 25 9.1669e-05
+1 24 8.97982e-05
+5 15 8.97982e-05
+15 18 8.97982e-05
+6 13 8.88628e-05
+6 16 8.79274e-05
+4 17 8.60566e-05
+6 15 8.51212e-05
+7 15 8.51212e-05
+8 9 8.51212e-05
+1 27 8.41858e-05
+10 17 8.41858e-05
+10 22 8.41858e-05
+12 33 8.41858e-05
+2 26 8.2315e-05
+8 10 8.2315e-05
+1 25 8.13796e-05
+2 23 8.04442e-05
+6 14 8.04442e-05
+8 13 8.04442e-05
+3 26 7.95088e-05
+5 12 7.95088e-05
+1 22 7.85734e-05
+5 19 7.85734e-05
+13 14 7.85734e-05
+5 16 7.7638e-05
+15 16 7.7638e-05
+7 19 7.57672e-05
+7 18 7.48318e-05
+8 12 7.48318e-05
+1 18 7.38964e-05
+2 35 7.2961e-05
+3 20 7.2961e-05
+2 18 7.20256e-05
+5 23 7.20256e-05
+6 24 7.20256e-05
+7 14 7.20256e-05
+11 12 7.10902e-05
+11 16 7.01548e-05
+13 15 7.01548e-05
+1 26 6.92194e-05
+9 11 6.8284e-05
+25 30 6.8284e-05
+11 14 6.73486e-05
+12 16 6.73486e-05
+7 12 6.64132e-05
+1 32 6.54778e-05
+5 17 6.54778e-05
+6 17 6.45424e-05
+13 22 6.45424e-05
+8 15 6.3607e-05
+1 36 6.26716e-05
+2 29 6.17362e-05
+3 30 6.17362e-05
+11 19 6.17362e-05
+7 13 6.08009e-05
+3 25 5.98655e-05
+3 19 5.89301e-05
+3 21 5.89301e-05
+14 15 5.89301e-05
+4 21 5.70593e-05
+5 20 5.70593e-05
+1 34 5.61239e-05
+11 20 5.61239e-05
+2 25 5.51885e-05
+2 28 5.51885e-05
+7 20 5.51885e-05
+8 14 5.42531e-05
+10 29 5.42531e-05
+11 13 5.42531e-05
+12 13 5.42531e-05
+9 10 5.33177e-05
+1 33 5.23823e-05
+1 35 5.23823e-05
+2 27 5.23823e-05
+2 37 5.23823e-05
+9 13 5.23823e-05
+12 37 5.23823e-05
+19 23 5.23823e-05
+4 24 5.14469e-05
+2 34 5.05115e-05
+9 15 5.05115e-05
+10 19 5.05115e-05
+13 16 5.05115e-05
+4 20 4.95761e-05
+7 10 4.86407e-05
+3 23 4.77053e-05
+15 17 4.77053e-05
+3 27 4.67699e-05
+9 39 4.67699e-05
+10 16 4.67699e-05
+10 24 4.67699e-05
+18 47 4.67699e-05
+1 40 4.58345e-05
+3 24 4.58345e-05
+14 17 4.58345e-05
+1 30 4.48991e-05
+1 37 4.48991e-05
+11 23 4.48991e-05
+12 21 4.48991e-05
+1 42 4.39637e-05
+12 28 4.39637e-05
+19 20 4.39637e-05
+2 32 4.30283e-05
+2 41 4.30283e-05
+2 43 4.30283e-05
+1 29 4.20929e-05
+2 31 4.20929e-05
+7 24 4.20929e-05
+10 31 4.20929e-05
+3 38 4.11575e-05
+6 20 4.11575e-05
+7 23 4.11575e-05
+8 16 4.11575e-05
+12 15 4.11575e-05
+13 29 4.11575e-05
+1 28 4.02221e-05
+4 22 4.02221e-05
+5 26 4.02221e-05
+10 23 4.02221e-05
+10 28 4.02221e-05
+6 19 3.92867e-05
+7 21 3.92867e-05
+12 17 3.92867e-05
+16 39 3.92867e-05
+6 22 3.83513e-05
+8 20 3.83513e-05
+10 25 3.83513e-05
+12 26 3.83513e-05
+13 17 3.83513e-05
+4 18 3.74159e-05
+4 23 3.74159e-05
+3 22 3.64805e-05
+4 19 3.64805e-05
+14 20 3.64805e-05
+12 23 3.55451e-05
+3 34 3.46097e-05
+3 40 3.46097e-05
+5 18 3.46097e-05
+6 45 3.46097e-05
+8 17 3.46097e-05
+8 21 3.46097e-05
+14 19 3.46097e-05
+14 26 3.46097e-05
+4 25 3.36743e-05
+8 26 3.36743e-05
+10 18 3.36743e-05
+15 22 3.36743e-05
+22 29 3.36743e-05
+2 49 3.27389e-05
+6 25 3.27389e-05
+8 23 3.27389e-05
+10 44 3.27389e-05
+12 22 3.27389e-05
+29 31 3.27389e-05
+2 33 3.18035e-05
+4 28 3.18035e-05
+5 24 3.18035e-05
+10 26 3.18035e-05
+14 16 3.18035e-05
+1 39 3.08681e-05
+6 28 3.08681e-05
+14 22 3.08681e-05
+1 38 2.99327e-05
+1 41 2.99327e-05
+4 26 2.99327e-05
+6 21 2.99327e-05
+11 24 2.99327e-05
+17 22 2.99327e-05
+18 19 2.99327e-05
+22 24 2.99327e-05
+1 50 2.89973e-05
+3 28 2.89973e-05
+5 21 2.89973e-05
+5 27 2.89973e-05
+6 23 2.89973e-05
+10 20 2.89973e-05
+11 30 2.89973e-05
+16 19 2.89973e-05
+1 45 2.80619e-05
+2 40 2.80619e-05
+2 44 2.80619e-05
+3 32 2.80619e-05
+7 38 2.80619e-05
+10 21 2.80619e-05
+12 39 2.80619e-05
+16 18 2.80619e-05
+3 36 2.71265e-05
+7 26 2.71265e-05
+12 32 2.71265e-05
+14 24 2.71265e-05
+32 35 2.71265e-05
+1 51 2.61911e-05
+3 35 2.61911e-05
+4 27 2.61911e-05
+5 22 2.61911e-05
+7 27 2.61911e-05
+8 36 2.61911e-05
+9 24 2.61911e-05
+12 46 2.61911e-05
+16 20 2.61911e-05
+17 29 2.61911e-05
+21 38 2.61911e-05
+1 43 2.52557e-05
+2 30 2.52557e-05
+2 36 2.52557e-05
+2 48 2.52557e-05
+6 31 2.52557e-05
+7 17 2.52557e-05
+9 42 2.52557e-05
+11 17 2.52557e-05
+11 21 2.52557e-05
+12 24 2.52557e-05
+12 29 2.52557e-05
+15 20 2.52557e-05
+19 41 2.52557e-05
+6 18 2.43203e-05
+7 41 2.43203e-05
+8 35 2.43203e-05
+12 14 2.43203e-05
+12 18 2.43203e-05
+17 23 2.43203e-05
+17 25 2.43203e-05
+18 20 2.43203e-05
+18 30 2.43203e-05
+19 27 2.43203e-05
+21 26 2.43203e-05
+28 31 2.43203e-05
+33 37 2.43203e-05
+37 46 2.43203e-05
+1 31 2.33849e-05
+3 41 2.33849e-05
+10 34 2.33849e-05
+11 25 2.33849e-05
+11 26 2.33849e-05
+13 21 2.33849e-05
+15 30 2.33849e-05
+26 28 2.33849e-05
+8 18 2.24495e-05
+8 32 2.24495e-05
+11 32 2.24495e-05
+16 42 2.24495e-05
+19 24 2.24495e-05
+2 52 2.15141e-05
+3 31 2.15141e-05
+4 34 2.15141e-05
+4 36 2.15141e-05
+5 31 2.15141e-05
+6 33 2.15141e-05
+7 30 2.15141e-05
+9 21 2.15141e-05
+10 27 2.15141e-05
+11 22 2.15141e-05
+12 20 2.15141e-05
+12 27 2.15141e-05
+14 18 2.15141e-05
+14 43 2.15141e-05
+15 23 2.15141e-05
+15 34 2.15141e-05
+16 21 2.15141e-05
+16 27 2.15141e-05
+17 19 2.15141e-05
+18 25 2.15141e-05
+22 31 2.15141e-05
+23 26 2.15141e-05
+1 48 2.05787e-05
+1 54 2.05787e-05
+3 33 2.05787e-05
+3 53 2.05787e-05
+6 27 2.05787e-05
+7 35 2.05787e-05
+9 20 2.05787e-05
+11 27 2.05787e-05
+13 25 2.05787e-05
+15 31 2.05787e-05
+18 38 2.05787e-05
+19 31 2.05787e-05
+23 29 2.05787e-05
+28 29 2.05787e-05
+1 55 1.96434e-05
+2 38 1.96434e-05
+2 39 1.96434e-05
+2 56 1.96434e-05
+6 30 1.96434e-05
+6 36 1.96434e-05
+7 36 1.96434e-05
+7 40 1.96434e-05
+8 25 1.96434e-05
+9 14 1.96434e-05
+9 22 1.96434e-05
+10 30 1.96434e-05
+11 40 1.96434e-05
+12 34 1.96434e-05
+13 31 1.96434e-05
+14 44 1.96434e-05
+17 21 1.96434e-05
+17 28 1.96434e-05
+21 25 1.96434e-05
+*Links 1:2:3 0.000891434 107 29
+1 3 0.00100088
+1 2 0.000991522
+2 3 0.000688453
+1 4 0.000603332
+2 4 0.000419058
+3 4 0.000348903
+1 5 0.000286232
+1 6 0.000278749
+2 6 0.000248816
+1 7 0.000238526
+2 5 0.000228237
+3 7 0.000197369
+3 5 0.000154341
+4 5 0.000154341
+5 11 0.000136568
+3 6 0.000131891
+2 9 0.00011786
+2 7 0.000116925
+6 7 0.000116925
+1 8 0.000106635
+1 10 0.0001057
+2 10 9.54106e-05
+4 6 9.44752e-05
+2 8 9.35398e-05
+6 8 9.1669e-05
+1 12 9.07336e-05
+4 9 8.6992e-05
+1 9 8.32504e-05
+7 8 8.32504e-05
+1 11 7.2961e-05
+3 8 7.2961e-05
+3 10 7.01548e-05
+4 10 7.01548e-05
+3 9 6.8284e-05
+3 12 6.8284e-05
+2 11 5.98655e-05
+4 7 5.89301e-05
+5 6 5.70593e-05
+2 15 5.61239e-05
+5 13 5.61239e-05
+9 10 5.05115e-05
+1 17 4.86407e-05
+1 19 4.86407e-05
+2 18 4.86407e-05
+2 12 4.77053e-05
+1 20 4.58345e-05
+4 8 4.39637e-05
+2 16 4.30283e-05
+3 11 4.20929e-05
+5 7 4.20929e-05
+2 14 4.02221e-05
+2 17 4.02221e-05
+1 23 3.83513e-05
+1 15 3.64805e-05
+6 12 3.64805e-05
+1 21 3.55451e-05
+2 13 3.46097e-05
+5 9 3.46097e-05
+1 13 3.36743e-05
+6 10 3.27389e-05
+4 12 3.18035e-05
+1 18 3.08681e-05
+2 23 2.99327e-05
+3 17 2.99327e-05
+4 24 2.89973e-05
+13 22 2.89973e-05
+4 14 2.80619e-05
+5 10 2.80619e-05
+5 14 2.80619e-05
+11 13 2.80619e-05
+1 14 2.71265e-05
+1 16 2.71265e-05
+6 9 2.71265e-05
+7 12 2.71265e-05
+4 15 2.61911e-05
+5 16 2.61911e-05
+3 13 2.52557e-05
+4 11 2.52557e-05
+6 15 2.52557e-05
+2 19 2.43203e-05
+2 27 2.43203e-05
+4 21 2.43203e-05
+6 28 2.43203e-05
+7 20 2.43203e-05
+3 18 2.33849e-05
+12 20 2.33849e-05
+14 29 2.33849e-05
+4 13 2.24495e-05
+5 18 2.24495e-05
+5 22 2.24495e-05
+8 17 2.24495e-05
+13 14 2.24495e-05
+13 16 2.24495e-05
+16 25 2.24495e-05
+1 26 2.05787e-05
+2 21 2.05787e-05
+2 26 2.05787e-05
+3 15 2.05787e-05
+5 12 2.05787e-05
+5 19 2.05787e-05
+9 24 2.05787e-05
+1 22 1.96434e-05
+3 14 1.96434e-05
+3 16 1.96434e-05
+4 19 1.96434e-05
+7 17 1.96434e-05
+13 25 1.96434e-05
+*Links 1:2:4 4.11575e-05 55 19
+1 3 0.000128149
+1 5 0.000100088
+1 2 9.54106e-05
+2 4 7.95088e-05
+1 4 7.20256e-05
+1 7 7.10902e-05
+2 5 6.45424e-05
+2 11 5.89301e-05
+1 12 5.33177e-05
+2 13 5.14469e-05
+2 10 5.05115e-05
+3 4 5.05115e-05
+3 5 4.95761e-05
+1 8 4.67699e-05
+2 3 4.30283e-05
+2 6 4.30283e-05
+2 7 4.11575e-05
+6 10 3.74159e-05
+2 9 3.64805e-05
+4 13 3.46097e-05
+5 7 3.46097e-05
+4 10 3.36743e-05
+7 8 3.18035e-05
+9 17 3.18035e-05
+2 8 3.08681e-05
+3 7 2.99327e-05
+4 5 2.99327e-05
+5 11 2.99327e-05
+6 11 2.89973e-05
+2 12 2.80619e-05
+2 14 2.80619e-05
+4 9 2.80619e-05
+5 6 2.80619e-05
+6 9 2.80619e-05
+6 8 2.71265e-05
+1 6 2.61911e-05
+1 10 2.61911e-05
+9 10 2.61911e-05
+3 8 2.52557e-05
+3 9 2.52557e-05
+5 8 2.52557e-05
+14 16 2.52557e-05
+1 11 2.43203e-05
+7 15 2.43203e-05
+8 15 2.43203e-05
+1 9 2.33849e-05
+3 10 2.33849e-05
+6 7 2.33849e-05
+2 16 2.24495e-05
+4 6 2.24495e-05
+2 18 2.15141e-05
+4 7 2.15141e-05
+4 8 2.05787e-05
+1 19 1.96434e-05
+3 6 1.96434e-05
+*Links 1:2:5 9.44752e-05 16 8
+2 3 0.000154341
+1 3 0.000115054
+1 4 8.6992e-05
+1 2 6.17362e-05
+3 4 5.05115e-05
+2 5 4.95761e-05
+2 4 4.48991e-05
+1 5 4.02221e-05
+1 6 2.80619e-05
+2 8 2.61911e-05
+4 5 2.61911e-05
+4 6 2.52557e-05
+3 5 2.43203e-05
+3 6 2.43203e-05
+4 7 2.15141e-05
+1 7 1.96434e-05
+*Links 1:2:6 0.000627652 6 6
+1 2 6.8284e-05
+1 4 6.73486e-05
+1 3 4.95761e-05
+2 3 3.36743e-05
+1 5 2.52557e-05
+1 6 2.05787e-05
+*Links 1:2:7 5.05115e-05 2 3
+1 2 6.8284e-05
+1 3 2.33849e-05
+*Links 1:2:8 2.33849e-05 1 2
+1 2 4.48991e-05
+*Links 1:2:9 6.45424e-05 1 2
+1 2 2.33849e-05
+*Links 1:3 7.7638e-05 21 11
+1 5 0.000474247
+1 4 0.000369482
+2 4 0.000312423
+3 4 0.00028249
+1 2 0.000276878
+4 5 0.000237591
+2 5 0.000186144
+4 7 0.000156211
+4 6 7.48318e-05
+1 3 7.20256e-05
+4 8 6.73486e-05
+3 6 5.61239e-05
+3 7 5.51885e-05
+3 5 5.42531e-05
+2 8 4.48991e-05
+1 9 3.64805e-05
+2 3 2.24495e-05
+1 8 2.05787e-05
+4 11 2.05787e-05
+1 6 1.96434e-05
+5 10 1.96434e-05
+*Links 1:3:1 0.00131704 26 12
+1 4 0.000568722
+1 3 0.00048173
+1 2 0.00043496
+2 3 0.000204852
+1 5 0.000192692
+2 4 0.000157147
+2 5 0.000145922
+3 4 0.000145922
+4 5 0.000100088
+3 5 5.61239e-05
+1 6 4.30283e-05
+1 7 3.64805e-05
+2 7 3.64805e-05
+1 9 3.27389e-05
+3 6 2.99327e-05
+2 6 2.89973e-05
+2 8 2.52557e-05
+1 10 2.24495e-05
+5 7 2.15141e-05
+5 8 2.15141e-05
+7 8 2.15141e-05
+1 8 2.05787e-05
+1 11 2.05787e-05
+3 9 2.05787e-05
+4 6 2.05787e-05
+8 12 1.96434e-05
+*Links 1:3:2 0.000842793 40 14
+1 2 0.000439637
+3 4 0.000252557
+1 3 0.000239462
+1 4 0.000150599
+2 3 0.000137503
+2 4 0.00013002
+1 6 7.57672e-05
+3 5 5.98655e-05
+1 5 5.79947e-05
+1 10 5.70593e-05
+1 9 5.61239e-05
+4 5 4.95761e-05
+4 6 4.67699e-05
+3 6 4.48991e-05
+2 6 4.20929e-05
+2 7 4.11575e-05
+2 10 4.02221e-05
+2 5 3.92867e-05
+2 8 3.64805e-05
+7 8 3.64805e-05
+2 9 3.46097e-05
+5 6 3.46097e-05
+1 8 3.36743e-05
+3 8 3.36743e-05
+1 7 3.27389e-05
+7 11 3.18035e-05
+8 11 2.99327e-05
+1 13 2.80619e-05
+3 9 2.80619e-05
+1 12 2.52557e-05
+3 7 2.52557e-05
+4 9 2.52557e-05
+5 9 2.52557e-05
+1 11 2.33849e-05
+2 14 2.33849e-05
+7 12 2.33849e-05
+4 7 2.24495e-05
+2 12 2.05787e-05
+4 8 1.96434e-05
+6 13 1.96434e-05
+*Links 1:3:3 0.000542531 34 15
+1 2 0.000279684
+2 3 0.000116925
+1 4 0.000108506
+1 5 0.0001057
+1 6 0.000101023
+1 3 8.41858e-05
+2 7 8.13796e-05
+2 5 7.7638e-05
+2 4 7.67026e-05
+1 7 5.79947e-05
+1 8 5.42531e-05
+1 9 5.05115e-05
+6 8 4.77053e-05
+3 5 4.20929e-05
+4 5 4.20929e-05
+8 9 4.20929e-05
+3 4 4.11575e-05
+1 13 3.92867e-05
+7 10 3.55451e-05
+2 11 3.46097e-05
+3 7 3.27389e-05
+2 6 2.99327e-05
+2 8 2.61911e-05
+6 7 2.33849e-05
+6 9 2.33849e-05
+1 10 2.24495e-05
+1 11 2.24495e-05
+1 14 2.24495e-05
+3 15 2.15141e-05
+4 6 2.05787e-05
+4 8 2.05787e-05
+1 12 1.96434e-05
+2 12 1.96434e-05
+8 10 1.96434e-05
+*Links 1:3:4 0.00152096 17 14
+1 3 0.000246945
+1 2 0.000228237
+1 4 0.00014218
+1 6 0.000114119
+1 7 7.10902e-05
+3 5 5.89301e-05
+2 9 4.67699e-05
+1 10 4.30283e-05
+5 8 3.83513e-05
+1 11 3.36743e-05
+3 4 2.99327e-05
+1 8 2.52557e-05
+1 12 2.52557e-05
+3 8 2.52557e-05
+8 13 2.24495e-05
+1 5 2.05787e-05
+2 14 1.96434e-05
+*Links 1:3:5 0.00100181 17 10
+1 2 0.000126279
+2 3 7.95088e-05
+1 3 4.77053e-05
+1 7 4.58345e-05
+2 6 4.20929e-05
+1 5 4.02221e-05
+1 4 3.46097e-05
+1 8 3.18035e-05
+2 5 2.71265e-05
+1 6 2.43203e-05
+2 4 2.43203e-05
+1 9 2.33849e-05
+3 4 2.33849e-05
+4 6 2.33849e-05
+3 5 2.24495e-05
+1 10 2.15141e-05
+4 5 2.05787e-05
+*Links 1:3:6 0.000150599 7 5
+1 2 0.000146857
+1 3 9.91522e-05
+2 3 6.92194e-05
+1 4 6.08009e-05
+2 4 3.36743e-05
+3 4 3.36743e-05
+1 5 2.15141e-05
+*Links 1:3:7 0.0002114 8 9
+1 3 7.57672e-05
+1 2 4.95761e-05
+2 6 4.67699e-05
+2 7 3.64805e-05
+2 4 3.18035e-05
+2 5 2.52557e-05
+1 8 2.05787e-05
+4 9 2.05787e-05
+*Links 1:3:8 0.000132826 4 4
+1 2 5.42531e-05
+1 3 4.30283e-05
+1 4 2.99327e-05
+2 3 2.61911e-05
+*Links 1:3:9 3.64805e-05 1 2
+1 2 2.61911e-05
+*Links 1:3:10 1.96434e-05 1 2
+1 2 2.52557e-05
+*Links 1:3:11 2.05787e-05 1 2
+1 2 1.96434e-05
+*Links 1:4 8.2315e-05 2 3
+1 2 5.42531e-05
+1 3 2.71265e-05
+*Links 1:4:1 0.000143116 3 3
+1 2 0.000472376
+1 3 0.000188015
+2 3 0.000133762
+*Links 1:4:2 5.42531e-05 5 5
+1 3 0.000124408
+1 2 6.92194e-05
+2 4 5.98655e-05
+1 4 3.74159e-05
+1 5 2.52557e-05
+*Links 1:4:3 4.77053e-05 2 3
+1 2 5.05115e-05
+1 3 2.15141e-05
+*Links 1:5 2.43945e-19 3 4
+1 2 5.05115e-05
+1 4 4.30283e-05
+1 3 3.18035e-05
+*Links 1:5:1 0.000125343 16 16
+1 2 0.000154341
+1 3 7.48318e-05
+1 4 6.54778e-05
+1 5 6.17362e-05
+2 6 5.05115e-05
+2 7 4.58345e-05
+2 8 2.89973e-05
+2 9 2.71265e-05
+2 10 2.61911e-05
+2 11 2.52557e-05
+1 12 2.43203e-05
+2 3 2.33849e-05
+2 13 2.33849e-05
+2 14 2.33849e-05
+1 15 2.15141e-05
+2 16 1.96434e-05
+*Links 1:5:2 5.05115e-05 3 3
+1 2 6.92194e-05
+1 3 6.64132e-05
+2 3 5.42531e-05
+*Links 1:5:3 3.18035e-05 3 4
+1 2 9.26044e-05
+1 3 5.89301e-05
+1 4 2.61911e-05
+*Links 1:5:4 4.30283e-05 1 2
+1 2 3.46097e-05
+*Links 1:6 0 1 2
+1 2 4.02221e-05
+*Links 2 4.30283e-05 3 3
+1 2 0.000543466
+1 3 0.000157147
+2 3 2.05787e-05
+*Links 2:1 0.000743641 19 9
+1 4 0.000407833
+3 4 0.000369482
+2 4 0.000360128
+1 6 0.000172113
+1 5 0.000156211
+1 3 9.26044e-05
+1 8 5.23823e-05
+4 5 4.58345e-05
+4 6 3.92867e-05
+4 7 3.27389e-05
+1 7 3.08681e-05
+6 7 3.08681e-05
+1 2 2.89973e-05
+6 8 2.61911e-05
+1 9 2.52557e-05
+5 6 2.43203e-05
+2 3 2.05787e-05
+4 8 2.05787e-05
+3 5 1.96434e-05
+*Links 2:1:1 0.00106261 52 23
+1 3 0.000462086
+1 4 0.000401286
+1 2 0.000395673
+1 5 0.000263782
+1 7 0.000154341
+1 6 0.000150599
+2 5 0.000149664
+2 3 0.000143116
+3 4 0.000136568
+2 4 0.000128149
+4 5 9.26044e-05
+2 6 9.07336e-05
+3 5 8.51212e-05
+1 9 7.67026e-05
+3 6 7.48318e-05
+1 10 7.38964e-05
+2 7 6.26716e-05
+1 8 6.17362e-05
+5 6 5.98655e-05
+1 11 5.70593e-05
+4 6 5.70593e-05
+1 12 5.61239e-05
+6 7 5.42531e-05
+1 13 4.86407e-05
+2 12 4.77053e-05
+5 7 4.11575e-05
+4 7 3.74159e-05
+1 14 3.64805e-05
+6 8 3.36743e-05
+2 9 3.27389e-05
+3 10 3.27389e-05
+7 8 3.18035e-05
+1 16 3.08681e-05
+1 15 2.99327e-05
+1 17 2.80619e-05
+1 18 2.80619e-05
+7 14 2.80619e-05
+3 11 2.71265e-05
+3 7 2.61911e-05
+3 13 2.61911e-05
+7 15 2.61911e-05
+3 9 2.52557e-05
+1 19 2.43203e-05
+2 10 2.43203e-05
+1 20 2.33849e-05
+1 21 2.24495e-05
+4 10 2.24495e-05
+2 8 2.15141e-05
+5 8 2.15141e-05
+1 22 2.05787e-05
+2 11 2.05787e-05
+1 23 1.96434e-05
+*Links 2:1:2 0.00043496 70 22
+2 3 0.000195498
+1 2 0.000183338
+1 3 0.000159018
+3 5 0.000158082
+2 4 0.000149664
+1 10 0.000130956
+1 6 0.000115054
+3 6 9.82168e-05
+1 5 8.2315e-05
+2 5 8.04442e-05
+3 4 7.7638e-05
+1 11 7.57672e-05
+1 4 7.10902e-05
+3 9 7.10902e-05
+2 9 6.54778e-05
+2 6 6.17362e-05
+2 7 5.98655e-05
+3 7 5.70593e-05
+4 9 5.70593e-05
+1 8 5.61239e-05
+1 17 5.42531e-05
+1 7 5.33177e-05
+4 7 5.14469e-05
+5 6 5.05115e-05
+4 5 4.58345e-05
+3 10 4.30283e-05
+5 7 4.30283e-05
+5 12 4.02221e-05
+1 13 3.74159e-05
+5 15 3.64805e-05
+3 12 3.55451e-05
+4 6 3.46097e-05
+4 8 3.46097e-05
+7 14 3.36743e-05
+7 9 3.27389e-05
+2 8 3.18035e-05
+1 15 3.08681e-05
+2 10 3.08681e-05
+2 14 3.08681e-05
+1 19 2.99327e-05
+8 18 2.99327e-05
+2 13 2.80619e-05
+6 10 2.80619e-05
+4 16 2.71265e-05
+6 15 2.61911e-05
+8 14 2.61911e-05
+1 9 2.52557e-05
+6 7 2.52557e-05
+1 12 2.43203e-05
+5 11 2.43203e-05
+1 21 2.33849e-05
+2 12 2.33849e-05
+4 14 2.33849e-05
+8 11 2.33849e-05
+13 20 2.33849e-05
+2 11 2.24495e-05
+8 9 2.24495e-05
+8 13 2.24495e-05
+3 14 2.15141e-05
+2 16 2.05787e-05
+3 8 2.05787e-05
+4 12 2.05787e-05
+7 8 2.05787e-05
+15 22 2.05787e-05
+1 16 1.96434e-05
+2 18 1.96434e-05
+3 11 1.96434e-05
+4 13 1.96434e-05
+6 12 1.96434e-05
+7 13 1.96434e-05
+*Links 2:1:3 0.000502309 26 12
+1 2 0.000562174
+1 3 0.000115989
+2 3 0.000107571
+1 4 0.0001057
+1 6 6.64132e-05
+2 4 6.64132e-05
+3 4 5.98655e-05
+1 5 4.95761e-05
+1 8 4.77053e-05
+4 5 3.92867e-05
+1 10 3.55451e-05
+1 7 3.46097e-05
+2 5 3.36743e-05
+2 6 3.18035e-05
+2 7 3.08681e-05
+3 5 2.99327e-05
+3 7 2.80619e-05
+1 12 2.71265e-05
+4 11 2.43203e-05
+1 9 2.24495e-05
+1 11 2.24495e-05
+2 8 2.24495e-05
+5 7 2.15141e-05
+5 9 2.15141e-05
+4 9 2.05787e-05
+5 10 1.96434e-05
+*Links 2:1:4 0.00189792 5 5
+1 2 0.000135633
+1 3 0.000132826
+1 4 0.000108506
+2 3 4.77053e-05
+1 5 2.80619e-05
+*Links 2:1:5 0.00024601 6 4
+1 2 0.000114119
+1 3 0.0001057
+1 4 6.73486e-05
+2 3 6.3607e-05
+2 4 6.3607e-05
+3 4 2.80619e-05
+*Links 2:1:6 0.000292779 9 8
+1 2 0.000147793
+1 3 4.58345e-05
+1 5 3.64805e-05
+1 4 3.27389e-05
+2 4 2.99327e-05
+1 6 2.43203e-05
+1 7 2.33849e-05
+3 5 2.15141e-05
+1 8 1.96434e-05
+*Links 2:1:7 9.44752e-05 2 3
+1 2 0.00014031
+2 3 2.24495e-05
+*Links 2:1:8 9.91522e-05 5 6
+1 3 4.67699e-05
+1 2 2.80619e-05
+1 4 2.71265e-05
+2 5 2.61911e-05
+1 6 2.15141e-05
+*Links 2:1:9 2.52557e-05 4 4
+1 2 6.3607e-05
+1 3 2.99327e-05
+2 3 2.80619e-05
+1 4 2.24495e-05
+*Links 2:2 0.000564045 3 3
+1 2 0.000779186
+2 3 0.000548143
+1 3 0.000206723
+*Links 2:2:1 0.0011019 60 18
+1 2 0.000546272
+1 3 0.000437766
+3 5 0.000257234
+2 4 0.00024601
+1 5 0.000245074
+2 3 0.000244139
+2 6 0.000225431
+3 4 0.000183338
+1 4 0.000157147
+4 6 0.000135633
+1 6 0.000130956
+2 7 0.000128149
+1 7 0.000125343
+3 8 0.000113183
+4 5 0.000104765
+3 7 9.26044e-05
+2 5 8.97982e-05
+1 8 8.32504e-05
+1 9 7.67026e-05
+2 8 7.57672e-05
+3 6 7.20256e-05
+5 8 7.10902e-05
+2 9 6.73486e-05
+3 9 6.73486e-05
+5 7 5.98655e-05
+4 10 5.79947e-05
+4 8 5.70593e-05
+5 9 5.42531e-05
+4 7 5.05115e-05
+2 11 4.67699e-05
+4 9 4.67699e-05
+1 11 4.30283e-05
+5 6 4.20929e-05
+2 10 4.02221e-05
+6 8 3.92867e-05
+8 9 3.74159e-05
+4 12 3.46097e-05
+2 12 3.36743e-05
+6 7 3.27389e-05
+7 8 3.27389e-05
+4 13 3.18035e-05
+10 17 3.08681e-05
+1 15 2.99327e-05
+2 14 2.99327e-05
+3 10 2.71265e-05
+7 11 2.71265e-05
+1 10 2.61911e-05
+6 9 2.61911e-05
+2 13 2.43203e-05
+9 13 2.33849e-05
+6 13 2.24495e-05
+1 12 2.15141e-05
+2 18 2.15141e-05
+1 14 2.05787e-05
+2 15 2.05787e-05
+4 16 2.05787e-05
+10 12 2.05787e-05
+2 16 1.96434e-05
+4 11 1.96434e-05
+7 9 1.96434e-05
+*Links 2:2:2 0.00159205 33 12
+1 2 0.000933527
+1 3 0.000660391
+3 4 0.000508856
+1 4 0.000468634
+2 3 0.000355451
+2 4 0.000298392
+1 5 0.000131891
+6 8 9.72814e-05
+5 6 9.26044e-05
+2 7 8.13796e-05
+5 8 7.38964e-05
+1 7 7.2961e-05
+3 9 7.2961e-05
+2 5 6.26716e-05
+4 9 5.98655e-05
+3 7 5.89301e-05
+3 10 5.61239e-05
+3 5 5.42531e-05
+1 11 4.39637e-05
+4 7 4.02221e-05
+1 6 3.92867e-05
+1 9 3.92867e-05
+2 8 3.74159e-05
+2 6 3.46097e-05
+4 5 3.46097e-05
+4 10 3.46097e-05
+2 11 2.99327e-05
+1 8 2.71265e-05
+3 6 2.71265e-05
+2 12 2.43203e-05
+1 10 2.33849e-05
+5 11 2.05787e-05
+2 10 1.96434e-05
+*Links 2:2:3 0.000938204 5 4
+1 2 0.00069313
+2 3 7.38964e-05
+1 3 7.01548e-05
+1 4 4.11575e-05
+3 4 3.18035e-05
+*Links 2:3 0.000177726 3 3
+1 2 0.000159953
+1 3 4.77053e-05
+2 3 3.92867e-05
+*Links 2:3:1 0.000331131 15 8
+1 2 0.000266588
+2 3 0.000145922
+1 3 0.000135633
+1 4 0.000131891
+1 5 6.92194e-05
+1 6 4.48991e-05
+2 5 4.11575e-05
+2 4 3.18035e-05
+2 6 3.08681e-05
+3 5 2.89973e-05
+3 6 2.61911e-05
+1 7 2.43203e-05
+3 4 2.24495e-05
+1 8 1.96434e-05
+5 6 1.96434e-05
+*Links 2:3:2 0.000253493 10 7
+1 3 0.000236656
+1 2 0.000209529
+2 3 0.000102894
+1 5 4.11575e-05
+2 6 3.08681e-05
+3 4 2.89973e-05
+2 4 2.80619e-05
+1 4 2.61911e-05
+1 7 2.61911e-05
+2 5 2.24495e-05
+*Links 2:3:3 8.6992e-05 7 6
+1 2 0.000204852
+1 3 3.83513e-05
+2 3 2.43203e-05
+1 4 2.33849e-05
+1 5 2.24495e-05
+1 6 1.96434e-05
+2 4 1.96434e-05
+*Links 3 9.48677e-20 33 14
+1 2 0.000300263
+1 3 0.000145922
+1 4 0.000116925
+2 3 0.000111312
+2 4 0.000111312
+1 5 8.79274e-05
+1 6 6.73486e-05
+1 7 5.98655e-05
+2 5 5.14469e-05
+3 4 5.14469e-05
+5 8 4.95761e-05
+3 5 4.39637e-05
+3 6 4.20929e-05
+3 8 4.20929e-05
+1 8 3.83513e-05
+4 7 3.74159e-05
+2 7 3.27389e-05
+1 9 3.08681e-05
+4 5 3.08681e-05
+2 6 2.99327e-05
+7 12 2.89973e-05
+2 8 2.80619e-05
+3 7 2.80619e-05
+5 6 2.71265e-05
+1 10 2.61911e-05
+6 13 2.61911e-05
+1 11 2.52557e-05
+1 14 2.15141e-05
+5 7 2.05787e-05
+6 10 2.05787e-05
+3 11 1.96434e-05
+4 9 1.96434e-05
+8 9 1.96434e-05
+*Links 4 4.74338e-20 21 9
+1 2 0.000304004
+1 3 0.000108506
+3 4 9.91522e-05
+2 3 7.85734e-05
+4 7 5.51885e-05
+1 4 5.14469e-05
+1 6 4.67699e-05
+2 5 4.48991e-05
+2 6 4.39637e-05
+3 6 4.20929e-05
+4 8 3.92867e-05
+2 4 3.36743e-05
+3 5 3.27389e-05
+3 7 3.27389e-05
+1 5 2.99327e-05
+4 5 2.89973e-05
+1 7 2.43203e-05
+5 9 2.43203e-05
+4 6 2.24495e-05
+2 7 2.15141e-05
+7 8 2.15141e-05
+*Links 5 5.42101e-20 12 6
+1 2 0.000203917
+1 3 0.000183338
+2 3 6.8284e-05
+4 5 4.86407e-05
+1 5 4.67699e-05
+1 4 4.58345e-05
+2 6 3.64805e-05
+3 4 2.80619e-05
+2 4 2.61911e-05
+3 5 2.52557e-05
+1 6 2.33849e-05
+2 5 2.33849e-05
+*Links 6 -6.09864e-20 18 10
+2 4 6.8284e-05
+1 2 6.54778e-05
+3 7 5.79947e-05
+1 4 5.70593e-05
+4 5 5.33177e-05
+3 5 4.67699e-05
+3 6 3.83513e-05
+2 5 3.74159e-05
+1 5 3.64805e-05
+2 3 3.64805e-05
+1 6 3.27389e-05
+6 8 2.89973e-05
+6 9 2.71265e-05
+3 4 2.43203e-05
+1 3 2.33849e-05
+1 7 2.05787e-05
+2 6 2.05787e-05
+1 10 1.96434e-05
+*Links 7 2.71051e-20 13 10
+1 2 0.000182403
+2 3 5.79947e-05
+1 3 5.14469e-05
+1 5 4.30283e-05
+1 4 4.11575e-05
+2 4 4.11575e-05
+2 8 2.71265e-05
+1 6 2.33849e-05
+5 9 2.33849e-05
+4 6 2.24495e-05
+1 10 2.15141e-05
+2 7 2.15141e-05
+1 7 1.96434e-05
+*Links 8 -2.71051e-20 8 6
+1 2 0.000108506
+1 4 7.48318e-05
+1 5 3.74159e-05
+2 3 3.74159e-05
+2 5 3.64805e-05
+3 6 3.55451e-05
+1 3 2.61911e-05
+2 6 2.15141e-05
+*Links 9 4.06576e-20 5 4
+2 3 9.35398e-05
+1 3 8.04442e-05
+1 2 7.85734e-05
+1 4 3.27389e-05
+2 4 1.96434e-05
+*Links 10 2.71051e-20 9 7
+1 2 4.39637e-05
+2 3 4.11575e-05
+1 3 3.36743e-05
+1 4 3.18035e-05
+3 5 2.43203e-05
+1 6 2.24495e-05
+2 5 2.24495e-05
+2 4 2.15141e-05
+3 7 2.05787e-05
+*Links 11 2.03288e-20 4 4
+1 2 0.000109442
+1 3 5.61239e-05
+2 3 4.02221e-05
+1 4 2.43203e-05
+*Links 12 6.77626e-21 5 5
+1 2 5.05115e-05
+1 3 4.86407e-05
+1 4 4.39637e-05
+2 3 3.18035e-05
+4 5 2.05787e-05
+*Links 13 0 5 4
+1 2 6.8284e-05
+2 3 4.67699e-05
+1 4 3.08681e-05
+1 3 2.80619e-05
+3 4 1.96434e-05
+*Links 14 2.71051e-20 5 4
+1 3 5.33177e-05
+1 2 5.14469e-05
+2 4 3.55451e-05
+1 4 2.71265e-05
+2 3 2.52557e-05
+*Links 15 -5.42101e-20 3 3
+1 2 9.35398e-05
+1 3 4.77053e-05
+2 3 3.74159e-05
+*Links 16 0 3 3
+1 2 7.10902e-05
+1 3 6.54778e-05
+2 3 4.02221e-05
+*Links 17 1.35525e-20 5 5
+1 2 5.05115e-05
+1 3 3.36743e-05
+1 4 3.18035e-05
+2 3 2.15141e-05
+1 5 2.05787e-05
+*Links 18 0 5 4
+1 3 4.02221e-05
+1 2 3.46097e-05
+1 4 2.80619e-05
+2 3 2.61911e-05
+2 4 2.24495e-05
+*Links 19 -6.77626e-21 4 4
+1 2 4.77053e-05
+1 3 3.36743e-05
+2 3 2.89973e-05
+1 4 2.15141e-05
+*Links 20 -6.77626e-21 3 4
+1 2 8.2315e-05
+1 3 2.61911e-05
+1 4 1.96434e-05
+*Links 21 6.77626e-21 5 5
+1 2 3.92867e-05
+2 3 2.24495e-05
+1 4 2.05787e-05
+3 4 2.05787e-05
+1 5 1.96434e-05
+*Links 22 1.35525e-20 3 3
+1 2 6.54778e-05
+1 3 2.43203e-05
+2 3 1.96434e-05
+*Links 23 0 1 2
+1 2 0.000109442
+*Links 24 -6.77626e-21 4 4
+2 3 3.08681e-05
+1 2 2.89973e-05
+1 3 2.71265e-05
+1 4 2.15141e-05
+*Links 25 6.77626e-21 2 3
+1 2 7.7638e-05
+1 3 2.52557e-05
+*Links 26 -1.35525e-20 4 4
+1 4 2.71265e-05
+1 2 2.52557e-05
+2 3 2.52557e-05
+1 3 2.43203e-05
+*Links 27 0 3 4
+1 3 3.74159e-05
+1 2 3.18035e-05
+2 4 3.18035e-05
+*Links 28 -1.35525e-20 3 4
+1 2 4.02221e-05
+1 3 2.89973e-05
+1 4 2.05787e-05
+*Links 29 0 3 3
+1 2 3.08681e-05
+1 3 2.99327e-05
+2 3 2.89973e-05
+*Links 30 1.35525e-20 3 4
+1 2 3.27389e-05
+1 3 3.08681e-05
+1 4 2.52557e-05
+*Links 31 0 1 2
+1 2 8.6992e-05
+*Links 32 0 3 4
+1 2 4.39637e-05
+1 3 2.33849e-05
+1 4 1.96434e-05
+*Links 33 0 1 2
+1 2 8.13796e-05
+*Links 34 0 1 2
+1 2 7.85734e-05
+*Links 35 6.77626e-21 3 4
+1 2 2.52557e-05
+1 3 2.43203e-05
+1 4 2.24495e-05
+*Links 36 0 1 2
+1 2 7.10902e-05
+*Links 37 -6.77626e-21 2 3
+1 2 5.05115e-05
+1 3 2.05787e-05
+*Links 38 6.77626e-21 2 3
+1 2 3.55451e-05
+1 3 2.99327e-05
+*Links 39 0 1 2
+1 2 6.3607e-05
+*Links 40 0 2 3
+1 2 4.11575e-05
+1 3 2.05787e-05
+*Links 41 0 2 3
+1 2 3.83513e-05
+1 3 2.15141e-05
+*Links 42 0 2 3
+1 2 3.18035e-05
+1 3 2.71265e-05
+*Links 43 0 2 3
+1 2 2.89973e-05
+1 3 2.24495e-05
+*Links 44 0 1 2
+1 2 4.77053e-05
+*Links 45 0 2 3
+1 2 2.52557e-05
+1 3 2.15141e-05
+*Links 46 -6.77626e-21 2 3
+1 2 2.33849e-05
+1 3 2.33849e-05
+*Links 47 0 1 2
+1 2 4.48991e-05
+*Links 48 0 1 2
+1 2 4.30283e-05
+*Links 49 6.77626e-21 2 3
+1 2 2.15141e-05
+1 3 1.96434e-05
+*Links 50 0 1 2
+1 2 4.11575e-05
+*Links 51 -6.77626e-21 2 3
+1 2 2.05787e-05
+1 3 1.96434e-05
+*Links 52 0 1 2
+1 2 3.92867e-05
+*Links 53 0 1 2
+1 2 3.64805e-05
+*Links 54 0 1 2
+1 2 3.64805e-05
+*Links 55 0 1 2
+1 2 3.64805e-05
+*Links 56 0 1 2
+1 2 3.55451e-05
+*Links 57 0 1 2
+1 2 3.55451e-05
+*Links 58 0 1 2
+1 2 3.55451e-05
+*Links 59 0 1 2
+1 2 3.46097e-05
+*Links 60 0 1 2
+1 2 3.46097e-05
+*Links 61 0 1 2
+1 2 3.46097e-05
+*Links 62 0 1 2
+1 2 3.36743e-05
+*Links 63 0 1 2
+1 2 3.27389e-05
+*Links 64 0 1 2
+1 2 3.27389e-05
+*Links 65 0 1 2
+1 2 3.27389e-05
+*Links 66 0 1 2
+1 2 2.99327e-05
+*Links 67 0 1 2
+1 2 2.89973e-05
+*Links 68 0 1 2
+1 2 2.89973e-05
+*Links 69 0 1 2
+1 2 2.80619e-05
+*Links 70 0 1 2
+1 2 2.80619e-05
+*Links 71 0 1 2
+1 2 2.80619e-05
+*Links 72 0 1 2
+1 2 2.80619e-05
+*Links 73 0 1 2
+1 2 2.71265e-05
+*Links 74 0 1 2
+1 2 2.71265e-05
+*Links 75 0 1 2
+1 2 2.61911e-05
+*Links 76 0 1 2
+1 2 2.61911e-05
+*Links 77 0 1 2
+1 2 2.61911e-05
+*Links 78 0 1 2
+1 2 2.61911e-05
+*Links 79 0 1 2
+1 2 2.52557e-05
+*Links 80 0 1 2
+1 2 2.52557e-05
+*Links 81 0 1 2
+1 2 2.52557e-05
+*Links 82 0 1 2
+1 2 2.52557e-05
+*Links 83 0 1 2
+1 2 2.43203e-05
+*Links 84 0 1 2
+1 2 2.33849e-05
+*Links 85 0 1 2
+1 2 2.33849e-05
+*Links 86 0 1 2
+1 2 2.33849e-05
+*Links 87 0 1 2
+1 2 2.33849e-05
+*Links 88 0 1 2
+1 2 2.24495e-05
+*Links 89 0 1 2
+1 2 2.24495e-05
+*Links 90 0 1 2
+1 2 2.24495e-05
+*Links 91 0 1 2
+1 2 2.24495e-05
+*Links 92 0 1 2
+1 2 2.24495e-05
+*Links 93 0 1 2
+1 2 2.24495e-05
+*Links 94 0 1 2
+1 2 2.24495e-05
+*Links 95 0 1 2
+1 2 2.15141e-05
+*Links 96 0 1 2
+1 2 2.15141e-05
+*Links 97 0 1 2
+1 2 2.15141e-05
+*Links 98 0 1 2
+1 2 2.15141e-05
+*Links 99 0 1 2
+1 2 2.15141e-05
+*Links 100 0 1 2
+1 2 2.05787e-05
+*Links 101 0 1 2
+1 2 2.05787e-05
+*Links 102 0 1 2
+1 2 2.05787e-05
+*Links 103 0 1 2
+1 2 2.05787e-05
+*Links 104 0 1 2
+1 2 2.05787e-05
+*Links 105 0 1 2
+1 2 2.05787e-05
+*Links 106 0 1 2
+1 2 2.05787e-05
+*Links 107 0 1 2
+1 2 2.05787e-05
+*Links 108 0 1 2
+1 2 2.05787e-05
+*Links 109 0 1 2
+1 2 1.96434e-05
+*Links 110 0 1 2
+1 2 1.96434e-05
+*Links 111 0 1 2
+1 2 1.96434e-05
+*Links 112 0 1 2
+1 2 1.96434e-05
+*Links 113 0 1 2
+1 2 1.96434e-05
