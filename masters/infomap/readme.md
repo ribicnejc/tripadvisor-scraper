@@ -20,7 +20,10 @@
 
 ## Run alghoritm    
     ./Infomap ../PycharmProjects/tripadvisor-scraper/masters/infomap/test.net ../PycharmProjects/tripadvisor-scraper/masters/infomap/
-    
+
+## Run alghoritm    
+    ./Infomap ../PycharmProjects/tripadvisor-scraper/masters/infomap/test.net ../PycharmProjects/tripadvisor-scraper/masters/infomap/ --ftree
+
 ## Import output of alghoritm
     https://www.mapequation.org/navigator/
 

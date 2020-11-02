@@ -94,7 +94,7 @@ def get_review_by_location_name(conn, review_name):
 
 
 def fill_attractions(folder):
-    conn = create_connection("../data_bkp.db")
+    conn = create_connection("../data.db")
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
@@ -110,7 +110,7 @@ def fill_attractions(folder):
 
 
 def fill_reviews(folder, country):
-    conn = create_connection("../data_bkp.db")
+    conn = create_connection("../data.db")
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
