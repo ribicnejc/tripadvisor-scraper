@@ -3,6 +3,7 @@ import codecs
 import os
 import re
 
+
 def create_database():
     database = "../data.db"
 

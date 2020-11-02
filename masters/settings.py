@@ -34,7 +34,7 @@ DOWNLOAD_DELAY = 0.1
 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = True
-COOKIES_DEBUG = False
+COOKIES_DEBUG = True
 
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False

@@ -62,6 +62,10 @@ class ReviewsSpider(scrapy.Spider):
             response.css('div.pageNumbers a.current::attr(data-page-number)').extract_first())
         review_last_page = unicode_utils.unicode_to_string(
             response.css('div.pageNumbers a.last::attr(data-page-number)').extract_first())
+        # review_location_type = unicode_utils.unicode_to_string(
+        #     response.css'div.'
+        # )
+        review_location_breadcrumbs = ""
         # location_lat, location_lng = coordinate_utils.parse_google_maps_link(self.current_review_coordinates)
         place_rate = unicode_utils.unicode_to_string(response.css('span.overallRating::text').extract_first())
 
