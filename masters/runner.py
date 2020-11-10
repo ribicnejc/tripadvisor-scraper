@@ -2,7 +2,7 @@
 import os
 import sys
 
-# sys.path.append("..")
+sys.path.append("..")
 
 from scrapy import cmdline
 from os import listdir
@@ -15,7 +15,9 @@ print("Scraper started...")
 #
 # exit(47
 
-cmdline.execute("scrapy crawl reviews -a location=/Attraction_Review-g1077241-d8587496-Reviews-Pivovarna_Lasko-Lasko_Styria_Region.html".split())
+# https://www.tripadvisor.com/Attraction_Review-g60763-d105127-Reviews-Central_Park-New_York_City_New_York.html
+
+cmdline.execute("scrapy crawl reviews -a location=/Attraction_Review-g60763-d105127-Reviews-Central_Park-New_York_City_New_York.html".split())
 
 # cmdline.execute("scrapy crawl reviews -a location=/Attraction_Review-g1887526-d11849033-Reviews-OLIMPIJCI_IZ_CRNE_NA_KOROSKEM_Olympians_from_Crna_na_Koroskem-Crna_na_Koroskem_.html".split())
 
