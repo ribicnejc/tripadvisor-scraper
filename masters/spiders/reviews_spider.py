@@ -57,6 +57,9 @@ class ReviewsSpider(scrapy.Spider):
             next_review_page_url = ""
         review_location_name = unicode_utils.unicode_to_string(
             response.css('div h1.ui_header::text').extract_first())
+        if review_location_name is None:
+            print("Retrying " + self.parent_url)
+            yield self.request(self.parent_url, self.parse)
         review_location_description_tags = unicode_utils.unicode_list_to_string(
             response.css('div.update-wrapper a::text').extract())
         review_current_page = unicode_utils.unicode_to_string(
@@ -78,12 +81,14 @@ class ReviewsSpider(scrapy.Spider):
         reviews = []
         for review in response.css('div.main_content div.Dq9MAugU'):
             review_id = unicode_utils.unicode_to_string(review.css('::attr(data-reviewid)').extract_first())
-            # user_id = unicode_utils.unicode_user_uid_to_string(
-            #     review.css('div.member_info div.memberOverlayLink::attr(id)').extract_first())
-            review_date = unicode_utils.unicode_date_to_string_number(
-                review.css('span.ratingDate::attr(title)').extract_first())
+            # TODO review_experience_date =
+            # review_date = unicode_utils.unicode_date_to_string_number(
+            #     review.css('span.ratingDate::attr(title)').extract_first())
+            review_date = unicode_utils.unicode_date_v2_to_string_number(
+                review.css('div._2fxQ4TOx span::text').extract_first())
             review_rate = unicode_utils.unicode_rating_to_string(
                 review.css('span.ui_bubble_rating::attr(class)').extract_first())
+            # TODO user_id = MD5 hash over username
             username = unicode_utils.unicode_to_string(review.css('div.info_text div::text').extract_first())
             review_data = Review(review_location_name,
                                  review_location_description_tags,
@@ -111,3 +116,6 @@ class ReviewsSpider(scrapy.Spider):
         self.log('Saved %s reviews to file %s' % (len(reviews), filename))
         if next_review_page_url is not "":
             yield self.request(next_review_page_url, self.parse)
+
+    def retry_page(self, url):
+        yield self.request(url, self.parse)

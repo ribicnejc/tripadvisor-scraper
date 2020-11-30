@@ -22,6 +22,12 @@ def unicode_list_to_string(list):
     return value[:-3]
 
 
+def unicode_date_v2_to_string_number(date):
+    date = unicode_to_string(date)
+    date = date.replace(" wrote a review ", "").split(" ")
+
+
+
 def unicode_date_to_string_number(date):
     date = unicode_to_string(date)
     date = date.replace(",", "").split(" ")
