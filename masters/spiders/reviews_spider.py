@@ -88,8 +88,12 @@ class ReviewsSpider(scrapy.Spider):
                 review.css('div._2fxQ4TOx span::text').extract_first())
             review_rate = unicode_utils.unicode_rating_to_string(
                 review.css('span.ui_bubble_rating::attr(class)').extract_first())
-            # TODO user_id = MD5 hash over username
-            username = unicode_utils.unicode_to_string(review.css('div.info_text div::text').extract_first())
+
+            user_name = unicode_utils.unicode_to_string(review.css('a.ui_header_link::text').extract_first())
+            user_link = unicode_utils.unicode_to_string(review.css('a.ui_header_link::attr(href)').extract_first())
+            user_id = unicode_utils.unicode_string_to_md5(user_link)
+
+            #TODO fix the object
             review_data = Review(review_location_name,
                                  review_location_description_tags,
                                  "#lat#",
