@@ -87,7 +87,7 @@ def unicode_date_v2_to_string_number(date):
             day = '0' + day
         year = datetime.now().year
 
-    return str(year) + month + day
+    return str(year) + str(month) + str(day)
     # current_month = datetime.now().strftime('%m')
     # current_month_text = datetime.now().strftime('%h')
     # current_month_text = datetime.now().strftime('%B')

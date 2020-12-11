@@ -2,12 +2,14 @@ import scrapy
 import re
 import json
 import time
+import functools
 
 from scrapy_splash import SplashRequest
 
 from masters.data_structures.Review import Review
 from masters.gecko_spiders import reviews_gecko
-from masters.utils import unicode_utils, coordinate_utils
+from masters.utils import unicode_utils, coordinate_utils, file_utils
+from os import listdir
 
 
 class ReviewsSpider(scrapy.Spider):
@@ -22,6 +24,7 @@ class ReviewsSpider(scrapy.Spider):
         self.parent_url = location
         self.start_time = time.time()
         self.urls.append(location)
+        self.scraped_pages = 0
         super(ReviewsSpider, self).__init__(**kwargs)
 
     def request(self, url, callback):
@@ -53,6 +56,7 @@ class ReviewsSpider(scrapy.Spider):
             yield self.request(url, self.parse)
 
     def parse(self, response):
+        self.scraped_pages = self.scraped_pages + 1
         next_href = response.css('div.ui_pagination a.next::attr(href)').extract_first()
         if next_href is not None:
             next_review_page_url = unicode_utils.unicode_to_string(next_href)
@@ -63,13 +67,17 @@ class ReviewsSpider(scrapy.Spider):
         current_url = response.request.url
         current_url = current_url.replace(self.root_url, "")
         if review_location_name is None:
-            print("Retrying " + current_url)
+            print("Retrying(1) " + current_url)
             yield self.request(current_url, self.parse)
             return
         # review_location_description_tags = unicode_utils.unicode_list_to_string(
         #     response.css('div.update-wrapper a::text').extract())
         review_current_page = unicode_utils.unicode_to_string(
             response.css('div.pageNumbers span.current::text').extract_first())
+        if review_current_page is None:
+            print("Retrying(2)" + current_url)
+            yield self.request(current_url, self.parse)
+            return
         review_last_page = unicode_utils.unicode_list_to_string(
             response.css('div.pageNumbers a.pageNum::text').extract()[-1:])
         review_location_type = unicode_utils.unicode_list_to_string(
@@ -139,6 +147,11 @@ class ReviewsSpider(scrapy.Spider):
         if review_current_page is not None:
             review_current_page = review_current_page.replace("/", "")
 
+        if review_current_page == '1':
+            last_scraped_page_url = file_utils.get_last_scraped_page_url(review_location_name, current_url)
+            if last_scraped_page_url is not None:
+                next_review_page_url = last_scraped_page_url
+
         filename = 'scraped_data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
         with open(filename, 'w') as f:
             f.write(Review.get_csv_header_v2())
@@ -147,12 +160,13 @@ class ReviewsSpider(scrapy.Spider):
         self.log('Saved %s reviews to file %s' % (len(reviews), filename))
         try:
             current_time = time.time()
-            average_time = (current_time - self.start_time) / int(review_current_page)
-            time_left = int(review_last_page) - int(review_current_page)
-            secs = time_left * average_time
-            mins = (time_left * average_time) / 60
-            hours = (time_left * average_time) / 3600
-            self.log('Reviews: %s/%s | %s seconds left | %s minutes left | %s hours left' % (review_current_page, review_last_page, secs, mins, hours))
+            average_time = (current_time - self.start_time) / int(self.scraped_pages)
+            pages_left = int(review_last_page) - int(review_current_page)
+            secs = pages_left * average_time
+            mins = (pages_left * average_time) / 60
+            hours = (pages_left * average_time) / 3600
+            self.log('Reviews: %s/%s | %s seconds left | %s minutes left | %s hours left' % (
+                review_current_page, review_last_page, secs, mins, hours))
         except:
             self.log('Reviews: %s/%s' % (review_current_page, review_last_page))
         if next_review_page_url is not "":
