@@ -2,6 +2,6 @@ selenium
 chromedriver
 Scrapy
 scrapy-splash
-infomap
+# infomap
 networkx
 matplotlib

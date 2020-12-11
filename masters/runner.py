@@ -15,18 +15,24 @@ print("Scraper started...")
 #
 # exit(47
 
+# https://www.tripadvisor.com/Attraction_Review-g60763-d105127-Reviews-Central_Park-New_York_City_New_York.html
+# https://www.tripadvisor.com/Attraction_Review-g60763-d105127-Reviews-or74990-Central_Park-New_York_City_New_York.html#REVIEWS
+# cmdline.execute("scrapy crawl reviews -a location=/Attraction_Review-g60763-d105127-Reviews-or74990-Central_Park-New_York_City_New_York.html".split())
+cmdline.execute("scrapy crawl reviews -a location=/Attraction_Review-g60763-d105127-Reviews-Central_Park-New_York_City_New_York.html".split())
 # cmdline.execute("scrapy crawl reviews -a location=/Attraction_Review-g1887526-d11849033-Reviews-OLIMPIJCI_IZ_CRNE_NA_KOROSKEM_Olympians_from_Crna_na_Koroskem-Crna_na_Koroskem_.html".split())
 
 root = "scraped_data/data_attractions/"
-for attraction in listdir(root):
-    f = open(root + attraction, 'r')
-    while True:
-        location = f.readline()
-        location = location.rstrip()
-        if not location:
-            break
-        if not location_scraped(location):
-            os.system("scrapy crawl reviews -a location=" + location)
-            Logger.log_location(location)
-        else:
-            print("location already scraped: " + location)
+# for attraction in listdir(root):
+#     f = open(root + attraction, 'r')
+#     while True:
+#         location = f.readline()
+#         location = location.rstrip()
+#         if not location:
+#             break
+#         if not location_scraped(location):
+#             os.system("scrapy crawl reviews -a location=" + location)
+#             Logger.log_location(location)
+#         else:
+#             print("location already scraped: " + location)
+
+# os.system("scrapy crawl reviews -a location=/Attraction_Review-g1077241-d8587496-Reviews-Pivovarna_Lasko-Lasko_Styria_Region.html")

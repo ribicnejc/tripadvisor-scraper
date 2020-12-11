@@ -9,3 +9,13 @@ def parse_google_maps_link(link):
 def parse_google_maps_link_selenium(link):
     coordinates = link.split("&center=")[1].split("&maptype")[0].split(",")
     return coordinates[0], coordinates[1]
+
+
+def parse_json_to_coords(json):
+    lat = "0"
+    lng = "0"
+    if len(json) > 0:
+        if "coords" in json[0]:
+            coords = json[0]["coords"]
+            lat, lng = coords.split(",")
+    return lat, lng
