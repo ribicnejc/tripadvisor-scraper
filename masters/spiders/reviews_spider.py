@@ -1,6 +1,7 @@
 import scrapy
 import re
 import json
+import time
 
 from scrapy_splash import SplashRequest
 
@@ -19,6 +20,7 @@ class ReviewsSpider(scrapy.Spider):
     def __init__(self, location='', **kwargs):
         print(location)
         self.parent_url = location
+        self.start_time = time.time()
         self.urls.append(location)
         super(ReviewsSpider, self).__init__(**kwargs)
 
@@ -26,12 +28,13 @@ class ReviewsSpider(scrapy.Spider):
         request_with_cookies = scrapy.Request(
             url=(self.root_url + url),
             callback=callback)
-        # request_with_cookies.cookies['TALanguage'] = 'ALL'
-        # request_with_cookies.cookies[
-        #     'TAReturnTo'] = '%1%%2FAttraction_Review%3FreqNum%3D1%26isLastPoll%3Dfalse%26filterLang%3DALL%26filterSegment%3D%26changeSet%3DREVIEW_LIST%26g%3D644300%26q%3D%26t%3D%26puid%3DXExNFQokH20AAYnnbnQAAACo%26preferFriendReviews%3DFALSE%26trating%3D%26d%3D7289577%26filterSeasons%3D%26waitTime%3D19%26paramSeqId%3D10'
-        # request_with_cookies.headers[
-        #     'User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/71.0.3578.89 Mobile/15E148 Safari/605.1'
         return request_with_cookies
+
+    # request_with_cookies.cookies['TALanguage'] = 'ALL'
+    # request_with_cookies.cookies[
+    #     'TAReturnTo'] = '%1%%2FAttraction_Review%3FreqNum%3D1%26isLastPoll%3Dfalse%26filterLang%3DALL%26filterSegment%3D%26changeSet%3DREVIEW_LIST%26g%3D644300%26q%3D%26t%3D%26puid%3DXExNFQokH20AAYnnbnQAAACo%26preferFriendReviews%3DFALSE%26trating%3D%26d%3D7289577%26filterSeasons%3D%26waitTime%3D19%26paramSeqId%3D10'
+    # request_with_cookies.headers[
+    #     'User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/71.0.3578.89 Mobile/15E148 Safari/605.1'
 
     def splash_request(self, url, callback):
         # splash
@@ -142,6 +145,16 @@ class ReviewsSpider(scrapy.Spider):
             for review in reviews:
                 f.write(review.get_csv_line())
         self.log('Saved %s reviews to file %s' % (len(reviews), filename))
+        try:
+            current_time = time.time()
+            average_time = (current_time - self.start_time) / int(review_current_page)
+            time_left = int(review_last_page) - int(review_current_page)
+            secs = time_left * average_time
+            mins = (time_left * average_time) / 60
+            hours = (time_left * average_time) / 3600
+            self.log('Reviews: %s/%s | %s seconds left | %s minutes left | %s hours left' % (review_current_page, review_last_page, secs, mins, hours))
+        except:
+            self.log('Reviews: %s/%s' % (review_current_page, review_last_page))
         if next_review_page_url is not "":
             yield self.request(next_review_page_url, self.parse)
 
