@@ -157,7 +157,9 @@ class ReviewsSpider(scrapy.Spider):
             f.write(Review.get_csv_header_v2())
             for review in reviews:
                 f.write(review.get_csv_line())
+            f.close()
         self.log('Saved %s reviews to file %s' % (len(reviews), filename))
+
         try:
             current_time = time.time()
             average_time = (current_time - self.start_time) / int(self.scraped_pages)
@@ -169,6 +171,7 @@ class ReviewsSpider(scrapy.Spider):
                 review_current_page, review_last_page, secs, mins, hours))
         except:
             self.log('Reviews: %s/%s' % (review_current_page, review_last_page))
+
         if next_review_page_url is not "":
             yield self.request(next_review_page_url, self.parse)
 

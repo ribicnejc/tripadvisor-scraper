@@ -3,6 +3,8 @@
 #https://www.tripadvisor.co.uk/Tourism-g274862-Slovenia-Vacations.html
 #https://www.tripadvisor.co.uk/Attractions-g274862-Activities-oa20-Slovenia.html
 
+# https://www.tripadvisor.com/Attractions-g274862-Activities-oa70-Slovenia.html#LOCATION_LIST
+
 import scrapy
 
 from masters.data_structures.Attraction import Attraction
@@ -10,8 +12,8 @@ from masters.utils import unicode_utils
 from time import sleep
 
 
-class LocationsSpider(scrapy.Spider):
-    name = "locations"
+class ProvincesSpider(scrapy.Spider):
+    name = "provinces"
     root_url = 'https://www.tripadvisor.com'
     current_review_coordinates = ""
     urls = [
