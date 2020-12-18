@@ -1,13 +1,14 @@
-#https://www.tripadvisor.com/Attractions-g187768-Activities-oa20-Italy.html
-#https://www.tripadvisor.co.uk/Attractions-g274862-Activities-Slovenia.html
-#https://www.tripadvisor.co.uk/Tourism-g274862-Slovenia-Vacations.html
-#https://www.tripadvisor.co.uk/Attractions-g274862-Activities-oa20-Slovenia.html
+# https://www.tripadvisor.com/Attractions-g187768-Activities-oa20-Italy.html
+# https://www.tripadvisor.co.uk/Attractions-g274862-Activities-Slovenia.html
+# https://www.tripadvisor.co.uk/Tourism-g274862-Slovenia-Vacations.html
+# https://www.tripadvisor.co.uk/Attractions-g274862-Activities-oa20-Slovenia.html
 
 # https://www.tripadvisor.com/Attractions-g274862-Activities-oa70-Slovenia.html#LOCATION_LIST
 
 import scrapy
+import time
 
-from masters.data_structures.Attraction import Attraction
+from masters.data_structures.Province import Province
 from masters.utils import unicode_utils
 from time import sleep
 
@@ -15,11 +16,15 @@ from time import sleep
 class ProvincesSpider(scrapy.Spider):
     name = "provinces"
     root_url = 'https://www.tripadvisor.com'
-    current_review_coordinates = ""
-    urls = [
-        '/Attractions-g187768-Activities-Italy.html',
-        '/Attractions-g187768-Activities-oa20-Italy.html'
-    ]
+    urls = []
+
+    def __init__(self, country='', **kwargs):
+        print(country)
+        self.parent_url = country
+        self.start_time = time.time()
+        self.urls.append(country)
+        self.scraped_pages = 0
+        super(ProvincesSpider, self).__init__(**kwargs)
 
     def request(self, url, callback):
         request_with_cookies = scrapy.Request(
@@ -30,33 +35,78 @@ class ProvincesSpider(scrapy.Spider):
     def start_requests(self):
         while self.urls.__len__() > 0:
             url = self.urls.pop()
-            yield self.request(url, self.parse_global_attraction)
+            yield self.request(url, self.parse)
 
-    def parse_global_attraction(self, response):
-        attractions = response.css('ul.geoList li a::attr(href)')
-        if len(attractions) == 0:
-            attractions = response.css('div.ap_filter_wrap div.navigation_list')[-1].css(
-                'div.ap_navigator a.taLnk::attr(href)')
-            more_attractions = attractions[-1].root
-            attractions = attractions[:-1]  # last element is more button on first parsing
+    def parse(self, response):
+        self.scraped_pages = self.scraped_pages + 1
+        provinces = response.css('ul.geoList li')
+        provinces_obj = []
+        for province in provinces:
+            province_name = unicode_utils.unicode_to_string(
+                province.css('a::text').extract_first())
+            region_name = unicode_utils.unicode_to_string(
+                province.css('span::text').extract_first())
+            province_url = unicode_utils.unicode_to_string(
+                province.css('a::attr(href)').extract_first())
+            province_obj = Province(province_name, region_name, province_url)
+            provinces_obj.append(province_obj)
+
+        next_page = response.css('div.pgLinks a.guiArw.sprite-pageNext.pid0::attr(href)').extract_first()
+        current_page = response.css('div.pgLinks span.paging.pageDisplay::text').extract_first()
+        last_page = response.css('div.pgLinks a.paging.taLnk.pid0::text').extract()
+        if last_page is None or len(last_page) == 0:
+            last_page = None
         else:
-            more_attractions = response.css('div.pgLinks a.sprite-pageNext::attr(href)').extract_first()
-            if more_attractions:
-                more_attractions = unicode_utils.unicode_to_string(more_attractions)
+            last_page = unicode_utils.unicode_to_string(last_page[-1])
 
-        attractions_obj = []
-        for attraction in attractions:
-            attraction_name = attraction.root.split('-')[-1].replace(".html", "")
-            attraction_obj = Attraction(attraction_name, attraction.root)
-            attractions_obj.append(attraction_obj)
+        province_group_name = unicode_utils.unicode_to_string(
+            response.css('h1.heading_name::text').extract_first()).replace("\n", "").replace(" ", "_")
 
-        """Scrap region attractions"""
-        for attraction in attractions_obj:
-            sleep(1)
-            print("Attraction: ", attraction.attraction_url)
-            yield self.request(attraction.attraction_url, self.parse_local_attraction)
+        try:
+            current_time = time.time()
+            average_time = (current_time - self.start_time) / int(self.scraped_pages)
+            pages_left = int(last_page) - int(current_page)
+            secs = pages_left * average_time
+            mins = (pages_left * average_time) / 60
+            hours = (pages_left * average_time) / 3600
+            self.log('Provinces: %s/%s | %s seconds left | %s minutes left | %s hours left' % (
+                current_page, last_page, secs, mins, hours))
+        except:
+            self.log('Provinces: %s/%s' % (current_page, last_page))
 
-        """Scrap next page of regions"""
-        if more_attractions:
-            yield self.request(unicode_utils.byte_to_string(more_attractions), self.parse_global_attraction)
+        filename = 'scraped_data/data_provinces/provinces-%s-%s.csv' % (province_group_name, current_page)
+        with open(filename, 'w') as f:
+            f.write(Province.get_csv_header())
+            for province in provinces_obj:
+                f.write(province.get_csv_line())
+            f.close()
+        self.log('Saved file %s' % filename)
 
+        if next_page is not None:
+            yield self.request(next_page, self.parse)
+
+        # if len(attractions) == 0:
+        #     attractions = response.css('div.ap_filter_wrap div.navigation_list')[-1].css(
+        #         'div.ap_navigator a.taLnk::attr(href)')
+        #     more_attractions = attractions[-1].root
+        #     attractions = attractions[:-1]  # last element is more button on first parsing
+        # else:
+        #     more_attractions = response.css('div.pgLinks a.sprite-pageNext::attr(href)').extract_first()
+        #     if more_attractions:
+        #         more_attractions = unicode_utils.unicode_to_string(more_attractions)
+
+        # attractions_obj = []
+        # for attraction in attractions:
+        #     attraction_name = attraction.root.split('-')[-1].replace(".html", "")
+        #     attraction_obj = Attraction(attraction_name, attraction.root)
+        #     attractions_obj.append(attraction_obj)
+        #
+        # """Scrap region attractions"""
+        # for attraction in attractions_obj:
+        #     sleep(1)
+        #     print("Attraction: ", attraction.attraction_url)
+        #     yield self.request(attraction.attraction_url, self.parse)
+        #
+        # """Scrap next page of regions"""
+        # if more_attractions:
+        #     yield self.request(unicode_utils.byte_to_string(more_attractions), self.parse_global_attraction)
