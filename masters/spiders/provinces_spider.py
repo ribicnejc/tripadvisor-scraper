@@ -7,10 +7,12 @@
 
 import scrapy
 import time
+import pathlib
 
 from masters.data_structures.Province import Province
 from masters.utils import unicode_utils
 from time import sleep
+from os import listdir
 
 
 class ProvincesSpider(scrapy.Spider):
@@ -20,6 +22,8 @@ class ProvincesSpider(scrapy.Spider):
 
     def __init__(self, country='', **kwargs):
         print(country)
+        self.extra_data_pages = -1
+        self.extra_data = False
         self.parent_url = country
         self.start_time = time.time()
         self.urls.append(country)
@@ -29,6 +33,13 @@ class ProvincesSpider(scrapy.Spider):
     def request(self, url, callback):
         request_with_cookies = scrapy.Request(
             url=(self.root_url + url),
+            callback=callback)
+        return request_with_cookies
+
+    def request_file(self, url, callback):
+        base_url = str(pathlib.Path().absolute())
+        request_with_cookies = scrapy.Request(
+            url=("file:///" + base_url + "/" + url),
             callback=callback)
         return request_with_cookies
 
@@ -61,7 +72,8 @@ class ProvincesSpider(scrapy.Spider):
 
         province_group_name = unicode_utils.unicode_to_string(
             response.css('h1.heading_name::text').extract_first()).replace("\n", "").replace(" ", "_")
-
+        province_group_name = ''.join(
+            [i if ord(i) < 128 else '' for i in province_group_name])  # Clean of non ascii chars
         try:
             current_time = time.time()
             average_time = (current_time - self.start_time) / int(self.scraped_pages)
@@ -82,9 +94,22 @@ class ProvincesSpider(scrapy.Spider):
             f.close()
         self.log('Saved file %s' % filename)
 
-        if next_page is not None:
+        if next_page is not None and self.extra_data is False:
             yield self.request(next_page, self.parse)
 
+        if next_page is None or self.extra_data is True:
+            self.extra_data = True
+            self.extra_data_pages += 1
+            root = "scraped_data/data_extra"
+            #TODO make script to clean page
+            #TODO print output before data is written inside the file
+            #TODO script to zip files
+            #TODO script to migrate files from zip to mysql
+            #TODO locations to be passed to reviews scraper
+            files = listdir(root)
+            files = list(filter(lambda x: province_group_name in x, files))
+            if self.extra_data_pages < len(files):
+                yield self.request_file(root + "/" + files[self.extra_data_pages], self.parse)
         # if len(attractions) == 0:
         #     attractions = response.css('div.ap_filter_wrap div.navigation_list')[-1].css(
         #         'div.ap_navigator a.taLnk::attr(href)')

@@ -39,3 +39,5 @@ def sort_files(a, b, name):
         return a
     return b
 
+# def read_extra_data_files()
+# TODO script where you read data and clean all the garbage

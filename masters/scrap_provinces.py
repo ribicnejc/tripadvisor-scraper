@@ -11,4 +11,6 @@ print("Scraper started...")
 # cmdline.execute("scrapy crawl locations".split())
 # TODO scrap location from that URL -> https://www.tripadvisor.com/Attractions-g187881-Activities-Cagliari_Province_of_Cagliari_Sardinia.html
 # cmdline.execute("scrapy crawl provinces -a country=/Attractions-g274862-Activities-oa20-Slovenia.html".split())
-cmdline.execute("scrapy crawl provinces -a country=/Attractions-g274862-Activities-Slovenia.html".split())
+cmdline.execute("scrapy crawl provinces -a country=/Attractions-g274862-Activities-oa20-Slovenia.html".split())
+
+# https://www.tripadvisor.co.uk/Attractions-g274862-Activities-Slovenia.html
