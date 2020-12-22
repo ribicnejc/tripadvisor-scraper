@@ -10,7 +10,7 @@ import time
 import pathlib
 
 from masters.data_structures.Province import Province
-from masters.utils import unicode_utils
+from masters.utils import unicode_utils, file_utils
 from time import sleep
 from os import listdir
 
@@ -101,37 +101,12 @@ class ProvincesSpider(scrapy.Spider):
             self.extra_data = True
             self.extra_data_pages += 1
             root = "scraped_data/data_extra"
-            #TODO make script to clean page
-            #TODO print output before data is written inside the file
-            #TODO script to zip files
-            #TODO script to migrate files from zip to mysql
-            #TODO locations to be passed to reviews scraper
+            # TODO print output before data is written inside the file
+            # TODO script to zip files
+            # TODO script to migrate files from zip to mysql
+            # TODO locations to be passed to reviews scraper
             files = listdir(root)
-            files = list(filter(lambda x: province_group_name in x, files))
+            files = list(filter(lambda x: province_group_name in x and "edited" not in x, files))
             if self.extra_data_pages < len(files):
-                yield self.request_file(root + "/" + files[self.extra_data_pages], self.parse)
-        # if len(attractions) == 0:
-        #     attractions = response.css('div.ap_filter_wrap div.navigation_list')[-1].css(
-        #         'div.ap_navigator a.taLnk::attr(href)')
-        #     more_attractions = attractions[-1].root
-        #     attractions = attractions[:-1]  # last element is more button on first parsing
-        # else:
-        #     more_attractions = response.css('div.pgLinks a.sprite-pageNext::attr(href)').extract_first()
-        #     if more_attractions:
-        #         more_attractions = unicode_utils.unicode_to_string(more_attractions)
-
-        # attractions_obj = []
-        # for attraction in attractions:
-        #     attraction_name = attraction.root.split('-')[-1].replace(".html", "")
-        #     attraction_obj = Attraction(attraction_name, attraction.root)
-        #     attractions_obj.append(attraction_obj)
-        #
-        # """Scrap region attractions"""
-        # for attraction in attractions_obj:
-        #     sleep(1)
-        #     print("Attraction: ", attraction.attraction_url)
-        #     yield self.request(attraction.attraction_url, self.parse)
-        #
-        # """Scrap next page of regions"""
-        # if more_attractions:
-        #     yield self.request(unicode_utils.byte_to_string(more_attractions), self.parse_global_attraction)
+                file = file_utils.fix_extra_data_files(root, files[self.extra_data_pages])
+                yield self.request_file(root + "/" + file, self.parse)

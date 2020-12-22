@@ -39,5 +39,18 @@ def sort_files(a, b, name):
         return a
     return b
 
-# def read_extra_data_files()
+
+def fix_extra_data_files(root, file):
+    with open(root + "/" + file, 'r') as f:
+        data = f.read()
+        data = data.replace("3D", "").replace("=\r\n", "")
+        new_file = file.replace(".mhtml", "")
+        new_file = new_file + "_edited.mhtml"
+        with open(root + "/" + new_file) as f2:
+            f2.write(data)
+            f2.close()
+            return new_file
+
+    # TODO remove 3D string from file
+    # TODO remove "=\r\n" from file
 # TODO script where you read data and clean all the garbage
