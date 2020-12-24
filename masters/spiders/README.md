@@ -13,7 +13,7 @@ Follow the pattern <first|second.html>
 That way parser will check extra folder (missing_data) and parse custom downloaded sites as well.
 
 ### 1.3
-Set main province url example </Attractions-g294473-Activities-oa20-Ukraine.html>
+In file ```provinces_spider.py``` set main province url example </Attractions-g294473-Activities-oa20-Ukraine.html>
 
 ### 1.4
 Run command bellow
