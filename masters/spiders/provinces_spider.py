@@ -39,7 +39,7 @@ class ProvincesSpider(scrapy.Spider):
     def request_file(self, url, callback):
         base_url = str(pathlib.Path().absolute())
         request_with_cookies = scrapy.Request(
-            url=("file:///" + base_url + "/" + url),
+            url=("file://" + base_url + "/" + url),
             callback=callback)
         return request_with_cookies
 
@@ -86,6 +86,9 @@ class ProvincesSpider(scrapy.Spider):
         except:
             self.log('Provinces: %s/%s' % (current_page, last_page))
 
+        if self.extra_data:
+            current_page = self.extra_data_pages
+
         filename = 'scraped_data/data_provinces/provinces-%s-%s.csv' % (province_group_name, current_page)
         with open(filename, 'w') as f:
             f.write(Province.get_csv_header())
@@ -94,19 +97,18 @@ class ProvincesSpider(scrapy.Spider):
             f.close()
         self.log('Saved file %s' % filename)
 
-        if next_page is not None and self.extra_data is False:
+        if next_page is not None and not self.extra_data:
             yield self.request(next_page, self.parse)
 
-        if next_page is None or self.extra_data is True:
+        if (next_page is None or self.extra_data is True) and self.extra_data_pages < 1:
             self.extra_data = True
             self.extra_data_pages += 1
-            root = "scraped_data/data_extra"
-            # TODO print output before data is written inside the file
+            root = "missing_data/slo"
+            files = listdir(root)
+            if self.extra_data_pages < len(files):
+                file = root + "/" + files[self.extra_data_pages]
+                yield self.request_file(file, self.parse)
+
             # TODO script to zip files
             # TODO script to migrate files from zip to mysql
             # TODO locations to be passed to reviews scraper
-            files = listdir(root)
-            files = list(filter(lambda x: province_group_name in x and "edited" not in x, files))
-            if self.extra_data_pages < len(files):
-                file = file_utils.fix_extra_data_files(root, files[self.extra_data_pages])
-                yield self.request_file(root + "/" + file, self.parse)
