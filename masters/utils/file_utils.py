@@ -51,6 +51,3 @@ def fix_extra_data_files(root, file):
             f2.close()
             return new_file
 
-    # TODO remove 3D string from file
-    # TODO remove "=\r\n" from file
-# TODO script where you read data and clean all the garbage
