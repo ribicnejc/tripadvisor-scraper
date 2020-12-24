@@ -103,6 +103,7 @@ class ProvincesSpider(scrapy.Spider):
         if (next_page is None or self.extra_data is True) and self.extra_data_pages < 1:
             self.extra_data = True
             self.extra_data_pages += 1
+            # TODO add config for country scraping
             root = "missing_data/slo"
             files = listdir(root)
             if self.extra_data_pages < len(files):
