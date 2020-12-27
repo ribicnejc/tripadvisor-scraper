@@ -33,8 +33,8 @@ DOWNLOAD_DELAY = 0.1
 # CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = True
-#COOKIES_DEBUG = True
+# COOKIES_ENABLED = True
+# COOKIES_DEBUG = True
 
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
@@ -106,5 +106,6 @@ SCRAP_USERS = False
 SCRAP_REVIEWS = True
 SCRAP_RANGE = (0, 10)
 HEADLESS_MODE = False
+COUNTRY = "ukr"  # aus|cro|hun|ita|slo|ukr
 
 SPLASH_URL = 'http://192.168.99.100:8050'

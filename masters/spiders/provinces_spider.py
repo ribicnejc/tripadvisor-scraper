@@ -11,7 +11,7 @@ import pathlib
 
 from masters.data_structures.Province import Province
 from masters.utils import unicode_utils, file_utils
-from time import sleep
+from masters import settings
 from os import listdir
 
 
@@ -103,13 +103,11 @@ class ProvincesSpider(scrapy.Spider):
         if (next_page is None or self.extra_data is True) and self.extra_data_pages < 1:
             self.extra_data = True
             self.extra_data_pages += 1
-            # TODO add config for country scraping
-            root = "missing_data/slo"
+            root = "missing_data/" + settings.COUNTRY
             files = listdir(root)
             if self.extra_data_pages < len(files):
                 file = root + "/" + files[self.extra_data_pages]
                 yield self.request_file(file, self.parse)
 
-            # TODO script to zip files
-            # TODO script to migrate files from zip to mysql
+
             # TODO locations to be passed to reviews scraper
