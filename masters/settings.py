@@ -100,11 +100,6 @@ AUTOTHROTTLE_MAX_DELAY = 10
 
 #############################################################
 # Custom settings
-PRODUCTION_ENV = False
-SCRAP_LOCATIONS = False
-SCRAP_USERS = False
-SCRAP_REVIEWS = True
-SCRAP_RANGE = (0, 10)
 HEADLESS_MODE = False
 COUNTRY = "ukr"  # aus|cro|hun|ita|slo|ukr
 
