@@ -4,6 +4,7 @@ import time
 from masters.data_structures.Attraction import Attraction
 from masters.utils import unicode_utils
 from time import sleep
+from masters import settings
 
 
 class LocationsSpider(scrapy.Spider):
@@ -34,18 +35,39 @@ class LocationsSpider(scrapy.Spider):
         self.scraped_pages = self.scraped_pages + 1
         attractions_obj = []
         attractions = response.css('div._2j03JUe9.MmIH_ltD._2JdZspdU')
+        if attractions is None or len(attractions) == 0:
+            attractions = response.css('div.k8UcErpq div._20eVZLwe')
         for attraction in attractions:
-            attraction_name = unicode_utils.unicode_to_string(
-                attraction.css('div._1fqdhjoD h3').extract_first()).split("<!-- -->")[1].replace("</h3>", "")
+            # Parsing attraction name
+            try:
+                attraction_name = unicode_utils.unicode_to_string(
+                    attraction.css('div._1fqdhjoD h3').extract_first()).split("<!-- -->")[1].replace("</h3>", "")
+            except:
+                attraction_name = None
+            try:
+                if attraction_name is None:
+                    attraction_name = unicode_utils.unicode_to_string(
+                        attraction.css('a._3W3bcspL h3').extract_first()).split("<!-- -->")[1].replace("</h3>", "")
+            except:
+                attraction_name = None
+
+            # Parsing attraction type
             attraction_type = unicode_utils.unicode_to_string(
                 attraction.css('span._21qUqkJx::text').extract_first())
+
+            # Parsing attraction rate
             try:
                 attraction_rate = unicode_utils.unicode_to_string(
                     attraction.css('svg._3KcXyP0F::attr(title)').extract_first()).split(" ")[0]
             except:
                 attraction_rate = "None"
+
+            # Parsing attraction url
             attraction_url = unicode_utils.unicode_to_string(
                 attraction.css('a._255i5rcQ::attr(href)').extract_first())
+            if attraction_url is None:
+                attraction_url = unicode_utils.unicode_to_string(
+                    attraction.css('a._3W3bcspL::attr(href)').extract_first())
             attraction_obj = Attraction(attraction_name, attraction_rate, attraction_type, attraction_url)
             attractions_obj.append(attraction_obj)
 
@@ -78,8 +100,11 @@ class LocationsSpider(scrapy.Spider):
             current_page = unicode_utils.unicode_to_string(
                 response.css('div.pageNumbers span.pageNum.current::text').extract_first())
         if last_page is None or len(last_page) == 0:
-            last_page = unicode_utils.unicode_to_string(
-                response.css('div.pageNumbers a.pageNum::text').extract()[-1])
+            try:
+                last_page = unicode_utils.unicode_to_string(
+                    response.css('div.pageNumbers a.pageNum::text').extract()[-1])
+            except:
+                last_page = "None"
         if next_page is None and current_page is not None:
             next_page = self.parent_url.split("-Activities-")
             pagination = int(current_page) * 30
@@ -87,7 +112,8 @@ class LocationsSpider(scrapy.Spider):
             if current_page == last_page:
                 next_page = None
 
-        filename = 'scraped_data/data_locations/locations-%s-%s.csv' % (location_group_name, current_page)
+        filename = 'scraped_data/data_locations/%s/locations-%s-%s.csv' % (
+            settings.COUNTRY, location_group_name, current_page)
         with open(filename, 'w') as f:
             f.write(Attraction.get_csv_header())
             for attraction in attractions_obj:

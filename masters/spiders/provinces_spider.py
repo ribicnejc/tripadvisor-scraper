@@ -89,7 +89,7 @@ class ProvincesSpider(scrapy.Spider):
         if self.extra_data:
             current_page = self.extra_data_pages
 
-        filename = 'scraped_data/data_provinces/provinces-%s-%s.csv' % (province_group_name, current_page)
+        filename = 'scraped_data/data_provinces/%s/provinces-%s-%s.csv' % (settings.COUNTRY, province_group_name, current_page)
         with open(filename, 'w') as f:
             f.write(Province.get_csv_header())
             for province in provinces_obj:
@@ -108,6 +108,3 @@ class ProvincesSpider(scrapy.Spider):
             if self.extra_data_pages < len(files):
                 file = root + "/" + files[self.extra_data_pages]
                 yield self.request_file(file, self.parse)
-
-
-            # TODO locations to be passed to reviews scraper

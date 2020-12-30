@@ -18,7 +18,7 @@ class Attraction(object):
 
     @staticmethod
     def get_csv_header():
-        return "attraction_name," \
-               "attraction_rate," \
-               "attraction_type," \
+        return "attraction_name, " \
+               "attraction_rate, " \
+               "attraction_type, " \
                "attraction_url\n"

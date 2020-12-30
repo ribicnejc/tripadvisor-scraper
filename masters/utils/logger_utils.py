@@ -15,4 +15,4 @@ class Logger(object):
         filename = 'logs/scraped_locations.log'
         with open(filename, 'a+') as f:
             f.write(text + "\n")
-            print(text)
+            print("Added to scraped locations: " + text)
