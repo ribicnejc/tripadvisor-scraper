@@ -11,6 +11,13 @@ class Logger(object):
             print(text)
 
     @staticmethod
+    def log_time(text):
+        filename = 'logs/timer.log'
+        with open(filename, 'a+') as f:
+            f.write(text + "\n")
+            print(text)
+
+    @staticmethod
     def log_location(text):
         filename = 'logs/scraped_locations.log'
         with open(filename, 'a+') as f:

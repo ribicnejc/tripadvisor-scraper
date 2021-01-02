@@ -3,7 +3,6 @@ import time
 
 from masters.data_structures.Attraction import Attraction
 from masters.utils import unicode_utils
-from time import sleep
 from masters import settings
 
 
@@ -13,7 +12,6 @@ class LocationsSpider(scrapy.Spider):
     urls = []
 
     def __init__(self, province='', **kwargs):
-        # print(province)
         self.parent_url = province
         self.start_time = time.time()
         self.urls.append(province)
@@ -68,7 +66,8 @@ class LocationsSpider(scrapy.Spider):
             if attraction_url is None:
                 attraction_url = unicode_utils.unicode_to_string(
                     attraction.css('a._3W3bcspL::attr(href)').extract_first())
-            attraction_obj = Attraction(attraction_name, attraction_rate, attraction_type, attraction_url)
+            attraction_obj = Attraction(attraction_name, attraction_rate, attraction_type, attraction_url,
+                                        self.parent_url)
             attractions_obj.append(attraction_obj)
 
         if attractions is None or len(attractions) == 0:
