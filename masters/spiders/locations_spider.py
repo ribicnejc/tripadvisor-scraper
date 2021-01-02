@@ -13,7 +13,7 @@ class LocationsSpider(scrapy.Spider):
     urls = []
 
     def __init__(self, province='', **kwargs):
-        print(province)
+        # print(province)
         self.parent_url = province
         self.start_time = time.time()
         self.urls.append(province)
@@ -103,9 +103,11 @@ class LocationsSpider(scrapy.Spider):
             try:
                 last_page = unicode_utils.unicode_to_string(
                     response.css('div.pageNumbers a.pageNum::text').extract()[-1])
+                if last_page <= current_page:
+                    next_page = None
             except:
                 last_page = "None"
-        if next_page is None and current_page is not None:
+        if next_page is None and current_page is not None and current_page < last_page:
             next_page = self.parent_url.split("-Activities-")
             pagination = int(current_page) * 30
             next_page = next_page[0] + "-Activities-" + "oa" + str(pagination) + "-" + next_page[1]
