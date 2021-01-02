@@ -10,7 +10,7 @@ ascending.
 ### 1.2
 Go to the last page and download the last and second last site. Save it in *.html format - single page. 
 Follow the pattern <first|second.html>
-That way parser will check extra folder (missing_data) and parse custom downloaded sites as well.
+That way parser will check extra folder (missing_data/<country_code>) and parse custom downloaded sites as well.
 
 ### 1.3
 In file ```provinces_spider.py``` set main province url example </Attractions-g294473-Activities-oa20-Ukraine.html>
@@ -20,7 +20,23 @@ Run command bellow
     
     python scrap_provinces.py
 
+### 1.5
+Scraped data is available under ```scraped_data``` folder under country code which is 
+set in settings.
+
 ## 2. Scrap Locations
+### 2.1
+Set country code in setting 
+    
+    COUNTRY = "slo"
 
+### 2.2
+Run command bellow
 
-## 3. Scrap 
+    python scrap_locations.py
+
+### 2.3
+Scraped data is available under ```scraped_data``` folder under country code which is 
+set in settings.
+
+## 3. Scrap Reviews
