@@ -1,12 +1,12 @@
 from zipfile import ZipFile
 from os import listdir
 
-locations = "locations.zip"
-provinces = "provinces.zip"
-reviews = "reviews.zip"
+locations = "locations_ukr.zip"
+provinces = "provinces_ukr.zip"
+reviews = "reviews_ukr.zip"
 
 with ZipFile(provinces, 'w') as zipProvinces:
-    root = "../scraped_data/data_provinces"
+    root = "../scraped_data/data_provinces/ukr"
     files = listdir(root)
     print("Zipping provinces...")
     for file in files:
@@ -14,7 +14,7 @@ with ZipFile(provinces, 'w') as zipProvinces:
     print("Provinces zipped.")
 
 with ZipFile(locations, 'w') as zipLocations:
-    root = "../scraped_data/data_locations"
+    root = "../scraped_data/data_locations/ukr"
     files = listdir(root)
     print("Zipping locations...")
     for file in files:
@@ -22,7 +22,7 @@ with ZipFile(locations, 'w') as zipLocations:
     print("Locations zipped.")
 
 with ZipFile(reviews, 'w') as zipReviews:
-    root = "../scraped_data/data_reviews"
+    root = "../scraped_data/data_reviews/ukr"
     files = listdir(root)
     print("Zipping reviews...")
     for file in files:

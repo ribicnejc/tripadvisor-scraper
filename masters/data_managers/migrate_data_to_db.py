@@ -14,6 +14,16 @@ def create_database():
                                         PRIMARY KEY (province_url)                                        
                                     ); """
 
+    sql_create_locations_table = """ CREATE TABLE IF NOT EXISTS locations (
+                                        attraction_name text,
+                                        attraction_rate text,
+                                        attraction_type text,
+                                        attraction_url text,
+                                        attraction_parent_url text,
+                                        PRIMARY KEY (attraction_url),    
+                                        FOREIGN KEY (attraction_parent_url) REFERENCES provinces (province_url)                                    
+                                    ); """
+
     # create a database connection
     conn = create_connection(database)
 
@@ -21,6 +31,8 @@ def create_database():
     if conn is not None:
         # create provinces table
         create_table(conn, sql_create_provinces_table)
+        # create locations table
+        create_table(conn, sql_create_locations_table)
     else:
         print("Error! cannot create the database connection.")
 
@@ -61,6 +73,14 @@ def insert_province(conn, province):
     cur.execute(sql, province)
 
 
+def insert_location(conn, location):
+    print("Inserting location: " + location[0])
+    sql = ''' INSERT OR REPLACE INTO locations(attraction_name, attraction_rate, attraction_type, attraction_url, attraction_parent_url)
+              VALUES(?,?,?,?,?) '''
+    cur = conn.cursor()
+    cur.execute(sql, location)
+
+
 def fill_provinces(folder, country):
     conn = create_connection("data.db")
     counter = 0
@@ -77,5 +97,22 @@ def fill_provinces(folder, country):
     conn.commit()
 
 
+def fill_locations(folder):
+    conn = create_connection("data.db")
+    counter = 0
+    for file in os.listdir(folder):
+        file = folder + "/" + file
+        with open(file) as f:
+            line = f.readline()
+            while line:
+                line = line.replace("\n", "")
+                print(counter)
+                counter += 1
+                insert_location(conn, tuple(line.split(", ")))
+                line = f.readline()
+    conn.commit()
+
+
 create_database()
-fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
+# fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
+fill_locations("../scraped_data/data_locations/ukr")
