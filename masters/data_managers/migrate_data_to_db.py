@@ -115,4 +115,9 @@ def fill_locations(folder):
 
 create_database()
 # fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
-fill_locations("../scraped_data/data_locations/ukr")
+fill_provinces("../scraped_data/data_provinces/cro", "croatia")
+fill_provinces("../scraped_data/data_provinces/slo", "slovenia")
+fill_provinces("../scraped_data/data_provinces/hun", "hungary")
+fill_provinces("../scraped_data/data_provinces/aus", "austria")
+fill_provinces("../scraped_data/data_provinces/ita", "italy")
+# fill_locations("../scraped_data/data_locations/ukr")
