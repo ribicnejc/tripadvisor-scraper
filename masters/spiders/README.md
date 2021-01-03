@@ -9,7 +9,8 @@ ascending.
 
 ### 1.2
 Go to the last page and download the last and second last site. Save it in *.html format - single page. 
-Follow the pattern <first|second.html>
+Follow the pattern <first|second.html> and save it into the ```missing_data\slo``` folder - following the 
+country code pattern.
 That way parser will check extra folder (missing_data/<country_code>) and parse custom downloaded sites as well.
 
 ### 1.3
@@ -31,6 +32,9 @@ Set country code in setting
     COUNTRY = "slo"
 
 ### 2.2
+Clean file located in ```masters\logs\scraped_locations.log```
+
+### 2.3
 Run command bellow
 
     python scrap_locations.py

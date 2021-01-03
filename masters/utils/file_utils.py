@@ -1,8 +1,10 @@
+import sys
 from os import listdir
 from masters.utils import unicode_utils
 
 import functools
 
+sys.path.append("..")
 
 def location_scraped(string):
     filename = 'logs/scraped_locations.log'
