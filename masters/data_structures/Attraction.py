@@ -16,7 +16,7 @@ class Attraction(object):
 
     @staticmethod
     def clean_value(value):
-        return str(value).replace(",", "&&")
+        return str(value).replace(",", "&&").replace("\"", "'")
 
     @staticmethod
     def get_csv_header():

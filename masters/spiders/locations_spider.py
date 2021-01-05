@@ -1,5 +1,7 @@
 import scrapy
 import time
+import re
+import json
 
 from masters.data_structures.Attraction import Attraction
 from masters.utils import unicode_utils
@@ -8,7 +10,7 @@ from masters import settings
 
 class LocationsSpider(scrapy.Spider):
     name = "locations"
-    root_url = 'https://www.tripadvisor.com'
+    root_url = 'https://www.tripadvisor.co.uk'
     urls = []
 
     def __init__(self, province='', **kwargs):
@@ -33,21 +35,21 @@ class LocationsSpider(scrapy.Spider):
         self.scraped_pages = self.scraped_pages + 1
         attractions_obj = []
         attractions = response.css('div._2j03JUe9.MmIH_ltD._2JdZspdU')
+
         if attractions is None or len(attractions) == 0:
             attractions = response.css('div.k8UcErpq div._20eVZLwe')
+
         for attraction in attractions:
             # Parsing attraction name
             try:
                 attraction_name = unicode_utils.unicode_to_string(
                     attraction.css('div._1fqdhjoD h3').extract_first()).split("<!-- -->")[1].replace("</h3>", "")
             except:
-                attraction_name = None
-            try:
-                if attraction_name is None:
+                try:
                     attraction_name = unicode_utils.unicode_to_string(
                         attraction.css('a._3W3bcspL h3').extract_first()).split("<!-- -->")[1].replace("</h3>", "")
-            except:
-                attraction_name = None
+                except:
+                    attraction_name = None
 
             # Parsing attraction type
             attraction_type = unicode_utils.unicode_to_string(
@@ -66,6 +68,7 @@ class LocationsSpider(scrapy.Spider):
             if attraction_url is None:
                 attraction_url = unicode_utils.unicode_to_string(
                     attraction.css('a._3W3bcspL::attr(href)').extract_first())
+
             attraction_obj = Attraction(attraction_name, attraction_rate, attraction_type, attraction_url,
                                         self.parent_url)
             attractions_obj.append(attraction_obj)
@@ -84,28 +87,45 @@ class LocationsSpider(scrapy.Spider):
                     attraction_rate = "None"
                 attraction_url = unicode_utils.unicode_to_string(
                     attraction.css('div._6sUF3jUd a._1QKQOve4::attr(href)').extract_first())
-                attraction_obj = Attraction(attraction_name, attraction_rate, attraction_type, attraction_url)
+                attraction_obj = Attraction(attraction_name, attraction_rate, attraction_type, attraction_url,
+                                            self.parent_url)
                 attractions_obj.append(attraction_obj)
 
         location_group_name = response.url.replace(".html", "").split("-Activities-")[1]
+        # next_page = pagination['nextLink']['url']
         next_page = unicode_utils.unicode_to_string(
             response.css('div._1r6YXRQy a._1JOGv2rJ._1qMtXLO6._3yBiBka1::attr(href)').extract_first())
+
+        # current_page = pagination['currentPage']
         current_page = unicode_utils.unicode_to_string(
             response.css('div._1r6YXRQy span._7Rpjvz_k::text').extract_first())
-        last_page = response.css('div._1r6YXRQy span._17Cv7cBt a::text').extract()
-        if last_page is not None and len(last_page) > 0:
-            last_page = last_page[-1]
         if current_page is None:
             current_page = unicode_utils.unicode_to_string(
                 response.css('div.pageNumbers span.pageNum.current::text').extract_first())
+
+        last_page = response.css('div._1r6YXRQy span._17Cv7cBt a::text').extract()
         if last_page is None or len(last_page) == 0:
             try:
                 last_page = unicode_utils.unicode_to_string(
                     response.css('div.pageNumbers a.pageNum::text').extract()[-1])
-                if last_page <= current_page:
+                if int(last_page) <= int(current_page):
                     next_page = None
             except:
-                last_page = "None"
+                if current_page is not None:
+                    current_url = response.url.replace(self.root_url, "")
+                    print("Retrying(1) " + current_url)
+                    yield self.request(current_url, self.parse)
+                    return
+
+        elif last_page is not None and len(last_page) > 0:
+            last_page = last_page[-1]
+
+        try:
+            last_page = int(last_page)
+            current_page = int(current_page)
+        except:
+            self.log("Fail to convert pages: %s %s" % (last_page, current_page))
+
         if next_page is None and current_page is not None and current_page < last_page:
             next_page = self.parent_url.split("-Activities-")
             pagination = int(current_page) * 30
@@ -120,7 +140,7 @@ class LocationsSpider(scrapy.Spider):
             for attraction in attractions_obj:
                 f.write(attraction.get_csv_line())
             f.close()
-        self.log('Saved file %s' % filename)
+        self.log('Saved %s locations in file %s' % (len(attractions_obj), filename))
 
         try:
             current_time = time.time()
@@ -136,3 +156,19 @@ class LocationsSpider(scrapy.Spider):
 
         if next_page is not None:
             yield self.request(next_page, self.parse)
+
+        # pattern = re.compile(r'(?<=pageManifest:)(.*)(?=}\;\(this\.)')
+        # pattern = re.compile(r'(?<=JSON\.parse\(\")(.*)(?=\"\)\)\);)')
+        # (?<=JSON\.parse\(\")(.*)(?=\.)
+        # class=\\"{0}\\">
+        # tripadvisor_data = response.css('html').re(pattern)[0]
+        # tripadvisor_data = tripadvisor_data.replace('\\"', "\"")
+
+        # class=\\"{0}\\">
+        # tripadvisor_data = json.loads(tripadvisor_data)
+        # tmp = tripadvisor_data['urqlCache']['921471245']['data']['attractionResponse']
+        # tripadvisor_data = tripadvisor_data['redux']['api']['responses']
+
+        # location_data_key = list(filter((lambda x: '/attraction_overview/' in x), list(tripadvisor_data)))[0]
+        # attractions = tripadvisor_data[location_data_key]['data']['topPOIs']['pois']
+        # pagination = tripadvisor_data[location_data_key]['data']['topPOIs']['paginationModel']

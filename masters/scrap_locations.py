@@ -62,6 +62,12 @@ for province in listdir(root):
             Logger.log_location(location)
         else:
             print("Location already scraped: " + location)
-
-# cmdline.execute("scrapy crawl locations -a province=/Attractions-g274873-Activities-Ljubljana_Upper_Carniola_Region.html".split())
+#
+# cmdline.execute("scrapy crawl locations -a province=/Attractions-g312722-Activities-Koper_Slovenian_Istria_Slovenian_Littoral_Region.html".split())
 # cmdline.execute("scrapy crawl locations -a province=/Attractions-g1816350-Activities-Yaremche_Ivano_Frankivsk_Oblast.html".split())
+# cmdline.execute("scrapy crawl locations -a province=/Attractions-g3737821-Activities-Skole_Skolivs_kyi_District_Lviv_Oblast.html".split())
+# cmdline.execute("scrapy crawl locations -a province=/Attractions-g294474-Activities-Kyiv_Kiev.html".split())
+# cmdline.execute("scrapy crawl locations -a province=".split())
+# cmdline.execute("scrapy crawl locations -a province=".split())
+# cmdline.execute("scrapy crawl locations -a province=".split())
+# cmdline.execute("scrapy crawl locations -a province=".split())
