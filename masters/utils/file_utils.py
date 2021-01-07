@@ -6,10 +6,13 @@ import functools
 
 sys.path.append("..")
 
+
 def location_scraped(string):
     filename = 'logs/scraped_locations.log'
     with open(filename) as f:
-        return string in f.read()
+        is_scraped = string in f.read()
+        f.close()
+        return is_scraped
 
 
 def get_last_scraped_page_url(review_location_name, url):
@@ -52,4 +55,3 @@ def fix_extra_data_files(root, file):
             f2.write(data)
             f2.close()
             return new_file
-

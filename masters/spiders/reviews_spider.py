@@ -9,6 +9,7 @@ from scrapy_splash import SplashRequest
 from masters.data_structures.Review import Review
 from masters.gecko_spiders import reviews_gecko
 from masters.utils import unicode_utils, coordinate_utils, file_utils
+from masters import settings
 from os import listdir
 
 
@@ -20,7 +21,7 @@ class ReviewsSpider(scrapy.Spider):
     parent_url = ""
 
     def __init__(self, location='', **kwargs):
-        print(location)
+        # print(location)
         self.parent_url = location
         self.start_time = time.time()
         self.urls.append(location)
@@ -66,20 +67,25 @@ class ReviewsSpider(scrapy.Spider):
             response.css('div h1.ui_header::text').extract_first())
         current_url = response.request.url
         current_url = current_url.replace(self.root_url, "")
-        if review_location_name is None:
+        other_title = response.css('h1._3QHreJVJ').extract_first()
+        if review_location_name is None and other_title is None:
             print("Retrying(1) " + current_url)
             yield self.request(current_url, self.parse)
             return
-        # review_location_description_tags = unicode_utils.unicode_list_to_string(
-        #     response.css('div.update-wrapper a::text').extract())
+        if other_title is not None:
+            self.log("Not correct review page to scrap, skipping...")
+            return
         review_current_page = unicode_utils.unicode_to_string(
             response.css('div.pageNumbers span.current::text').extract_first())
-        if review_current_page is None:
+        reviews = response.css('div.main_content div.Dq9MAugU')
+        if review_current_page is None and len(reviews) > 5:
             print("Retrying(2)" + current_url)
             yield self.request(current_url, self.parse)
             return
         review_last_page = unicode_utils.unicode_list_to_string(
             response.css('div.pageNumbers a.pageNum::text').extract()[-1:])
+        if not review_current_page:
+            review_last_page = "None"
         review_location_type = unicode_utils.unicode_list_to_string(
             response.css('div._3RTCF0T0 a._1cn4vjE4::text').extract())
         review_location_breadcrumbs = unicode_utils.unicode_list_to_string(
@@ -91,12 +97,6 @@ class ReviewsSpider(scrapy.Spider):
         tripadvisor_data = response.xpath('//script[contains(., "coords")]/text()').re(pattern)[0]
         tripadvisor_data = json.loads(tripadvisor_data)
         location_lat, location_lng = coordinate_utils.parse_json_to_coords(tripadvisor_data)
-
-        location_parent_id = str(tripadvisor_data[0]['details']['parent_id'])
-        location_parent_name = str(tripadvisor_data[0]['details']['parent_name'])
-        location_grandparent_id = str(tripadvisor_data[0]['details']['grandparent_id'])
-        location_grandparent_name = str(tripadvisor_data[0]['details']['grandparent_name'])
-        location_full_ids = unicode_utils.unicode_int_list_to_string(tripadvisor_data[0]['details']['parent_ids'])
 
         reviews = []
         for review in response.css('div.main_content div.Dq9MAugU'):
@@ -127,11 +127,6 @@ class ReviewsSpider(scrapy.Spider):
                                  review_location_rate,
                                  location_lat,
                                  location_lng,
-                                 location_parent_id,
-                                 location_parent_name,
-                                 location_grandparent_id,
-                                 location_grandparent_name,
-                                 location_full_ids,
                                  review_id,
                                  review_date,
                                  review_experience_date,
@@ -141,6 +136,27 @@ class ReviewsSpider(scrapy.Spider):
                                  user_id,
                                  self.parent_url)
             reviews.append(review_data)
+
+        no_reviews = False
+        if len(reviews) is 0:
+            review_data = Review(review_location_name,
+                                 review_current_page,
+                                 review_last_page,
+                                 review_location_type,
+                                 review_location_breadcrumbs,
+                                 review_location_rate,
+                                 location_lat,
+                                 location_lng,
+                                 "None",
+                                 "None",
+                                 "None",
+                                 "None",
+                                 "None",
+                                 "None",
+                                 "None",
+                                 self.parent_url)
+            reviews.append(review_data)
+            no_reviews = True
 
         if review_location_name is not None:
             review_location_name = review_location_name.replace("/", "").replace(",", "").replace(" ", "_")
@@ -152,7 +168,8 @@ class ReviewsSpider(scrapy.Spider):
             if last_scraped_page_url is not None:
                 next_review_page_url = last_scraped_page_url
 
-        filename = 'scraped_data/data_reviews/reviews-%s-%s.csv' % (review_location_name, review_current_page)
+        filename = 'scraped_data/data_reviews/%s/reviews-%s-%s.csv' % (
+            settings.COUNTRY, review_location_name, review_current_page)
         with open(filename, 'w') as f:
             f.write(Review.get_csv_header_v2())
             for review in reviews:
@@ -171,7 +188,8 @@ class ReviewsSpider(scrapy.Spider):
                 review_current_page, review_last_page, secs, mins, hours))
         except:
             self.log('Reviews: %s/%s' % (review_current_page, review_last_page))
-
+        if no_reviews:
+            self.log("Location had no reviews. None values with coords were collected.")
         if next_review_page_url is not "":
             yield self.request(next_review_page_url, self.parse)
 

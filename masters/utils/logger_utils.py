@@ -4,11 +4,12 @@ class Logger(object):
         self.spider_name = self.spider_name.replace(" ", "-")
 
     @staticmethod
-    def log_it(text):
+    def log_review(text):
         filename = 'logs/reviews.log'
         with open(filename, 'a+') as f:
             f.write(text + "\n")
             print(text)
+            f.close()
 
     @staticmethod
     def log_time(text):
@@ -23,3 +24,4 @@ class Logger(object):
         with open(filename, 'a+') as f:
             f.write(text + "\n")
             print("Added to scraped locations: " + text)
+            f.close()

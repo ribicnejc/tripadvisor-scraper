@@ -4,7 +4,7 @@ import os
 
 
 def create_database():
-    database = "data.db"
+    database = "../data.db"
 
     sql_create_provinces_table = """ CREATE TABLE IF NOT EXISTS provinces (
                                         province_name text,
@@ -82,7 +82,7 @@ def insert_location(conn, location):
 
 
 def fill_provinces(folder, country):
-    conn = create_connection("data.db")
+    conn = create_connection("../data.db")
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
@@ -98,7 +98,7 @@ def fill_provinces(folder, country):
 
 
 def fill_locations(folder):
-    conn = create_connection("data.db")
+    conn = create_connection("../data.db")
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
