@@ -14,10 +14,8 @@ def get_review_by_location_name(conn, review_name):
 def get_location_urls(conn):
     cur = conn.cursor()
     sql = """
-        select * from provinces p
-        join locations l on p.province_url = l.attraction_parent_url
-        where country = 'ukraine'
-        and region_name = 'Odessa Oblast'
+        select * from provinces join locations l on provinces.province_url = l.attraction_parent_url
+        where country = 'slovenia'
     """
     cur.execute(sql)
     return cur.fetchall()
