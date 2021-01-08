@@ -4,7 +4,7 @@ import os
 
 
 def create_database():
-    database = "../data.db"
+    database = "data.db"
 
     sql_create_provinces_table = """ CREATE TABLE IF NOT EXISTS provinces (
                                         province_name text,
@@ -24,6 +24,26 @@ def create_database():
                                         FOREIGN KEY (attraction_parent_url) REFERENCES provinces (province_url)                                    
                                     ); """
 
+    sql_create_review_table = """ CREATE TABLE IF NOT EXISTS reviews (
+                                        review_location_name text,
+                                        review_current_page text,
+                                        review_last_page text,
+                                        review_location_type text,
+                                        review_location_breadcrumbs text,
+                                        review_location_rate text,
+                                        location_lat text,
+                                        location_lng text,
+                                        review_id text,
+                                        review_date text,
+                                        review_experience_date text,
+                                        review_rate text,
+                                        user_name text,
+                                        user_link text,
+                                        user_id text,
+                                        parent_url text,
+                                        PRIMARY KEY (review_id),    
+                                        FOREIGN KEY (parent_url) REFERENCES locations (attraction_url)                                    
+                                    ); """
     # create a database connection
     conn = create_connection(database)
 
@@ -33,6 +53,8 @@ def create_database():
         create_table(conn, sql_create_provinces_table)
         # create locations table
         create_table(conn, sql_create_locations_table)
+        # create review table
+        create_table(conn, sql_create_review_table)
     else:
         print("Error! cannot create the database connection.")
 
@@ -81,8 +103,19 @@ def insert_location(conn, location):
     cur.execute(sql, location)
 
 
+def insert_review(conn, review):
+    print("Inserting review: " + review[0])
+    sql = ''' INSERT OR REPLACE INTO reviews(review_location_name, review_current_page, review_last_page,
+                    review_location_type, review_location_breadcrumbs, review_location_rate, location_lat,
+                    location_lng, review_id, review_date, review_experience_date,
+                    review_rate, user_name, user_link, user_id, parent_url)
+              VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) '''
+    cur = conn.cursor()
+    cur.execute(sql, review)
+
+
 def fill_provinces(folder, country):
-    conn = create_connection("../data.db")
+    conn = create_connection("data.db")
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
@@ -98,7 +131,7 @@ def fill_provinces(folder, country):
 
 
 def fill_locations(folder):
-    conn = create_connection("../data.db")
+    conn = create_connection("data.db")
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
@@ -113,6 +146,22 @@ def fill_locations(folder):
     conn.commit()
 
 
+def fill_reviews(folder):
+    conn = create_connection("data.db")
+    counter = 0
+    for file in os.listdir(folder):
+        file = folder + "/" + file
+        with open(file) as f:
+            line = f.readline()
+            while line:
+                line = line.replace("\n", "")
+                print(counter)
+                counter += 1
+                insert_review(conn, tuple(line.split(", ")))
+                line = f.readline()
+    conn.commit()
+
+
 create_database()
 # fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
 # fill_provinces("../scraped_data/data_provinces/cro", "croatia")
@@ -121,8 +170,10 @@ create_database()
 # fill_provinces("../scraped_data/data_provinces/aus", "austria")
 # fill_provinces("../scraped_data/data_provinces/ita", "italy")
 # fill_locations("../scraped_data/data_locations/slo")
-fill_locations("../scraped_data/data_locations/cro")
-fill_locations("../scraped_data/data_locations/ukr")
-fill_locations("../scraped_data/data_locations/aus")
-fill_locations("../scraped_data/data_locations/hun")
-fill_locations("../scraped_data/data_locations/ita")
+# fill_locations("../scraped_data/data_locations/cro")
+# fill_locations("../scraped_data/data_locations/ukr")
+# fill_locations("../scraped_data/data_locations/aus")
+# fill_locations("../scraped_data/data_locations/hun")
+# fill_locations("../scraped_data/data_locations/ita")
+
+fill_reviews("../scraped_data/data_reviews/ukr")
