@@ -2,9 +2,11 @@ import sqlite3
 import codecs
 import os
 
+db = "../data/databases/data.db"
+
 
 def create_database():
-    database = "data.db"
+    database = db
 
     sql_create_provinces_table = """ CREATE TABLE IF NOT EXISTS provinces (
                                         province_name text,
@@ -115,7 +117,7 @@ def insert_review(conn, review):
 
 
 def fill_provinces(folder, country):
-    conn = create_connection("data.db")
+    conn = create_connection(db)
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
@@ -131,7 +133,7 @@ def fill_provinces(folder, country):
 
 
 def fill_locations(folder):
-    conn = create_connection("data.db")
+    conn = create_connection(db)
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
@@ -147,7 +149,7 @@ def fill_locations(folder):
 
 
 def fill_reviews(folder):
-    conn = create_connection("data.db")
+    conn = create_connection(db)
     counter = 0
     for file in os.listdir(folder):
         file = folder + "/" + file
@@ -163,7 +165,7 @@ def fill_reviews(folder):
 
 
 create_database()
-# fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
+fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
 # fill_provinces("../scraped_data/data_provinces/cro", "croatia")
 # fill_provinces("../scraped_data/data_provinces/slo", "slovenia")
 # fill_provinces("../scraped_data/data_provinces/hun", "hungary")
@@ -171,7 +173,7 @@ create_database()
 # fill_provinces("../scraped_data/data_provinces/ita", "italy")
 # fill_locations("../scraped_data/data_locations/slo")
 # fill_locations("../scraped_data/data_locations/cro")
-# fill_locations("../scraped_data/data_locations/ukr")
+fill_locations("../scraped_data/data_locations/ukr")
 # fill_locations("../scraped_data/data_locations/aus")
 # fill_locations("../scraped_data/data_locations/hun")
 # fill_locations("../scraped_data/data_locations/ita")

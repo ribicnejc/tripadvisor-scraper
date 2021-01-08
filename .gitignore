@@ -2,4 +2,3 @@ workspace.xml
 .idea/
 *.pyc
 venv/
-*.db
