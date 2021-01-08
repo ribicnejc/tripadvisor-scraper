@@ -136,6 +136,8 @@ def unicode_date_to_string_number(date):
 
 
 def unicode_rating_to_string(rating):
+    if rating is None:
+        return "0"
     return str(int(unicode_to_string(rating).split(" ")[1].replace("bubble_", "")) / 10)
 
 
