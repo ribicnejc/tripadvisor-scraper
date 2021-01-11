@@ -68,7 +68,8 @@ class ReviewsSpider(scrapy.Spider):
         current_url = response.request.url
         current_url = current_url.replace(self.root_url, "")
         other_title = response.css('h1._3QHreJVJ').extract_first()
-        if review_location_name is None and other_title is None:
+        other_photos = response.css('div.b2oaw8yU').extract_first()
+        if review_location_name is None and other_title is None and other_photos is None:
             print("Retrying(1) " + current_url)
             yield self.request(current_url, self.parse)
             return
@@ -138,7 +139,7 @@ class ReviewsSpider(scrapy.Spider):
             reviews.append(review_data)
 
         no_reviews = False
-        if len(reviews) is 0:
+        if len(reviews) == 0:
             review_data = Review(review_location_name,
                                  review_current_page,
                                  review_last_page,

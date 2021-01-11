@@ -15,7 +15,7 @@ def get_location_urls(conn):
     cur = conn.cursor()
     sql = """
         select * from provinces join locations l on provinces.province_url = l.attraction_parent_url
-        where country = 'slovenia'
+        where country = 'croatia'
     """
     cur.execute(sql)
     return cur.fetchall()

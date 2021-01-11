@@ -178,4 +178,4 @@ def fill_reviews(folder):
 # fill_locations("../scraped_data/data_locations/hun")
 # fill_locations("../scraped_data/data_locations/ita")
 
-fill_reviews("../scraped_data/data_reviews/slo")
+fill_reviews("../scraped_data/data_reviews/cro")

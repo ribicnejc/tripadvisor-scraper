@@ -13,9 +13,9 @@ sys.path.append("..")
 print("Scraper started...")
 # location_url = "/Attraction_Review-g7060164-d9756222-Reviews-Tri_Karasya_Fishing_and_Recreation_Complex-Bilyayivka_Odessa_Oblast.html"
 # location_url = "/Attraction_Review-g295368-d554746-Reviews-Odessa_National_Academic_Opera_and_Ballet_Theater-Odessa_Odessa_Oblast.html"
-# location_url = "/Attraction_Review-g10355435-d9740467-Reviews-Viktoriya-Velykodolynske_Odessa_Oblast.html"
+# location_url = "/Attraction_Review-g8480324-d21212631-Reviews-Obrt_Eva-Plitvicka_Jezera_Plitvice_Lakes_National_Park_Central_Croatia.html"
 # cmdline.execute(("scrapy crawl reviews -a location=" + location_url).split())
-#
+
 # exit(0)
 
 connection = database_utils.create_connection("data/databases/data.db")
@@ -58,3 +58,4 @@ for location in locations:
     os.system("scrapy crawl reviews -a location=" + location_url)
     Logger.log_location(location_url)
     scraped_in_this_run += 1
+    #pages_left -= 1
