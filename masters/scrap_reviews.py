@@ -3,12 +3,13 @@ import os
 import sys
 import time
 
+sys.path.append("..")
+
+import masters
 from scrapy import cmdline
 from masters.utils.logger_utils import Logger
 from masters.utils.file_utils import location_scraped
 from masters.data_managers.utils import database_utils
-
-sys.path.append("..")
 
 print("Scraper started...")
 # location_url = "/Attraction_Review-g7060164-d9756222-Reviews-Tri_Karasya_Fishing_and_Recreation_Complex-Bilyayivka_Odessa_Oblast.html"
@@ -58,4 +59,4 @@ for location in locations:
     os.system("scrapy crawl reviews -a location=" + location_url)
     Logger.log_location(location_url)
     scraped_in_this_run += 1
-    #pages_left -= 1
+    # pages_left -= 1
