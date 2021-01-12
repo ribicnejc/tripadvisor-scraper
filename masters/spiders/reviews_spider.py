@@ -99,6 +99,16 @@ class ReviewsSpider(scrapy.Spider):
         tripadvisor_data = json.loads(tripadvisor_data)
         location_lat, location_lng = coordinate_utils.parse_json_to_coords(tripadvisor_data)
 
+        extra = []
+        for grade in response.css('div.ui_column ul._2lcHrbTn li.ui_checkbox._3gEj_Jb5'):
+            key = grade.css('label::text').extract_first()
+            value = grade.css('span._3fVK8yi6::text').extract_first()
+            if value is None:
+                break
+            extra.append(key + " : " + value)
+
+        extra = unicode_utils.unicode_list_to_string(extra)
+
         reviews = []
         for review in response.css('div.main_content div.Dq9MAugU'):
             review_id = unicode_utils.unicode_to_string(
@@ -135,6 +145,7 @@ class ReviewsSpider(scrapy.Spider):
                                  user_name,
                                  user_link,
                                  user_id,
+                                 extra,
                                  self.parent_url)
             reviews.append(review_data)
 
@@ -155,6 +166,7 @@ class ReviewsSpider(scrapy.Spider):
                                  "None",
                                  "None",
                                  "None",
+                                 extra,
                                  self.parent_url)
             reviews.append(review_data)
             no_reviews = True

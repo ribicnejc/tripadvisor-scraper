@@ -2,7 +2,7 @@ import sqlite3
 import codecs
 import os
 
-db = "../data/databases/data.db"
+db = "../data/databases/data_ukr.db"
 
 
 def create_database():
@@ -42,6 +42,7 @@ def create_database():
                                         user_name text,
                                         user_link text,
                                         user_id text,
+                                        extra text,
                                         parent_url text,
                                         PRIMARY KEY (review_id),    
                                         FOREIGN KEY (parent_url) REFERENCES locations (attraction_url)                                    
@@ -110,8 +111,8 @@ def insert_review(conn, review):
     sql = ''' INSERT OR REPLACE INTO reviews(review_location_name, review_current_page, review_last_page,
                     review_location_type, review_location_breadcrumbs, review_location_rate, location_lat,
                     location_lng, review_id, review_date, review_experience_date,
-                    review_rate, user_name, user_link, user_id, parent_url)
-              VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) '''
+                    review_rate, user_name, user_link, user_id, extra, parent_url)
+              VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) '''
     cur = conn.cursor()
     cur.execute(sql, review)
 
@@ -164,7 +165,7 @@ def fill_reviews(folder):
     conn.commit()
 
 
-# create_database()
+create_database()
 # fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
 # fill_provinces("../scraped_data/data_provinces/cro", "croatia")
 # fill_provinces("../scraped_data/data_provinces/slo", "slovenia")
@@ -178,4 +179,4 @@ def fill_reviews(folder):
 # fill_locations("../scraped_data/data_locations/hun")
 # fill_locations("../scraped_data/data_locations/ita")
 
-fill_reviews("../scraped_data/data_reviews/cro")
+fill_reviews("../scraped_data/data_reviews/ukr")

@@ -15,6 +15,7 @@ class Review(object):
                  user_name,
                  user_link,
                  user_id,
+                 extra,
                  parent_url
                  ):
         self.review_location_name = self.clean_value(review_location_name)
@@ -32,10 +33,11 @@ class Review(object):
         self.user_name = self.clean_value(user_name)
         self.user_link = self.clean_value(user_link)
         self.user_id = self.clean_value(user_id)
+        self.extra = self.clean_value(extra)
         self.parent_url = self.clean_value(parent_url)
 
     def get_csv_line(self):
-        return "{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n".format(
+        return "{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n".format(
             self.review_location_name,
             self.review_current_page,
             self.review_last_page,
@@ -51,6 +53,7 @@ class Review(object):
             self.user_name,
             self.user_link,
             self.user_id,
+            self.extra,
             self.parent_url
         )
 
@@ -75,4 +78,5 @@ class Review(object):
                "user_name, " \
                "user_link, " \
                "user_id, " \
+               "extra, " \
                "parent_url\n"
