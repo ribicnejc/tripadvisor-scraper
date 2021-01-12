@@ -2,3 +2,5 @@ workspace.xml
 .idea/
 *.pyc
 venv/
+data.db
+data.old.db
