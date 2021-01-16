@@ -9,6 +9,8 @@ from masters.utils.timer_utils import Timer
 from masters.utils import unicode_utils, coordinate_utils, gecko_utils
 from masters.data_structures.Review import Review
 
+from selenium.webdriver.common.action_chains import ActionChains
+
 
 def stale_decorator(f):
     def wrapper(*args, **kwargs):
@@ -42,28 +44,34 @@ class GeckoReviewSpider(object):
         self.driver.implicitly_wait(2)
         # self.wait = WebDriverWait(self.driver, 5)
 
-    @stale_decorator
+    # @stale_decorator
     def select_all_languages(self):
         time.sleep(1)
-        all_languages = self.driver.find_element_by_xpath('//div[@data-value="ALL"]')
-        all_languages.click()
-        time.sleep(1)
-        self.driver.implicitly_wait(2)
+        review_title = self.driver.find_element_by_css_selector("h2._1VLgXtcm")
+        y = review_title.location['y']
+        self.driver.execute_script("window.scrollTo(0, " + str(y) + ");")
+        time.sleep(0.5)
+        all_languages = self.driver.find_element_by_css_selector('label.bUKZfPPw')
+        ActionChains(self.driver).move_to_element(all_languages).click().perform()
+        time.sleep(0.5)
 
     @stale_decorator
     def is_all_languages_selected(self):
         all_languages = self.driver.find_element_by_xpath('//input[@id="filters_detail_language_filterLang_ALL"]')
         return all_languages.is_selected()
 
-    @stale_decorator
+    # @stale_decorator
     def has_next_review_page(self):
         Logger.log_it("Checking if next page exists...")
         return not (self.get_next_page_url() is None)
 
-    @stale_decorator
+    # @stale_decorator
     def get_next_page_url(self):
         Logger.log_it("Retrieving next page url...")
-        next_url = self.driver.find_element_by_css_selector('div.ui_pagination a.next').get_attribute("href")
+        try:
+            next_url = self.driver.find_element_by_css_selector('div.ui_pagination a.next').get_attribute("href")
+        except:
+            next_url = None
         f = lambda x: "None" if next_url is None else next_url
         Logger.log_it("Next url: " + f(next_url))
         return next_url
@@ -73,16 +81,15 @@ class GeckoReviewSpider(object):
         coord_url = self.driver.find_element_by_css_selector("div.staticMap img").get_attribute("src")
         return coord_url
 
-    @stale_decorator
+    # @stale_decorator
     def next_page(self):
-        try:
-            if not self.is_all_languages_selected():
-                Logger.log_it("All language not selected... selecting all language")
-                self.select_all_languages()
-            self.driver.find_element_by_css_selector('div.ui_pagination a.next').click()
-        except WebDriverException:
-            Logger.log_it("There is no more pages!")
-        self.driver.implicitly_wait(2)
+        time.sleep(0.3)
+        next_page = self.driver.find_element_by_css_selector('a.ui_button.nav.next.primary')
+        y = next_page.location['y']
+        self.driver.execute_script("window.scrollTo(0, " + str(y) + ");")
+        time.sleep(0.3)
+        ActionChains(self.driver).move_to_element(next_page).click().perform()
+        time.sleep(0.6)
 
     @stale_decorator
     def scrap_page(self):
