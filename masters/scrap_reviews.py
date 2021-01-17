@@ -14,10 +14,10 @@ from masters.data_managers.utils import database_utils
 print("Scraper started...")
 # location_url = "/Attraction_Review-g7060164-d9756222-Reviews-Tri_Karasya_Fishing_and_Recreation_Complex-Bilyayivka_Odessa_Oblast.html"
 # location_url = "/Attraction_Review-g295368-d554746-Reviews-Odessa_National_Academic_Opera_and_Ballet_Theater-Odessa_Odessa_Oblast.html"
-# location_url = "/Attraction_Review-g8480324-d21212631-Reviews-Obrt_Eva-Plitvicka_Jezera_Plitvice_Lakes_National_Park_Central_Croatia.html"
-# cmdline.execute(("scrapy crawl reviews -a location=" + location_url).split())
-
-# exit(0)
+location_url = "/Attraction_Review-g274873-d12987385-Reviews-Avtobusna_postaja_Ljubljana-Ljubljana_Upper_Carniola_Region.html"
+cmdline.execute(("scrapy crawl reviews -a location=" + location_url).split())
+#
+exit(0)
 
 connection = database_utils.create_connection("data/databases/data.db")
 locations = database_utils.get_location_urls(connection)

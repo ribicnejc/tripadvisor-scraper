@@ -63,6 +63,8 @@ def unicode_int_list_to_string(arr):
 
 def unicode_date_v2_to_string_number(date):
     date = unicode_to_string(date)
+    pos = date.find(' wrote') # Gecko runner change
+    date = date[pos:] # Gecko runner change
     date = date.replace(" wrote a review ", "").split(" ")
     day = '01'
     month = '01'
