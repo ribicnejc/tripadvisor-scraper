@@ -145,6 +145,23 @@ class GeckoReviewSpider(object):
         tripadvisor_data = json.loads(tripadvisor_data)
         location_lat, location_lng = coordinate_utils.parse_json_to_coords(tripadvisor_data)
 
+        extra = []
+
+        grades = self.driver.find_elements_by_css_selector('div.ui_column ul._2lcHrbTn li.ui_checkbox._3gEj_Jb5')
+        for grade in grades:
+            key = grade.find_element_by_css_selector('label').text
+            try:
+                value = grade.find_element_by_css_selector('span._3fVK8yi6').text
+            except:
+                value = None
+            if value is None:
+                break
+            extra.append(key + " : " + value)
+
+        extra = unicode_utils.unicode_list_to_string(extra)
+        if not extra:
+            extra = "None"
+
         reviews = []
         for review in self.driver.find_elements_by_css_selector('div.main_content div.Dq9MAugU'):
             review_id = unicode_utils.unicode_to_string(
@@ -180,6 +197,7 @@ class GeckoReviewSpider(object):
                                  user_name,
                                  user_link,
                                  user_id,
+                                 extra,
                                  parent_url)
             reviews.append(review_data)
 
@@ -200,6 +218,7 @@ class GeckoReviewSpider(object):
                                  "None",
                                  "None",
                                  "None",
+                                 extra,
                                  parent_url)
             reviews.append(review_data)
             no_reviews = True
