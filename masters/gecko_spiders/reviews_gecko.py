@@ -3,7 +3,7 @@ import time
 import json
 
 from selenium import webdriver
-from selenium.common.exceptions import WebDriverException, StaleElementReferenceException
+from selenium.common.exceptions import WebDriverException, StaleElementReferenceException, NoSuchElementException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 
@@ -12,6 +12,19 @@ from masters.data_structures.Review import Review
 from masters.utils import unicode_utils, coordinate_utils, file_utils
 from masters.utils.logger_utils import Logger
 from masters.utils.timer_utils import Timer
+
+
+def exception_handler(f):
+    def wrapper(*args, **kwargs):
+        try:
+            result = f(*args, **kwargs)
+            return result
+        except NoSuchElementException as e:
+            Logger.log_it('Element not found' + str(e))
+        except Exception as e:
+            Logger.log_it(str(e))
+
+    return wrapper
 
 
 def stale_decorator(f):
@@ -42,13 +55,18 @@ class GeckoReviewSpider(object):
         self.driver = webdriver.Firefox()
 
         # driver.add_cookie({'name': 'TALanguage', 'value': 'ALL'})
-        self.driver.get(url)
+        try:
+            self.driver.get(url)
+        except:
+            self.driver.close()
+            return
         self.driver.implicitly_wait(2)
         # self.wait = WebDriverWait(self.driver, 5)
 
-    # @stale_decorator
+    @exception_handler
     def select_all_languages(self):
         time.sleep(1)
+        Logger.log_it("Selecting all languages")
         review_title = self.driver.find_element_by_css_selector("h2._1VLgXtcm")
         y = review_title.location['y']
         self.driver.execute_script("window.scrollTo(0, " + str(y) + ");")
@@ -62,19 +80,21 @@ class GeckoReviewSpider(object):
         all_languages = self.driver.find_element_by_xpath('//input[@id="filters_detail_language_filterLang_ALL"]')
         return all_languages.is_selected()
 
-    # @stale_decorator
     def has_next_review_page(self):
-        Logger.log_it("Checking if next page exists...")
+        Logger.log_it("Checking if next page exists")
         return not (self.get_next_page_url() is None)
 
     def get_next_page_url(self):
-        Logger.log_it("Retrieving next page url...")
         try:
             next_url = self.driver.find_element_by_css_selector('div.ui_pagination a.next').get_attribute("href")
         except:
             next_url = None
         f = lambda x: "None" if next_url is None else next_url
-        Logger.log_it("Next url: " + f(next_url))
+        var = f(next_url)
+        if var == "None":
+            Logger.log_it("Next page doesn't exists")
+            return next_url
+        Logger.log_it("Next url exists: " + f(next_url))
         return next_url
 
     def next_page(self):
@@ -90,15 +110,26 @@ class GeckoReviewSpider(object):
         time.sleep(0.2)
         review_location_name = unicode_utils.unicode_to_string(
             self.driver.find_element_by_css_selector('div h1.ui_header').text)
-        review_current_page = unicode_utils.unicode_to_string(
-            self.driver.find_element_by_css_selector('div.pageNumbers span.current').text)
-        review_last_page = self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum')[-1].text
+        try:
+            review_current_page = unicode_utils.unicode_to_string(
+                self.driver.find_element_by_css_selector('div.pageNumbers span.current').text)
+        except NoSuchElementException as e:
+            review_current_page = "None"
+
+        try:
+            review_last_page = self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum')[-1].text
+        except Exception as e:
+            review_last_page = "None"
+
         review_location_type = unicode_utils.unicode_list_to_string(
             map(lambda x: x.text, self.driver.find_elements_by_css_selector('div._3RTCF0T0 a._1cn4vjE4')))
         review_location_breadcrumbs = unicode_utils.unicode_list_to_string(
             map(lambda x: x.text, self.driver.find_elements_by_css_selector('div ul.breadcrumbs li.breadcrumb a span')))
-        review_location_rate = unicode_utils.unicode_rating_to_string(
-            self.driver.find_element_by_css_selector('div._1NKYRldB span.ui_bubble_rating').get_attribute('class'))
+        try:
+            review_location_rate = unicode_utils.unicode_rating_to_string(
+                self.driver.find_element_by_css_selector('div._1NKYRldB span.ui_bubble_rating').get_attribute('class'))
+        except:
+            review_location_rate = "0"
 
         current_url = self.driver.current_url
         current_url = current_url.replace(root_url, "")

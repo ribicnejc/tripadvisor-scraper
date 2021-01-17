@@ -11,13 +11,13 @@ from masters.utils.logger_utils import Logger
 from masters.utils.file_utils import location_scraped
 from masters.data_managers.utils import database_utils
 
-print("Scraper started...")
-# location_url = "/Attraction_Review-g7060164-d9756222-Reviews-Tri_Karasya_Fishing_and_Recreation_Complex-Bilyayivka_Odessa_Oblast.html"
-# location_url = "/Attraction_Review-g295368-d554746-Reviews-Odessa_National_Academic_Opera_and_Ballet_Theater-Odessa_Odessa_Oblast.html"
-location_url = "/Attraction_Review-g274873-d12987385-Reviews-Avtobusna_postaja_Ljubljana-Ljubljana_Upper_Carniola_Region.html"
-cmdline.execute(("scrapy crawl reviews -a location=" + location_url).split())
-#
-exit(0)
+# print("Scraper started...")
+# # location_url = "/Attraction_Review-g7060164-d9756222-Reviews-Tri_Karasya_Fishing_and_Recreation_Complex-Bilyayivka_Odessa_Oblast.html"
+# # location_url = "/Attraction_Review-g295368-d554746-Reviews-Odessa_National_Academic_Opera_and_Ballet_Theater-Odessa_Odessa_Oblast.html"
+# location_url = "/Attraction_Review-g274873-d12987385-Reviews-Avtobusna_postaja_Ljubljana-Ljubljana_Upper_Carniola_Region.html"
+# cmdline.execute(("scrapy crawl reviews -a location=" + location_url).split())
+# #
+# exit(0)
 
 connection = database_utils.create_connection("data/databases/data.db")
 locations = database_utils.get_location_urls(connection)
@@ -56,7 +56,8 @@ for location in locations:
     print('Locations: %s/%s | %s seconds left | %s minutes left | %s hours left' % (
         (scraped_num + scraped_in_this_run), amount_of_locations, secs, mins, hours))
 
-    os.system("scrapy crawl reviews -a location=" + location_url)
+    # os.system("scrapy crawl reviews -a location=" + location_url)
+    os.system("python3 gecko_runner.py " + location_url)
     Logger.log_location(location_url)
     scraped_in_this_run += 1
     # pages_left -= 1

@@ -18,4 +18,7 @@ def parse_json_to_coords(json):
         if "coords" in json[0]:
             coords = json[0]["coords"]
             lat, lng = coords.split(",")
+        if len(json) > 1 and "coords" in json[1]:
+            coords = json[1]["coords"]
+            lat, lng = coords.split(",")
     return lat, lng
