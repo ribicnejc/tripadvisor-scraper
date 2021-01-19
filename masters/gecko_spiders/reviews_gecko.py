@@ -4,7 +4,7 @@ import json
 
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException, StaleElementReferenceException, NoSuchElementException
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 
 from masters import settings
@@ -50,9 +50,11 @@ class GeckoReviewSpider(object):
         Logger.log_it("##########################################")
         self.timer = Timer()
         self.timer.start_timer()
+        options = Options()
+        options.headless = settings.HEADLESS_MODE
 
         # self.driver = gecko_utils.get_gecko_driver()
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox(options=options)
 
         # driver.add_cookie({'name': 'TALanguage', 'value': 'ALL'})
         try:
@@ -60,20 +62,19 @@ class GeckoReviewSpider(object):
         except:
             self.driver.close()
             return
-        self.driver.implicitly_wait(2)
+        # self.driver.implicitly_wait(0.5)
         # self.wait = WebDriverWait(self.driver, 5)
 
     @exception_handler
     def select_all_languages(self):
-        time.sleep(1)
         Logger.log_it("Selecting all languages")
         review_title = self.driver.find_element_by_css_selector("h2._1VLgXtcm")
         y = review_title.location['y']
         self.driver.execute_script("window.scrollTo(0, " + str(y) + ");")
-        time.sleep(0.5)
+        time.sleep(0.2)
         all_languages = self.driver.find_element_by_css_selector('label.bUKZfPPw')
         ActionChains(self.driver).move_to_element(all_languages).click().perform()
-        time.sleep(0.5)
+        time.sleep(1)
 
     @stale_decorator
     def is_all_languages_selected(self):
@@ -98,13 +99,20 @@ class GeckoReviewSpider(object):
         return next_url
 
     def next_page(self):
-        time.sleep(0.3)
-        next_page = self.driver.find_element_by_css_selector('a.ui_button.nav.next.primary')
+        time.sleep(0.2)
+        current_page = self.driver.find_element_by_css_selector('span.pageNum.current.disabled')
+        next_page = self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum')
+        current_page = current_page.text
+        for page in self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum'):
+            if int(page.text) > int(current_page):
+                next_page = page
+                break
+        print(next_page.text)
         y = next_page.location['y']
-        self.driver.execute_script("window.scrollTo(0, " + str(y) + ");")
-        time.sleep(0.3)
+        self.driver.execute_script("window.scrollTo(0, " + str(y - 200) + ");")
+        time.sleep(0.1)
         ActionChains(self.driver).move_to_element(next_page).click().perform()
-        time.sleep(0.6)
+        self.driver.implicitly_wait(0.8)
 
     def scrap_page(self, parent_url, scraped_pages, start_time, root_url):
         time.sleep(0.2)
@@ -171,7 +179,7 @@ class GeckoReviewSpider(object):
             try:
                 review_experience_date = unicode_utils.unicode_date_v3_to_string_number(
                     review.find_element_by_css_selector('div._27JpaCjl span').text.split(':')[1])
-            except IndexError:
+            except Exception:
                 review_experience_date = review_date
 
             review_rate = unicode_utils.unicode_rating_to_string(

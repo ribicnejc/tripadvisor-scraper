@@ -57,7 +57,8 @@ for location in locations:
         (scraped_num + scraped_in_this_run), amount_of_locations, secs, mins, hours))
 
     # os.system("scrapy crawl reviews -a location=" + location_url)
-    os.system("python3 gecko_runner.py " + location_url)
-    Logger.log_location(location_url)
+    status = os.system("python3 gecko_runner.py " + location_url)
+    if status == 0:
+        Logger.log_location(location_url)
     scraped_in_this_run += 1
     # pages_left -= 1
