@@ -81,6 +81,16 @@ class GeckoReviewSpider(object):
         all_languages = self.driver.find_element_by_xpath('//input[@id="filters_detail_language_filterLang_ALL"]')
         return all_languages.is_selected()
 
+    def is_other_page(self):
+        Logger.log_it("Checking if its the other page")
+        try:
+            tmp = self.driver.find_element_by_css_selector('h1._3QHreJVJ').text
+            Logger.log_it("It is. Skipping.")
+            return True
+        except:
+            Logger.log_it("It is not. Scraping.")
+            return False
+
     def has_next_review_page(self):
         Logger.log_it("Checking if next page exists")
         return not (self.get_next_page_url() is None)
@@ -112,7 +122,7 @@ class GeckoReviewSpider(object):
         self.driver.execute_script("window.scrollTo(0, " + str(y - 200) + ");")
         time.sleep(0.1)
         ActionChains(self.driver).move_to_element(next_page).click().perform()
-        self.driver.implicitly_wait(0.8)
+        self.driver.implicitly_wait(1.5)
 
     def scrap_page(self, parent_url, scraped_pages, start_time, root_url):
         time.sleep(0.2)

@@ -16,8 +16,7 @@ def get_location_urls(conn):
     sql = """
         select * from provinces p
         join locations l on p.province_url = l.attraction_parent_url
-        where country = 'ukraine'
-        and region_name = 'Odessa Oblast'
+        where country = 'slovenia'
     """
     cur.execute(sql)
     return cur.fetchall()

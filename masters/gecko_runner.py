@@ -11,6 +11,10 @@ parent_url = sys.argv[1]
 site = GeckoReviewSpider(domain + parent_url)
 site.select_all_languages()
 scraped_pages = 0
+
+if site.is_other_page():
+    site.stop_spider()
+    exit(0)
 while site.has_next_review_page():
     site.scrap_page(parent_url, scraped_pages, start_time, domain)
     scraped_pages += 1
