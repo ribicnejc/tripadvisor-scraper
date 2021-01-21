@@ -122,7 +122,7 @@ class GeckoReviewSpider(object):
         self.driver.execute_script("window.scrollTo(0, " + str(y - 200) + ");")
         time.sleep(0.1)
         ActionChains(self.driver).move_to_element(next_page).click().perform()
-        self.driver.implicitly_wait(1.5)
+        self.driver.implicitly_wait(2)
 
     def scrap_page(self, parent_url, scraped_pages, start_time, root_url):
         time.sleep(0.2)
