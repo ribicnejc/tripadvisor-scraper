@@ -53,7 +53,7 @@ for location in locations:
     secs = pages_left * average_time
     mins = (pages_left * average_time) / 60
     hours = (pages_left * average_time) / 3600
-    print('Locations: %s/%s | %s seconds left | %s minutes left | %s hours left' % (
+    Logger.log_it('Locations: %s/%s | %s seconds left | %s minutes left | %s hours left' % (
         (scraped_num + scraped_in_this_run), amount_of_locations, secs, mins, hours))
 
     # os.system("scrapy crawl reviews -a location=" + location_url)
