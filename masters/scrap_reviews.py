@@ -50,9 +50,9 @@ for location in locations:
     else:
         average_time = (time.time() - start_time) / scraped_in_this_run
     seconds_left = (pages_left - scraped_in_this_run) * average_time
-    secs = pages_left * average_time
-    mins = (pages_left * average_time) / 60
-    hours = (pages_left * average_time) / 3600
+    secs = seconds_left
+    mins = seconds_left / 60
+    hours = seconds_left / 3600
     Logger.log_it('Locations: %s/%s | %s seconds left | %s minutes left | %s hours left' % (
         (scraped_num + scraped_in_this_run), amount_of_locations, secs, mins, hours))
 
