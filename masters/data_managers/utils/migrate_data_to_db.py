@@ -2,7 +2,7 @@ import sqlite3
 import codecs
 import os
 
-db = "../../data/databases/data_ukr.db"
+db = "../../data/databases/data.db"
 
 
 def create_database():
@@ -165,7 +165,7 @@ def fill_reviews(folder):
     conn.commit()
 
 
-create_database()
+# create_database()
 # fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
 # fill_provinces("../scraped_data/data_provinces/cro", "croatia")
 # fill_provinces("../scraped_data/data_provinces/slo", "slovenia")
@@ -179,4 +179,4 @@ create_database()
 # fill_locations("../scraped_data/data_locations/hun")
 # fill_locations("../scraped_data/data_locations/ita")
 
-fill_reviews("../../scraped_data/data_reviews/ukr")
+fill_reviews("../../scraped_data/data_reviews/slo")
