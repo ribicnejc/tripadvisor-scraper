@@ -120,10 +120,11 @@ class GeckoReviewSpider(object):
         print(next_page.text)
         y = next_page.location['y']
         self.driver.execute_script("window.scrollTo(0, " + str(y - 200) + ");")
-        time.sleep(0.1)
+        time.sleep(0.2)
         ActionChains(self.driver).move_to_element(next_page).click().perform()
         self.driver.implicitly_wait(2)
 
+    @stale_decorator
     def scrap_page(self, parent_url, scraped_pages, start_time, root_url):
         time.sleep(0.2)
         review_location_name = unicode_utils.unicode_to_string(
