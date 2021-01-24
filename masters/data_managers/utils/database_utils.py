@@ -11,6 +11,12 @@ def get_review_by_location_name(conn, review_name):
         return row
 
 
+def get_data(conn, sql):
+    cur = conn.cursor()
+    cur.execute(sql)
+    return cur.fetchall()
+
+
 def get_location_urls(conn):
     cur = conn.cursor()
     sql = """

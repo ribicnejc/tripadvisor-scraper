@@ -54,8 +54,20 @@ class GeckoReviewSpider(object):
         options = Options()
         options.headless = settings.HEADLESS_MODE
 
+        options.add_argument("start-maximized")
+        options.add_argument("disable-infobars")
+        options.add_argument("--disable-extensions")
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-application-cache')
+        options.add_argument('--disable-gpu')
+        options.add_argument("--disable-dev-shm-usage")
+
+        firefox_profile = webdriver.FirefoxProfile()
+        firefox_profile.set_preference('permissions.default.image', 2)
+        firefox_profile.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
+
         # self.driver = gecko_utils.get_gecko_driver()
-        self.driver = webdriver.Firefox(options=options)
+        self.driver = webdriver.Firefox(options=options, firefox_profile=firefox_profile)
 
         # driver.add_cookie({'name': 'TALanguage', 'value': 'ALL'})
         try:
@@ -110,20 +122,21 @@ class GeckoReviewSpider(object):
         return next_url
 
     def next_page(self):
-        time.sleep(0.2)
+        # time.sleep(0.2)
         current_page = self.driver.find_element_by_css_selector('span.pageNum.current.disabled')
         next_page = self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum')
         current_page = current_page.text
-        for page in self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum'):
-            if int(page.text) > int(current_page):
+        pages = self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum')
+        for page in pages:
+            page_num = page.text
+            if int(page_num) > int(current_page):
                 next_page = page
                 break
-        print(next_page.text)
         y = next_page.location['y']
         self.driver.execute_script("window.scrollTo(0, " + str(y - 200) + ");")
         time.sleep(0.2)
         ActionChains(self.driver).move_to_element(next_page).click().perform()
-        self.driver.implicitly_wait(0.4)
+        time.sleep(0.4)
 
     @stale_decorator
     def scrap_page(self, parent_url, scraped_pages, start_time, root_url):
@@ -276,6 +289,18 @@ class GeckoReviewSpider(object):
             Logger.log_it('Reviews: %s/%s' % (review_current_page, review_last_page))
         if no_reviews:
             Logger.log_it("Location had no reviews. None values with coords were collected.")
+
+    def continue_scraping(self):
+        # self.driver.execute_script()
+        # https://www.tripadvisor.com/Attraction_Review-g274887-d276817-Reviews-or10760-Hungarian_Parliament_Building-Budapest_Central_Hungary.html
+        self.driver.execute_script("document.getElementByClassName('pageNumbers').")
+
+        script = """
+            var a_element = document.createElement('a');
+            a_element.setAttribute('href', "")
+        """
+
+        # js.executeScript("document.getElementById('myDiv').appendChild(document.createTextNode(' New Element'))")
 
     def refresh_page(self):
         Logger.log_it("Refreshing")

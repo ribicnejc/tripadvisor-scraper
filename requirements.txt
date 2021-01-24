@@ -5,3 +5,4 @@ scrapy-splash
 # infomap
 networkx
 matplotlib
+wordcloud
