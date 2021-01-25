@@ -6,3 +6,4 @@ scrapy-splash
 networkx
 matplotlib
 wordcloud
+pandas
