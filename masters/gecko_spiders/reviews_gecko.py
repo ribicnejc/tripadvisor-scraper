@@ -55,7 +55,7 @@ class GeckoReviewSpider(object):
         options.headless = settings.HEADLESS_MODE
 
         options.add_argument("start-maximized")
-        options.add_argument("disable-infobars")
+        # options.add_argument("disable-infobars")
         options.add_argument("--disable-extensions")
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-application-cache')
@@ -80,6 +80,7 @@ class GeckoReviewSpider(object):
 
     @exception_handler
     def select_all_languages(self):
+        time.sleep(1)
         Logger.log_it("Selecting all languages")
         review_title = self.driver.find_element_by_css_selector("h2._1VLgXtcm")
         y = review_title.location['y']
@@ -103,6 +104,24 @@ class GeckoReviewSpider(object):
         except:
             Logger.log_it("It is not. Scraping.")
             return False
+
+    def is_not_ram_capable(self, parent_url):
+        Logger.log_it("Checking if machine is RAM capable")
+        try:
+            review_last_page = self.driver.find_elements_by_css_selector('div.pageNumbers a.pageNum')[-1].text
+        except Exception as e:
+            review_last_page = "None"
+
+        RAM = 4500
+        max_pages = (RAM / 300) * 100
+        Logger.log_it("Performance: Pages limit %s | Pages to scrap %s" % (max_pages, review_last_page))
+        if review_last_page is None or review_last_page == "None":
+            return False
+        if int(review_last_page) > max_pages:
+            Logger.log_it("Skipping page")
+            Logger.log_performance_location(parent_url)
+            return True
+        return False
 
     def has_next_review_page(self):
         Logger.log_it("Checking if next page exists")

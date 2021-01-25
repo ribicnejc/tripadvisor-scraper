@@ -100,7 +100,7 @@ AUTOTHROTTLE_MAX_DELAY = 10
 
 #############################################################
 # Custom settings
-HEADLESS_MODE = True
+HEADLESS_MODE = False
 COUNTRY = "hun"  # aus|cro|hun|ita|slo|ukr
 
 SPLASH_URL = 'http://192.168.99.100:8050'

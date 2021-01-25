@@ -32,3 +32,11 @@ class Logger(object):
             f.write(text + "\n")
             print("Added to scraped locations: " + text)
             f.close()
+
+    @staticmethod
+    def log_performance_location(text):
+        filename = 'logs/to_scrap.log'
+        with open(filename, 'a+') as f:
+            f.write(text + "\n")
+            print("Added to performance locations: " + text)
+            f.close()
