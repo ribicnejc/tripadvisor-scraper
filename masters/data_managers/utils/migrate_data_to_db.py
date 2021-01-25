@@ -1,6 +1,9 @@
 import sqlite3
 import codecs
 import os
+import zipfile
+
+from masters.utils import unicode_utils
 
 db = "../../data/databases/data.db"
 
@@ -165,18 +168,21 @@ def fill_reviews(folder):
     conn.commit()
 
 
-# create_database()
-# fill_provinces("../scraped_data/data_provinces/ukr", "ukraine")
-# fill_provinces("../scraped_data/data_provinces/cro", "croatia")
-# fill_provinces("../scraped_data/data_provinces/slo", "slovenia")
-# fill_provinces("../scraped_data/data_provinces/hun", "hungary")
-# fill_provinces("../scraped_data/data_provinces/aus", "austria")
-# fill_provinces("../scraped_data/data_provinces/ita", "italy")
-# fill_locations("../scraped_data/data_locations/slo")
-# fill_locations("../scraped_data/data_locations/cro")
-# fill_locations("../scraped_data/data_locations/ukr")
-# fill_locations("../scraped_data/data_locations/aus")
-# fill_locations("../scraped_data/data_locations/hun")
-# fill_locations("../scraped_data/data_locations/ita")
+def unzip_fill_reviews(file):
+    conn = create_connection(db)
+    counter = 0
+    with zipfile.ZipFile(file) as z:
+        for filename in z.namelist():
+            if not os.path.isdir(filename):
+                # read the file
+                with z.open(filename) as f:
+                    for line in f:
+                        review = unicode_utils.byte_to_string(line)
+                        print(counter)
+                        counter += 1
+                        insert_review(conn, tuple(review.split(", ")))
+    conn.commit()
 
-fill_reviews("../../scraped_data/data_reviews/slo")
+
+# create_database()
+unzip_fill_reviews("../../data/reviews/reviews_hun_1.zip")
