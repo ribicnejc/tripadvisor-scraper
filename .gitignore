@@ -4,3 +4,4 @@ workspace.xml
 venv/
 data.db
 data.old.db
+*.zip

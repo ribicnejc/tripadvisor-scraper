@@ -185,4 +185,4 @@ def unzip_fill_reviews(file):
 
 
 # create_database()
-unzip_fill_reviews("../../data/reviews/reviews_hun_1.zip")
+unzip_fill_reviews("../../data/reviews/reviews_cro_1.zip")
