@@ -8,7 +8,7 @@ sys.path.append("..")
 import masters
 from scrapy import cmdline
 from masters.utils.logger_utils import Logger
-from masters.utils.file_utils import location_scraped
+from masters.utils.file_utils import location_scraped, location_overkill
 from masters.data_managers.utils import database_utils
 
 # print("Scraper started...")
@@ -39,7 +39,11 @@ scraped_in_this_run = 0
 for location in locations:
     location_url = location[7]
     is_scraped = location_scraped(location_url)
-    if not location_url or location_url == "attraction_url" or is_scraped:
+    is_overkill = location_overkill(location_url)
+    if not location_url or location_url == "attraction_url" or is_scraped or is_overkill:
+        if is_overkill:
+            print("Location overkill: " + location_url)
+            continue
         if location_scraped:
             print("Location already scraped: " + location_url)
             continue

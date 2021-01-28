@@ -15,6 +15,13 @@ def location_scraped(string):
         return is_scraped
 
 
+def location_overkill(string):
+    filename = 'logs/to_scrap.log'
+    with open(filename) as f:
+        is_overkill = string in f.read()
+        f.close()
+        return is_overkill
+
 def get_last_scraped_page_url(review_location_name, url):
     # https://www.tripadvisor.com/Attraction_Review-g60763-d105127-Reviews-or74990-Central_Park-New_York_City_New_York.html#REVIEWS
     # https://www.tripadvisor.com/Attraction_Review-g60763-d105127-Reviews-Central_Park-New_York_City_New_York.html#REVIEWS
