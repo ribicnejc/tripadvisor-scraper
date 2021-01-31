@@ -8,12 +8,37 @@ from reviews
          join locations l on l.attraction_url = reviews.parent_url
          join provinces p on p.province_url = l.attraction_parent_url
 where country = 'slovenia'
-  and reviews.review_date > 20190101
-  and reviews.review_date < 20200101
+  and reviews.review_date > 20200101
+  and reviews.review_date < 20210101
 order by user_link, review_experience_date, review_id
     """
 connection = database_utils.create_connection("../data/databases/data.db")
 data = database_utils.get_data(connection, sql)
+
+
+def get_color(region_name):
+    if region_name == "Lower Carniola Region":
+        return "#c62828"
+    if region_name == "Inner Carniola Region":
+        return "#ad1457"
+    if region_name == "Styria Region":
+        return "#9c27b0"
+    if region_name == "Prekmurje Region":
+        return "#673ab7"
+    if region_name == "Slovenian Littoral Region":
+        return "#3f51b5"
+    if region_name == "Upper Carniola Region":
+        return "#2196f3"
+    if region_name == "Carnithia Region":
+        return "#03a9f4"
+    if region_name == "Slovenia Istria":
+        return "#00bcd4"
+    if region_name == "Slovenia":
+        return "#009688"
+    if region_name == "Kras":
+        return "#4caf50"
+    else:
+        return "#000000"
 
 
 class Node(object):
@@ -32,19 +57,10 @@ class Node(object):
     id %s
     label "%s"
     group %s
-    fill "#%s2c771"
-    border "#8e9f5a"
+    fill "%s"
+    border "%s"
   ]
-""" % (self.node_id, self.province_name, self.group_id, self.group_id)
-
-        # node
-        # [
-        #     id 43
-        #     label "Woman2"
-        #     group 5
-        #     fill "#b2c771"
-        #     border "#8e9f5a"
-        # ]
+""" % (self.node_id, self.province_name.replace(" attractions", ""), self.group_id, get_color(self.region_name), get_color(self.region_name))
 
 
 class Edge(object):
@@ -54,21 +70,13 @@ class Edge(object):
         self.source = source
 
     def get_edge(self):
-        tmp = """  edge
+        return """  edge
   [
     source %s 
     target %s 
     value %s 
   ]
-""" % (self.source, self.target,self.value)
-
-        return tmp
-        # return "  edge\n" \
-        #        "  [\n" \
-        #        "    source %s" \
-        #        "    target %s" \
-        #        "    value %s" \
-        #        "  ]\n" % (self.source, self.target, self.value)
+""" % (self.source, self.target, self.value)
 
 
 # edge
@@ -138,6 +146,30 @@ for key, value in edges_lib.items():
     edge_obj = Edge(node_ids[province_1], node_ids[province_2], value)
     edges.append(edge_obj)
 
+filtered_nodes = []
+for edge in edges:
+    filtered_nodes.append(edge.target)
+    filtered_nodes.append(edge.source)
+
+sorted_edges = sorted(edges, key=lambda x: x.value, reverse=True)
+limited_edges = []
+limited_nodes = []
+region_hash = {}
+provinces_in_regions = []
+for edge in sorted_edges:
+    it1 = list(filter(lambda x: x.node_id == edge.source, nodes))[0]
+    try:
+        val = region_hash[it1.region_name]
+        if val < 10 and it1.province_name not in provinces_in_regions:
+            region_hash[it1.region_name] = val + 1
+            limited_nodes.append(it1)
+            provinces_in_regions.append(it1.province_name)
+            it2 = list(filter(lambda x: x.node_id == edge.target, nodes))[0]
+            limited_nodes.append(it2)
+            limited_edges.append(edge)
+    except:
+        region_hash[it1.region_name] = 1
+
 filename = 'arcdiagram_slo.gml'
 unique_dist = []
 with open(filename, 'w') as f:
@@ -146,12 +178,12 @@ with open(filename, 'w') as f:
     f.write('graph\n')
     f.write('[\n')
     f.write('  directed 0\n')
-    for node in nodes:
+    for node in limited_nodes:
         if node.node_id not in unique_dist:
             f.write(node.get_node())
             unique_dist.append(node.node_id)
-    for edges in edges:
-        f.write(edges.get_edge())
+    for edge in limited_edges:
+        f.write(edge.get_edge())
     f.write(']')
     f.close()
 

@@ -15,7 +15,7 @@ library(arcdiagram)
 library(dplyr)
 # location of 'gml' file
 mis_file = "/home/nejc/PycharmProjects/tripadvisor-scraper/masters/analyser/arcdiagram_slo.gml"
-#mis_file = "/home/nejc/PycharmProjects/tripadvisor-scraper/masters/analyser/lesmiserables.gml"
+mis_file = "/home/nejc/PycharmProjects/tripadvisor-scraper/masters/analyser/lesmiserables.gml"
 # read 'gml' file
 mis_graph = read.graph(mis_file, format="gml")
 
@@ -44,8 +44,10 @@ y = arrange(x, desc(vgroups), desc(degrees))
 new_ord = y$ind
 
 # plot arc diagram
+#labels=vlabels
 arcplot(edgelist, ordering=new_ord, labels=vlabels, cex.labels=0.8,
         show.nodes=TRUE, col.nodes=vborders, bg.nodes=vfill,
         cex.nodes = log(degrees)+0.5, pch.nodes=21,
         lwd.nodes = 2, line=-0.5,
-        col.arcs = hsv(0, 0, 0.2, 0.25), lwd.arcs = 1.5 * values)
+        col.arcs = hsv(0, 0, 0.2, 0.25), lwd.arcs = 1.5 * (values / 3.5))
+
