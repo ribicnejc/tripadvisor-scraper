@@ -8,8 +8,8 @@ from reviews
          join locations l on l.attraction_url = reviews.parent_url
          join provinces p on p.province_url = l.attraction_parent_url
 where country = 'slovenia'
-  and reviews.review_date > 20200101
-  and reviews.review_date < 20210101
+  and reviews.review_date > 20190101
+  and reviews.review_date < 20200101
 order by user_link, review_experience_date, review_id
     """
 connection = database_utils.create_connection("../data/databases/data.db")
