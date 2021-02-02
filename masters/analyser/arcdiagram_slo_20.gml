@@ -9,7 +9,7 @@ graph
     label "Bled"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -17,7 +17,7 @@ graph
     label "Ljubljana"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -25,7 +25,7 @@ graph
     label "Izola"
     group 1
     fill "#000000"
-    border "#000000"
+    border "#808080"
   ]
   node 
   [
@@ -33,7 +33,7 @@ graph
     label "Piran"
     group 1
     fill "#000000"
-    border "#000000"
+    border "#808080"
   ]
   node 
   [
@@ -41,7 +41,7 @@ graph
     label "Bohinjsko Jezero"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -49,7 +49,7 @@ graph
     label "Kranjska Gora"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -57,7 +57,7 @@ graph
     label "Postojna"
     group 6
     fill "#ad1457"
-    border "#ad1457"
+    border "#808080"
   ]
   node 
   [
@@ -65,7 +65,7 @@ graph
     label "Podcetrtek"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -73,7 +73,7 @@ graph
     label "Kobarid"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -81,7 +81,7 @@ graph
     label "Cerkno"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -89,7 +89,7 @@ graph
     label "Maribor"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -97,7 +97,7 @@ graph
     label "Radovljica"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -105,7 +105,7 @@ graph
     label "Solcava"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -113,7 +113,7 @@ graph
     label "Portoroz"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -121,7 +121,7 @@ graph
     label "Nova Gorica"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -129,7 +129,7 @@ graph
     label "Koper"
     group 1
     fill "#000000"
-    border "#000000"
+    border "#808080"
   ]
   node 
   [
@@ -137,7 +137,7 @@ graph
     label "Zgornje Gorje"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -145,7 +145,7 @@ graph
     label "Bovec"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -153,7 +153,7 @@ graph
     label "Kranj"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -161,7 +161,7 @@ graph
     label "Marezige"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -169,7 +169,7 @@ graph
     label "Zalec"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -177,7 +177,7 @@ graph
     label "Stahovica"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -185,7 +185,7 @@ graph
     label "Tolmin"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -193,7 +193,7 @@ graph
     label "Ribnica"
     group 7
     fill "#c62828"
-    border "#c62828"
+    border "#808080"
   ]
   node 
   [
@@ -201,7 +201,7 @@ graph
     label "Gozd Martuljek"
     group 2
     fill "#2196f3"
-    border "#2196f3"
+    border "#808080"
   ]
   node 
   [
@@ -209,7 +209,7 @@ graph
     label "Lasko"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -217,7 +217,7 @@ graph
     label "Soca"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -225,7 +225,7 @@ graph
     label "Skocjan"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -233,7 +233,7 @@ graph
     label "Vipava"
     group 6
     fill "#ad1457"
-    border "#ad1457"
+    border "#808080"
   ]
   node 
   [
@@ -241,7 +241,7 @@ graph
     label "Brezice"
     group 7
     fill "#c62828"
-    border "#c62828"
+    border "#808080"
   ]
   node 
   [
@@ -249,7 +249,7 @@ graph
     label "Strunjan"
     group 3
     fill "#3f51b5"
-    border "#3f51b5"
+    border "#808080"
   ]
   node 
   [
@@ -257,7 +257,7 @@ graph
     label "Zgornja Kungota"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -265,7 +265,7 @@ graph
     label "Ptuj"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -273,7 +273,7 @@ graph
     label "Celje"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -281,7 +281,7 @@ graph
     label "Lendava"
     group 5
     fill "#673ab7"
-    border "#673ab7"
+    border "#808080"
   ]
   node 
   [
@@ -289,7 +289,7 @@ graph
     label "Beltinci"
     group 5
     fill "#673ab7"
-    border "#673ab7"
+    border "#808080"
   ]
   node 
   [
@@ -297,7 +297,7 @@ graph
     label "Novo Mesto"
     group 7
     fill "#c62828"
-    border "#c62828"
+    border "#808080"
   ]
   node 
   [
@@ -305,7 +305,7 @@ graph
     label "Rogla"
     group 4
     fill "#9c27b0"
-    border "#9c27b0"
+    border "#808080"
   ]
   node 
   [
@@ -313,7 +313,7 @@ graph
     label "Crnomelj"
     group 7
     fill "#c62828"
-    border "#c62828"
+    border "#808080"
   ]
   node 
   [
@@ -321,7 +321,7 @@ graph
     label "Semic"
     group 7
     fill "#c62828"
-    border "#c62828"
+    border "#808080"
   ]
   node 
   [
@@ -329,7 +329,7 @@ graph
     label "Grahovo"
     group 6
     fill "#ad1457"
-    border "#ad1457"
+    border "#808080"
   ]
   node 
   [
@@ -337,7 +337,7 @@ graph
     label "Stari Trg pri Lozu"
     group 6
     fill "#ad1457"
-    border "#ad1457"
+    border "#808080"
   ]
   node 
   [
@@ -345,7 +345,7 @@ graph
     label "Zunici"
     group 7
     fill "#c62828"
-    border "#c62828"
+    border "#808080"
   ]
   node 
   [
@@ -353,7 +353,7 @@ graph
     label "Grad"
     group 5
     fill "#673ab7"
-    border "#673ab7"
+    border "#808080"
   ]
   node 
   [
@@ -361,7 +361,7 @@ graph
     label "Murska Sobota"
     group 5
     fill "#673ab7"
-    border "#673ab7"
+    border "#808080"
   ]
   node 
   [
@@ -369,7 +369,7 @@ graph
     label "Moravske Toplice"
     group 5
     fill "#673ab7"
-    border "#673ab7"
+    border "#808080"
   ]
   edge
   [

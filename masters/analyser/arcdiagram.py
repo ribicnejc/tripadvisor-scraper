@@ -8,8 +8,8 @@ from reviews
          join locations l on l.attraction_url = reviews.parent_url
          join provinces p on p.province_url = l.attraction_parent_url
 where country = 'slovenia'
-  and reviews.review_date > 20190101
-  and reviews.review_date < 20200101
+  and reviews.review_date > 20200101
+  and reviews.review_date < 20210101
 order by user_link, review_experience_date, review_id
     """
 connection = database_utils.create_connection("../data/databases/data.db")
@@ -60,7 +60,7 @@ class Node(object):
     fill "%s"
     border "%s"
   ]
-""" % (self.node_id, self.province_name.replace(" attractions", ""), self.group_id, get_color(self.region_name), get_color(self.region_name))
+""" % (self.node_id, self.province_name.replace(" attractions", ""), self.group_id, get_color(self.region_name), "#808080")
 
 
 class Edge(object):
@@ -170,7 +170,7 @@ for edge in sorted_edges:
     except:
         region_hash[it1.region_name] = 1
 
-filename = 'arcdiagram_slo.gml'
+filename = 'arcdiagram_slo_20.gml'
 unique_dist = []
 with open(filename, 'w') as f:
     f.write('Creator "igraph version 0.6 Wed Jan 30 10:28:57 2013"\n')
