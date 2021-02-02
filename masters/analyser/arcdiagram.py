@@ -18,25 +18,50 @@ data = database_utils.get_data(connection, sql)
 
 def get_color(region_name):
     if region_name == "Lower Carniola Region":
-        return "#c62828"
+        return "#9575cd"  # 7e57c2
     if region_name == "Inner Carniola Region":
-        return "#ad1457"
+        return "#7986cb"  # 5c6bc0
     if region_name == "Styria Region":
-        return "#9c27b0"
+        return "#4db6ac"  # 26a69a
     if region_name == "Prekmurje Region":
-        return "#673ab7"
+        return "#81c784"  # 66bb6a
     if region_name == "Slovenian Littoral Region":
-        return "#3f51b5"
+        return "#dce775"  # d4e157
     if region_name == "Upper Carniola Region":
-        return "#2196f3"
-    if region_name == "Carnithia Region":
-        return "#03a9f4"
-    if region_name == "Slovenia Istria":
-        return "#00bcd4"
+        return "#ffd54f"  # ffca28
+    if region_name == "Carinthia Region":
+        return "#ff8a65"  # ff7043
+    if region_name == "Slovenian Istria":
+        return "#bcaaa4"  # a1887f
     if region_name == "Slovenia":
-        return "#009688"
+        return "#90a4ae"  # 78909c
     if region_name == "Kras":
-        return "#4caf50"
+        return "#64b5f6"  # 42a5f5
+    else:
+        return "#000000"
+
+
+def get_border_color(region_name):
+    if region_name == "Lower Carniola Region":
+        return "#7e57c2"
+    if region_name == "Inner Carniola Region":
+        return "#5c6bc0"
+    if region_name == "Styria Region":
+        return "#26a69a"
+    if region_name == "Prekmurje Region":
+        return "#66bb6a"
+    if region_name == "Slovenian Littoral Region":
+        return "#d4e157"
+    if region_name == "Upper Carniola Region":
+        return "#ffca28"
+    if region_name == "Carinthia Region":
+        return "#ff7043"
+    if region_name == "Slovenian Istria":
+        return "#a1887f"
+    if region_name == "Slovenia":
+        return "#78909c"
+    if region_name == "Kras":
+        return "#42a5f5"
     else:
         return "#000000"
 
@@ -60,7 +85,8 @@ class Node(object):
     fill "%s"
     border "%s"
   ]
-""" % (self.node_id, self.province_name.replace(" attractions", ""), self.group_id, get_color(self.region_name), "#808080")
+""" % (self.node_id, self.province_name.replace(" attractions", ""), self.group_id, get_color(self.region_name),
+       get_border_color(self.region_name))
 
 
 class Edge(object):
@@ -127,12 +153,19 @@ for line in data:
     if username == usr_1:
         province_2 = province_name
         try:
-            # TODO trip direction issue
-            val = edges_lib[province_1 + "," + province_2]
-            val += 1
-            edges_lib[province_1 + "," + province_2] = val
+            if province_1 < province_2:
+                val = edges_lib[province_1 + "," + province_2]
+                val += 1
+                edges_lib[province_1 + "," + province_2] = val
+            else:
+                val = edges_lib[province_2 + "," + province_1]
+                val += 1
+                edges_lib[province_2 + "," + province_1] = val
         except:
-            edges_lib[province_1 + "," + province_2] = 1
+            if province_1 < province_2:
+                edges_lib[province_1 + "," + province_2] = 1
+            else:
+                edges_lib[province_2 + "," + province_1] = 1
         province_2 = None
         continue
     else:
@@ -160,7 +193,7 @@ for edge in sorted_edges:
     it1 = list(filter(lambda x: x.node_id == edge.source, nodes))[0]
     try:
         val = region_hash[it1.region_name]
-        if val < 10 and it1.province_name not in provinces_in_regions:
+        if val < 8 and it1.province_name not in provinces_in_regions:
             region_hash[it1.region_name] = val + 1
             limited_nodes.append(it1)
             provinces_in_regions.append(it1.province_name)
