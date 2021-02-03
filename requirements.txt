@@ -7,3 +7,4 @@ networkx
 matplotlib
 wordcloud
 pandas
+seaborn

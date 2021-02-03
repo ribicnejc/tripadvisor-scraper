@@ -12,7 +12,7 @@ where country = 'slovenia'
   and reviews.review_date < 20210101
 order by user_link, review_experience_date, review_id
     """
-connection = database_utils.create_connection("../data/databases/data.db")
+connection = database_utils.create_connection("../../data/databases/data.db")
 data = database_utils.get_data(connection, sql)
 
 
