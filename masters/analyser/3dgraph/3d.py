@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from masters.data_managers.utils import database_utils
 from masters import settings
 import math
-
+#TODO naredi 2D ker je 3D nepregledno
 # Get data
 sql = """
 select location_lat as x, location_lng as y, count(attraction_name) as z
