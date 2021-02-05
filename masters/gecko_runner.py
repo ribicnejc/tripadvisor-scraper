@@ -15,9 +15,9 @@ scraped_pages = 0
 if site.is_other_page():
     site.stop_spider()
     exit(0)
-if site.is_not_ram_capable(parent_url):
-    site.stop_spider()
-    exit(1)
+#if site.is_not_ram_capable(parent_url):
+#    site.stop_spider()
+#    exit(1)
 while site.has_next_review_page():
     site.scrap_page(parent_url, scraped_pages, start_time, domain)
     scraped_pages += 1
