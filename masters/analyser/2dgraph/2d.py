@@ -29,11 +29,10 @@ def graph(year_from, year_to, country, color):
     sns.set_theme()
     # Custom the inside plot: options are: “scatter” | “reg” | “resid” | “kde” | “hex”
     sns.jointplot(x=dset['Lat'], y=dset['Lng'], kind='scatter', color=color)
-    plt.show()
     plt.savefig(f'{country}-{year_from}-scatter.png'.format(country=country, year_from=year_from))
     sns.jointplot(x=dset['Lat'], y=dset['Lng'], kind='kde', color=color)
-    plt.show()
     plt.savefig(f'{country}-{year_from}-kde.png'.format(country=country, year_from=year_from))
+    plt.show()
 
 
 # 2980b9

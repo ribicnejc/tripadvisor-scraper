@@ -182,7 +182,8 @@ def unzip_fill_reviews(file):
                         counter += 1
                         insert_review(conn, tuple(review.split(", ")))
     conn.commit()
+    conn.close()
 
 
 # create_database()
-unzip_fill_reviews("../../data/reviews/reviews_aus_2.zip")
+unzip_fill_reviews("../../data/reviews/reviews_cro_1.zip")
