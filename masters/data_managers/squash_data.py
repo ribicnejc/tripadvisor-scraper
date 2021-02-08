@@ -4,7 +4,7 @@ from masters import settings
 
 # locations = "../data/locations/locations_" + settings.COUNTRY + ".zip"
 # provinces = "../data/provinces/provinces_" + settings.COUNTRY + ".zip"
-reviews = "../data/reviews/reviews_" + settings.COUNTRY + "_7.zip"
+reviews = "../data/reviews/reviews_" + settings.COUNTRY + "_8.zip"
 
 # with ZipFile(provinces, 'w') as zipProvinces:
 #     root = "../scraped_data/data_provinces/" + settings.COUNTRY
