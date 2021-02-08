@@ -1,43 +1,75 @@
-# TODO naredi graf, frekvenčne porazdelitve števila komentarjev po mesecih
-# TODO frekvenca med datumom objave in datumom izkušnje
+# naredi graf, frekvenčne porazdelitve števila komentarjev po mesecih
+# frekvenca med datumom objave in datumom izkušnje
 
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# df = sns.load_dataset('iris')
+from masters.data_managers.utils import database_utils
 
-# plot
-f, axes = plt.subplots(1, 1, figsize=(7, 7), sharex=True)
-
-# Control the number of bins
-
-d = {'Mesec': ["Jan", "Feb", "Feb", "Mar"]}
-df = pd.DataFrame(data=d)
-# sns.distplot(df, label="2020")
-tips = sns.load_dataset("tips")
-
-penguins = sns.load_dataset("penguins")
-sns.histplot(data=df, x="Mesec", kde=True)
-plt.legend()
-plt.show()
-
-# sns.distplot(df["sepal_length"], color="skyblue", ax=axes[0, 0])
-# sns.distplot(df["sepal_width"], color="olive", ax=axes[0, 1])
-# sns.distplot(df["petal_length"], color="gold", ax=axes[1, 0])
-# sns.distplot(df["petal_width"], color="teal", ax=axes[1, 1])
-# plt.show()
-
-# Import library and dataset
-# import seaborn as sns
-# import matplotlib.pyplot as plt
 
 # df = sns.load_dataset('iris')
+def map_date(date):
+    month = date[4:6]
+    if month == "01":
+        return "Jan"
+    if month == "02":
+        return "Feb"
+    if month == "03":
+        return "Mar"
+    if month == "04":
+        return "Apr"
+    if month == "05":
+        return "May"
+    if month == "06":
+        return "Jun"
+    if month == "07":
+        return "Jul"
+    if month == "08":
+        return "Aug"
+    if month == "09":
+        return "Sep"
+    if month == "10":
+        return "Oct"
+    if month == "11":
+        return "Nov"
+    if month == "12":
+        return "Dec"
 
-# Method 1: on the same Axis
-# sns.distplot(df["sepal_length"], color="skyblue", label="Sepal Length")
-# sns.distplot(df["sepal_width"], color="red", label="Sepal Width")
 
-# Make default histogram of sepal length
-# sns.distplot(df["sepal_length"])
-# sns.plt.show()
+def get_monthly_visits(country, year_from, year_to):
+    sql = """
+        select review_experience_date, review_date
+        from provinces
+                 join locations l on provinces.province_url = l.attraction_parent_url
+                 join reviews r on l.attraction_url = r.parent_url
+        where country = '{country}'
+          and r.review_date > {year_from}
+          and r.review_date < {year_to}
+        order by review_date
+            """.format(country=country, year_from=year_from, year_to=year_to)
+    connection = database_utils.create_connection("../../data/databases/data_sachi.db")
+    data = database_utils.get_data(connection, sql)
+
+    month_arr = []
+    type_arr = []
+    for el in data:
+        month_arr.append(map_date(el[1]))
+        type_arr.append("Date of comment")
+
+    for el in data:
+        month_arr.append(map_date(el[0]))
+        type_arr.append("Date of experience")
+
+    f, axes = plt.subplots(1, 1, figsize=(7, 7), sharex=True)
+    d = {'Month': month_arr, 'Type': type_arr}
+    df = pd.DataFrame(data=d)
+    # sns.distplot(df, label="2020")
+    sns.histplot(data=df, x="Month", hue="Type", kde=True,
+                 multiple="dodge")
+    plt.savefig(f'{country}-{year_from}.png'.format(country=country, year_from=year_from))
+    plt.show()
+
+
+get_monthly_visits('slovenia', 20200100, 20210100)
+get_monthly_visits('slovenia', 20190100, 20200100)
