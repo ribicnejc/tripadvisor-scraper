@@ -5,7 +5,7 @@ import zipfile
 
 from masters.utils import unicode_utils
 
-db = "../../data/databases/data.db"
+db = "../../data/databases/data_sachi.db"
 
 
 def create_database():
@@ -136,35 +136,37 @@ def fill_provinces(folder, country):
     conn.commit()
 
 
-def fill_locations(folder):
+def unzip_fill_provinces(file, country):
     conn = create_connection(db)
     counter = 0
-    for file in os.listdir(folder):
-        file = folder + "/" + file
-        with open(file) as f:
-            line = f.readline()
-            while line:
-                line = line.replace("\n", "")
-                print(counter)
-                counter += 1
-                insert_location(conn, tuple(line.split(", ")))
-                line = f.readline()
+    with zipfile.ZipFile(file) as z:
+        for filename in z.namelist():
+            if not os.path.isdir(filename):
+                # read the file
+                with z.open(filename) as f:
+                    for line in f:
+                        province = unicode_utils.byte_to_string(line)
+                        province = province.replace("\n", "")
+                        print(counter)
+                        counter += 1
+                        insert_province(conn, tuple(province.split(", ")) + (country,))
     conn.commit()
 
 
-def fill_reviews(folder):
+def unzip_fill_locations(file):
     conn = create_connection(db)
     counter = 0
-    for file in os.listdir(folder):
-        file = folder + "/" + file
-        with open(file) as f:
-            line = f.readline()
-            while line:
-                line = line.replace("\n", "")
-                print(counter)
-                counter += 1
-                insert_review(conn, tuple(line.split(", ")))
-                line = f.readline()
+    with zipfile.ZipFile(file) as z:
+        for filename in z.namelist():
+            if not os.path.isdir(filename):
+                # read the file
+                with z.open(filename) as f:
+                    for line in f:
+                        location = unicode_utils.byte_to_string(line)
+                        location = location.replace("\n", "")
+                        print(counter)
+                        counter += 1
+                        insert_location(conn, tuple(location.split(", ")))
     conn.commit()
 
 
@@ -178,12 +180,42 @@ def unzip_fill_reviews(file):
                 with z.open(filename) as f:
                     for line in f:
                         review = unicode_utils.byte_to_string(line)
+                        review = review.replace("\n", "")
                         print(counter)
                         counter += 1
                         insert_review(conn, tuple(review.split(", ")))
     conn.commit()
-    conn.close()
 
 
 # create_database()
-unzip_fill_reviews("../../data/reviews/reviews_cro_1.zip")
+def bulk_provinces():
+    """Fill provinces"""
+    unzip_fill_provinces("../../data/provinces/provinces_aus.zip", "austria")
+    unzip_fill_provinces("../../data/provinces/provinces_cro.zip", "croatia")
+    unzip_fill_provinces("../../data/provinces/provinces_hun.zip", "hungary")
+    unzip_fill_provinces("../../data/provinces/provinces_ita.zip", "italy")
+    unzip_fill_provinces("../../data/provinces/provinces_slo.zip", "slovenia")
+
+
+def bulk_locations():
+    """Fill locations"""
+    unzip_fill_locations("../../data/locations/locations_aus.zip")
+    unzip_fill_locations("../../data/locations/locations_cro.zip")
+    unzip_fill_locations("../../data/locations/locations_hun.zip")
+    unzip_fill_locations("../../data/locations/locations_ita.zip")
+    unzip_fill_locations("../../data/locations/locations_slo.zip")
+
+
+def bulk_reviews():
+    """Fill reviews"""
+    unzip_fill_reviews("../../data/reviews/reviews_slo.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_cro_1.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_hun_1.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_hun_2.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_aus_1.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_aus_2.zip")
+
+
+# bulk_locations()
+bulk_reviews()
+# unzip_fill_reviews("../../data/reviews/reviews_cro_1.zip")
