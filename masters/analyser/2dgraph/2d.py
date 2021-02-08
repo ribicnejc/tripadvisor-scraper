@@ -15,7 +15,7 @@ def graph(year_from, year_to, country, color):
       and r.review_date > {year_from}
       and r.review_date < {year_to}
         """.format(country=country, year_from=year_from, year_to=year_to)
-    connection = database_utils.create_connection("../../data/databases/data.db")
+    connection = database_utils.create_connection("../../data/databases/data_sachi.db")
     data = database_utils.get_data(connection, sql)
 
     x_arr = []
