@@ -19,7 +19,7 @@ from masters.data_managers.utils import database_utils
 # #
 # exit(0)
 
-connection = database_utils.create_connection("data/databases/data.db")
+connection = database_utils.create_connection("data/databases/data_sachi.db")
 locations = database_utils.get_location_urls(connection)
 
 f = open("logs/scraped_locations.log", "r")
