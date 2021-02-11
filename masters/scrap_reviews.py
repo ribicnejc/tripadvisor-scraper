@@ -35,17 +35,18 @@ amount_of_locations = len(locations)
 pages_left = amount_of_locations - scraped_num
 start_time = time.time()
 scraped_in_this_run = 0
-
+counter = 0
 for location in locations:
+    counter += 1
     location_url = location[7]
     is_scraped = location_scraped(location_url)
     is_overkill = location_overkill(location_url)
     if not location_url or location_url == "attraction_url" or is_scraped or is_overkill:
         if is_overkill:
-            print("Location overkill: " + location_url)
+            print(str(counter) + ": Location overkill: " + location_url)
             continue
         if location_scraped:
-            print("Location already scraped: " + location_url)
+            print(str(counter) + ": Location already scraped: " + location_url)
             continue
 
     time_stamp = time.time()
