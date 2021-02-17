@@ -31,7 +31,7 @@ while True:
         f.close()
         break
 
-amount_of_locations = len(locations)
+amount_of_locations = len(locations) + 40000
 pages_left = amount_of_locations - scraped_num
 start_time = time.time()
 scraped_in_this_run = 0
