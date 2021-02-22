@@ -23,7 +23,7 @@ def get_location_urls(conn):
         select * from provinces p
         join locations l on p.province_url = l.attraction_parent_url
         where country = 'italy'
-        limit 20000 offset 40000
+        limit 10000 offset 50000
     """
     cur.execute(sql)
     return cur.fetchall()
