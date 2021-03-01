@@ -5,7 +5,7 @@ import zipfile
 
 from masters.utils import unicode_utils
 
-db = "../../data/databases/data_sachi.db"
+db = "../../data/databases/slo_aus_ita_hun_cro.db"
 
 
 def create_database():
@@ -181,7 +181,7 @@ def unzip_fill_reviews(file):
                     for line in f:
                         review = unicode_utils.byte_to_string(line)
                         review = review.replace("\n", "")
-                        print(counter)
+                        print(str(counter) + " " + file)
                         counter += 1
                         insert_review(conn, tuple(review.split(", ")))
     conn.commit()
@@ -208,14 +208,42 @@ def bulk_locations():
 
 def bulk_reviews():
     """Fill reviews"""
+    # SLO
     unzip_fill_reviews("../../data/reviews/reviews_slo.zip")
+    # CRO
     unzip_fill_reviews("../../data/reviews/reviews_cro_1.zip")
+    # HUN
     unzip_fill_reviews("../../data/reviews/reviews_hun_1.zip")
     unzip_fill_reviews("../../data/reviews/reviews_hun_2.zip")
+    # AUS
     unzip_fill_reviews("../../data/reviews/reviews_aus_1.zip")
     unzip_fill_reviews("../../data/reviews/reviews_aus_2.zip")
+    # ITA
+    unzip_fill_reviews("../../data/reviews/reviews_ita_1.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_2.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_3.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_4.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_5.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_6.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_7.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_8.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_9.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_10.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_11.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_12.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_13.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_14.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_16.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_17.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_18.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_19.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_ita_30x.zip")
+    # OVERKILL
+    unzip_fill_reviews("../../data/reviews/reviews_overkill_1.zip")
+    unzip_fill_reviews("../../data/reviews/reviews_overkill_2.zip")
 
 
-# bulk_locations()
+create_database()
+bulk_provinces()
+bulk_locations()
 bulk_reviews()
-# unzip_fill_reviews("../../data/reviews/reviews_cro_1.zip")

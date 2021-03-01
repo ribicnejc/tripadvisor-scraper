@@ -15,7 +15,7 @@ def graph(year_from, year_to, country, color):
       and r.review_date > {year_from}
       and r.review_date < {year_to}
         """.format(country=country, year_from=year_from, year_to=year_to)
-    connection = database_utils.create_connection("../../data/databases/data_sachi.db")
+    connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro.db")
     data = database_utils.get_data(connection, sql)
 
     x_arr = []
@@ -37,5 +37,5 @@ def graph(year_from, year_to, country, color):
 
 # 2980b9
 # c0392b
-graph(20200101, 20210101, "slovenia", "#2980b9")
-graph(20190101, 20200101, "slovenia", "#bb3f3f")
+graph(20200101, 20210101, "hungary", "#2980b9")
+graph(20190101, 20200101, "hungary", "#bb3f3f")
