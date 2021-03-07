@@ -72,4 +72,4 @@ def get_monthly_visits(country, year_from, year_to):
 
 
 get_monthly_visits('slovenia', 20200100, 20210100)
-get_monthly_visits('slovenia', 20190100, 20200100)
+# get_monthly_visits('slovenia', 20190100, 20200100)

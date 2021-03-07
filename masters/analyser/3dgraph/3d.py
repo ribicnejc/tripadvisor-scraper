@@ -13,12 +13,12 @@ select location_lat as x, location_lng as y, count(attraction_name) as z
 from provinces
          join locations l on provinces.province_url = l.attraction_parent_url
          join reviews r on l.attraction_url = r.parent_url
-where country = 'slovenia'
+where country = 'italy'
   and r.review_date > 20200101
   and r.review_date < 20210101
 group by attraction_name
     """
-connection = database_utils.create_connection("../../data/databases/data.db")
+connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro.db")
 data = database_utils.get_data(connection, sql)
 
 # https://towardsdatascience.com/an-easy-introduction-to-3d-plotting-with-matplotlib-801561999725
