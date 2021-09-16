@@ -42,8 +42,7 @@ def get_monthly_visits(country, year_from, year_to):
         from provinces
                  join locations l on provinces.province_url = l.attraction_parent_url
                  join reviews r on l.attraction_url = r.parent_url
-        where country = '{country}'
-          and r.review_experience_date > {year_from}
+        where r.review_experience_date > {year_from}
           and r.review_experience_date < {year_to}
         order by review_experience_date
             """.format(country=country, year_from=year_from, year_to=year_to)
@@ -60,16 +59,16 @@ def get_monthly_visits(country, year_from, year_to):
         month_arr.append(map_date(el[0]))
         type_arr.append("Date of experience")
 
-    f, axes = plt.subplots(1, 1, figsize=(7, 7), sharex=True)
+    f, axes = plt.subplots(1, 1, figsize=(11, 7), sharex=True)
     d = {'Month': month_arr, 'Type': type_arr}
     df = pd.DataFrame(data=d)
     # sns.distplot(df, label="2020")
-    sns.histplot(data=df, x="Month", hue="Type", kde=True,
+    sns.histplot(data=df, x="Month", hue="Type", kde=False,
                  multiple="dodge")
     plt.xticks(rotation=65)
     plt.savefig(f'{country}-{year_from}.png'.format(country=country, year_from=year_from))
     plt.show()
 
 
-get_monthly_visits('slovenia', 20190100, 20210200)
+get_monthly_visits('all', 20180100, 20210200)
 # get_monthly_visits('slovenia', 20190100, 20200100)
