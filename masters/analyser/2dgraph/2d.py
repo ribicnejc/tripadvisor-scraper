@@ -65,11 +65,11 @@ def graph(year_from, year_to, country, color):
     #sns.scatterplot(x=crdset['CLat'], y=crdset['CLng'], color="#ffc37e", label="Croatia")
     #sns.scatterplot(x=sldset['SLat'], y=sldset['SLng'], color="#ff4e60", label="Slovenia")
 
-    sns.scatterplot(x=audset['Lat'], y=audset['Lng'], color="#ccc", label="Austria")
-    sns.scatterplot(x=itdset['ILat'], y=itdset['ILng'], color="#aaa", label="Italy")
-    sns.scatterplot(x=hudset['HLat'], y=hudset['HLng'], color="#999", label="Hungary")
-    sns.scatterplot(x=crdset['CLat'], y=crdset['CLng'], color="#666", label="Croatia")
-    sns.scatterplot(x=sldset['SLat'], y=sldset['SLng'], color="#000", label="Slovenia")
+    sns.scatterplot(x=audset['Lat'], y=audset['Lng'], color="#ccc", label="Austria", kde=True)
+    sns.scatterplot(x=itdset['ILat'], y=itdset['ILng'], color="#aaa", label="Italy", kde=True)
+    sns.scatterplot(x=hudset['HLat'], y=hudset['HLng'], color="#999", label="Hungary", kde=True)
+    sns.scatterplot(x=crdset['CLat'], y=crdset['CLng'], color="#666", label="Croatia", kde=True)
+    sns.scatterplot(x=sldset['SLat'], y=sldset['SLng'], color="#000", label="Slovenia", kde=True)
 
     #sns.jointplot(x=dset['Lat'], y=dset['Lng'], kind='scatter', color="#2980b9")
     #sns.jointplot(x=dset['Lng'], y=dset['Lat'], kind='scatter', color="#c0392b")
