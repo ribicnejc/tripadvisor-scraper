@@ -8,3 +8,5 @@ matplotlib
 wordcloud
 pandas
 seaborn
+pyvis
+IPython
