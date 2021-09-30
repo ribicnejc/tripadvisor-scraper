@@ -14,9 +14,33 @@ def subtract(d1, d2):
     return abs(delta.days)
 
 
+def merge_locations(old):
+    sql = """select region_name, province_name, avg(location_lng) as location_lng, avg(location_lat) as location_lat, country from reviews
+        join locations l on l.attraction_url = reviews.parent_url
+        join provinces p on p.province_url = l.attraction_parent_url
+    group by region_name"""
+    connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro_updated.db")
+    data = database_utils.get_data(connection, sql)
+    new_data = []
+    dic = {}
+    for j in data:
+        if j[4] not in dic:
+            dic[j[4]] = j  # 0 region, 1 province, 4 country
+    for i in old:
+        j = dic[i[7]]  # 9 province, 8 region, 7 country
+        tmp = list(i)
+        tmp[6] = str(j[2])
+        tmp[5] = str(j[3])
+        new_data.append(tmp)
+    return new_data
+
+
 def prepare_data(sql):
     connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro_updated.db")
     data = database_utils.get_data(connection, sql)
+
+    """ Comment below if you don't want to merge data """
+    data = merge_locations(data)
 
     previous_review_date = 0
     user = "abc"
@@ -61,7 +85,8 @@ def prepare_data(sql):
 sql = """select review_id, user_id, calculated_dates, review_date, review_experience_date, location_lat, location_lng, country, region_name, province_name, attraction_type, attraction_name, review_location_type, review_location_name from reviews
 join locations l on l.attraction_url = reviews.parent_url
 join provinces p on p.province_url = l.attraction_parent_url
---where country = 'slovenia'
+where review_date < 20200000
+and review_date > 20180000
 order by user_id, cast(review_id as INTEGER) asc
 """.format()
 
@@ -97,7 +122,7 @@ new_flows = {}
 
 # More than n repetitions
 for k, v in flows.items():
-    if len(v) > 10:
+    if len(v) > 2:
         new_flows[k] = v
 
 flows = new_flows
@@ -115,10 +140,10 @@ for k, v in flows.items():
             break
         if e not in id_set:
             id_set[e] = id_num
-            labels[e] = v[0][0][11]
+            labels[e] = v[0][0][7]  # 11 attraction name, 8 region, 7 ukraine
             id_num += 1
 
-bonds = []
+bonds_set = {}
 for k, v in flows.items():
     prev_e = None
     for e in k.split(";"):
@@ -129,10 +154,18 @@ for k, v in flows.items():
         if prev_e is not None and prev_e != e:
             lat_p = prev_e.split("+")[0]
             lng_p = prev_e.split("+")[1]
-            bonds.append([id_set[e], id_set[prev_e], 3])
+            bond = "{p1},{p2}".format(p1=id_set[e], p2=id_set[prev_e])
+            if bond not in bonds_set:
+                bonds_set[bond] = 0
+            bonds_set[bond] = bonds_set[bond] + len(v)  # tu prišteva povezavi število ponovitev
         prev_e = e
     prev_e = None
 
+bonds = []
+for k, v in bonds_set.items():
+    p1 = int(k.split(",")[0])
+    p2 = int(k.split(",")[1])
+    bonds.append([p1, p2, (v / 200)])
 lats = []
 lngs = []
 for k, v in id_set.items():
@@ -140,15 +173,19 @@ for k, v in id_set.items():
     lng = k.split("+")[1]
     lats.append(float(lat))
     lngs.append(float(lng))
-g3 = net.Network(height='600px', width='80%', heading='', directed=True)
+g3 = net.Network(height='600px', width='60%', heading='', directed=True)
 
 for atom in range(len(lats)):
     key = str(lats[atom]) + "+" + str(lngs[atom])
-    scale = 1000
+    scale = 40
     g3.add_node(id_set[key], label=labels[key], y=(((scale * -1) * lats[atom]) + 47 * scale),
-                x=(((scale * 1) * lngs[atom]) - 30 * scale), physics=False, size=5)
+                x=(((scale * 1) * lngs[atom]) - 30 * scale), physics=False, size=10)
 
 g3.add_edges(bonds)
 
-g3.show('g3.html')
-display(HTML('g3.html'))
+g3.show_buttons()
+g3.set_edge_smooth('dynamic')
+g3.show('flow_country_all_2019.html')
+display(HTML('flow_country_all_2019.html'))
+
+# font was 10, stroke was 3, edge scale factor was 0.75
