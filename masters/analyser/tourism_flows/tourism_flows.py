@@ -6,6 +6,7 @@ import datetime
 
 """DAO/DTO Logic below"""
 
+global_node_names = {}
 
 def subtract(d1, d2):
     da1 = datetime.datetime(int(d1[0:4]), int(d1[4:6]), int(d1[6:8]), 0, 0)
@@ -18,16 +19,18 @@ def merge_locations(old):
     sql = """select region_name, province_name, avg(location_lng) as location_lng, avg(location_lat) as location_lat, country from reviews
         join locations l on l.attraction_url = reviews.parent_url
         join provinces p on p.province_url = l.attraction_parent_url
+    where country = 'slovenia'
     group by region_name"""
     connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro_updated.db")
     data = database_utils.get_data(connection, sql)
     new_data = []
     dic = {}
     for j in data:
-        if j[4] not in dic:
-            dic[j[4]] = j  # 0 region, 1 province, 4 country
+        if j[0] not in dic:
+            global_node_names["{lng}+{lat}".format(lat=j[2], lng=j[3])] = j[0]
+            dic[j[0]] = j  # 0 region, 1 province, 4 country
     for i in old:
-        j = dic[i[7]]  # 9 province, 8 region, 7 country
+        j = dic[i[8]]  # 9 province, 8 region, 7 country
         tmp = list(i)
         tmp[6] = str(j[2])
         tmp[5] = str(j[3])
@@ -85,8 +88,9 @@ def prepare_data(sql):
 sql = """select review_id, user_id, calculated_dates, review_date, review_experience_date, location_lat, location_lng, country, region_name, province_name, attraction_type, attraction_name, review_location_type, review_location_name from reviews
 join locations l on l.attraction_url = reviews.parent_url
 join provinces p on p.province_url = l.attraction_parent_url
-where review_date < 20200000
-and review_date > 20180000
+where review_date < 20201000
+and review_date > 20200700
+and country = 'slovenia'
 order by user_id, cast(review_id as INTEGER) asc
 """.format()
 
@@ -122,14 +126,14 @@ new_flows = {}
 
 # More than n repetitions
 for k, v in flows.items():
-    if len(v) > 2:
+    if len(v) > 0:
         new_flows[k] = v
 
 flows = new_flows
 new_flows = {}
 # Longer than n locations
 for k, v in flows.items():
-    if len(v[0]) > 2:
+    if len(v[0]) > 0:
         new_flows[k] = v
 
 flows = new_flows
@@ -140,7 +144,8 @@ for k, v in flows.items():
             break
         if e not in id_set:
             id_set[e] = id_num
-            labels[e] = v[0][0][7]  # 11 attraction name, 8 region, 7 ukraine
+            labels[e] = global_node_names[e]  # 11 attraction name, 8 region, 7 ukraine
+            #labels[e] = v[0][0][8]  # 11 attraction name, 8 region, 7 ukraine
             id_num += 1
 
 bonds_set = {}
@@ -165,7 +170,8 @@ bonds = []
 for k, v in bonds_set.items():
     p1 = int(k.split(",")[0])
     p2 = int(k.split(",")[1])
-    bonds.append([p1, p2, (v / 200)])
+    bonds.append([p1, p2, math.log2(v)])
+    #bonds.append([p1, p2, (v / 2)])
 lats = []
 lngs = []
 for k, v in id_set.items():
@@ -173,11 +179,24 @@ for k, v in id_set.items():
     lng = k.split("+")[1]
     lats.append(float(lat))
     lngs.append(float(lng))
+
+
+for k, v in global_node_names.items():  # za neobiskana vozlišča
+    lat = k.split("+")[0]
+    lng = k.split("+")[1]
+    lats.append(float(lat))
+    lngs.append(float(lng))
+    labels[k] = v
+    if k not in id_set:
+        id_set[k] = id_num
+        id_num += 1
+
+
 g3 = net.Network(height='600px', width='60%', heading='', directed=True)
 
 for atom in range(len(lats)):
     key = str(lats[atom]) + "+" + str(lngs[atom])
-    scale = 40
+    scale = 250
     g3.add_node(id_set[key], label=labels[key], y=(((scale * -1) * lats[atom]) + 47 * scale),
                 x=(((scale * 1) * lngs[atom]) - 30 * scale), physics=False, size=10)
 
@@ -185,7 +204,7 @@ g3.add_edges(bonds)
 
 g3.show_buttons()
 g3.set_edge_smooth('dynamic')
-g3.show('flow_country_all_2019.html')
-display(HTML('flow_country_all_2019.html'))
+g3.show('flow_slovenia_regions_2020-Q3.html')
+display(HTML('flow_slovenia_regions_2020-Q3.html'))
 
 # font was 10, stroke was 3, edge scale factor was 0.75
