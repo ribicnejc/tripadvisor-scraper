@@ -19,18 +19,18 @@ def merge_locations(old):
     sql = """select region_name, province_name, avg(location_lng) as location_lng, avg(location_lat) as location_lat, country from reviews
         join locations l on l.attraction_url = reviews.parent_url
         join provinces p on p.province_url = l.attraction_parent_url
-    where country = 'slovenia'
-    group by region_name"""
+    --where country = 'slovenia'
+    group by country"""
     connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro_updated.db")
     data = database_utils.get_data(connection, sql)
     new_data = []
     dic = {}
     for j in data:
-        if j[0] not in dic:
-            global_node_names["{lng}+{lat}".format(lat=j[2], lng=j[3])] = j[0]
-            dic[j[0]] = j  # 0 region, 1 province, 4 country
+        if j[4] not in dic:
+            global_node_names["{lng}+{lat}".format(lat=j[2], lng=j[3])] = j[4]
+            dic[j[4]] = j  # 0 region, 1 province, 4 country
     for i in old:
-        j = dic[i[8]]  # 9 province, 8 region, 7 country
+        j = dic[i[7]]  # 9 province, 8 region, 7 country
         tmp = list(i)
         tmp[6] = str(j[2])
         tmp[5] = str(j[3])
@@ -71,7 +71,11 @@ def prepare_data(sql):
                 start_trip_date = review_date
                 previous_review_date = review_date
             previous_review_date = review_date
-            trip.append(e)
+            if len(trip) > 0:
+                if trip[-1][5] != e[5] or trip[-1][6] != e[6]: # a-b-c-c-d -> a-b-c-d
+                    trip.append(e)
+            else:
+                trip.append(e)
         else:
             if trip_started:
                 # log the previous trip since new user arrived
@@ -81,16 +85,20 @@ def prepare_data(sql):
             user = username
             start_trip_date = review_date
             previous_review_date = review_date
-            trip.append(e)
+            if len(trip) > 0:
+                if trip[-1][5] != e[5] or trip[-1][6] != e[6]:  # a-b-c-c-d -> a-b-c-d
+                    trip.append(e)
+            else:
+                trip.append(e)
     return trips
 
 
 sql = """select review_id, user_id, calculated_dates, review_date, review_experience_date, location_lat, location_lng, country, region_name, province_name, attraction_type, attraction_name, review_location_type, review_location_name from reviews
 join locations l on l.attraction_url = reviews.parent_url
 join provinces p on p.province_url = l.attraction_parent_url
-where review_date < 20201000
-and review_date > 20200700
-and country = 'slovenia'
+where review_date < 20200000
+and review_date > 20190000
+--and country = 'slovenia'
 order by user_id, cast(review_id as INTEGER) asc
 """.format()
 
@@ -133,7 +141,7 @@ flows = new_flows
 new_flows = {}
 # Longer than n locations
 for k, v in flows.items():
-    if len(v[0]) > 0:
+    if len(v[0]) > 1:
         new_flows[k] = v
 
 flows = new_flows
@@ -170,7 +178,7 @@ bonds = []
 for k, v in bonds_set.items():
     p1 = int(k.split(",")[0])
     p2 = int(k.split(",")[1])
-    bonds.append([p1, p2, math.log2(v)])
+    bonds.append([p1, p2, v])
     #bonds.append([p1, p2, (v / 2)])
 lats = []
 lngs = []
@@ -204,7 +212,7 @@ g3.add_edges(bonds)
 
 g3.show_buttons()
 g3.set_edge_smooth('dynamic')
-g3.show('flow_slovenia_regions_2020-Q3.html')
-display(HTML('flow_slovenia_regions_2020-Q3.html'))
+g3.show('all.html')
+display(HTML('all.html'))
 
 # font was 10, stroke was 3, edge scale factor was 0.75

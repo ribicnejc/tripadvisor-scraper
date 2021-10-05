@@ -17,19 +17,19 @@ def subtract(d1, d2):
 
 
 def merge_locations(old):
-    sql = """select region_name, province_name, avg(location_lng) as location_lng, avg(location_lat) as location_lat, country from reviews
+    sql = """select region_name, province_name, avg(location_lng) as location_lng, avg(location_lat) as location_lat, country, province_name from reviews
         join locations l on l.attraction_url = reviews.parent_url
         join provinces p on p.province_url = l.attraction_parent_url
-    group by region_name"""
+    group by province_name"""
     connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro_updated.db")
     data = database_utils.get_data(connection, sql)
     new_data = []
     dic = {}
     for j in data:
-        if j[4] not in dic:
-            dic[j[4]] = j  # 0 region, 1 province, 4 country
+        if j[5] not in dic:
+            dic[j[5]] = j  # 0 region, 1 province, 4 country, 5 province
     for i in old:
-        j = dic[i[7]]  # 9 province, 8 region, 7 country
+        j = dic[i[9]]  # 9 province, 8 region, 7 country
         tmp = list(i)
         tmp[6] = str(j[2])
         tmp[5] = str(j[3])
@@ -87,15 +87,23 @@ def prepare_data(sql):
 sql = """select review_id, user_id, calculated_dates, review_date, review_experience_date, location_lat, location_lng, country, region_name, province_name, attraction_type, attraction_name, review_location_type, review_location_name from reviews
 join locations l on l.attraction_url = reviews.parent_url
 join provinces p on p.province_url = l.attraction_parent_url
-where review_date < 20200000
-and review_date > 20180000
+
+where location_lng > 13.344046 and location_lng < 16.616267
+and location_lat > 45.353430 and location_lat < 46.680789
+and review_date < 20210000
+and review_date > 20200000
+--and country = 'slovenia'
 order by user_id, cast(review_id as INTEGER) asc
 """.format()
 
 trips = prepare_data(sql)
 
 """ Here on tourism flow detection """
-
+def get_node_key(e):
+    lat = e[5]
+    lng = e[6]
+    key = "{lat}+{lng}".format(lat=lat, lng=lng)
+    return key
 
 def get_key(trip):
     key = ""
@@ -114,80 +122,54 @@ for trip in trips:
     else:
         flows[key] = [trip]
 
-""" Tourism flow visualisation """
-id_set = {}
-labels = {}
-id_num = 0
+edge_weights = {}
+node_weights = {}
+nodes = {}
+node_ids = {}
+ids = 0
+for trip in trips:
+    prev_node = None
+    for node in trip:
+        key = get_node_key(node)
+        if key not in node_weights:
+            node_weights[key] = 1
+            nodes[key] = node
+            node_ids[key] = ids
+            ids += 1
+        else:
+            node_weights[key] += 1
+        if prev_node is not None:
+            key = get_key([prev_node, node])
+            if key not in edge_weights:
+                edge_weights[key] = 1
+            else:
+                edge_weights[key] += 1
+        prev_node = node
 
-new_flows = {}
-#  Filter flows
+#  filtering
+filtered = set()
+for k, w in edge_weights.items():
+    nodes_tmp = k.split(";")
+    n_id1 = node_ids[nodes_tmp[0]]
+    n_id2 = node_ids[nodes_tmp[1]]
+    if w > 5:
+        filtered.add(n_id2)
+        filtered.add(n_id1)
 
-# More than n repetitions
-for k, v in flows.items():
-    if len(v) > 2:
-        new_flows[k] = v
-
-flows = new_flows
-new_flows = {}
-# Longer than n locations
-for k, v in flows.items():
-    if len(v[0]) > 2:
-        new_flows[k] = v
-
-flows = new_flows
-#  Setup node ids
-for k, v in flows.items():
-    for e in k.split(";"):
-        if e == '':
-            break
-        if e not in id_set:
-            id_set[e] = id_num
-            labels[e] = v[0][0][7]  # 11 attraction name, 8 region, 7 ukraine
-            id_num += 1
-
-bonds_set = {}
-for k, v in flows.items():
-    prev_e = None
-    for e in k.split(";"):
-        if e == '':
-            break
-        lat = e.split("+")[0]
-        lng = e.split("+")[1]
-        if prev_e is not None and prev_e != e:
-            lat_p = prev_e.split("+")[0]
-            lng_p = prev_e.split("+")[1]
-            bond = "{p1},{p2}".format(p1=id_set[e], p2=id_set[prev_e])
-            if bond not in bonds_set:
-                bonds_set[bond] = 0
-            bonds_set[bond] = bonds_set[bond] + len(v)  # tu prišteva povezavi število ponovitev
-        prev_e = e
-    prev_e = None
-
-bonds = []
-for k, v in bonds_set.items():
-    p1 = int(k.split(",")[0])
-    p2 = int(k.split(",")[1])
-    bonds.append([p1, p2, (v)])
-lats = []
-lngs = []
-for k, v in id_set.items():
-    lat = k.split("+")[0]
-    lng = k.split("+")[1]
-    lats.append(float(lat))
-    lngs.append(float(lng))
-
-filename = 'first_one'
+filename = 'slovenia_2020'
 with open(filename, 'w+') as f:
-    f.write("*Vertices " + str(len(lats)) + "\n")
-    nodes = set()
-    for node_i in range(len(lats)):
-        key = str(lats[node_i]) + "+" + str(lngs[node_i])
-        if node_i not in nodes:
-            f.write("{num} {title} {w}\n".format(num=node_i, title=labels[key], w=1.0))
-            nodes.add(node_i)
-    f.write("*Arcs " + str(len(bonds)) + "\n")
-    for bond in bonds:
-        f.write("{from_n} {to} {w}\n".format(from_n=bond[0], to=bond[1], w=bond[2]))
+    f.write("*Vertices " + str(len(nodes)) + "\n")
+    for k, v in nodes.items():
+        node_i = node_ids[k]
+        label = v[9].replace(" attractions", "")
+        w = node_weights[k]
+        if node_i in filtered:
+            f.write("{num} \"{title}\" {w}\n".format(num=node_i, title=label, w=w))
+    f.write("*Arcs " + str(len(edge_weights)) + "\n")
+    for k, w in edge_weights.items():
+        nodes = k.split(";")
+        n_id1 = node_ids[nodes[0]]
+        n_id2 = node_ids[nodes[1]]
+        if n_id1 != n_id2 and n_id1 in filtered and n_id2 in filtered:
+            f.write("{from_n} {to} {w}\n".format(from_n=n_id1, to=n_id2, w=w))
     f.close()
-
-# font was 10, stroke was 3, edge scale factor was 0.75
