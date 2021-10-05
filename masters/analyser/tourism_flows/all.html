@@ -1,0 +1,120 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 60%;
+            height: 600px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": 0, "label": "austria", "physics": false, "shape": "dot", "size": 10, "x": -3831.214785831539, "y": -210.0631373478809}, {"id": 1, "label": "hungary", "physics": false, "shape": "dot", "size": 10, "x": -2736.941021572774, "y": -115.14906400637301}, {"id": 2, "label": "italy", "physics": false, "shape": "dot", "size": 10, "x": -4496.454088155892, "y": 1030.69611440283}, {"id": 3, "label": "slovenia", "physics": false, "shape": "dot", "size": 10, "x": -3922.4569520861082, "y": 224.0522021064662}, {"id": 4, "label": "croatia", "physics": false, "shape": "dot", "size": 10, "x": -3436.6250312110187, "y": 763.5559908397627}]);
+        edges = new vis.DataSet([{"arrows": "to", "from": 1, "to": 0, "width": 643}, {"arrows": "to", "from": 0, "to": 1, "width": 667}, {"arrows": "to", "from": 0, "to": 2, "width": 769}, {"arrows": "to", "from": 3, "to": 2, "width": 412}, {"arrows": "to", "from": 2, "to": 3, "width": 404}, {"arrows": "to", "from": 4, "to": 2, "width": 508}, {"arrows": "to", "from": 2, "to": 4, "width": 510}, {"arrows": "to", "from": 3, "to": 4, "width": 437}, {"arrows": "to", "from": 4, "to": 3, "width": 462}, {"arrows": "to", "from": 2, "to": 1, "width": 291}, {"arrows": "to", "from": 2, "to": 0, "width": 856}, {"arrows": "to", "from": 1, "to": 2, "width": 256}, {"arrows": "to", "from": 4, "to": 0, "width": 128}, {"arrows": "to", "from": 0, "to": 4, "width": 137}, {"arrows": "to", "from": 3, "to": 1, "width": 52}, {"arrows": "to", "from": 3, "to": 0, "width": 145}, {"arrows": "to", "from": 1, "to": 3, "width": 54}, {"arrows": "to", "from": 0, "to": 3, "width": 134}, {"arrows": "to", "from": 4, "to": 1, "width": 122}, {"arrows": "to", "from": 1, "to": 4, "width": 89}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
