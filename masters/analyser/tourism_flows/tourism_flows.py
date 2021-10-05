@@ -178,8 +178,8 @@ bonds = []
 for k, v in bonds_set.items():
     p1 = int(k.split(",")[0])
     p2 = int(k.split(",")[1])
-    bonds.append([p1, p2, v])
-    #bonds.append([p1, p2, (v / 2)])
+    #bonds.append([p1, p2, v])
+    bonds.append([p1, p2, v / 50])
 lats = []
 lngs = []
 for k, v in id_set.items():
@@ -204,7 +204,7 @@ g3 = net.Network(height='600px', width='60%', heading='', directed=True)
 
 for atom in range(len(lats)):
     key = str(lats[atom]) + "+" + str(lngs[atom])
-    scale = 250
+    scale = 50
     g3.add_node(id_set[key], label=labels[key], y=(((scale * -1) * lats[atom]) + 47 * scale),
                 x=(((scale * 1) * lngs[atom]) - 30 * scale), physics=False, size=10)
 
@@ -212,7 +212,7 @@ g3.add_edges(bonds)
 
 g3.show_buttons()
 g3.set_edge_smooth('dynamic')
-g3.show('all.html')
-display(HTML('all.html'))
+g3.show('country_2019.html')
+display(HTML('country_2019.html'))
 
 # font was 10, stroke was 3, edge scale factor was 0.75
