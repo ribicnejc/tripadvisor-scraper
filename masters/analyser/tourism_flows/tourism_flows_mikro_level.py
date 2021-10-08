@@ -43,7 +43,7 @@ def prepare_data(sql):
     data = database_utils.get_data(connection, sql)
 
     """ Comment below if you don't want to merge data """
-    data = merge_locations(data)
+    #data = merge_locations(data)
 
     previous_review_date = 0
     user = "abc"

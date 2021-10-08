@@ -90,8 +90,8 @@ join provinces p on p.province_url = l.attraction_parent_url
 
 where location_lng > 13.344046 and location_lng < 16.616267
 and location_lat > 45.353430 and location_lat < 46.680789
-and review_date < 20210000
-and review_date > 20200000
+and review_date < 20201000
+and review_date > 20200700
 --and country = 'slovenia'
 order by user_id, cast(review_id as INTEGER) asc
 """.format()
@@ -156,7 +156,7 @@ for k, w in edge_weights.items():
         filtered.add(n_id2)
         filtered.add(n_id1)
 
-filename = 'slovenia_2020'
+filename = 'slovenia_2020_extra'
 with open(filename, 'w+') as f:
     f.write("*Vertices " + str(len(nodes)) + "\n")
     for k, v in nodes.items():
