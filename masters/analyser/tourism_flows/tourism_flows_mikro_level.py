@@ -3,6 +3,7 @@ from IPython.core.display import display, HTML
 import math
 from masters.data_managers.utils import database_utils
 import datetime
+import decimal
 
 """DAO/DTO Logic below"""
 
@@ -14,36 +15,9 @@ def subtract(d1, d2):
     delta = da1 - da2
     return abs(delta.days)
 
-
-def merge_locations(old):
-    sql = """select region_name, province_name, avg(location_lng) as location_lng, avg(location_lat) as location_lat, country from reviews
-        join locations l on l.attraction_url = reviews.parent_url
-        join provinces p on p.province_url = l.attraction_parent_url
-    --where country = 'slovenia'
-    group by country"""
-    connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro_updated.db")
-    data = database_utils.get_data(connection, sql)
-    new_data = []
-    dic = {}
-    for j in data:
-        if j[4] not in dic:
-            global_node_names["{lng}+{lat}".format(lat=j[2], lng=j[3])] = j[4]
-            dic[j[4]] = j  # 0 region, 1 province, 4 country
-    for i in old:
-        j = dic[i[7]]  # 9 province, 8 region, 7 country
-        tmp = list(i)
-        tmp[6] = str(j[2])
-        tmp[5] = str(j[3])
-        new_data.append(tmp)
-    return new_data
-
-
 def prepare_data(sql):
     connection = database_utils.create_connection("../../data/databases/slo_aus_ita_hun_cro_updated.db")
     data = database_utils.get_data(connection, sql)
-
-    """ Comment below if you don't want to merge data """
-    #data = merge_locations(data)
 
     previous_review_date = 0
     user = "abc"
@@ -93,12 +67,19 @@ def prepare_data(sql):
     return trips
 
 
-sql = """select review_id, user_id, calculated_dates, review_date, review_experience_date, location_lat, location_lng, country, region_name, province_name, attraction_type, attraction_name, review_location_type, review_location_name from reviews
+sql = """select review_id, user_id, calculated_dates, review_date, review_experience_date,
+       (location_lat * 1.0 + l.attraction_id) as location_lat,
+       (location_lng * 1.0 + l.attraction_id_2) as location_lng,
+       country, region_name, province_name, attraction_type, attraction_name, review_location_type, review_location_name from reviews
 join locations l on l.attraction_url = reviews.parent_url
 join provinces p on p.province_url = l.attraction_parent_url
 where review_date < 20210000
 and review_date > 20200000
---and country = 'slovenia'
+and cast(location_lat as decimal) < 41.986482 and cast(location_lat as decimal) > 41.786401
+and cast(location_lng as decimal) > 12.345257 and cast(location_lng as decimal) < 12.632454
+and cast(review_last_page as INTEGER) > 20
+--and review_location_breadcrumbs like '%Province of Rome%'
+--and region_name = 'Lazio'--'Upper Carniola Region'--'Lazio'
 order by user_id, cast(review_id as INTEGER) asc
 """.format()
 
@@ -124,16 +105,6 @@ for trip in trips:
     else:
         flows[key] = [trip]
 
-country_not = []
-country_passers = set()
-for trip in trips:
-    key = get_key(trip)
-    steps = key.split(";")
-    if len(steps) > 2:
-        if steps[0] != steps[1]:
-            user = trip[0][1]
-            country_passers.add(user)
-            country_not.append(user)
 """ Tourism flow visualisation """
 id_set = {}
 labels = {}
@@ -144,7 +115,7 @@ new_flows = {}
 
 # More than n repetitions
 for k, v in flows.items():
-    if len(v) > 0:
+    if len(v) > 2:
         new_flows[k] = v
 
 flows = new_flows
@@ -155,15 +126,24 @@ for k, v in flows.items():
         new_flows[k] = v
 
 flows = new_flows
+new_flows = {}
+# Contain specific type of location
+for k, v in flows.items():
+    for loc in v[0]:
+        if "Cathedrals" in ';'.join(map(str, loc)):
+            new_flows[k] = v
+
 #  Setup node ids
 for k, v in flows.items():
+    i = -1
     for e in k.split(";"):
+        i += 1
         if e == '':
             break
         if e not in id_set:
             id_set[e] = id_num
+            global_node_names[e] = v[0][i][11]
             labels[e] = global_node_names[e]  # 11 attraction name, 8 region, 7 ukraine
-            #labels[e] = v[0][0][8]  # 11 attraction name, 8 region, 7 ukraine
             id_num += 1
 
 bonds_set = {}
@@ -188,41 +168,25 @@ bonds = []
 for k, v in bonds_set.items():
     p1 = int(k.split(",")[0])
     p2 = int(k.split(",")[1])
-    #bonds.append([p1, p2, v])
-    bonds.append([p1, p2, v / 50])
-lats = []
-lngs = []
+    bonds.append([p1, p2, v / 10])
+
+g3 = net.Network(height='600px', width='60%', heading='', directed=False)
+
 for k, v in id_set.items():
     lat = k.split("+")[0]
     lng = k.split("+")[1]
-    lats.append(float(lat))
-    lngs.append(float(lng))
-
-
-for k, v in global_node_names.items():  # za neobiskana vozlišča
-    lat = k.split("+")[0]
-    lng = k.split("+")[1]
-    lats.append(float(lat))
-    lngs.append(float(lng))
-    labels[k] = v
-    if k not in id_set:
-        id_set[k] = id_num
-        id_num += 1
-
-
-g3 = net.Network(height='600px', width='60%', heading='', directed=True)
-
-for atom in range(len(lats)):
-    key = str(lats[atom]) + "+" + str(lngs[atom])
-    scale = 50
-    g3.add_node(id_set[key], label=labels[key], y=(((scale * -1) * lats[atom]) + 47 * scale),
-                x=(((scale * 1) * lngs[atom]) - 30 * scale), physics=False, size=10)
+    scale = 20000
+    y = (((scale * -1) * decimal.Decimal(lat)) + 41 * scale)
+    x = (((scale * 1) * decimal.Decimal(lng)) - 12 * scale)
+    _y = float(y)
+    _x = float(x)
+    g3.add_node(v, label=labels[k], y=_y, x=_x, physics=False, size=5)
 
 g3.add_edges(bonds)
 
 g3.show_buttons()
-g3.set_edge_smooth('dynamic')
-g3.show('country_2019_delete.html')
-display(HTML('country_2019_delete.html'))
+#g3.set_edge_smooth('dynamic')
+g3.show('country_2020_rome.html')
+display(HTML('country_2020_rome.html'))
 
 # font was 10, stroke was 3, edge scale factor was 0.75

@@ -1,0 +1,120 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 60%;
+            height: 600px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": 0, "label": "Colosseum", "physics": false, "shape": "dot", "size": 5, "x": -175122.9658449324, "y": 51002.46724944974}, {"id": 1, "label": "Trevi Fountain", "physics": false, "shape": "dot", "size": 5, "x": -174966.13564903953, "y": 51052.1897670295}, {"id": 2, "label": "Pantheon", "physics": false, "shape": "dot", "size": 5, "x": -174987.61726142702, "y": 50984.4592824964}, {"id": 3, "label": "St. Peter\u0027s Basilica", "physics": false, "shape": "dot", "size": 5, "x": -175371.8124246098, "y": 51069.6024624017}, {"id": 4, "label": "Trastevere", "physics": false, "shape": "dot", "size": 5, "x": -175086.39441189627, "y": 51091.02026343116}, {"id": 5, "label": "Piazza Navona", "physics": false, "shape": "dot", "size": 5, "x": -175125.8384992774, "y": 51034.39330227445}, {"id": 6, "label": "Vatican Museums", "physics": false, "shape": "dot", "size": 5, "x": -175534.264599885, "y": 50934.4150693697}, {"id": 7, "label": "Sistine Chapel", "physics": false, "shape": "dot", "size": 5, "x": -175481.75640738476, "y": 51045.1900639202}, {"id": 8, "label": "Basilica di Santa Maria Maggiore", "physics": false, "shape": "dot", "size": 5, "x": -175012.80093208753, "y": 51083.4045646446}, {"id": 9, "label": "Roman Forum", "physics": false, "shape": "dot", "size": 5, "x": -175078.55328716445, "y": 51032.45398654956}, {"id": 10, "label": "Palatine Hill", "physics": false, "shape": "dot", "size": 5, "x": -174955.37879252137, "y": 51130.0345709077}, {"id": 11, "label": "Galleria Borghese", "physics": false, "shape": "dot", "size": 5, "x": -175050.42704883675, "y": 51011.67702992655}, {"id": 12, "label": "Museo Nazionale di Castel Sant\u0027Angelo", "physics": false, "shape": "dot", "size": 5, "x": -174978.7051835006, "y": 51081.22187381596}, {"id": 13, "label": "Spanish Steps", "physics": false, "shape": "dot", "size": 5, "x": -174966.03536140663, "y": 51064.8090655189}, {"id": 14, "label": "St. Peter\u0027s Square", "physics": false, "shape": "dot", "size": 5, "x": -175429.69390843203, "y": 51075.69426909656}, {"id": 15, "label": "Welcome to Rome", "physics": false, "shape": "dot", "size": 5, "x": -174968.11869532807, "y": 51151.4217235184}, {"id": 16, "label": "Piazza di Spagna", "physics": false, "shape": "dot", "size": 5, "x": -175053.4128703297, "y": 51114.208005369}, {"id": 17, "label": "Vatican City", "physics": false, "shape": "dot", "size": 5, "x": -175393.70540640206, "y": 50956.9213633655}, {"id": 18, "label": "Quirinale Palace (Palazzo del Quirinale)", "physics": false, "shape": "dot", "size": 5, "x": -175063.59603734326, "y": 51115.781352107}, {"id": 19, "label": "La Pieta", "physics": false, "shape": "dot", "size": 5, "x": -175497.0050353355, "y": 50971.41876649395}, {"id": 20, "label": "Monumento a Vittorio Emanuele II", "physics": false, "shape": "dot", "size": 5, "x": -175046.5970937175, "y": 51121.6937891861}, {"id": 21, "label": "Bioparco di Roma", "physics": false, "shape": "dot", "size": 5, "x": -175044.17448213583, "y": 51059.6182372677}]);
+        edges = new vis.DataSet([{"from": 1, "to": 0, "width": 8.34}, {"from": 2, "to": 1, "width": 11.0}, {"from": 2, "to": 0, "width": 1.58}, {"from": 3, "to": 1, "width": 3.98}, {"from": 4, "to": 1, "width": 2.26}, {"from": 5, "to": 2, "width": 3.68}, {"from": 1, "to": 6, "width": 1.24}, {"from": 6, "to": 3, "width": 1.78}, {"from": 7, "to": 6, "width": 1.66}, {"from": 2, "to": 8, "width": 1.36}, {"from": 5, "to": 0, "width": 0.52}, {"from": 9, "to": 5, "width": 0.14}, {"from": 3, "to": 2, "width": 1.8}, {"from": 4, "to": 2, "width": 1.06}, {"from": 1, "to": 8, "width": 0.84}, {"from": 10, "to": 9, "width": 1.44}, {"from": 10, "to": 2, "width": 1.26}, {"from": 6, "to": 11, "width": 0.1}, {"from": 12, "to": 11, "width": 0.26}, {"from": 6, "to": 2, "width": 0.94}, {"from": 11, "to": 1, "width": 0.4}, {"from": 4, "to": 11, "width": 0.26}, {"from": 5, "to": 1, "width": 4.34}, {"from": 10, "to": 0, "width": 0.56}, {"from": 5, "to": 3, "width": 0.48}, {"from": 1, "to": 9, "width": 2.44}, {"from": 7, "to": 0, "width": 0.26}, {"from": 5, "to": 6, "width": 0.16}, {"from": 0, "to": 6, "width": 0.2}, {"from": 1, "to": 10, "width": 1.26}, {"from": 13, "to": 1, "width": 2.56}, {"from": 11, "to": 2, "width": 0.4}, {"from": 13, "to": 5, "width": 0.52}, {"from": 14, "to": 3, "width": 0.22}, {"from": 1, "to": 7, "width": 0.24}, {"from": 3, "to": 9, "width": 0.12}, {"from": 3, "to": 0, "width": 1.02}, {"from": 9, "to": 2, "width": 2.54}, {"from": 1, "to": 15, "width": 0.12}, {"from": 4, "to": 9, "width": 0.22}, {"from": 16, "to": 1, "width": 0.14}, {"from": 0, "to": 8, "width": 0.42}, {"from": 4, "to": 5, "width": 0.58}, {"from": 4, "to": 0, "width": 0.22}, {"from": 17, "to": 1, "width": 0.12}, {"from": 11, "to": 0, "width": 0.12}, {"from": 18, "to": 1, "width": 0.1}, {"from": 11, "to": 8, "width": 0.32}, {"from": 8, "to": 12, "width": 0.1}, {"from": 5, "to": 10, "width": 0.66}, {"from": 5, "to": 8, "width": 0.38}, {"from": 7, "to": 3, "width": 1.2}, {"from": 19, "to": 6, "width": 0.16}, {"from": 6, "to": 8, "width": 0.14}, {"from": 1, "to": 12, "width": 0.38}, {"from": 2, "to": 12, "width": 0.14}, {"from": 12, "to": 4, "width": 0.1}, {"from": 4, "to": 6, "width": 0.14}, {"from": 0, "to": 9, "width": 0.18}, {"from": 4, "to": 3, "width": 0.1}, {"from": 13, "to": 2, "width": 0.74}, {"from": 4, "to": 10, "width": 0.14}, {"from": 3, "to": 17, "width": 0.16}, {"from": 10, "to": 13, "width": 0.1}, {"from": 12, "to": 0, "width": 0.1}, {"from": 12, "to": 5, "width": 0.2}, {"from": 9, "to": 6, "width": 0.1}, {"from": 9, "to": 12, "width": 0.1}, {"from": 11, "to": 9, "width": 0.1}, {"from": 3, "to": 13, "width": 0.2}, {"from": 5, "to": 11, "width": 0.3}, {"from": 20, "to": 1, "width": 0.22}, {"from": 9, "to": 8, "width": 0.34}, {"from": 4, "to": 8, "width": 0.22}, {"from": 3, "to": 11, "width": 0.14}, {"from": 13, "to": 4, "width": 0.12}, {"from": 13, "to": 9, "width": 0.12}, {"from": 6, "to": 10, "width": 0.16}, {"from": 10, "to": 11, "width": 0.12}, {"from": 1, "to": 21, "width": 0.1}, {"from": 12, "to": 13, "width": 0.1}, {"from": 12, "to": 10, "width": 0.14}, {"from": 3, "to": 8, "width": 0.1}, {"from": 0, "to": 13, "width": 0.1}, {"from": 13, "to": 6, "width": 0.12}, {"from": 17, "to": 0, "width": 0.1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
