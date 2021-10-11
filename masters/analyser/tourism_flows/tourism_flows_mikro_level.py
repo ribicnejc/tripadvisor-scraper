@@ -110,12 +110,31 @@ id_set = {}
 labels = {}
 id_num = 0
 
+
+bonds_set = {}
+for k, v in flows.items():
+    prev_e = None
+    for e in k.split(";"):
+        if e == '':
+            break
+        lat = e.split("+")[0]
+        lng = e.split("+")[1]
+        if prev_e is not None and prev_e != e:
+            lat_p = prev_e.split("+")[0]
+            lng_p = prev_e.split("+")[1]
+            bond = "{p1},{p2}".format(p1=e, p2=prev_e)
+            if bond not in bonds_set:
+                bonds_set[bond] = 0
+            bonds_set[bond] = bonds_set[bond] + len(v)  # tu prišteva povezavi število ponovitev
+        prev_e = e
+    prev_e = None
+
 new_flows = {}
 #  Filter flows
 
 # More than n repetitions
 for k, v in flows.items():
-    if len(v) > 2:
+    if len(v) > 0:
         new_flows[k] = v
 
 flows = new_flows
@@ -146,29 +165,26 @@ for k, v in flows.items():
             labels[e] = global_node_names[e]  # 11 attraction name, 8 region, 7 ukraine
             id_num += 1
 
-bonds_set = {}
-for k, v in flows.items():
-    prev_e = None
-    for e in k.split(";"):
-        if e == '':
-            break
-        lat = e.split("+")[0]
-        lng = e.split("+")[1]
-        if prev_e is not None and prev_e != e:
-            lat_p = prev_e.split("+")[0]
-            lng_p = prev_e.split("+")[1]
-            bond = "{p1},{p2}".format(p1=id_set[e], p2=id_set[prev_e])
-            if bond not in bonds_set:
-                bonds_set[bond] = 0
-            bonds_set[bond] = bonds_set[bond] + len(v)  # tu prišteva povezavi število ponovitev
-        prev_e = e
-    prev_e = None
+
 
 bonds = []
 for k, v in bonds_set.items():
-    p1 = int(k.split(",")[0])
-    p2 = int(k.split(",")[1])
-    bonds.append([p1, p2, v / 10])
+    p1 = k.split(",")[0]
+    p2 = k.split(",")[1]
+    if p1 in id_set and p2 in id_set:
+        bonds.append([id_set[p1], id_set[p2], v, p1, p2])
+
+new_bonds = []
+new_id_set = {}
+#  number of repetition of flow
+for bond in bonds:
+    v = bond[2]
+    if v > 5:
+        new_bonds.append([id_set[bond[3]], id_set[bond[4]], v / 10])
+        new_id_set[bond[3]] = bond[0]
+        new_id_set[bond[4]] = bond[1]
+bonds = new_bonds
+id_set = new_id_set
 
 g3 = net.Network(height='600px', width='60%', heading='', directed=False)
 
