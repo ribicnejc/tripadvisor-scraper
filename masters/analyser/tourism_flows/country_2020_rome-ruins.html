@@ -1,0 +1,120 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 60%;
+            height: 600px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": 1, "label": "Pantheon", "physics": false, "shape": "dot", "size": 20, "x": 9671.72630351872, "y": -18234.2502415172}, {"id": 0, "label": "Piazza Navona", "physics": false, "shape": "dot", "size": 20, "x": 9559.48180860676, "y": -18190.0759994898}, {"id": 2, "label": "St. Peter\u0027s Basilica", "physics": false, "shape": "dot", "size": 20, "x": 8999.42170311664, "y": -17841.5272322926}, {"id": 3, "label": "Basilica di Santa Maria Maggiore", "physics": false, "shape": "dot", "size": 20, "x": 9788.13048629582, "y": -18099.5238054302}, {"id": 6, "label": "Trevi Fountain", "physics": false, "shape": "dot", "size": 20, "x": 9817.36160416454, "y": -17589.59054744552}, {"id": 5, "label": "Colosseum", "physics": false, "shape": "dot", "size": 20, "x": 9996.69036112774, "y": -18244.071562075}, {"id": 22, "label": "Palatine Hill", "physics": false, "shape": "dot", "size": 20, "x": 9721.96797595608, "y": -17862.12410193528}, {"id": 34, "label": "Roman Forum", "physics": false, "shape": "dot", "size": 20, "x": 10274.11622119622, "y": -17744.88539119688}, {"id": 4, "label": "Vatican Museums", "physics": false, "shape": "dot", "size": 20, "x": 9397.01176288168, "y": -18406.8382977756}, {"id": 10, "label": "Spanish Steps", "physics": false, "shape": "dot", "size": 20, "x": 10044.6710827375, "y": -18257.3723362748}, {"id": 40, "label": "Museo Nazionale di Castel Sant\u0027Angelo", "physics": false, "shape": "dot", "size": 20, "x": 10247.51965903466, "y": -18137.4049467934}, {"id": 37, "label": "Vatican City", "physics": false, "shape": "dot", "size": 20, "x": 9245.0686770878, "y": -17771.4306387678}, {"id": 61, "label": "Trastevere", "physics": false, "shape": "dot", "size": 20, "x": 9814.41754476976, "y": -18087.5090421824}, {"id": 42, "label": "Sistine Chapel", "physics": false, "shape": "dot", "size": 20, "x": 9125.06299243454, "y": -17937.4298765434}, {"id": 60, "label": "Galleria Borghese", "physics": false, "shape": "dot", "size": 20, "x": 9853.4235793122, "y": -17816.0107761892}, {"id": 44, "label": "St. Peter\u0027s Square", "physics": false, "shape": "dot", "size": 20, "x": 9392.36043328872, "y": -17947.4201827212}]);
+        edges = new vis.DataSet([{"from": 1, "to": 0, "width": 3.2}, {"from": 2, "to": 1, "width": 8.1}, {"from": 1, "to": 3, "width": 4.9}, {"from": 6, "to": 5, "width": 25.9}, {"from": 1, "to": 6, "width": 23.4}, {"from": 6, "to": 22, "width": 2.4}, {"from": 34, "to": 22, "width": 2.8}, {"from": 4, "to": 2, "width": 7.9}, {"from": 10, "to": 1, "width": 2.8}, {"from": 2, "to": 5, "width": 7.1}, {"from": 34, "to": 5, "width": 9.9}, {"from": 6, "to": 34, "width": 3.8}, {"from": 4, "to": 6, "width": 4.7}, {"from": 3, "to": 5, "width": 2.3}, {"from": 0, "to": 5, "width": 4.2}, {"from": 2, "to": 6, "width": 8.2}, {"from": 34, "to": 0, "width": 3.1}, {"from": 10, "to": 0, "width": 3.4}, {"from": 34, "to": 1, "width": 8.9}, {"from": 40, "to": 0, "width": 2.1}, {"from": 5, "to": 1, "width": 14.4}, {"from": 22, "to": 5, "width": 4.4}, {"from": 2, "to": 37, "width": 2.1}, {"from": 61, "to": 1, "width": 2.1}, {"from": 0, "to": 2, "width": 4.8}, {"from": 4, "to": 0, "width": 4.0}, {"from": 6, "to": 0, "width": 6.1}, {"from": 4, "to": 5, "width": 4.4}, {"from": 10, "to": 6, "width": 3.2}, {"from": 42, "to": 4, "width": 6.7}, {"from": 4, "to": 1, "width": 3.1}, {"from": 40, "to": 6, "width": 2.5}, {"from": 42, "to": 2, "width": 5.4}, {"from": 60, "to": 6, "width": 2.1}, {"from": 0, "to": 22, "width": 3.1}, {"from": 6, "to": 61, "width": 3.3}, {"from": 44, "to": 2, "width": 2.3}, {"from": 22, "to": 1, "width": 2.2}, {"from": 61, "to": 0, "width": 2.3}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

@@ -73,11 +73,11 @@ sql = """select review_id, user_id, calculated_dates, review_date, review_experi
        country, region_name, province_name, attraction_type, attraction_name, review_location_type, review_location_name from reviews
 join locations l on l.attraction_url = reviews.parent_url
 join provinces p on p.province_url = l.attraction_parent_url
-where review_date < 20210000
-and review_date > 20200000
+where review_date < 20200000
+and review_date > 20190000
 and cast(location_lat as decimal) < 41.986482 and cast(location_lat as decimal) > 41.786401
 and cast(location_lng as decimal) > 12.345257 and cast(location_lng as decimal) < 12.632454
-and cast(review_last_page as INTEGER) > 20
+--and cast(review_last_page as INTEGER) > 20
 --and review_location_breadcrumbs like '%Province of Rome%'
 --and region_name = 'Lazio'--'Upper Carniola Region'--'Lazio'
 order by user_id, cast(review_id as INTEGER) asc
@@ -109,6 +109,16 @@ for trip in trips:
 id_set = {}
 labels = {}
 id_num = 0
+
+new_flows = {}
+# Contain specific type of location
+for k, v in flows.items():
+    for loc in v[0]:
+        var = ';'.join(map(str, loc))
+        if "Religious" in var or "Churches" in var or "Cathedrals" in var:  # "Cathedrals, Religious, Art Museums"
+            new_flows[k] = v
+
+flows = new_flows
 
 
 bonds_set = {}
@@ -145,12 +155,6 @@ for k, v in flows.items():
         new_flows[k] = v
 
 flows = new_flows
-new_flows = {}
-# Contain specific type of location
-for k, v in flows.items():
-    for loc in v[0]:
-        if "Cathedrals" in ';'.join(map(str, loc)):
-            new_flows[k] = v
 
 #  Setup node ids
 for k, v in flows.items():
@@ -179,8 +183,8 @@ new_id_set = {}
 #  number of repetition of flow
 for bond in bonds:
     v = bond[2]
-    if v > 5:
-        new_bonds.append([id_set[bond[3]], id_set[bond[4]], v / 10])
+    if v > 20:
+        new_bonds.append([id_set[bond[3]], id_set[bond[4]], v / 30])
         new_id_set[bond[3]] = bond[0]
         new_id_set[bond[4]] = bond[1]
 bonds = new_bonds
@@ -202,7 +206,7 @@ g3.add_edges(bonds)
 
 g3.show_buttons()
 #g3.set_edge_smooth('dynamic')
-g3.show('country_2020_rome.html')
-display(HTML('country_2020_rome.html'))
+g3.show('country_2019_rome-ruins.html')
+display(HTML('country_2019_rome-ruins.html'))
 
 # font was 10, stroke was 3, edge scale factor was 0.75
