@@ -1,0 +1,207 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 60%;
+            height: 600px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+        #loadingBar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width: 60%;
+            height: 600px;
+            background-color:rgba(200,200,200,0.8);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            opacity:1;
+        }
+
+        #bar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:20px;
+            height:20px;
+            margin:auto auto auto auto;
+            border-radius:11px;
+            border:2px solid rgba(30,30,30,0.05);
+            background: rgb(0, 173, 246); /* Old browsers */
+            box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+        }
+
+        #border {
+            position:absolute;
+            top:10px;
+            left:10px;
+            width:500px;
+            height:23px;
+            margin:auto auto auto auto;
+            box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+            border-radius:10px;
+        }
+
+        #text {
+            position:absolute;
+            top:8px;
+            left:530px;
+            width:30px;
+            height:50px;
+            margin:auto auto auto auto;
+            font-size:22px;
+            color: #000000;
+        }
+
+        div.outerBorder {
+            position:relative;
+            top:400px;
+            width:600px;
+            height:44px;
+            margin:auto auto auto auto;
+            border:8px solid rgba(0,0,0,0.1);
+            background: rgb(252,252,252); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+            border-radius:72px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "orange", "id": 0, "label": "Postojna", "physics": false, "shape": "dot", "size": 15, "x": -6314.795999998601, "y": 490.1159999956981}, {"color": "yellow", "id": 1, "label": "Trieste", "physics": false, "shape": "dot", "size": 15, "x": -6492.253863016106, "y": 540.3318048476249}, {"id": 2, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6413.551999999985, "y": 636.8999999999178}, {"id": 3, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6387.775999999975, "y": 398.8879999999226}, {"id": 4, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6440.027999999988, "y": 595.4839999999531}, {"id": 5, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6230.116000000009, "y": 492.09200000002966}, {"id": 6, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6412.216000000028, "y": 527.0519999998869}, {"color": "orange", "id": 7, "label": "Ljubljana", "physics": false, "shape": "dot", "size": 15, "x": -6197.743600001301, "y": 377.22640000272804}, {"id": 8, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6136.2564, "y": 417.2852000000021}, {"color": "orange", "id": 9, "label": "Kobarid", "physics": false, "shape": "dot", "size": 15, "x": -6568.263999999932, "y": 301.16399999997157}, {"color": "orange", "id": 10, "label": "Bohinjsko Jezero", "physics": false, "shape": "dot", "size": 15, "x": -6454.687599999941, "y": 285.29199999881166}, {"id": 11, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6436.559200000007, "y": 445.23759999998947}, {"color": "yellow", "id": 12, "label": "Grado", "physics": false, "shape": "dot", "size": 15, "x": -6641.995401296889, "y": 526.9115434497107}, {"color": "green", "id": 14, "label": "Klagenfurt", "physics": false, "shape": "dot", "size": 15, "x": -6275.724000000421, "y": 151.77599999932863}, {"color": "orange", "id": 15, "label": "Karlovac", "physics": false, "shape": "dot", "size": 15, "x": -5778.656000000022, "y": 601.8719999999739}, {"id": 16, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6535.117451088222, "y": 418.0463977088875}, {"id": 17, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6419.184037558666, "y": 462.3873990610082}, {"color": "orange", "id": 18, "label": "Zagreb", "physics": false, "shape": "dot", "size": 15, "x": -5611.5787999984195, "y": 476.49199999872144}, {"id": 19, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6341.586800000004, "y": 145.8559999999452}, {"id": 20, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5867.012, "y": 218.8239999999969}, {"id": 21, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5829.787599999999, "y": 264.1800000000003}, {"id": 22, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5892.164000000027, "y": 306.12399999997797}, {"id": 23, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5811.858458100542, "y": 132.8516201117818}, {"color": "yellow", "id": 24, "label": "Aquileia", "physics": false, "shape": "dot", "size": 15, "x": -6653.251999999873, "y": 491.25200000091354}, {"id": 25, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6638.630494436155, "y": 150.24102015051176}, {"color": "orange", "id": 26, "label": "Varazdin", "physics": false, "shape": "dot", "size": 15, "x": -5468.4359999999515, "y": 274.50799999985975}, {"id": 27, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5808.760000000002, "y": 554.943999999985}, {"id": 28, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5727.6840000000175, "y": 369.2279999999664}, {"id": 29, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5715.616000000018, "y": 479.3760000000184}, {"id": 30, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5603.248000000001, "y": 129.00799999998708}, {"id": 31, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6446.612000000002, "y": 146.1439999999202}, {"color": "green", "id": 32, "label": "Villach", "physics": false, "shape": "dot", "size": 15, "x": -6460.29199999997, "y": 152.7559999994919}, {"id": 34, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6614.8818084507075, "y": 415.88570140832235}, {"color": "orange", "id": 36, "label": "Bled", "physics": false, "shape": "dot", "size": 15, "x": -6354.766959357995, "y": 252.3552882251024}, {"id": 37, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6642.324000000002, "y": 376.73999999999796}, {"color": "yellow", "id": 38, "label": "Tarvisio", "physics": false, "shape": "dot", "size": 15, "x": -6571.099999999869, "y": 197.87200000091252}, {"id": 39, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5763.556000000054, "y": 438.6679999998378}, {"color": "orange", "id": 40, "label": "Ptuj", "physics": false, "shape": "dot", "size": 15, "x": -5648.808000000066, "y": 229.80799999983356}, {"color": "yellow", "id": 41, "label": "Gorizia", "physics": false, "shape": "dot", "size": 15, "x": -6551.214000000081, "y": 423.53360000037355}, {"id": 42, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5907.371600000003, "y": 332.252000000055}, {"id": 43, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6506.987999999937, "y": 326.92799999973795}, {"id": 44, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6524.607999999994, "y": 267.0559999999896}, {"color": "orange", "id": 45, "label": "Kranjska Gora", "physics": false, "shape": "dot", "size": 15, "x": -6486.162448794089, "y": 205.0471570313057}, {"color": "red", "id": 46, "label": "Piran", "physics": false, "shape": "dot", "size": 15, "x": -6572.766400000255, "y": 588.7392000003456}, {"id": 47, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6196.891999999998, "y": 176.40000000000873}, {"id": 48, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6169.7599999999975, "y": 154.2000000000662}, {"color": "orange", "id": 49, "label": "Zgornje Gorje", "physics": false, "shape": "dot", "size": 15, "x": -6373.7599999994945, "y": 247.84800000149335}, {"id": 50, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6588.016000000002, "y": 196.2439999999733}, {"id": 51, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6628.184000000006, "y": 527.4279999999853}, {"color": "green", "id": 52, "label": "Keutschach am See", "physics": false, "shape": "dot", "size": 15, "x": -6325.112000000065, "y": 162.58800000036354}, {"color": "orange", "id": 53, "label": "Maribor", "physics": false, "shape": "dot", "size": 15, "x": -5739.58399999982, "y": 176.54800000015894}, {"id": 54, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6607.839999999901, "y": 452.29600000015853}, {"id": 55, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6643.788000000017, "y": 403.6199999999626}, {"id": 56, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6594.2, "y": 423.24000000003434}, {"id": 57, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6562.15200000005, "y": 593.6439999997929}, {"id": 59, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6589.963999999978, "y": 476.5039999999135}, {"id": 61, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6431.376, "y": 281.2399999999943}, {"color": "yellow", "id": 62, "label": "Sgonico", "physics": false, "shape": "dot", "size": 15, "x": -6493.657603448357, "y": 516.2294017241657}, {"id": 63, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6519.6315718309825, "y": 179.98384225351037}, {"color": "yellow", "id": 65, "label": "Duino", "physics": false, "shape": "dot", "size": 15, "x": -6558.54039999991, "y": 489.2959999997838}, {"id": 66, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6364.136000000003, "y": 343.89199999998164}, {"id": 67, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6571.49200000001, "y": 223.8160000000462}, {"id": 70, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6467.252000000005, "y": 206.283999999996}, {"id": 71, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6447.255999999925, "y": 533.259999999842}, {"id": 72, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6438.415999999976, "y": 172.3400000000329}, {"id": 73, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6435.278061016962, "y": 133.97487457633906}, {"id": 74, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6336.924, "y": 255.53199999997378}, {"color": "yellow", "id": 76, "label": "Cividale del Friuli", "physics": false, "shape": "dot", "size": 15, "x": -6628.636610249526, "y": 361.2578102502375}, {"id": 79, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6606.332000000006, "y": 450.2239999999874}, {"id": 80, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6601.999999999999, "y": 508.77600000000893}, {"id": 81, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6405.396000000012, "y": 349.09599999994316}, {"id": 82, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6424.9560000000165, "y": 216.15200000009645}, {"id": 83, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6654.104000000006, "y": 451.13599999998405}, {"id": 85, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6555.119999999991, "y": 601.8539999999193}, {"id": 88, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6331.528399999989, "y": 261.13440000013725}, {"id": 90, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6576.095999999966, "y": 264.95600000007835}, {"id": 91, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6080.348000000003, "y": 163.9439999999995}, {"color": "orange", "id": 92, "label": "Koper", "physics": false, "shape": "dot", "size": 15, "x": -6506.67200000012, "y": 584.0999999993728}, {"id": 94, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5567.636000000001, "y": 515.7400000000016}, {"color": "yellow", "id": 95, "label": "Muggia", "physics": false, "shape": "dot", "size": 15, "x": -6491.032000000044, "y": 558.3960000001571}, {"id": 96, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5418.771999999992, "y": 174.7200000000339}, {"color": "orange", "id": 97, "label": "Podcetrtek", "physics": false, "shape": "dot", "size": 15, "x": -5761.359600000067, "y": 337.2419999999729}, {"id": 98, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5555.78, "y": 396.320000000007}, {"id": 100, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6383.452799999995, "y": 154.8799999999901}, {"id": 101, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6524.903999999997, "y": 150.25999999998385}, {"id": 102, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6158.719999999995, "y": 292.9720000000052}, {"id": 103, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6157.147999999998, "y": 311.1559999999772}, {"color": "red", "id": 105, "label": "Marezige", "physics": false, "shape": "dot", "size": 15, "x": -6482.363999999999, "y": 597.755999999994}, {"id": 106, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6448.000000000001, "y": 580.0}, {"id": 107, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6510.896000000032, "y": 648.1399999999994}, {"id": 109, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6623.667999999999, "y": 455.77600000010716}, {"id": 110, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6597.688000000012, "y": 477.80400000002555}, {"id": 117, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6540.388000000001, "y": 201.91600000000108}, {"id": 118, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6462.551999999983, "y": 470.8239999999969}, {"id": 119, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5535.207999999989, "y": 135.5759999999791}, {"id": 120, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6516.5796, "y": 329.40200000000186}, {"id": 121, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6211.612000000005, "y": 514.0639999999767}, {"id": 122, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6392.319999999998, "y": 163.61199999994642}, {"id": 123, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5764.0284, "y": 384.09720000000016}, {"id": 125, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6610.071999999995, "y": 243.6760000000031}, {"id": 126, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5924.443999999999, "y": 571.5560000000041}, {"id": 127, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5874.332000000002, "y": 541.1120000000083}, {"id": 128, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5700.268000000004, "y": 369.96399999999267}, {"id": 129, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6599.884000000012, "y": 443.0240000000049}, {"id": 131, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6270.855999999949, "y": 332.4439999998431}, {"id": 132, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6442.13479999999, "y": 284.50919999996404}, {"id": 133, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6417.540000000006, "y": 291.35199999993347}, {"id": 134, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6406.204000000026, "y": 130.01199999999153}, {"color": "red", "id": 136, "label": "Izola", "physics": false, "shape": "dot", "size": 15, "x": -6534.262800000018, "y": 585.3200000000506}, {"id": 137, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6588.836000000005, "y": 400.9320000000298}, {"id": 138, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6122.479999999997, "y": 232.19600000005084}, {"id": 139, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6622.363960396036, "y": 196.90867722774783}, {"id": 141, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6588.951999999997, "y": 489.83600000000297}, {"id": 144, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5934.042000000006, "y": 299.17999999998574}, {"id": 145, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6452.207999999998, "y": 172.1160000000018}, {"id": 146, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5620.711999999955, "y": 296.3000000001084}, {"id": 147, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6554.111999999992, "y": 411.66799999995055}, {"id": 148, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6615.1640000000025, "y": 415.1319999999978}, {"id": 149, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6402.753199999793, "y": 533.8379999997087}, {"id": 150, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6258.25755692307, "y": 305.173952000041}, {"id": 151, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5924.746173410391, "y": 474.2924161850242}, {"id": 152, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6616.868000000009, "y": 432.99999999999636}, {"id": 154, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5462.809600000001, "y": 139.27599999999802}, {"id": 157, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5855.7028, "y": 607.1059999999998}, {"id": 158, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5650.508000000022, "y": 335.06400000000576}, {"id": 161, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5881.9448, "y": 247.5767999999989}, {"id": 163, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6590.472000000031, "y": 626.5679999999447}, {"id": 164, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6621.716, "y": 471.79599999999846}, {"id": 165, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6624.800000000001, "y": 147.60399999999936}, {"id": 167, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5802.908, "y": 416.38800000000265}, {"id": 168, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6335.158800000013, "y": 153.7064000000064}, {"id": 170, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6608.1444809523855, "y": 387.3744285714274}, {"id": 171, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6118.224000000004, "y": 632.1119999999937}, {"id": 172, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6480.0, "y": 333.3319999999985}, {"id": 177, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6154.392000000005, "y": 330.3080000000409}, {"id": 178, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6498.543199999999, "y": 247.31200000000536}, {"id": 179, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6569.859999999986, "y": 397.41199999996024}, {"color": "red", "id": 180, "label": "Strunjan", "physics": false, "shape": "dot", "size": 15, "x": -6555.415999999999, "y": 589.475999999966}, {"id": 181, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6017.679058823533, "y": 264.130901960787}, {"id": 185, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6320.916000000009, "y": 527.0479999999552}, {"id": 188, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6536.399999999989, "y": 636.7279999999992}, {"id": 189, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5744.259200000002, "y": 309.7303999999931}, {"id": 190, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6259.496, "y": 651.3080000000009}, {"id": 191, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6098.855999999997, "y": 655.8879999999845}, {"id": 194, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6254.828399999998, "y": 482.6080000000147}, {"id": 195, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6038.439999999995, "y": 627.6840000000229}, {"id": 196, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6474.556, "y": 580.112000000001}, {"id": 197, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5354.164, "y": 500.28800000000047}, {"id": 202, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6641.8776, "y": 361.7691999999988}, {"id": 205, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5763.225955555554, "y": 242.7248888888862}, {"id": 207, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6058.223999999997, "y": 191.44400000000678}, {"id": 210, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6105.62, "y": 179.14400000000023}, {"id": 211, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6232.9388, "y": 336.62400000000343}, {"id": 212, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6273.535999999999, "y": 474.7199999999866}, {"id": 214, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6453.8399999999965, "y": 517.487999999983}, {"id": 217, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5447.827999999997, "y": 604.8399999999783}, {"id": 219, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6598.896000000001, "y": 469.15600000000995}, {"id": 221, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5533.599999999999, "y": 167.15599999998813}, {"id": 222, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5505.5808, "y": 157.10800000000017}, {"id": 223, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5522.105999999993, "y": 193.00999999997657}, {"id": 224, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6095.2588, "y": 175.0}, {"id": 225, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6372.0876, "y": 134.02800000000207}, {"id": 227, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5489.104399999998, "y": 128.74160000000484}, {"id": 228, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6087.6196, "y": 246.9268000000011}, {"id": 229, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6444.688, "y": 289.53199999999924}, {"id": 238, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6100.7836, "y": 168.71800000000076}, {"id": 241, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6433.937200000002, "y": 165.88280000000668}, {"id": 242, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6307.084000000001, "y": 268.411999999993}, {"id": 249, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6316.6464, "y": 149.27200000000084}, {"id": 250, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6109.000000000001, "y": 504.5560000000005}, {"id": 252, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6584.999999999995, "y": 461.5560000000114}, {"id": 257, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6580.08, "y": 424.5440000000017}, {"id": 258, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6585.888, "y": 449.6680000000015}, {"id": 261, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -6468.3315999999995, "y": 288.1080000000002}, {"id": 262, "label": " ", "physics": false, "shape": "dot", "size": 7, "x": -5927.112, "y": 541.5560000000005}]);
+        edges = new vis.DataSet([{"from": 9, "to": 7, "width": 2}, {"from": 7, "to": 10, "width": 7}, {"from": 12, "to": 24, "width": 6}, {"from": 0, "to": 36, "width": 5}, {"from": 0, "to": 46, "width": 2}, {"from": 1, "to": 41, "width": 3}, {"from": 7, "to": 14, "width": 1}, {"from": 36, "to": 7, "width": 20}, {"from": 41, "to": 24, "width": 1}, {"from": 62, "to": 76, "width": 1}, {"from": 1, "to": 95, "width": 7}, {"from": 62, "to": 24, "width": 1}, {"from": 24, "to": 38, "width": 1}, {"from": 18, "to": 26, "width": 1}, {"from": 7, "to": 1, "width": 5}, {"from": 52, "to": 14, "width": 8}, {"from": 1, "to": 62, "width": 10}, {"from": 1, "to": 36, "width": 7}, {"from": 36, "to": 53, "width": 1}, {"from": 53, "to": 7, "width": 1}, {"from": 1, "to": 24, "width": 3}, {"from": 32, "to": 14, "width": 4}, {"from": 46, "to": 7, "width": 4}, {"from": 36, "to": 10, "width": 13}, {"from": 10, "to": 49, "width": 2}, {"from": 18, "to": 7, "width": 6}, {"from": 38, "to": 41, "width": 1}, {"from": 38, "to": 45, "width": 2}, {"from": 92, "to": 7, "width": 1}, {"from": 53, "to": 40, "width": 2}, {"from": 46, "to": 136, "width": 2}, {"from": 18, "to": 36, "width": 4}, {"from": 1, "to": 38, "width": 4}, {"from": 105, "to": 1, "width": 1}, {"from": 0, "to": 49, "width": 1}, {"from": 49, "to": 36, "width": 8}, {"from": 12, "to": 65, "width": 1}, {"from": 7, "to": 0, "width": 10}, {"from": 0, "to": 45, "width": 1}, {"from": 10, "to": 0, "width": 2}, {"from": 36, "to": 45, "width": 2}, {"from": 45, "to": 7, "width": 1}, {"from": 10, "to": 45, "width": 1}, {"from": 105, "to": 46, "width": 1}, {"from": 46, "to": 180, "width": 2}, {"from": 1, "to": 92, "width": 1}, {"from": 1, "to": 12, "width": 2}, {"from": 36, "to": 38, "width": 1}, {"from": 1, "to": 0, "width": 4}, {"from": 7, "to": 40, "width": 1}, {"from": 95, "to": 12, "width": 1}, {"from": 24, "to": 76, "width": 3}, {"from": 76, "to": 1, "width": 2}, {"from": 46, "to": 92, "width": 2}, {"from": 1, "to": 180, "width": 1}, {"from": 12, "to": 41, "width": 1}, {"from": 49, "to": 9, "width": 1}, {"from": 9, "to": 0, "width": 1}, {"from": 1, "to": 136, "width": 1}, {"from": 136, "to": 180, "width": 2}, {"from": 38, "to": 32, "width": 1}, {"from": 1, "to": 65, "width": 6}, {"from": 65, "to": 62, "width": 1}, {"from": 7, "to": 95, "width": 1}, {"from": 53, "to": 97, "width": 1}, {"from": 97, "to": 7, "width": 1}, {"from": 18, "to": 15, "width": 1}, {"from": 7, "to": 49, "width": 2}, {"from": 95, "to": 46, "width": 1}, {"from": 45, "to": 46, "width": 1}, {"from": 46, "to": 38, "width": 1}, {"from": 92, "to": 0, "width": 3}, {"from": 65, "to": 38, "width": 1}, {"from": 36, "to": 9, "width": 1}, {"from": 9, "to": 45, "width": 1}, {"from": 53, "to": 0, "width": 1}, {"from": 36, "to": 46, "width": 1}, {"from": 38, "to": 76, "width": 1}, {"from": 62, "to": 0, "width": 1}, {"from": 65, "to": 41, "width": 1}, {"from": 18, "to": 0, "width": 1}, {"from": 95, "to": 62, "width": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+        network.on("stabilizationProgress", function(params) {
+      		document.getElementById('loadingBar').removeAttribute("style");
+	        var maxWidth = 496;
+	        var minWidth = 20;
+	        var widthFactor = params.iterations/params.total;
+	        var width = Math.max(minWidth,maxWidth * widthFactor);
+
+	        document.getElementById('bar').style.width = width + 'px';
+	        document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+	    });
+	    network.once("stabilizationIterationsDone", function() {
+	        document.getElementById('text').innerHTML = '100%';
+	        document.getElementById('bar').style.width = '496px';
+	        document.getElementById('loadingBar').style.opacity = 0;
+	        // really clean the dom element
+	        setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+	    });
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
