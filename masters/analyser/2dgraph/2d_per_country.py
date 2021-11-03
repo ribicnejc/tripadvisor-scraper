@@ -24,14 +24,14 @@ def graph(year_from, year_to, country, color):
         x_arr.append(float(el[0]))
         y_arr.append(float(el[1]))
 
-    dataset = {'Lat': x_arr, 'Lng': y_arr}
+    dataset = {'Zemljepisna širina': x_arr, 'Zemljepisna dolžina': y_arr}
     dset = pd.DataFrame(data=dataset)
     sns.set_theme()
     # Custom the inside plot: options are: “scatter” | “reg” | “resid” | “kde” | “hex”
-    sns.jointplot(x=dset['Lat'], y=dset['Lng'], kind='scatter', color=color)
+    sns.jointplot(x=dset['Zemljepisna širina'], y=dset['Zemljepisna dolžina'], kind='scatter', color=color)
     plt.savefig(f'{country}-{year_from}-scatter.png'.format(country=country, year_from=year_from))
-    sns.jointplot(x=dset['Lat'], y=dset['Lng'], kind='kde', color=color)
-    plt.savefig(f'{country}-{year_from}-kde.png'.format(country=country, year_from=year_from))
+    sns.jointplot(x=dset['Zemljepisna širina'], y=dset['Zemljepisna dolžina'], kind='kde', color=color)
+    plt.savefig(f'{country}-{year_from}-kde-slovensko.png'.format(country=country, year_from=year_from))
     plt.show()
 
 

@@ -20,17 +20,17 @@ def map_date(date):
     if month == "04":
         return "Apr"
     if month == "05":
-        return "May"
+        return "Maj"
     if month == "06":
         return "Jun"
     if month == "07":
         return "Jul"
     if month == "08":
-        return "Aug"
+        return "Avg"
     if month == "09":
         return "Sep"
     if month == "10":
-        return "Oct"
+        return "Okt"
     if month == "11":
         return "Nov"
     if month == "12":
@@ -62,12 +62,12 @@ def get_monthly_visits(country, year_from, year_to):
         type_arr.append("Date of experience")
 
     f, axes = plt.subplots(1, 1, figsize=(7, 7), sharex=True)
-    d = {'Month': month_arr, 'Type': type_arr}
+    d = {'Month': month_arr, 'Tip': type_arr}
     df = pd.DataFrame(data=d)
     # sns.distplot(df, label="2020")
-    sns.histplot(data=df, x="Month", hue="Type", kde=True,
+    sns.histplot(data=df, x="Month", hue="Tip", kde=True,
                  multiple="dodge")
-    plt.savefig(f'{country}-{year_from}.png'.format(country=country, year_from=year_from))
+    plt.savefig(f'{country}-{year_from}-slovensko.png'.format(country=country, year_from=year_from))
     plt.show()
 
 

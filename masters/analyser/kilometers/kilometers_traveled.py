@@ -192,10 +192,11 @@ for e in title_arr2:
 for e in days_arr2:
     days_arr.append(e)
 
-d = {'Kilometers traveled': title_arr, 'Year of travel': days_arr}
+d = {'Prepotovani kilometri': title_arr, 'Leto potovanja': days_arr}
 df = pd.DataFrame(data=d)
 plt.xticks(rotation=45)
-sns.histplot(data=df, x="Kilometers traveled", hue="Year of travel", kde=True,
+plt.ylabel("Delež potovanj (%)")
+sns.histplot(data=df, x="Prepotovani kilometri", hue="Leto potovanja", kde=True,
              multiple="dodge")
 plt.savefig(f'kilometers_traveled.png'.format())
 plt.show()

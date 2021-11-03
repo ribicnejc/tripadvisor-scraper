@@ -96,35 +96,35 @@ order by user_id, cast(review_id as INTEGER) asc
     k, a, b, c, d, e, f, g = 2, 2, 2, 2, 2, 2, 2, 2
     trips = sorted(trips)
     for lenght in trips:
-        if lenght < 1:
+        if lenght <= 1:
             title_arr.append("1")
             days_arr.append("Trip time")
             k += 1
-        elif 1 <= lenght < 2:
+        elif 1 < lenght <= 2:
             title_arr.append("2")
             days_arr.append("Trip time")
             a += 1
-        elif 1 < lenght < 3:
+        elif 2 < lenght <= 3:
             title_arr.append("3")
             days_arr.append("Trip time")
             b += 1
-        elif 2 < lenght < 4:
+        elif 3 < lenght <= 4:
             title_arr.append("4")
             days_arr.append("Trip time")
             c += 1
-        elif 3 < lenght < 6:
+        elif 5 < lenght <= 6:
             title_arr.append("5-6")
             days_arr.append("Trip time")
             d += 1
-        elif 5 < lenght < 11:
+        elif 6 < lenght <= 11:
             title_arr.append("7-11")
             days_arr.append("Trip time")
             e += 1
-        elif 10 < lenght < 16:
+        elif 11 < lenght <= 16:
             title_arr.append("12-16")
             days_arr.append("Trip time")
             f += 1
-        elif lenght > 15:
+        elif lenght > 16:
             title_arr.append("17+")
             days_arr.append("Trip time")
             g += 1
@@ -198,10 +198,11 @@ for e in title_arr2:
 for e in days_arr2:
     days_arr.append(e)
 
-d = {'Days': title_arr, 'Year of travel': days_arr}
+d = {'Časovni interval': title_arr, 'Leto potovanja': days_arr}
 df = pd.DataFrame(data=d)
 plt.xticks(rotation=45)
-sns.histplot(data=df, x="Days", hue="Year of travel", kde=False,
+plt.ylabel("Delež potovanj (%)")
+sns.histplot(data=df, x="Časovni interval", hue="Leto potovanja", kde=False,
              multiple="dodge")
 plt.savefig(f'trip_lenght.png'.format())
 plt.show()

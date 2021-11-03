@@ -150,7 +150,7 @@ plt.xticks(angles[:-1], categories)
 
 # Draw ylabels
 ax.set_rlabel_position(0)
-plt.yticks([0.5, 2.5, 6], ["5%", "10%", "30%"], color="grey", size=7)
+plt.yticks([0.5, 2, 6], ["3%", "10%", "20%"], color="grey", size=7)
 plt.ylim(0, 6)
 
 # ------- PART 2: Add plots
