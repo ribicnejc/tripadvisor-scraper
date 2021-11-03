@@ -205,9 +205,9 @@ for k, v in edge_weights.items():
     node_set.add(p1)
     node_set.add(p2)
 
-
+filtered_nodes = set()
 for k, v in nodes.items():
-    scale = 250
+    scale = 400
     lbl = v[9].replace(" attractions", "")
     id_set = node_ids[k]
     lat = float(v[5])
@@ -216,25 +216,32 @@ for k, v in nodes.items():
         continue
     if lbl in comm1:
         g3.add_node(id_set, label=lbl, y=(((scale * -1) * lat) + 47 * scale),
-                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=10, color='orange')
+                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=15, color='orange')
     elif lbl in comm2:
         g3.add_node(id_set, label=lbl, y=(((scale * -1) * lat) + 47 * scale),
-                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=10, color='yellow')
+                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=15, color='yellow')
     elif lbl in comm3:
         g3.add_node(id_set, label=lbl, y=(((scale * -1) * lat) + 47 * scale),
-                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=10, color='green')
+                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=15, color='green')
     elif lbl in comm4:
         g3.add_node(id_set, label=lbl, y=(((scale * -1) * lat) + 47 * scale),
-                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=10, color='red')
+                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=15, color='red' )
     else:
-        g3.add_node(id_set, label=lbl, y=(((scale * -1) * lat) + 47 * scale),
-                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=5)
+        filtered_nodes.add(id_set)
+        g3.add_node(id_set, label=" ", y=(((scale * -1) * lat) + 47 * scale),
+                    x=(((scale * 1) * lng) - 30 * scale), physics=False, size=7)
 
+new_bonds = []
+for bond in bonds:
+    if bond[0] in filtered_nodes or bond[1] in filtered_nodes:
+        continue
+    new_bonds.append(bond)
+bonds = new_bonds
 g3.add_edges(bonds)
 
 g3.show_buttons()
 #g3.set_edge_smooth('continous')
-g3.show('komune.html')
-display(HTML('komune.html'))
+g3.show('komune2.html')
+display(HTML('komune2.html'))
 
 # font was 10, stroke was 3, edge scale factor was 0.75
