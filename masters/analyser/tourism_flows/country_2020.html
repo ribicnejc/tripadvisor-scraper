@@ -10,6 +10,7 @@
 <script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
 
 
+
 <style type="text/css">
 
         #mynetwork {
@@ -59,7 +60,7 @@
         
 
         // parsing and collecting nodes and edges from the python
-        nodes = new vis.DataSet([{"id": 0, "label": "slovenia", "physics": false, "shape": "dot", "size": 20, "x": -784.4913904172216, "y": 44.810440421293606}, {"id": 1, "label": "croatia", "physics": false, "shape": "dot", "size": 20, "x": -687.3250062422038, "y": 152.71119816795272}, {"id": 2, "label": "austria", "physics": false, "shape": "dot", "size": 20, "x": -766.2429571663079, "y": -42.01262746957627}, {"id": 3, "label": "italy", "physics": false, "shape": "dot", "size": 20, "x": -899.2908176311785, "y": 206.13922288056574}, {"id": 4, "label": "hungary", "physics": false, "shape": "dot", "size": 20, "x": -547.3882043145547, "y": -23.029812801274602}]);
+        nodes = new vis.DataSet([{"id": 0, "label": "Slovenija", "physics": false, "shape": "dot", "size": 20, "x": -784.4913904172216, "y": 44.810440421293606}, {"id": 1, "label": "Hrvaška", "physics": false, "shape": "dot", "size": 20, "x": -687.3250062422038, "y": 152.71119816795272}, {"id": 2, "label": "Avstrija", "physics": false, "shape": "dot", "size": 20, "x": -766.2429571663079, "y": -42.01262746957627}, {"id": 3, "label": "Italija", "physics": false, "shape": "dot", "size": 20, "x": -899.2908176311785, "y": 206.13922288056574}, {"id": 4, "label": "Madžarska", "physics": false, "shape": "dot", "size": 20, "x": -547.3882043145547, "y": -23.029812801274602}]);
         edges = new vis.DataSet([{"arrows": "to", "from": 1, "to": 0, "width": 1.1}, {"arrows": "to", "from": 0, "to": 1, "width": 0.66}, {"arrows": "to", "from": 2, "to": 0, "width": 0.42}, {"arrows": "to", "from": 0, "to": 2, "width": 0.56}, {"arrows": "to", "from": 2, "to": 3, "width": 4.12}, {"arrows": "to", "from": 3, "to": 2, "width": 4.72}, {"arrows": "to", "from": 4, "to": 1, "width": 0.4}, {"arrows": "to", "from": 4, "to": 2, "width": 1.62}, {"arrows": "to", "from": 4, "to": 3, "width": 1.0}, {"arrows": "to", "from": 2, "to": 4, "width": 2.24}, {"arrows": "to", "from": 0, "to": 3, "width": 1.42}, {"arrows": "to", "from": 3, "to": 0, "width": 1.6}, {"arrows": "to", "from": 3, "to": 1, "width": 1.74}, {"arrows": "to", "from": 3, "to": 4, "width": 0.94}, {"arrows": "to", "from": 1, "to": 4, "width": 0.38}, {"arrows": "to", "from": 1, "to": 2, "width": 0.56}, {"arrows": "to", "from": 2, "to": 1, "width": 0.56}, {"arrows": "to", "from": 1, "to": 3, "width": 1.5}, {"arrows": "to", "from": 0, "to": 4, "width": 0.08}, {"arrows": "to", "from": 4, "to": 0, "width": 0.1}]);
 
         // adding nodes and edges to the graph

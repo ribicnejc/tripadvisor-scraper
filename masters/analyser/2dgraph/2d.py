@@ -43,9 +43,9 @@ def graph(year_from, year_to, country, color):
         if el[2] == "hungary":
             hu_x_arr.append(float(el[0]))
             hu_y_arr.append(float(el[1]))
-
+#Zemljepisna širina
     sl_dataset = {'SLat': sl_x_arr, 'SLng': sl_y_arr}
-    au_dataset = {'Zemljepisna širina': au_x_arr, 'Zemljepisna dolžina': au_y_arr}
+    au_dataset = {'Zemljepisna dolžina': au_x_arr, 'Zemljepisna širina': au_y_arr}
     it_dataset = {'ILat': it_x_arr, 'ILng': it_y_arr}
     hu_dataset = {'HLat': hu_x_arr, 'HLng': hu_y_arr}
     cr_dataset = {'CLat': cr_x_arr, 'CLng': cr_y_arr}
@@ -65,7 +65,7 @@ def graph(year_from, year_to, country, color):
     #sns.scatterplot(x=crdset['CLat'], y=crdset['CLng'], color="#ffc37e", label="Croatia")
     #sns.scatterplot(x=sldset['SLat'], y=sldset['SLng'], color="#ff4e60", label="Slovenia")
 
-    sns.scatterplot(x=audset['Zemljepisna širina'], y=audset['Zemljepisna dolžina'], color="#ccc", label="Avstrija")
+    sns.scatterplot(x=audset['Zemljepisna dolžina'], y=audset['Zemljepisna širina'], color="#ccc", label="Avstrija")
     sns.scatterplot(x=itdset['ILat'], y=itdset['ILng'], color="#aaa", label="Italija")
     sns.scatterplot(x=hudset['HLat'], y=hudset['HLng'], color="#999", label="Madžarska")
     sns.scatterplot(x=crdset['CLat'], y=crdset['CLng'], color="#666", label="Hrvaška")
